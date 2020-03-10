@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_view_make_opeation"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/actionbar_round_corner_background"
+        android:elevation="4dp"
+        android:textAlignment="center"
+        app:elevation="4dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:title="Notification"
+        app:titleTextAppearance="@style/toolbarTitle"
+        app:titleTextColor="@color/matt_black"
+        tools:targetApi="lollipop" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/msg_icon"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/req_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="All Customers"
+                    android:textAppearance="@style/headerTextStyle"
+                    android:textColor="@color/matt_black"
+                    android:textSize="18sp"
+                    android:textStyle="normal">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/create_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="Createded Date 12-Aug-2019"
+                    android:textAppearance="@style/subHeaderTextStyle"
+                    android:textColor="@color/matt_black"
+                    android:textSize="15sp">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/send_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="7dp"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="Scheduled Date 12-Aug-2019"
+                    android:textAppearance="@style/subHeaderTextStyle"
+                    android:textColor="@color/matt_black"
+                    android:textSize="15sp">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/border_gray_half"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/notification_dialog_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="Notification"
+                    android:textAppearance="@style/headerTextStyle"
+                    android:textColor="@color/matt_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/notification_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="12dp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:padding="2dp"
+                    android:text="title"
+                    android:textAppearance="@style/headerTextStyle"
+                    android:textColor="@color/matt_black"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/notification_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:lineSpacingMultiplier="1.2"
+                        android:padding="12dp"
+                        android:text="content"
+                        android:textAppearance="@style/subHeaderTextStyle"
+                        android:textColor="@color/matt_black"
+                        android:textSize="14sp" />
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/notification_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="148dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="12dp"
+                        android:scaleType="centerCrop"
+                        android:src="@color/off_white"
+                        android:visibility="gone"
+                        app:riv_corner_radius="8dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal"
+        android:padding="7dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/deactivate_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/redbtn"
+            android:singleLine="true"
+            android:text="Deactivate"
+            android:textAllCaps="false"
+            android:textAppearance="@style/buttontextStyle"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="visible"></com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/edit_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/oldBlue"
+            android:singleLine="true"
+            android:text="Edit"
+            android:textAllCaps="false"
+            android:textAppearance="@style/buttontextStyle"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="visible">
+
+        </com.google.android.material.button.MaterialButton>
+
+    </LinearLayout>
+</FrameLayout>

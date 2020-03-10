@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_terms_conditions"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextColor="@color/matt_black"
+        android:background="@drawable/actionbar_round_corner_background"
+        android:elevation="4dp"
+        app:title="@string/terms_conditions_title"
+        app:titleTextAppearance="@style/toolbarTitle"
+        android:textAlignment="center"
+        app:elevation="4dp"
+        app:layout_scrollFlags="scroll|enterAlways">
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textAppearance="@style/textStyle"
+            android:id="@+id/terms_and_conditions_txtvw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+</LinearLayout>

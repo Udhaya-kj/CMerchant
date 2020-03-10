@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/voucher_cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:background="@android:color/transparent"
+    android:elevation="8dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:minHeight="100dp"
+    app:cardBackgroundColor="#F8F8F8"
+    app:cardCornerRadius="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:paddingLeft="15dp"
+            android:singleLine="false"
+            android:textColor="@color/fade_black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/text_expired"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:text="Expired"
+            android:textSize="15sp"
+            android:textColor="#f00" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.VoucherPerformanceActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_voucher_performance"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/actionbar_round_corner_background"
+        android:elevation="4dp"
+        android:textAlignment="center"
+        app:elevation="4dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:title="Voucher Performance"
+        app:titleTextAppearance="@style/toolbarTitle"
+        app:titleTextColor="@color/matt_black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_5dp"
+        android:layout_marginTop="@dimen/marginTop_10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/margin_5dp"
+            android:layout_marginEnd="0dp"
+            android:weightSum="2">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:textColor="@color/black"
+                android:text="Title " />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:textColor="@color/black"
+                android:text=":" />
+            <TextView
+                android:id="@+id/text_title_perf"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+                android:text="Get 8% offer for 1000 points"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/margin_5dp"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:layout_marginEnd="0dp"
+            android:weightSum="2">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:textColor="@color/black"
+                android:text="No.of Redemptions " />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:textColor="@color/black"
+                android:text=":" />
+            <TextView
+                android:id="@+id/text_redemptions"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+                android:text="5"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/margin_5dp"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:layout_marginEnd="0dp"
+            android:weightSum="2">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:textColor="@color/black"
+                android:text="No.of sharing " />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:textColor="@color/black"
+                android:text=":" />
+            <TextView
+                android:id="@+id/text_sharings"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+                android:text="12"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

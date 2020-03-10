@@ -1,0 +1,107 @@
+{
+  "project_info": {
+    "project_number": "1090184350640",
+    "firebase_url": "https://corals-customer-3f967.firebaseio.com",
+    "project_id": "corals-customer-3f967",
+    "storage_bucket": "corals-customer-3f967.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090184350640:android:5550eb12a1033104",
+        "android_client_info": {
+          "package_name": "life.corals.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1090184350640-j8ppsoltpo62gimtd50vn5lsekj5ihcj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "life.corals.customer",
+            "certificate_hash": "f00db99f78f95b9302170db9f83568dc9ee6cf2e"
+          }
+        },
+        {
+          "client_id": "1090184350640-ogd49tpecome1lsrb12v3pof3hf6g98u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "life.corals.customer",
+            "certificate_hash": "9e7c415f51a7c9878ab07fdf1d8efb845b5931fb"
+          }
+        },
+        {
+          "client_id": "1090184350640-79rjsfvbr520bm09ks0up9sircmmfddd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "life.corals.customer",
+            "certificate_hash": "0c29e03fd339073e22dad4cdc435de6b42d546ae"
+          }
+        },
+        {
+          "client_id": "1090184350640-oa626pkbsfet6582r89jd6tjrm4ur1il.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrs4gi-olU-5G5yQ5uxCvXsvSNd-Wlh8w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1090184350640-oa626pkbsfet6582r89jd6tjrm4ur1il.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1090184350640-dpi0br733tnjiqjmh51vlppu0ecuqgk2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "life.corals.customer"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090184350640:android:6511e3580b393cec",
+        "android_client_info": {
+          "package_name": "life.corals.merchant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1090184350640-oa626pkbsfet6582r89jd6tjrm4ur1il.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrs4gi-olU-5G5yQ5uxCvXsvSNd-Wlh8w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1090184350640-oa626pkbsfet6582r89jd6tjrm4ur1il.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1090184350640-dpi0br733tnjiqjmh51vlppu0ecuqgk2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "life.corals.customer"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/corner_curve"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/qr_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="QR Name"
+        android:textAppearance="@style/headerTextStyle"
+        android:textColor="@color/matt_black"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:background="@color/LightGrey" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:elevation="4dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="10dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/qr_code_imageview"
+            android:layout_width="270dp"
+            android:scaleType="fitCenter"
+            android:layout_height="270dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_qr"
+            app:riv_corner_radius="10dp" />
+   </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/helptxt"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:text="Help text"
+        android:padding="2dp"
+        android:textSize="14sp"
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/helptxt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="Help text two"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="3dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/btnGreen"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingStart="80dp"
+            android:paddingEnd="80dp"
+            android:text="Close"
+            android:textAllCaps="false"
+            android:textAppearance="@style/buttontextStyle"
+            android:textColorHint="@color/white" />
+
+    </LinearLayout>
+</LinearLayout>

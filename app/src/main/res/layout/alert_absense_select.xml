@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:elevation="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:padding="1dp"
+            android:text="Absense for..."
+            android:textAppearance="@style/subHeaderTextStyle"
+            android:textColor="@color/black_color"
+            android:textSize="20sp">
+
+        </TextView>
+
+        <RadioGroup
+            android:id="@+id/absense_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <RadioButton
+                android:id="@+id/ab_three_days"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text=">2 days"
+                android:textColor="@color/rich_black" />
+
+            <RadioButton
+                android:id="@+id/ab_five_days"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text=">4 days" />
+
+            <RadioButton
+                android:id="@+id/ab_seven_days"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text=">6 days" />
+
+            <RadioButton
+                android:id="@+id/ab_ten_days"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text=">10 days" />
+
+            <RadioButton
+                android:id="@+id/ab_fifteen_days"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text=">15 days" />
+
+            <RadioButton
+                android:id="@+id/ab_twenty_days"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text=">21 days" />
+
+            <RadioButton
+                android:id="@+id/ab_twentyfive_days"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text=">30 days" />
+
+            <RadioButton
+                android:id="@+id/ab_thirty_days"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text=">60 days" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/failed_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:drawableStart="@drawable/ic_failed"
+                    android:drawablePadding="3dp"
+                    android:text="please select any one and continue"
+                    android:textColor="@color/redbtn"
+                    android:visibility="gone">
+
+                </TextView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/continue_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="0dp"
+                    android:backgroundTint="@color/btnGreen"
+                    android:text="Next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/White"
+                    android:textSize="18sp">
+
+                </com.google.android.material.button.MaterialButton>
+            </LinearLayout>
+        </RadioGroup>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

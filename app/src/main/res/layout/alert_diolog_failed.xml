@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="4dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_curve"
+        android:orientation="vertical">
+
+        <!-- <RelativeLayout
+             android:id="@+id/relative_layout"
+             android:layout_width="wrap_content"
+             android:layout_height="50dp"
+             android:layout_gravity="center">
+
+         </RelativeLayout>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent_white"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="Oops !"
+            android:textColor="@color/matt_black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/LightGrey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <TextView
+                android:id="@+id/oops"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Failed !"
+                android:textAlignment="center"
+                android:textAppearance="@style/subHeaderTextStyle" />
+
+            <TextView
+                android:id="@+id/alert_diolog_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="Unable to register \n please try again later"
+                android:textAlignment="center"
+                android:textAppearance="@style/subHeaderTextStyle"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonOk"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/btnGreen"
+                    android:backgroundTint="@color/btnGreen"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="3dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="OK"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/buttontextStyle"
+                    android:textColor="@color/white"
+                    app:strokeColor="@color/btnGreen" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

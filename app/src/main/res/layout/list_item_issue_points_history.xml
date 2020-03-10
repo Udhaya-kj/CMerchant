@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingLeft="3dp"
+    android:paddingEnd="3dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:elevation="3dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/name_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:singleLine="true"
+                        android:id="@+id/name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="Customer Name"
+                        android:textAppearance="@style/subHeaderTextStyle"
+                        android:textColor="@color/matt_black"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:id="@+id/issue_customer_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:textColor="@color/matt_black"
+                        android:gravity="start"
+                        android:text="23232255344"
+                        android:textAppearance="@style/subHeaderTextStyle"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:singleLine="true"
+                        android:id="@+id/cust_id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="Customer ID"
+                        android:textAppearance="@style/subHeaderTextStyle"
+                        android:textColor="@color/matt_black"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:id="@+id/issue_customer_id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:textColor="@color/matt_black"
+                        android:gravity="start"
+                        android:text="23232255344"
+                        android:textAppearance="@style/subHeaderTextStyle"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:singleLine="true"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="Mobile Number"
+                        android:textAppearance="@style/subHeaderTextStyle"
+                        android:textColor="@color/matt_black"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:id="@+id/issue_mobile_number"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="start"
+                        android:textColor="@color/matt_black"
+                        android:text="9876543210"
+                        android:textAppearance="@style/subHeaderTextStyle"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:id="@+id/type"
+                        android:singleLine="true"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:textColor="@color/matt_black"
+                        android:text="Transaction Type"
+                        android:textAppearance="@style/subHeaderTextStyle"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4">
+
+                        <TextView
+                            android:id="@+id/points_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="1dp"
+                            android:gravity="start"
+                            android:singleLine="true"
+                            android:text="Redeem"
+                            android:textAppearance="@style/subHeaderTextStyle"
+                            android:textColor="@color/matt_black"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:id="@+id/points"
+                        android:singleLine="true"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:textColor="@color/matt_black"
+                        android:text="Points Issued"
+                        android:textAppearance="@style/subHeaderTextStyle"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4">
+
+                        <TextView
+                            android:singleLine="true"
+                            android:id="@+id/issue_points_added"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="1dp"
+                            android:gravity="start"
+                            android:textColor="@color/matt_black"
+                            android:text="@string/initial_value"
+                            android:textAppearance="@style/subHeaderTextStyle"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:singleLine="true"
+                        android:text="Issue Time"
+                        android:textAppearance="@style/subHeaderTextStyle"
+                        android:textColor="@color/matt_black"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:id="@+id/issue_issued_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:textColor="@color/matt_black"
+                        android:gravity="start"
+                        android:text="23-jan-2019 2:30:20 PM "
+                        android:textAppearance="@style/subHeaderTextStyle"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:singleLine="true"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="Points Balance"
+                        android:textAppearance="@style/subHeaderTextStyle"
+                        android:textColor="@color/matt_black"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4">
+
+                        <TextView
+                            android:singleLine="true"
+                            android:id="@+id/issue_points_balance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="1dp"
+                            android:gravity="start"
+                            android:textColor="@color/matt_black"
+                            android:text="@string/initial_value"
+                            android:textAppearance="@style/subHeaderTextStyle"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:singleLine="true"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="Expiry Date"
+                            android:textAppearance="@style/subHeaderTextStyle"
+                            android:textColor="@color/matt_black"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/issue_expiry_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1.4"
+                            android:gravity="start"
+                            android:singleLine="true"
+                            android:text="23 feb 2019"
+                            android:textAppearance="@style/subHeaderTextStyle"
+                            android:textColor="@color/matt_black"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:singleLine="true"
+                        android:layout_marginEnd="4dp"
+                        android:id="@+id/customer_active"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:gravity="end|center"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="10dp"
+                        android:text="Not active "
+                        android:textAppearance="@style/headerTextStyle"
+                        android:textColor="@color/IndianRed"
+                        android:textSize="12sp"
+                        android:textStyle="italic">
+
+                    </TextView>
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

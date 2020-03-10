@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@drawable/navigation_drawable"
+    android:gravity="start|center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:topRightRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="28dp"
+            android:gravity="start|center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/corals_merchant"
+                    android:textAppearance="@style/headerTextStyle"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:layout_marginStart="8dp"
+                    android:id="@+id/version_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|bottom"
+                    android:textAppearance="@style/subHeaderTextStyle"
+                    android:text="v1.1"
+                    android:textColor="@color/light_light"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/business_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/corals_merchant"
+                android:textAppearance="@style/textStyle"
+                android:textColor="@color/lynch_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/off_white" />
+</LinearLayout>

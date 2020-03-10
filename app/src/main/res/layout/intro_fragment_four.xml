@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout_intro_fragment_four"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:foregroundGravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:layout_marginBottom="60dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="30dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Congratulations"
+                            android:textAppearance="@style/headerTextStyle"
+                            android:textColor="@color/matt_black"
+                            android:textSize="20sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="80dp"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:textColor="@color/matt_black"
+                            android:text="You have successfully registered to Corals"
+                            android:textAppearance="@style/subHeaderTextStyle"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:textColor="@color/matt_black"
+                            android:padding="10dp"
+                            android:text="You had taken right step forword to retain and grow your customer base"
+                            android:textAppearance="@style/subHeaderTextStyle"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/admin_text_one"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textColor="@color/matt_black"
+                            android:text="@string/admin_text_one"
+                            android:textAppearance="@style/subHeaderTextStyle"
+                            android:textSize="16sp"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/admin_text_two"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textColor="@color/matt_black"
+                            android:text="@string/admin_text_two"
+                            android:textAppearance="@style/subHeaderTextStyle"
+                            android:textSize="16sp"
+                            android:visibility="visible" />
+
+                        <!-- <TextView
+                             android:id="@+id/admin_text_three"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="10dp"
+                             android:gravity="center"
+                             android:padding="10dp"
+                              android:textColor="@color/matt_black"
+                             android:text="@string/admin_text_three"
+                             android:textAppearance="@style/subHeaderTextStyle"
+                             android:textSize="16sp"
+                             android:visibility="gone" />-->
+                    </LinearLayout>
+
+            </FrameLayout>
+
+
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:text="By using this application I fully agreed to"
+                    android:textAppearance="@style/textStyle"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/terms_conditions_introfrag_one"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="3dp"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:text="@string/terms_and_conditions_u"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/subHeaderTextStyle"
+                    android:textColor="@color/matt_black"
+                    android:textColorHint="@color/matt_black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/and"
+                    android:textAppearance="@style/textStyle"
+                    android:textColor="@color/dark_gray" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/privacy_policy_introfrag_one"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="3dp"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:text="@string/privacy_policy_u"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/subHeaderTextStyle"
+                    android:textColor="@color/light_black"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/ok_btn"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/green_btn"
+            android:backgroundTint="@color/btnGreen"
+            android:gravity="center"
+            android:text="@string/continue_txt"
+            android:textAllCaps="false"
+            android:textAppearance="@style/buttontextStyle"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </FrameLayout>
+</LinearLayout>

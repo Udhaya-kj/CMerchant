@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="life.corals.merchant">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup">
+        <activity android:name=".activity.VoucherPerformanceActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".activity.VoucherSetupTypes"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.VoucherSetupPreview"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.VoucherSetupCreate"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.VoucherSetupHome"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.ShowQrActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.QrActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.SplashScreen"
+            android:theme="@style/AppTheme.SplashNoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.Homenew"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.SendNotificationActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.HistoryIssuePoints"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.AwardCashbackActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.MyCustomers"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.IntroActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.TermsandConditions"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.PrivacyPolicy"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.CashCampaigns"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.PerformanceActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.PerformanceGraphHomePage"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.CashTopupScreenScanner"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.CashTopupScreenSuccess"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.ReceivePaymentScreenTwo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.ReceivePaymentScreenOne"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name=".activity.HistoryTopup"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.RedeeemPoints"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.HistoryHomePage"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.ViewNotificationActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name=".fcm.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@android:color/transparent" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_splash_new" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

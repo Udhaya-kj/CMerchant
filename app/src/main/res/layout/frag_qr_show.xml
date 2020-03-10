@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:background="@drawable/corner_curve"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:id="@+id/qr_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="QR Name"
+        android:textAppearance="@style/headerTextStyle"
+        android:textColor="@color/matt_black"
+        android:textSize="16sp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="30dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:elevation="4dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="10dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/qr_code_imageview"
+            android:layout_width="match_parent"
+            android:scaleType="fitCenter"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_qr"
+            app:riv_corner_radius="10dp" />
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/helptxt"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:text="Help text"
+        android:padding="2dp"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/helptxt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="Help text two"
+        android:textSize="12sp" />
+
+</LinearLayout>

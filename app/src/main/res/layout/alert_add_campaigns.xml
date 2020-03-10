@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Create New Campaign"
+                android:textAppearance="@style/headerTextStyle"
+                android:textColor="@color/matt_black"
+                android:textSize="16sp" />
+
+        </FrameLayout>
+
+        <View
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@color/LightGrey"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp">
+
+        </View>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:textColor="@color/matt_black"
+                android:textAppearance="@style/subHeaderTextStyle"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Amount">
+
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_camp_amount"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="200dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:background="@drawable/edittext_corner"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="7"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:textSize="14sp"
+                android:textColor="@color/matt_black"
+                android:textAppearance="@style/subHeaderTextStyle"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bonus">
+
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_camp_bonus"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="200dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/edittext_corner"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="7"
+                android:textSize="18sp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="3dp"
+                android:orientation="horizontal"
+                android:weightSum="6.8">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3">
+
+                </View>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cancel_btn"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="3"
+                    android:backgroundTint="@color/redbtn"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:text="@string/cancel"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/buttontextStyle"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2">
+
+                </View>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/okay_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="3"
+                    android:backgroundTint="@color/btnGreen"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    android:text="Create"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/buttontextStyle"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3">
+
+                </View>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

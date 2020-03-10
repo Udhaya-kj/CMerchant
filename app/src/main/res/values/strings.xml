@@ -1,0 +1,486 @@
+<resources>
+    <string name="app_name">C Merchant</string>
+    <string name="app_name_app">Corals Merchant</string>
+    <string name="title_activity_dash">Dash</string>
+    <string name="title_home">Home</string>
+    <string name="title_history">History</string>
+    <string name="title_reports">Reports</string>
+    <string name="title_more">More </string>
+    <string name="agree_continue"><![CDATA[Agree & Continue]]></string>
+    <string name="terms_conditions_value">Lorem ipsum dolor sit amet,consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Posuere ac ut consequat semper viverra.Felis donec et odio pellentesque.Elementum nisi quis eleifend quam adipiscing vitae proin.Fermentum et sollicitudin ac orci phasellus egestas tellus retrum.Ligula ullamcorper malesuada proin libero</string>
+    <string name="terms_conditions_title">Terms &amp; Conditions</string>
+    <string name="cancel">Cancel</string>
+    <string name="next">Next</string>
+    <string name="confirm">Confirm</string>
+    <string name="okay">OK</string>
+
+    <string name="dollar">$</string>
+    <string name="topup_amount">Topup Amount</string>
+    <string name="topup_amount_col">Topup Amount: </string>
+    <string name="medium_spender_tier">Medium Spender Tier</string>
+    <string name="bonus_awarded">Bonus Awarded</string>
+    <string name="low_spender_tier">Low Spender Tier</string>
+    <string name="bonus">Bonus</string>
+    <string name="input">Input</string>
+    <string name="topup">Topup</string>
+    <string name="initial_value">0.00</string>
+    <string name="review_and_confirm">Review and Confirm</string>
+    <string name="success">success</string>
+    <string name="code">CODE :</string>
+    <string name="search">Search</string>
+    <string name="percentage_symbol">%</string>
+
+    <string name="title_activity_home_page">HomePage</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="topup_nav">Top Up</string>
+    <string name="Top_up">Topup Campaigns</string>
+    <string name="secure_pin">Secure PIN</string>
+    <string name="history">History</string>
+    <string name="my_customers">My Customers</string>
+    <string name="log_out">Log Out</string>
+    <string name="performance">Insights</string>
+    <string name="add_outlets">Add Outlets</string>
+    <string name="home">Home</string>
+    <string name="activation_code">Activation code</string>
+    <string name="initial_timestamp">00:00:00</string>
+    <string name="waiting_for_acceptance">Waiting for Acceptance…</string>
+    <string name="show_qr_code">Show QR Code</string>
+    <string name="notify_to_new_user">This is a new customer. Ask them to enroll in membership program. Click here to send  <a href="sms_body">Invite SMS</a> </string>
+    <string name="notify_to_existing_user">This is a existing customer has not enrolled yet to your membership program. Click here to send  <a href="sms_body">Notify User</a> </string>
+
+    <string name="good_status">your are performing better than last</string>
+    <string name="equal_status"> your are performing same as last </string>
+    <string name="bad_status"> your performance is not as good as last</string>󠀽
+
+    <string name="bad_emoji"><b>👎</b>󠀽󠀽󠀽</string>
+    <string name="good_emji"><b>👍</b></string>
+    <string name="equal_emji"><b>🤝</b></string>
+
+    <string name="good_tip">No tips. You\'re already a champion</string>
+    <string name="equal_tip">It is a time to send a message to your customers</string>
+    <string name="bad_tip">Issue points to every customer. Remind customer to join membership</string>
+    󠀽
+
+    <string name="profile">Profile</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="privacy_policy_u"><u>Privacy policies</u></string>
+    <string name="terms_and_conditions_u"><u>Terms and Conditions</u></string>
+    <string name="todo">TODO</string>
+    <string name="insight_msg1">This week, you have awarded 100 points less so far compared to 1000 last week.</string>
+    <string name="insight_msg2">Number of customers has reduced by 10 compare to 100 last week. </string>
+
+    <string name="topupconfirmationmsg">Ensure you received money from Customer before clicking Yes and Customer has selected the same amount to top up from their mobile.\n\nCustomer has to scan QR code in next screen.</string>
+    <string name="termsconditonslongvalue">
+<![CDATA[
+<html>
+<head>
+</head>
+<body>
+<p><span class="tc">TERMS AND CONDITIONS</span></p>
+<p><span class="tb">Last modified: 15-Jul-2019</span></p>
+<p><span class="tb">Thanks for your interest to use our products and services (“Services”). The Services are provided by The Services are provided by CORALS LIFE PTE. LTD., SINGAPORE ("Corals", "us", "We", "Our", “Platform”).
+</span></p>
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">
+These terms and conditions (“Agreement”) are the legally binding terms and conditions between (1) Corals, a company incorporated in Republic of Singapore with ACRA Company No.: 201919945W; and (2) the party being a merchant, retailer, commercial or other registered or organized entity (“Merchant”) (collectively, “you” or its derivatives), governing the access to or use of (“use” or its derivatives) Coral’s digital assets - Corals website, Corals managed or published mobile applications and any services offered by Corals (collectively, the “Services”), An individual user (“Individual User”) signed up as an individual to use Merchant (“your”) schemes using our Services. By registering to use the Service offered by Corals you acknowledge that You have read and understood these Terms and have the authority to act on behalf of any person for whom you are using the Service. You are deemed to have agreed to these Terms on behalf of any entity for whom you use the Service.
+</span></p>
+
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">
+1. License
+</span></p>
+<p><span class="tb">
+Corals offers you a revocable, non-transferable, non-exclusive and limited license to use the Services, upon the terms and conditions of this Agreement.
+
+</span></p>
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">
+2. Conditions
+</span></p>
+<p><span class="tb">
+(i) Merchant shall use the Services only for its own business purposes, strictly in accordance with service agreement signed with Corals or as otherwise expressly agreed in writing by Corals under any applicable merchant agreement between the Merchant and us, always as intended, described or implied by Corals, and not for any purpose that is unlawful or prohibited by any applicable law, in contravention or infringement of the rights of third parties or in any way that could be detrimental to Corals or the Services; <br>(ii) authorises Corals to disclose any information provided by the Merchant in relation to the Merchant Scheme to any Individual User who is, or is applying to be, registered in respect of such Merchant Scheme, and Corals may, if it considers appropriate in its sole discretion, approve, modify or refuse any communications related to us from the Merchant to Individual Users. <br>(iii) authorizes Corals to contact or share or promote our services relating to other Merchants on Corals to Individual Users who have signed up for your Merchant Scheme. <br>(iv) You are fully responsible for all actions and transactions performed using the Corals services by your staff / employees. <br>(v) You agree to provide access and maintain active staff and inform us promptly of any breach / revocation of access.
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">3. Scope of Data</span></p>
+
+<p><span class="tb"> In the course of business, Merchant could receive personal information of users collected through Corals. <br>(i) Merchant agree to use the data only for loyalty purposes and not for any other purposes. <br>(ii) Merchant agree to destroy all personal information of the individual user if requested by customer or Corals or if customer ends relationship with merchant loyalty scheme. <br>(iii) In case of any data breach, Merchant would immediately inform Corals.
+</span></p>
+ <p><span>&nbsp;</span></p>
+
+<p><span class="tb">4. Restrictions</span></p>
+
+<p><span class="tb"> Without prejudice to the generality of the foregoing, you shall not, in any way, directly or indirectly, in relation to any of the Services or part thereof:<BR> (i) sell, rent, lease, license or sublicense, assign, distribute, or transfer the Services; <BR>(ii) violate or compromise the functionality or security of the Services, including without limitation by copying, reproducing, creating derivative works of, deciphering, translating, disassembling, decompiling, reverse engineering or discovering, deriving or removing source code or trade secrets of the Services, whether in respect of any intellectual property, ideas, algorithms, file formats, programming, interoperability interfaces or otherwise, or make attempts to do any of the foregoing; or <BR>(iii) export or re-export the Services; or <BR>(iv) make attempts to do any of the foregoing, without our express prior written approval.
+</span></p>
+
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">
+5. Disclaimer
+</span></p>
+ <p><span class="tb">
+Corals may provide you with information on Individual Users or third parties who may or may not be users of the Services (collectively, “Third Parties”) or links to other websites or services on the Internet (“Third Party Websites”). Corals does not control and is not responsible for: <br>(i) the acts, omissions, or compliance with any applicable laws, rules or regulations, of any Third Parties; or <br>(ii) the functionality, security or any other aspect of any Third Party Websites. Corals does not verify, control and is not responsible for the accuracy, completeness or currency of any information provided in respect of any Third Parties, including any Individual User or Merchant, or any Third Party Website. You acknowledge and agree that in dealing with any Third Parties, using any Third Party Websites, or relying on any information provided to you under the Services, you do so at your own risk.
+</span></p>
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">
+6. No Warranty
+</span></p>
+<p><span class="tb">
+While Corals aims to make the services available, functional and secure as far as reasonably possible, your attention is specifically drawn to the fact that corals makes no representations or warranties of any kind, express or implied, with respect to the services provided, including, without limitation, any warranty of merchantability or fitness for a particular purpose, and corals hereby expressly disclaims the same. in addition, the services are provided on an “as is” basis and corals does not warrant that the services will be uninterrupted, error-free or completely secure. further, corals may, if it deems appropriate in its sole discretion and with or without prior notice, update, modify, release new versions of, restrict, suspend or terminate any of the services provided. You understand, acknowledge and agree to the foregoing, and that your use of the services is subject to the same, and you agree to put in place such contingency plans as are necessary taking into account the foregoing.
+
+</span></p>
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">
+7. LIMITATION ON LIABILITY
+</span></p>
+<p><span class="tb">
+ YOU ACKNOWLEDGE AND AGREE THAT CORALS SHALL NOT, UNDER ANY CIRCUMSTANCES, AND TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, BE LIABLE TO YOU FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL LOSSES, DAMAGES, LIABILITIES, CLAIMS, COSTS AND/OR EXPENSES OF ANY KIND WHATSOEVER INCLUDING LOSS PROFITS, LOSS OF REVENUE, LOSS OF CHANCE, LOSS OF DATA AND COSTS INCURRED TO LIMIT ANY OF THE FOREGOING ARISING OUT OF THIS AGREEMENT OR YOUR USE OF THE SERVICES, WHETHER BASED IN CONTRACT, OR ANY OTHER LEGAL THEORY, EVEN IF SUCH LOSSES OR DAMAGES WERE FORESEEABLE AND YOU ARE AWARE OR HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSSES OR DAMAGES.
+
+</span></p>
+<p><span class="tb">
+THE MERCHANT ACKNOWLEDGES AND AGREES THAT IN ANY EVENT, CORALS’S TOTAL LIABILITY TO A MERCHANT FOR ANY AND ALL CLAIMS WHATSOEVER ARISING UNDER OR RELATING TO THIS AGREEMENT SHALL NOT EXCEED THE AMOUNT OF COMMISIIONS (EXCLUDING TRANSACTION COSTS) OR FEES PAID BY THE MERCHANT TO CORALS UNDER THIS AGREEMENT DURING THE THREE (3) MONTHS PRECEDING THE DATE OF FORMAL COMMENCEMENT OF ACTION BY THE MERCHANT IN RESPECT OF ANY CLAIM.
+
+</span></p>
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">
+8. Indemnity</span></p>
+<p><span class="tb">
+You shall, at your sole cost and expense, defend, indemnify and hold harmless Corals, Corals’s employees, directors and officers as well as any Corals affiliates, such as agents, sub-contractors, accountants, bankers, financial or legal advisors or consultants, from and against any direct, indirect, special, incidental or consequential losses, damages, liabilities, claims, costs and/or expenses of any kind whatsoever including loss profits, loss of revenue, loss of chance, loss of data, costs incurred to limit any of the foregoing arising out of your breach of any of the terms of this Agreement, Misuse of services by you, any non-compliance with Law, any data breaches resulting from data shared by Corals
+
+</span></p>
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">
+9.Representations and Warranties
+
+</span></p>
+
+<p><span class="tb">The Merchant represents and warrants that: (i) it is a duly established and existing legal entity in its country of incorporation and all necessary approvals, permits, authorization and licenses from the authorities required by it under the laws and regulations of its country of incorporation to enter into and perform this Agreement have been obtained; (ii) all actions have been taken by it to comply with all legal, corporate and other requirements necessary to ensure that the entry and performance of this Agreement will not infringe any laws or regulations applicable to it or contravene its constitutional documents or any agreement or contract binding on it; and (iii) the Agreement is binding and enforceable against the Merchant in accordance with all its terms.</span></p>
+<p><span>&nbsp;</span></p>
+
+
+<p><span class="tb">10. Intellectual Property</span></p>
+
+<p><span class="tb">Corals owns all right, title and interest in and to the Services including, without limitation, any intellectual property rights and any improvements, modifications, enhancements or refinements thereto. Except as provided in this Agreement, all such rights not expressly granted to you are reserved.</span></p>
+
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">11. Confidentiality
+</span></p>
+<p><span class="tb"> Each party acknowledges that in connection with this Agreement it will have access to certain confidential, personal and/or proprietary information of the other party (“Confidential Information”). Confidential Information includes but is not confined to information either marked as confidential or information known by the receiving party as being treated by the disclosing party as confidential, and shall remain the sole property of the disclosing party. The receiving party agrees to keep Confidential Information confidential and not to use such information except as authorized by this Agreement or the disclosing party, and to accord to such information the same standards and protections that it uses to protect its own confidential information, save that the receiving party shall have the right to disclose Confidential Information to the extent required by applicable law or to the directors, officers or employees of the receiving party who have a need to know such Confidential Information in order to perform its obligations under the Agreement and to the extent such directors, officers or employees are subject to obligations of confidentiality and non-disclosure that are substantially similar to the obligations set forth in this Agreement. The prohibitions contained herein will not apply to information: (i) already lawfully known to the receiving party prior to such disclosure by the disclosing party; (ii) independently developed by the receiving party without access to or use of the disclosing party’s Confidential Information; (iii) disclosed in published materials; (iv) generally known to the public; or (v) lawfully obtained from any third party. In addition, a party will not be considered to have breached its obligations under this Agreement to the extent that Confidential Information is required to be disclosed by any governmental authority, provided that, to the extent legally practicable, the receiving party advises the disclosing party prior to making such disclosure in order that the disclosing party may object to such disclosure, take action to ensure confidential treatment of the Confidential Information, or take such other action as it considers appropriate to protect the Confidential Information. Except for Confidential Information necessary for the performance of obligations or exercise of rights under this Agreement, materials or documents containing Confidential Information will be returned to the disclosing party promptly following written requests thereof or otherwise in accordance with this Agreement.
+</span></p>
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">12. Force Majeure
+</span></p>
+<p><span class="tb">If any party is prevented from performing any of its obligations under the Agreement due to any cause beyond the party’s reasonable control, the time for that party’s performance will be extended for the period of the delay or failure to perform due to such cause, except that you will not be excused from the payment of any sums of money owed by you to Corals prior to such cause.
+</span></p>
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">13. Termination
+</span></p>
+<p><span class="tb">Corals or the Merchant may terminate this Agreement in accordance with the Merchant Agreement, the Subscription Plan, or this Agreement. In the event of any inconsistency in the terms thereof, the following shall prevail from most to least controlling: Merchant Service Agreement; and this Agreement. If the Merchant enters into a Merchant Subscription Plan for our services, at the end of the applicable Subscription Plan (“existing subscription”), Subscription Plan will automatically renew for another term (depending on the existing term) unless either party gives written notice to the other party at least thirty (30) days before the expiration of existing subscription plan of the party’s intent not to renew. No subscription amount shall be refunded to Merchant upon termination. Each party (“Terminating Party”) shall have the right to terminate the Agreement with immediate effect by giving written notice to the other party (“Other Party”), or in the case of termination by Corals, by Corals ceasing to provide the Services to the Merchant, or in the case of termination by the Merchant, by the Merchant de-registering its account with Corals: (i) if the other party becomes insolvent, goes into liquidation, passes any resolution for its liquidation or winding up, or any step is taken by the Other Party or any other third party for the appointment of a receiver, judicial manager or like officer in relation to the Other Party; (ii) upon the dissolution of the Other Party; or (iii) if the Other Party is in material breach of any of its obligations under this Agreement (including non-payment of any amounts due and payable by the Merchant to Corals) and has not cured such breach to the reasonable satisfaction of the Terminating Party within fourteen (14) days of the Terminating Party’s notice to the Other Party to cure such breach. Upon knowledge of termination:  (i) Corals has all rights to inform any Individual User which has registered with the Merchant in respect of any Merchant Scheme of the Merchant’s termination of this Agreement and any matter relating thereto, and may delete or retain information relating to the Merchant as allowed or required under applicable law; and (ii) the Merchant shall immediately cease using the Services in any way save only for the purposes of terminating the Agreement or complying with any obligations surviving thereafter. (iv) the Merchant is fully liable in honoring all offers not limited to advances received, promise of offers made, unfulfilled discounts to the Individual User registered with the Merchant. Liability of Corals ends with informing the Individual User of termination of Agreement between the Merchant and Corals.
+</span></p>
+<p><span class="tb">In the event that merchant payments are not settled in full within due date of the invoice, we have right to limit some or All capabilities in the application without any notice to you until full payment with outstanding interest is made. In the event of payment delayed beyond 20 calendar days, from the invoice date, we reserve right to terminate your service without notice. We reserve right to inform Individual users enrolled with your program on the situation and may advise them to make arrangements with you on the alternate arrangement on their deals or wallet balances.
+</span></p>
+<p><span class="tb">Surviving Obligations: The obligations of Corals and you under this Agreement that by their nature would continue beyond the termination of this Agreement, including without limitation obligations of confidentiality, shall survive termination thereof.
+</span></p>
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">14. Notices
+</span></p>
+<p><span class="tb">In Writing. Any reference in this Agreement to a notice or the terms “in writing”, “written” or similar shall include the same delivered or done in electronic form or by electronic means. Any notice under this Agreement shall be given: (i) electronically, when receipt is confirmed by the receiving party, evidenced by electronic evidence of delivery, or when reasonably understood or expected to have been received, whichever is the earliest; or (ii) by delivery to the party in person, by courier, by facsimile or by registered mail when receipt is confirmed by the receiving party or respectively, at the time of delivery in person, one day after courier delivery, one day after facsimile transmission, and two business days after delivery of registered mail, whichever is the earliest.
+</span></p>
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">15. Independent Contractors
+</span></p>
+<p><span class="tb"> The relationship between Corals and you is that of independent contractors and nothing in this Agreement and no action taken by the parties hereunder shall create or be construed as creating any agency, distributorship, partnership, joint venture or the like for any purpose whatsoever and neither party shall have the power to bind the other or incur obligations on the other’s behalf without the other’s prior written consent.
+</span></p>
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">16. Assignment
+</span></p>
+<p><span class="tb"> This Agreement shall inure to the benefit of and be binding upon the parties hereto and their respective successors and assigns, but shall not be assignable by you without Corals’s prior written consent.
+</span></p>
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">17. Severability
+</span></p>
+<p><span class="tb"> If any provision or part thereof of this Agreement is held to be unenforceable or invalid for any reason, by virtue of being illegal, contrary to public policy or for any other reason, the remaining provisions or parts thereof, to the fullest extent possible, shall continue in full force and effect.
+</span></p>
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">18. Entire Agreement
+</span></p>
+<p><span class="tb">This Agreement shall include and apply to the terms of any Merchant Agreement and Subscription Plan. In the event of any inconsistency in the terms thereof, the following shall prevail from most to least controlling: (1) Merchant Service Agreement; (2) Subscription Plan; and (3) this Agreement. This Agreement constitutes the entire agreement between the parties and supersedes all prior statements, whether oral or written, representations, discussions, negotiations and agreements, by phone, e-mail, instant messaging or other means.
+</span></p>
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">19. Amendment and Waiver
+</span></p>
+<p><span class="tb">Corals may amend any of the terms and conditions of this Agreement from time to time, and shall publish the updated terms and conditions on Corals website or through the Services. You shall be solely responsible for regularly reviewing and keeping yourself informed and up to date of the terms and conditions of this Agreement. The failure of either party to exercise or enforce any of its rights under the Agreement will not act as a waiver of any breach and the waiver of any breach will not act as a waiver of any subsequent breaches.
+</span></p>
+<p><span>&nbsp;</span></p>
+
+
+<p><span class="tb">20. Further Assurances
+</span></p>
+<p><span class="tb"> The parties shall each do all such acts, matters and things as may be reasonably necessary to give full effect to this Agreement.
+</span></p>
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">21. Fees and taxes
+</span></p>
+<p><span class="tb"> The fees charged for use of the Corals services are set out on the Website (or as offered to you in the case of some exclusive plans) (“Fees”) and are subject to change. We can change the Fees, and/or introduce new pricing packages and terms, at any time by giving you 30 days’ prior notice (by email to your Primary Admin or by displaying a message the next time you use the Corals). The new Fees or pricing/package terms will apply to you from expiry of that notice, unless you choose to cancel your account before the changes take effect. Also, the new Fees will apply to you immediately if you choose to change your plan/package (or if you reactivate your plan after cancellation). Fees are charged in advance on a monthly or annual basis and are non-refundable, including if you only use part of a month or year’s subscription for the Corals Services unless an exclusive payment contract is signed between the merchant and Corals. Unless required by law, we will not provide refunds in connection with the Corals Services.
+</span></p>
+<p><span class="tb">If you are late in paying any Fees including commission charges or have outstanding payments beyond due date, you agree to pay a late fee with interest on outstanding amounts as stated on the Merchant service Agreement.
+</span></p>
+<p><span class="tb">All Fees are exclusive of all taxes and you are responsible for any taxes that may arise. You indemnify and hold Corals harmless against any claims by any tax authority for any underpayment of any sales, use, goods and services, value added or other tax or levy, and any penalties and/or interest. If you are required to withhold or deduct tax from the Fees, you will pay Corals such additional amounts as are necessary to ensure receipt of the full amount which would have been received but for the deduction.
+</span></p>
+<p><span class="tb">If you are located outside of Singapore, then payment of your Fees could incur additional bank fees at the discretion of your bank. Bank fees may be charged for currency conversion and international settlement; and your charge may still be subject to additional fees even if you are being charged by Corals in your local currency. If your credit card statement charge differs from your Corals invoice, please contact your bank in the first instance. Corals is not liable for any additional bank transaction fees that may be charged.
+</span></p>
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">22. No Third-Party Rights
+</span></p>
+<p><span class="tb"> A person who is not a party to this Agreement has no right under the Contracts (Rights of Third Parties) Act (Cap 53B) to enforce any term of this Agreement.
+</span></p>
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">23. New features and enhancements
+</span></p>
+<p><span class="tb"> From time to time, Corals would upgrade our service with new capabilities, features and security measures. You agree to upgrade your mobile application as and when requested to do so by us or our system. You would also advice your customers to upgrade and maintain latest version of the software. Corals may not communicate the details of the enhancements ahead of the launch. New capabilities that are applicable to you would be available automatically to you. We would make efforts to educate you on the new capability if it affects your operations.
+</span></p>
+<p><span>&nbsp;</span></p>
+
+<p><span class="tb">24. Governing Law and Dispute Resolution
+</span></p>
+<p><span class="tb"> The Agreement is governed by and construed in accordance with the laws of Singapore, to the exclusion of conflict of law principles. The United Nations Convention on Contracts for the International Sale of Goods shall not apply to this Agreement. Any dispute arising from or in connection with this Agreement shall be dealt with by the courts of Singapore and the parties irrevocably submit to the exclusive jurisdiction thereof and agree not to raise any defense of forum non convenience or similar defense.
+</span></p>
+
+
+<p><span class="tb">
+© Copyright CORALS LIFE PTE LTD
+</span></p>
+
+<p><span class="tb">Version 1.16
+ <br><br><br>
+</body></html>
+
+]]> </string>
+
+    <string name="privacypolicylongvalue"><![CDATA[
+<p><span class="tb">PRIVACY POLICY</span></p>
+<p><span class="tb">This Data Protection Notice (&ldquo;Notice&rdquo;) sets out the basis which Corals Life Pte Ltd. (&ldquo;Corals&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) may collect, use, disclose or otherwise process personal data of our customers in accordance with the Personal Data Protection Act (&ldquo;PDPA&rdquo;). This Notice applies to personal data in our possession or under our control, including personal data in the possession of organisations which we have engaged to collect, use, disclose or process personal data for our purposes.</span></p>
+
+<p><span class="tb">Examples of such Personal Data you may provide to us include your name, NRIC, passport or other identification number, telephone numbers, mailing address, email address, network data and any other information relating to any individuals which you have provided us in any forms you may have submitted to us, or via other forms of interaction with you.</span></p>
+
+<p><span class="tb">Collection of Personal Data</span></p>
+
+<p><span class="tb">Generally, We collect Personal Data, either directly from you or from your authorised representatives (i.e. persons whom you have authorised, persons who have been validly identified as being you or your authorised representative pursuant to our then-current security procedures), from third parties, or from publicly available sources or through our website in the following ways:</span></p>
+
+<p><span class="tb">when you submit a form for registering as a customer on our website or any other forms relating to any of our Products and Services</span></p>
+<p><span class="tb">when you interact with our customer service team, for example, via telephone calls, letters, face-to-face meetings and emails</span></p>
+<p><span class="tb">when you use some of our services, for example, websites and apps including establishing any online accounts with us</span></p>
+<p><span class="tb">when you request that we contact you, be included in an email or other mailing list</span></p>
+<p><span class="tb">when you respond to our promotions, initiatives or to any request for additional Personal Data</span></p>
+<p><span class="tb">when you are contacted by, and respond to, our marketing representatives and customer service team</span></p>
+<p><span class="tb">when we receive references from business partners and third parties, for example, where you have been referred by them</span></p>
+<p><span class="tb">when you submit your Personal Data to us for any other reasons.</span></p>
+<p><span class="tb">&nbsp;</span></p>
+
+<p><span class="tb">When you browse our website, you generally do so anonymously but please see paragraph 7 below on cookies</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">If you provide us with any Personal Data relating to a third party (e.g. information of your spouse, children, parents, and/or employees), by submitting such information to us, you represent to us that you have obtained the consent of the third party to provide us with their Personal Data for the respective purposes.</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">You should ensure that all Personal Data submitted to us is complete, accurate, true and correct. Failure on your part to do so may result in our inability to provide you with the Products and Services you have requested.</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">Purposes for the Collection, Use and Disclosure of Personal Data</span></p>
+<p><span class="tb">&nbsp;<br></span></p>
+<p><span class="tb">We collect, may use and disclose your Personal Data for the following purposes:</span></p>
+<p><span class="tb">responding to your queries and requests;</span></p>
+<p><span class="tb">managing the administrative and business operations of Corals and complying with internal policies and procedures;</span></p>
+<p><span class="tb">facilitating business asset transactions (which may extend to any mergers, acquisitions or asset sales) involving any of the Companies; </span></p>
+<p><span class="tb">matching any Personal Data held which relates to you for any of the purposes listed herein;</span></p>
+<p><span class="tb">resolving complaints and handling requests and enquiries;</span></p>
+<p><span class="tb">preventing, detecting and investigating crime and analyzing and managing commercial risks;</span></p>
+<p><span class="tb">providing media announcements and responses;</span></p>
+<p><span class="tb">monitoring or recording phone calls and customer-facing interactions for quality assurance, employee training and performance evaluation and identity verification purposes;</span></p>
+<p><span class="tb">organising promotional events;</span></p>
+<p><span class="tb">legal purposes (including but not limited to obtaining legal advice and dispute resolution);</span></p>
+<p><span class="tb">conducting investigations relating to disputes, billing or fraud;</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">meeting or complying with any applicable rules, laws, regulations, codes of practice or guidelines issued by any legal or regulatory bodies which are binding on Corals (including but not limited to responding to regulatory complaints, disclosing to regulatory bodies and conducting audit checks, due diligence and investigations); and </span></p>
+<p><span class="tb">purposes which are reasonably related to the aforesaid.</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">Where permitted under the Act:</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">Corals may also collect, use and disclose your Personal Data for the following &ldquo;Additional Purposes&rdquo;: </span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">analytics and tracking,</span></p>
+
+<p><span class="tb">conducting market research and surveys to enable us to understand and determine customer location, preferences and demographics to develop special offers and marketing programmes in relation to our Products and Services, and to improve our service delivery and your customer experience at our touchpoints;</span></p>
+
+<p><span class="tb">providing additional Products and Services and benefits to you, including promotions, loyalty and reward programmes from Corals;</span></p>
+<p><span class="tb">matching Personal Data with other data collected for other purposes and from other sources (including third parties) in connection with the provision, marketing or offering of Products and Services by Corals;</span></p>
+
+<p><span class="tb">leads generation and management for marketing Corals&rsquo;s Products and Services;</span></p>
+
+<p><span class="tb">administering contests, competitions and marketing campaigns, and personalising your experience at Corals&rsquo;s touchpoints;</span></p>
+
+<p><span class="tb">communicating to you advertisements involving details of our Products and Services, special offers and rewards, either to our customers generally, or which we have identified may be of interest to you (including but not limited to upselling, cross selling and online marketing);</span></p>
+
+<p><span class="tb">organising promotional events and corporate social responsibility projects; and</span></p>
+
+<p><span class="tb">purposes which are reasonably related to the aforesaid.</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">In addition, where permitted under the Act and subject to the provisions of any applicable law, your Personal Data may be disclosed, for Corals Additional Purposes, to the vendors or other third party service providers in connection with promotions and services offered by Corals.</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">Corals may also collect, use and disclose your Personal Data for the following &ldquo;Preferred Partners Additional Purposes&rdquo;: </span></p>
+<p><span class="tb">&nbsp;</span></p>
+
+<p><span class="tb">conducting market research and surveys to enable us to understand and determine customer location, preferences and demographics to develop special offers and marketing programmes with our preferred partners;</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">matching Personal Data with other data collected for other purposes and from other sources (including third parties) in connection with the provision, marketing or offering of products and services (including promotions, loyalty and reward programmes) by our preferred partners;</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">leads generation and management for marketing the products and services offered by our preferred partners;</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">administering contests, competitions and marketing campaigns in connection with the products and services offered by our preferred partners;</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">communicating to you advertisements involving details of the products, services, special offers and rewards offered by our preferred partners, either to our customers generally, (including but not limited to upselling, cross selling and online marketing); and</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">purposes which are reasonably related to the aforesaid.</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">In addition, where permitted under the Act and subject to the provisions of any applicable law, your Personal Data may be disclosed, for Preferred Partners&rsquo; Additional Purposes, to the vendors or other third party service providers in connection with promotions and services offered by Corals&rsquo;s preferred partners.</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">In relation to particular Products and Services or in your interactions with us, we may also have specifically notified you of other purposes for which we collect, use or disclose your Personal Data. If so, we will collect, use and disclose your Personal Data for these additional purposes as well, unless we have specifically notified you otherwise.</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">Should you wish to withdraw your consent for us to send you sales, marketing or promotional information via a specific mode, please inform us as follows:</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">to withdraw consent from receiving SMS promotions: please unsubscribe by following the steps provided in the promotional SMS;</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">to withdraw consent from promotional emails: please click on the Unsubscribe link in the promotional emails;</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">to withdraw consent from receiving promotional material with your order package: please email customer service, with the words &ldquo;PERSONAL DATA&rdquo; in the subject line, at the address provided below.</span></p>
+
+<p><span class="tb">Please be aware that once we receive confirmation that you wish to withdraw your consent for marketing or promotional materials/communication, it may take up to thirty (30) days for your withdrawal to be reflected in our systems. Therefore, you may still receive marketing or promotional materials/ communication during this period of time. Please note that even if you withdraw your consent for the receipt of marketing or promotional materials through a specific mode, we may still contact you for other purposes in relation to the Products and Services that you hold or have subscribed to with us.</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">Disclosure of Personal Data </span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">Corals will take reasonable steps to protect your Personal Data against unauthorised disclosure. Subject to the provisions of any applicable law, your Personal Data may be disclosed, for the purposes listed above (where applicable), to the following:</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">Our related corporations and employees to provide content, Products and Services to you, address your questions and requests in relation to your customer accounts, subscription and billing or order arrangements with us as well as our Products and Services, to activate, deactivate, install, maintain and operate our systems and/or services;</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">companies providing services relating to insurance and consultancy to us;</span></p>
+<p><span class="tb">agents, contractors or third party service providers who provide operational services to Corals, such as courier services, telecommunications, information technology, payment, printing, billing, payroll, processing, technical services, training, market research, call centre, security or other services to Corals;</span></p>
+<p><span class="tb">vendors or third party service providers in connection with marketing promotions and services offered by Corals or its preferred partners; </span></p>
+<p><span class="tb">commercial shops and retailers in relation to providing rewards and benefits;</span></p>
+<p><span class="tb">any business partner, investor, assignee or transferee (actual or prospective) to facilitate business asset transactions (which may extend to any merger, acquisition or asset sale) involving any of the Companies;</span></p>
+<p><span class="tb">our professional advisers such as auditors and lawyers;</span></p>
+<p><span class="tb">relevant government regulators, statutory boards or authorities or law enforcement agencies to comply with any laws, rules, guidelines and regulations or schemes imposed by any governmental authority; and</span></p>
+<p><span class="tb">any other party to whom you authorise us to disclose your Personal Data to.</span></p>
+<p><span class="tb">&nbsp;</span></p>
+<p><span class="tb">Governing Law </span></p>
+<p><span class="tb">This Personal Data Protection Policy and your use of this website shall be governed in all respects by the laws of Singapore.</span></p><br><br><br>
+</body></html>
+
+   ]]></string>
+    <string name="initial_date_time">01/01/2019 00:00 am</string>
+    <string name="currency_symbol">$</string>
+    <string name="welcome">Corals Merchant</string>
+    <string name="receive_payment">Receive Payments</string>
+    <string name="txn_number">Txn number</string>
+    <string name="initial_txn_value">1234567890</string>
+    <string name="and">and</string>
+    <string name="remind_me_later"><u>Remind me later</u></string>
+    <string name="update">Update</string>
+    <string name="wallet_balance">Wallet Balance:</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="recent_transactions">Recent five Transactions</string>
+    <string name="outlet_name">Outlet Name</string>
+    <string name="scanning_qr">Scanning QR</string>
+    <string name="enter_code">Enter code</string>
+    <string name="waiting_for_qr_code">Waiting for QR Code</string>
+    <string name="bonus_amount">Enter Bonus</string>
+    <string name="top_up_successful">Top Up successful !</string>
+    <string name="corals_merchant">Corals Merchant</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="issue_points">Issue Points</string>
+    <string name="submit">Submit</string>
+    <string name="send_sms">send sms</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="amount">Amount</string>
+    <string name="close">Close</string>
+    <string name="scan_qr">Scan Customer QR</string>
+    <string name="redeem_points">Redeem Points</string>
+    <string name="redeem_campaigns">Redeem Campaigns</string>
+    <string name="existing_customer">Existing Customer (Scan myQR. MyQR icon found in top right corner of the customer home screen)</string>
+    <string name="save">Save</string>
+    <string name="expiry_date">Expiry Date</string>
+    <string name="issue_points_history">Points Issue History</string>
+    <string name="send_message">Send Message</string>
+    <string name="continue_txt">Continue</string>
+    <string name="view_schedules">View schedules</string>
+    <string name="not_admin_text">This mobile will be admin mobile.You would need to authorize from this mobile for any new mobile devices added to receive payments.</string>
+    <string name="admin_text_one">This mobile device is enabled with administration role.</string>
+    <string name="admin_text_two">You can manage all your business parameters with this mobile.</string>
+    <string name="admin_text_three">If you need additional device to be placed at POS, you can add a device from menu.</string>
+    <string name="select_date_time"><![CDATA[Select Date]]></string>
+    <string name="please_select_date_time"><![CDATA[Please select Date & Time]]></string>
+    <string name="back"><u>Back</u></string>
+    <string name="read_later">Read later</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="please_select_any_one_and_continue">please select any one and continue</string>
+    <string name="initial_mobile_number">9876543210</string>
+    <string name="title_activity_maps_location">Corals Merchant</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="set_up_one_now">Set up one now</string>
+    <string name="view_current_schedules">View current schedules</string>
+
+    <string name="message_one_title">We miss you !</string>
+    <string name="message_one_two">Hello,
+ We miss you. It has been more than 10 days since your last visit.
+Let us know if we can do anything to serve you better. We look forward for your visit.
+Show this message and get a free drink. \n\n
+Best Wishes, \n
+Merchant Team</string>
+    <string name="notify_msg_one">Communicating to customers periodically has proven to increase loyalty and speed</string>
+    <string name="notify_msg_two">Thank customers for their visit, remind on products and services, wish an important festival/event</string>
+
+    <string name="title_activity_maps">Map</string>
+    <string name="compose_own_message">Compose own message</string>
+    <string name="select_number_of_days_of_absence">Select number of days of absence</string>
+    <string name="v_performance">Performance</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="product_description">Customer can use this voucher to redeem your product/ service with reward points \ne.g: Get $10 off on your next bill with 500 points</string>
+    <string name="bonus_description">Customer can top up their loyalty prepaid wallet using their reward points \ne.g: Redeem $1 worth of wallet balance for 100 points</string>
+    <string name="bulk_description">Use this voucher is to offer product / service as a bulk purchase \ne.g: Buy 10 hair cuts and get extra 2 hair cuts free </string>
+    <string name="assigned_description">This voucher is to offer free / discounted services as part of bulk buy or separately \ne.g 1: Redeem a Hair cut \ne.g 2: Get 10% off when you present this voucher</string>
+    <string name="MGM_description">Make every customer your marketing agent \ne.g: Refer your friend and get 200 points. Your referral gets 20% discount on first purchase</string>
+
+    <string name="product_title">Product/ Service for Reward Points</string>
+    <string name="bonus_title">Wallet Balance for Reward Points</string>
+    <string name="bulk_title">Bulk Offer Voucher</string>
+    <string name="assigned_title">Assigned Voucher</string>
+    <string name="MGM_title">Member Get Member Voucher</string>
+    <string name="voucher_types_question">Select a type of voucher you want to create?</string>
+    <string name="History">History</string>
+
+</resources>

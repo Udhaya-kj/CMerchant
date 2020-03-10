@@ -1,0 +1,139 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@style/Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:statusBarColor">@color/redbtn</item>
+        <item name="colorPrimary">@color/receivepaymentViolet</item>
+        <item name="colorPrimaryDark">@color/oldBlue</item>
+        <item name="colorAccent">@color/rich_black</item>
+    </style>
+
+    <style name="AppTheme.SplashNoActionBar" parent="@style/Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:statusBarColor">@color/oldBlue</item>
+        <item name="colorPrimary">@color/btnGreen</item>
+        <item name="colorPrimaryDark">@color/yellow</item>
+        <item name="windowActionBar">false</item>
+
+        <item name="android:textColor">@color/rich_black</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="@style/Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="colorPrimary">@color/btnGreen</item>
+        <item name="colorPrimaryDark">@color/yellow</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:textColor">@color/rich_black</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="myEditText" parent="@android:style/Widget.Holo.Light.EditText">
+        <item name="android:background">@android:drawable/alert_light_frame</item>
+        <item name="android:textCursorDrawable">@color/cursercolor</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="headerTextStyle1">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/quicksand_bold</item>
+    </style>
+
+    <style name="MyButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="shapeAppearanceOverlay">@style/MyShapeAppearance</item>
+        <item name="android:color">@color/yellow</item>
+    </style>
+
+    <style name="MyShapeAppearance">
+        <item name="android:color">@color/yellow</item>
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerFamilyTopRight">cut</item>
+        <item name="cornerFamilyBottomRight">cut</item>
+        <item name="cornerSizeTopLeft">32dp</item>
+        <item name="cornerSizeBottomLeft">32dp</item>
+    </style>
+    <style name="subHeaderTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/lato_medium</item>
+    </style>
+
+    <style name="headerTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="navheaderTextStyle">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/lato_regular</item>
+    </style>
+
+    <style name="toolbarHeaderTextStyle">
+        <item name="android:fontFamily">@font/lato_light</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="textStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/lato_light</item>
+    </style>
+
+    <style name="textStylehistory">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/lato_medium</item>
+    </style>
+
+    <style name="toolbarTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="textStylebold">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="buttontextStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/lato_medium</item>
+    </style>
+
+    <style name="titleTextApperance">
+        <item name="android:fontFamily">@font/lato_semibold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:titleTextColor" tools:ignore="NewApi">@android:color/black</item>
+    </style>
+
+    <style name="SheetDialog" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <!--<item name="android:windowCloseOnTouchOutside">false</item>-->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="SheetDialog1" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <!--<item name="android:windowCloseOnTouchOutside">false</item>-->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.7</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+</resources>

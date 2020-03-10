@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/main_layout"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_home_graph"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/actionbar_round_corner_background"
+        android:elevation="4dp"
+        android:textAlignment="center"
+        app:elevation="4dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:title="Reward points"
+        app:titleTextAppearance="@style/toolbarTitle"
+        app:titleTextColor="@color/matt_black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="2dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="@android:color/transparent"
+            android:elevation="2dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="2dp">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout_graph"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/graph_btn_one"
+                android:padding="1dp"
+                android:visibility="visible"
+                app:tabIndicator="@color/matt_black"
+                app:tabIndicatorColor="@color/btnGreen"
+                app:tabSelectedTextColor="@color/matt_black"
+                app:tabTextAppearance="@style/headerTextStyle"
+                app:tabTextColor="@color/LightGrey">
+
+            </com.google.android.material.tabs.TabLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager_graph"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

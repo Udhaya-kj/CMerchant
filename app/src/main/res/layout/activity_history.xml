@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_histry"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/actionbar_round_corner_background"
+        android:elevation="4dp"
+        android:textAlignment="center"
+        app:elevation="4dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:title="TopUp history"
+        app:titleTextAppearance="@style/toolbarTitle"
+        app:titleTextColor="@color/white"
+        tools:targetApi="lollipop"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@android:color/transparent"
+        android:elevation="4dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="5dp">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/topup_tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/graph_btn_one"
+            android:padding="1dp"
+            android:visibility="visible"
+            app:tabIndicator="@color/matt_black"
+            app:tabIndicatorColor="@color/btnGreen"
+            app:tabSelectedTextColor="@color/matt_black"
+            app:tabTextAppearance="@style/headerTextStyle"
+            app:tabTextColor="@color/LightGrey">
+
+        </com.google.android.material.tabs.TabLayout>
+    </androidx.cardview.widget.CardView>
+    <!-- <com.google.android.material.tabs.TabLayout
+         android:layout_marginTop="0.5dp"
+         app:tabBackground="@color/colorPrimaryDark"
+         android:layout_width="wrap_content"
+         app:tabTextAppearance="@style/headerTextStyle"
+         android:layout_height="wrap_content"
+         android:background="@color/colorPrimaryDark"
+         app:tabTextColor="@color/fade_black"
+         app:tabSelectedTextColor="@color/white">
+     </com.google.android.material.tabs.TabLayout>
+ -->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

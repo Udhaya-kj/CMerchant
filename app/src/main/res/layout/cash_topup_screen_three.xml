@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    android:background="@android:color/background_light">
+   <!-- <androidx.appcompat.widget.Toolbar
+        android:layout_gravity="top"
+        android:id="@+id/dashboard_toolbar"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Menu"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:title="Top Up Success"
+        app:titleTextAppearance="@style/toolbarHeaderTextStyle"
+        app:titleTextColor="@color/white">
+    </androidx.appcompat.widget.Toolbar>-->
+<LinearLayout
+    android:layout_marginTop="25dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/topup_successfull"
+        android:textSize="22sp"
+       android:textStyle="bold"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/top_up_successful"
+        android:textAppearance="@style/headerTextStyle1"
+        android:textColor="@color/lytgreen" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/top_up_amount_txt_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:text="Top Up:  $20.00"
+            android:textAppearance="@style/headerTextStyle1"
+            android:textColor="@color/lynch_color"
+            android:textSize="22sp" />
+
+        <TextView
+            android:textSize="22sp"
+            android:gravity="center"
+            android:id="@+id/bonus_amount_txt_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bonus:   $2.00"
+            android:textAppearance="@style/headerTextStyle1"
+            android:textColor="@color/lynch_color" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:textSize="20sp"
+            android:gravity="center"
+            android:id="@+id/wall_txt_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="Wallet Balance:  $20.00"
+            android:textAppearance="@style/headerTextStyle1"
+            android:textColor="@color/lynch_color" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Rate your experience"
+            android:textAppearance="@style/subHeaderTextStyle"
+            android:textColor="@color/lytgreen" />
+
+        <hyogeun.github.com.colorratingbarlib.ColorRatingBar
+            android:id="@+id/rating"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="3"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            app:changeable="true"
+            app:empty_color="@color/light_gray"
+            app:progress_color="@color/Gold" />
+    </LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:textAppearance="@style/buttontextStyle"
+        android:layout_gravity="bottom"
+        android:id="@+id/wallet_top_up_success_okay_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="2dp"
+        android:text="@string/okay"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+      android:backgroundTint="@color/btnGreen"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+      />
+</FrameLayout>

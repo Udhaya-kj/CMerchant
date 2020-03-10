@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/navigation_drawable"
+    android:fitsSystemWindows="false"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/home_app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@drawable/navigation_drawable"
+        android:fitsSystemWindows="true"
+        app:itemHorizontalPadding="48dp"
+        app:headerLayout="@layout/home_nav_header_main"
+        app:itemBackground="@drawable/nav_item_background"
+        app:itemTextAppearance="@style/navheaderTextStyle"
+        app:itemTextColor="@color/black_color"
+        app:menu="@menu/activity_main_drawer"
+        tools:ignore="UnusedAttribute">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/terms_conditions"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="0dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_height="35dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textAllCaps="false"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:text="@string/terms_conditions_title"
+                        android:textSize="10sp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/privacy_policy"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:backgroundTint="@color/white"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:gravity="center"
+                            android:textAllCaps="false"
+                            android:padding="1dp"
+                            android:text="@string/privacy_policy"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

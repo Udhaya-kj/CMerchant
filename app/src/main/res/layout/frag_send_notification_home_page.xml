@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/notification_home_page"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_for_home"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/actionbar_round_corner_background"
+        android:elevation="4dp"
+        android:textAlignment="center"
+        app:elevation="4dp"
+        app:titleTextAppearance="@style/toolbarTitle"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:title="Send notification"
+        app:titleTextColor="@color/white"
+        tools:targetApi="lollipop" />
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/view_schedule_msg"
+            android:textColor="@color/white"
+            android:textAppearance="@style/buttontextStyle"
+           android:backgroundTint="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:padding="4dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:gravity="center"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:text="@string/view_schedules"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.button.MaterialButton>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="?attr/actionBarSize"
+        android:visibility="gone"
+        android:id="@+id/create_new_layout"
+        android:layout_marginBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:gravity="center"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="3dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:textSize="18sp"
+            android:textColor="@color/light_black"
+            android:textAllCaps="false"
+            android:layout_marginEnd="0dp"
+            android:layout_weight="1"
+            android:id="@+id/one_to_one"
+            android:text="Single Customer"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </Button>
+       <View
+           android:background="@color/lynch_color"
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp">
+       </View>
+        <Button
+            android:textSize="18sp"
+            android:id="@+id/by_absense"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_weight="1"
+            android:text="By Absense"
+            android:textAllCaps="false"
+            android:textColor="@color/light_black">
+
+        </Button>
+        <View
+            android:background="@color/lynch_color"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp">
+        </View>
+        <Button
+            android:textSize="18sp"
+            android:textColor="@color/light_black"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:id="@+id/all_customers"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="All Customers">
+
+        </Button>
+        <View
+            android:background="@color/lynch_color"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp">
+        </View>
+    </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/sorry_layout"
+        android:layout_marginBottom="50dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sorry ! \nyou could not create new mesaage.Reached your maximum limit(5).\n Delete your old schedules and try to create new messages"
+
+                android:textSize="16sp">
+
+            </TextView>
+        </LinearLayout>
+
+        <!--<ListView
+            android:id="@+id/list_view"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/edittext_corner"
+            android:divider="@color/LightGrey"
+            android:dividerHeight="1dip"
+            android:textAlignment="center">
+
+        </ListView>-->
+    </LinearLayout>
+</FrameLayout>

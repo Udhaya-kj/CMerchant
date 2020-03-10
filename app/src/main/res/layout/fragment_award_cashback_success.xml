@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+                <TextView
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Cashback points awarded successfull !"
+                    android:textAppearance="@style/headerTextStyle1"
+                    android:textColor="@color/lytgreen"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="0dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:singleLine="true"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Mobile Number "
+                        android:textAppearance="@style/subHeaderTextStyle"
+                        android:textColor="@color/matt_black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:id="@+id/Mobile_number_cashback_two"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="3dp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:textStyle="bold"
+                        android:padding="5dp"
+                        android:text="9876543210"
+                        android:textAppearance="@style/subHeaderTextStyle"
+                        android:textColor="@color/matt_black"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:singleLine="true"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Points Issued"
+                        android:textAppearance="@style/subHeaderTextStyle"
+                        android:textColor="@color/matt_black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:id="@+id/points_issued"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="00"
+                        android:textAppearance="@style/subHeaderTextStyle"
+                        android:textColor="@color/matt_black"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:singleLine="true"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Expiry Date"
+                        android:textAppearance="@style/subHeaderTextStyle"
+                        android:textColor="@color/matt_black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/expiry_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:textStyle="bold"
+                        android:padding="5dp"
+                        android:text="01 jan 2019"
+                        android:textAppearance="@style/subHeaderTextStyle"
+                        android:textColor="@color/matt_black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Total points"
+                        android:textAppearance="@style/subHeaderTextStyle"
+                        android:textColor="@color/matt_black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/total_points"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:textStyle="bold"
+                        android:padding="5dp"
+                        android:text="00"
+                        android:textAppearance="@style/subHeaderTextStyle"
+                        android:textColor="@color/matt_black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp">
+
+                <TextView
+                    android:id="@+id/send_sms_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:padding="20sp"
+                    android:text="@string/notify_to_new_user"
+                    android:textAppearance="@style/textStyle"
+                    android:textColor="@color/matt_black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginBottom="12dp"
+                    android:text="Rate your experience"
+                    android:textAppearance="@style/subHeaderTextStyle"
+                    android:textColor="@color/lytgreen" />
+
+                <hyogeun.github.com.colorratingbarlib.ColorRatingBar
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:numStars="5"
+                    android:rating="3"
+                    android:scaleX="0.8"
+                    android:scaleY="0.7"
+                    android:textColor="@color/white"
+                    app:changeable="true"
+                    app:empty_color="@color/light_gray"
+                    app:progress_color="@color/Gold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cashback_two_okay_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/btnGreen"
+        android:gravity="center"
+        android:padding="1dp"
+        android:text="@string/okay"
+        android:textAppearance="@style/textStyle"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</FrameLayout>

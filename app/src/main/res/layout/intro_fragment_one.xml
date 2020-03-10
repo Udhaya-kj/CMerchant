@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:gravity="center"
+                android:text="@string/activation_code"
+                android:textAppearance="@style/headerTextStyle"
+                android:textColor="@color/lynch_color"
+                android:textSize="22sp"
+                android:textStyle="normal" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/user_id"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext_corner"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:lineSpacingMultiplier="1.5"
+                    android:maxLength="10"
+                    android:paddingLeft="10dp"
+                    android:paddingEnd="10dp"
+                    android:textAppearance="@style/headerTextStyle"
+                    android:singleLine="true"
+                    android:textColor="@color/light_black"
+                    android:textColorHint="@color/light_black"
+                    android:textSize="20sp" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:textColor="@color/dark_gray"
+                    android:text="By using this application I fully agreed to"
+                    android:textAppearance="@style/textStyle"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/terms_conditions_introfrag_one"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="3dp"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:text="@string/terms_and_conditions_u"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/subHeaderTextStyle"
+                    android:textColor="@color/light_black"
+                    android:textColorHint="@color/black_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/and"
+                    android:textAppearance="@style/textStyle"
+                    android:textColor="@color/dark_gray" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/privacy_policy_introfrag_one"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="3dp"
+                    android:gravity="center"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/light_black"
+                    android:padding="1dp"
+                    android:text="@string/privacy_policy_u"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/subHeaderTextStyle"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/next_btn"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/btnGreen"
+            android:gravity="center"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:textColorHint="@color/white"
+            android:textSize="18sp" />
+    </FrameLayout>
+</LinearLayout>

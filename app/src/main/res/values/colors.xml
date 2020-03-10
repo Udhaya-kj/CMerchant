@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <!-- <color name="colorPrimary">#1B6BF1</color>
+    -->
+<color name="colorPrimary">#ffffff</color>
+    <color name="oldBlue2">#2264D3</color>
+    <color name="oldBlue">#0439F5</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#2D9C32</color>
+    <color name="splash_dark">#061650</color>
+    <color name="off_white">#ecf0f1</color>
+    <color name="transparent_white">#60ffffff</color>
+    <color name="black_color">#1d1d1d</color>
+    <color name="btnGreen">#14AA24</color>
+    <color name="matt_black">#333333</color>
+    <color name="rich_black">#010203</color>
+    <color name="fade_black">#1b1b1b</color>
+    <color name="light_black">#222222</color>
+    <color name="very_light_gray">#E7E7E7</color>
+    <color name="light_light">#DAD5D5</color>
+    <color name="light_gray">#a0a0a0</color>
+    <color name="dark_gray">#808080</color>
+    <color name="white">#ffffff</color>
+    <color name="fade_white">#f2f2f2</color>
+    <color name="lytgreen">#54b854</color>
+    <color name="White">#FFFFFF</color>
+    <color name="Gold">#FFD700</color>
+    <color name="LightGrey">#D3D3D3</color>
+    <color name="IndianRed">#CD5C5C</color>
+    <color name="redbtn">#E02C2C</color>
+    <color name="DarkGray">#A9A9A9</color>
+    <color name="LightGreen">#90EE90</color>
+    <color name="SkyBlue">#3099C4</color>
+    <color name="Gray">#808080</color>
+    <color name="logo_color">#690ECC</color>
+    <color name="LightSeaGreen">#20B2AA</color>
+    <color name="transparent_black">#95000000</color>
+    <color name="lynch_color">#6c7a89</color>
+    <color name="qr_color">#262729</color>
+    <color name="QRCodeWhiteColor">#ffffff</color>
+    <color name="QRCodeBlackColor">#000000</color>
+    <color name="rewardpoints">#F1C40F</color>
+    <color name="reddemOffer">#3BBE67</color>
+    <color name="topup">#F6A022</color>
+    <color name="receivepayment">#0097A7</color>
+    <color name="customervisis">#009688</color>
+    <color name="yellow">#F1C40F</color>
+    <color name="green_alert">#389C3B</color>
+    <color name="red_alert">#D3384B</color>
+    <color name="analytic_bg">#EEF4F4F5</color>
+    <color name="sample">#39D639</color>
+    <color name="issuepoints">#12C06A </color>
+    <color name="topup_orange">#F6A022 </color>
+    <color name="receivepaymentViolet">#5166D9 </color>
+    <color name="redeemofferyellow">#F1C40F  </color>
+    <color name="bluehome">#1581FE</color>
+    <color name="cursercolor">#138D0A</color>
+
+    <color name="blue">#429EFA</color>
+    <color name="blue_green">#07B990</color>
+    <color name="light_blue">#70C8FA</color>
+    <color name="dark_blue">#0C8CEB</color>
+    <color name="dark_orange">#FBAB4C</color>
+    <color name="orange">#F05A26</color>
+    <color name="black">#000000</color>
+    <color name="button_background">#399C39</color>
+    <color name="app_text">#FA813C</color>
+    <color name="Green">#0B8D0B</color>
+    <color name="grey">#EEEEEE</color>
+    <color name="light_grey">#EBEBEB</color>
+    <color name="red"> #FC3B20</color>
+    <color name="red1"> #FD5848</color>
+    <color name="blur_blue">#F9FBFD</color>
+    <color name="button_background_red">#F85D37</color>
+    <color name="transparent_orange">#30FE9129</color>
+
+
+    <color name="iron_white">#dadfe1</color>
+    <color name="gold">#fad859</color>
+    <color name="gossip_green">#87d37c</color>
+    <color name="green_hase">#04BA90</color>
+    <color name="green_hase_light">#20D6AC</color>
+    <color name="yellow_ripe_lemon">#f7ca18</color>
+    <color name="saffron">#f4d03f</color>
+    <color name="white_smoke">#ececec</color>
+    <color name="pumice">#d2d7d3</color>
+    <color name="dark_grey">#DDDDDD</color>
+    <color name="light_green">#21D316</color>
+    <color name="grey_dark">#EEEEEE</color>
+    <color name="green2">#21E095</color>
+    <color name="grey_d">#8B8C8C</color>
+    <color name="blue_middle">#3AA8E7</color>
+
+    //voucher
+    <color name="red_color">#E84646</color>
+    <color name="green_color">#12C06A</color>
+    <color name="blue_color">#1581FE</color>
+    <color name="voucher_layout_bg">#F3F3F3</color>
+
+    <string-array name="voucher_colors">
+        <item>#E84646</item>
+        <item>#1581FE</item>
+        <item>#F1C40F</item>
+        <item>#939292</item>
+        <item>#12C06A</item>
+        <item>#FF4081</item>
+    </string-array>
+
+    </resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragments.NotificationTemplateList">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_template_list"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/actionbar_round_corner_background"
+        android:elevation="4dp"
+        android:textAlignment="center"
+        app:elevation="4dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:title="Customer Notification "
+        app:titleTextColor="@color/white"
+        tools:targetApi="lollipop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/absence_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:text="Message set up for After 0 days of from last visit"
+                android:textAppearance="@style/headerTextStyle"
+                android:textColor="@color/matt_black"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="start"
+                android:padding="15dp"
+                android:text="Select a template or Compose your own message"
+                android:textAppearance="@style/subHeaderTextStyle"
+                android:textSize="16sp">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ListView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="?attr/actionBarSize">
+
+            </ListView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:background="@color/light_light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="7dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/create_new_btn"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/oldBlue"
+            android:background="@color/oldBlue"
+            android:padding="2dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:text="@string/compose_own_message"
+            android:textAllCaps="false"
+            android:textAppearance="@style/buttontextStyle"
+            android:textColor="@color/white"
+            android:textSize="16sp">
+
+        </com.google.android.material.button.MaterialButton>
+
+    </LinearLayout>
+
+</FrameLayout>

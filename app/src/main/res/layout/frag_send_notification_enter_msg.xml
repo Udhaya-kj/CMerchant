@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/enter_notification_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_enter_msg"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/actionbar_round_corner_background"
+        android:elevation="4dp"
+        android:textAlignment="center"
+        app:elevation="4dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:title="Customer Notification "
+        app:titleTextAppearance="@style/toolbarTitle"
+        app:titleTextColor="@color/matt_black"
+        tools:targetApi="lollipop" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="0dp"
+            android:gravity="top"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/absence_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="Message setup for After 10 days of from last visit"
+                android:textAppearance="@style/subHeaderTextStyle"
+                android:textColor="@color/matt_black"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textAppearance="@style/headerTextStyle"
+                    android:id="@+id/scheduled_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/border_gray"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/select_date_time"
+                    android:textColor="@color/matt_black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/date_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableStart="@drawable/ic_failed"
+                    android:gravity="center"
+                    android:text="Please select date"
+                    android:textColor="@color/redbtn"
+                    android:visibility="invisible">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:text="Title"
+                android:textAppearance="@style/subHeaderTextStyle"
+                android:textColor="@color/matt_black"
+                android:textSize="16sp">
+
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/send_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:background="@drawable/border_gray_fill"
+                    android:maxLength="100"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/very_light_gray"
+                    android:textSize="18sp">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textAppearance="@style/subHeaderTextStyle"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                android:text="Message"
+                android:textColor="@color/matt_black"
+                android:textSize="16sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/msg_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/send_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:background="@drawable/border_gray_fill"
+                    android:focusable="true"
+                    android:gravity="start"
+                    android:maxLength="500"
+                    android:maxLines="10"
+                    android:padding="10dp"
+                    android:singleLine="false"
+                    android:textColorHint="@color/very_light_gray"
+                    android:textSize="18sp">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:padding="5dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/send_ok_button"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/btnGreen"
+                    android:text="Preview"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp">
+
+                </com.google.android.material.button.MaterialButton>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

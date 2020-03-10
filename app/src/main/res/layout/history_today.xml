@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/frame_layout_history_today"
+    android:layout_height="match_parent"
+     android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/transaction_today_history_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="visible"
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <TextView
+        android:id="@+id/no_transactions"
+        android:textSize="18sp"
+        android:textAppearance="@style/textStyle"
+        android:visibility="gone"
+        android:gravity="center"
+        android:text="Transaction empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

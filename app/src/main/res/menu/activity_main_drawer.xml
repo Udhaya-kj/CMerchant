@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item
+        android:id="@+id/menu_home"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/receive_payment"
+        android:title="@string/receive_payment" />
+    <item
+        android:id="@+id/redeem_points"
+        android:title="@string/redeem_points" />
+
+    <item
+        android:id="@+id/history"
+        android:title="@string/history" />
+    <item
+        android:id="@+id/manage_campaigns"
+        android:title="@string/Top_up" />
+
+    <item
+        android:id="@+id/send_notification"
+        android:title="@string/send_message" />
+
+    <item
+        android:id="@+id/my_customers"
+        android:title="@string/my_customers" />
+
+    <item
+        android:id="@+id/performance"
+        android:title="@string/performance" />
+
+</menu>

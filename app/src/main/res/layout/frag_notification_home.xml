@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_home"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/actionbar_round_corner_background"
+        android:elevation="4dp"
+        android:textAlignment="center"
+        app:elevation="4dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:title="Notifications "
+        app:titleTextAppearance="@style/toolbarTitle"
+        app:titleTextColor="@color/matt_black"
+        tools:targetApi="lollipop" />
+
+    <ScrollView
+        android:layout_marginTop="?attr/actionBarSize"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:gravity="start"
+                android:padding="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Set up notifications to be automatically sent to your customers"
+                android:textAppearance="@style/subHeaderTextStyle"
+                android:textColor="@color/matt_black"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/border_gray_half"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:text="Based on Customer Absence"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/subHeaderTextStyle"
+                    android:textColor="@color/matt_black"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:padding="0dp"
+                    android:text="@string/select_number_of_days_of_absence"
+                    android:textAppearance="@style/subHeaderTextStyle"
+                    android:textColor="@color/matt_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold">
+
+                </TextView>
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/last_setup_info_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:padding="0dp"
+                    android:text="No broadcost set up"
+                    android:textAppearance="@style/subHeaderTextStyle"
+                    android:textColor="@color/lynch_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold">
+
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_gray_half"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:id="@+id/spinner_select_days"
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:dropDownSelector="@color/colorPrimary"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/black_color"
+                            android:textSize="22sp">
+
+                        </Spinner>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/days"
+                        android:textAppearance="@style/headerTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:gravity="center"
+                        android:text="days"
+                        android:textColor="@color/matt_black"
+                        android:textSize="17sp">
+
+                    </TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/view_schedules_list"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/oldBlue"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:padding="1dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:text="@string/view_current_schedules"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="14sp">
+
+                </com.google.android.material.button.MaterialButton>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/border_gray_half"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:text="To All Customers"
+                    android:textAppearance="@style/subHeaderTextStyle"
+                    android:textColor="@color/matt_black"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="5dp"
+                    android:padding="5dp"
+                    android:text="Schedule a message broadcost message to all customers"
+                    android:textAppearance="@style/subHeaderTextStyle"
+                    android:textColor="@color/matt_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/last_setup_info_all"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:padding="0dp"
+                        android:text="No broadcost set up"
+                        android:textAppearance="@style/subHeaderTextStyle"
+                        android:textColor="@color/lynch_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone">
+
+                    </TextView>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/setup_btn"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:backgroundTint="@color/oldBlue"
+                            android:gravity="center"
+                            android:padding="1dp"
+                            android:singleLine="true"
+                            android:paddingStart="15dp"
+                            android:paddingEnd="15dp"
+                            android:text="@string/set_up_one_now"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:visibility="visible" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/already_setup_btn"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:gravity="center"
+                            android:padding="1dp"
+                            android:paddingStart="4dp"
+                            android:paddingEnd="15dp"
+                            android:text="Allready setup"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+
+
+                    </FrameLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>

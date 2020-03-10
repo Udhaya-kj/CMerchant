@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.VoucherSetupPreview">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_voucher_preview"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/actionbar_round_corner_background"
+        android:elevation="4dp"
+        android:textAlignment="center"
+        app:elevation="4dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:title="Voucher Preview"
+        app:titleTextAppearance="@style/toolbarTitle"
+        app:titleTextColor="@color/matt_black" />
+
+
+        <ScrollView
+            android:id="@+id/voucher_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fitsSystemWindows="true"
+            tools:ignore="ExtraText">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_background_round_corner_8dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="end"
+                    android:contentDescription="Delete"
+                    android:id="@+id/image_delete_voucher"
+                    android:src="@drawable/delete"
+                    android:padding="4dp"
+                    android:layout_marginEnd="20dp"
+                    />
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+                ​
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="@dimen/height_30dp"
+                    android:text="Your voucher settings"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:gravity="center"
+                        android:text="* " />
+
+                    <TextView
+                        android:id="@+id/text_settings1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_settings2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:gravity="center"
+                        android:text="* " />
+
+                    <TextView
+                        android:id="@+id/text_settings2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_edit_delete"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_50dp"
+                    android:layout_marginStart="@dimen/marginTop_10dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="@dimen/marginTop_10dp"
+                    android:layout_marginBottom="@dimen/marginTop_10dp"
+                    android:gravity="center"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/view_perf_button"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/v_performance"
+                        android:textSize="14sp"
+                        android:textColor="@color/blue_color"
+                        app:cornerRadius="8dp"
+                        app:strokeColor="@color/blue_color" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_marginStart="@dimen/marginTop_20dp"
+                        android:id="@+id/edit_button"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/edit"
+                        android:textSize="14sp"
+                        app:backgroundTint="@color/blue_color"
+                        app:cornerRadius="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_create_voucher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginTop_10dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="@dimen/marginTop_10dp"
+                    android:layout_marginBottom="@dimen/marginTop_10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_ask_create_update"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="Do you want to create this voucher?"
+                         />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50dp"
+                        android:layout_marginTop="@dimen/marginTop_10dp"
+                        android:weightSum="2"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/cancel_button"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/cancel"
+                            android:textSize="14sp"
+                            android:textColor="@color/blue_color"
+                            app:cornerRadius="8dp"
+                            app:strokeColor="@color/blue_color" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/ok_button"
+                            android:layout_marginStart="@dimen/marginTop_20dp"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/ok"
+                            android:textSize="14sp"
+                            app:backgroundTint="@color/blue_color"
+                            app:cornerRadius="8dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+</LinearLayout>

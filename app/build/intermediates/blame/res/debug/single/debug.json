@@ -1,0 +1,1490 @@
+[
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\anim_down_from_top.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\anim\\down_from_top.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_update_me_diolog.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\update_me_diolog.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_quicksand_bold.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\quicksand_bold.ttf"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_frag_notification_edit.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\frag_notification_edit.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_frag_notification_home.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\frag_notification_home.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_exit.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_exit.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_redeem_points.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_redeem_points.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_topup_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_topup_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_redeem_points.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-ldpi\\ic_redeem_points.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_payment_receive_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-ldpi\\ic_payment_receive_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_splash_new.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_splash_new.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_award_cashback_one.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\fragment_award_cashback_one.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_proceed_black_24dp.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_proceed_black_24dp.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\menu\\bottom_nav.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_receivepayment.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\receivepayment.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_arrow_up.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_arrow_up.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_browe.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_browe.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border_blue_high.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\border_blue_high.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_icon.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_icon.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_up_arrow_home.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_up_arrow_home.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_splash_new.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_splash_new.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_sync.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_sync.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_bottom_sheet_top_up_note_alert_dialog.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\bottom_sheet_top_up_note_alert_dialog.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_crown.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_crown.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_receivepayment.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\receivepayment.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_my_customers.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\activity_my_customers.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_receivepayment.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\receivepayment.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_insights.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_insights.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_customer_visit_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_customer_visit_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_intro_fragment_one.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\intro_fragment_one.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_loadingbar.gif.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\loadingbar.gif"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_corals_white.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_corals_white.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_voucher_performance.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\activity_voucher_performance.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_alert_success.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\alert_success.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_topup_campaign.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_topup_campaign.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_campaign_setup_one.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\campaign_setup_one.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\anim_blinking_fast.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\anim\\blinking_fast.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_performance.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\fragment_performance.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_redeem_voucher.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\redeem_voucher.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_payment_receive_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_payment_receive_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_performance.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\activity_performance.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_payment_receive_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_payment_receive_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_cancel.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_cancel.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_home_icon.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_home_icon.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border_gray.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\border_gray.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_payment_receive.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-ldpi\\ic_payment_receive.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_blue_edit_btn.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\blue_edit_btn.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_topup.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_topup.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_topup_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_topup_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_receive_payment_one.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\receive_payment_one.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_browe.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_browe.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_myustomers.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_myustomers.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_home_icon.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-ldpi\\ic_home_icon.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_person_white_24dp.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_person_white_24dp.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_semibold.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\lato_semibold.ttf"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_menu_icon.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_menu_icon.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_success_swipe_button.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_success_swipe_button.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_intro_fragment_three.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\intro_fragment_three.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_person_blue.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_person_blue.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_show_qr.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\activity_show_qr.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_crown_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_crown_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_crown_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_crown_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_month_calender.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_month_calender.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_topup_campaign.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-ldpi\\ic_topup_campaign.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_history_home_page.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\activity_history_home_page.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_home_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_home_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_redeem_points.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_redeem_points.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_thinitalic.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\lato_thinitalic.ttf"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_history.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_history.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_frag_edit_msg_notification.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\frag_edit_msg_notification.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_customer_visit_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_customer_visit_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_menu.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\menu.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_bold.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\lato_bold.ttf"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_sendmessage.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_sendmessage.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_arrow_right.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_arrow_right.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border_blue.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\border_blue.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_redeem_product_scanner.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\fragment_redeem_product_scanner.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_year_calender.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_year_calender.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_preview.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\preview.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_frag_view_sent_notification.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\frag_view_sent_notification.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_topup_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_topup_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_insights.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_insights.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_frag_customer_view_details.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\frag_customer_view_details.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_corals_white.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_corals_white.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_alert_diolog_failed.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\alert_diolog_failed.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_alert_absense_select.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\alert_absense_select.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_crown.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-ldpi\\ic_crown.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_msg_scheduled_list.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\list_item_msg_scheduled_list.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\anim_layout_animation_fall_down.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\anim\\layout_animation_fall_down.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_frag_history_issue_points_history_search.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\frag_history_issue_points_history_search.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_exit.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-ldpi\\ic_exit.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_history.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\activity_history.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_exit.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_exit.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_history_previous.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\history_previous.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_topup_campaign.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_topup_campaign.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\anim_zoom_out.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\anim\\zoom_out.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_topup.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_topup.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\anim_swipe_in_left.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\anim\\swipe_in_left.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_intropage.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\activity_intropage.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_browe.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_browe.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_insights.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_insights.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_map_shows.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\map_shows.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_arrow_left.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_arrow_left.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_home_icon.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_home_icon.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_qr.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_qr.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_payment_receive.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_payment_receive.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_myustomers.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_myustomers.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_frag_history_issue_points_history_search_result.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\frag_history_issue_points_history_search_result.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_redeem_setup_home.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\activity_redeem_setup_home.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_myustomers.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_myustomers.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border_red.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\border_red.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_award_cashback.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\activity_award_cashback.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_white_background_round_corner_8dp.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\white_background_round_corner_8dp.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_crown_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_crown_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_home_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_home_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_frag_graph_week_details.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\frag_graph_week_details.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_payment.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\payment.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_intro_fragment_four.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\intro_fragment_four.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_green_btn.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\green_btn.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_frag_qr_show.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\frag_qr_show.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_restaurant_image.webp.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\restaurant_image.webp"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border_green.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\border_green.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_home_icon.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_home_icon.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_week_calender.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_week_calender.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_crown.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\crown.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_crown.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_crown.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_home_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_home_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_alert_dioalog_profile_info.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\alert_dioalog_profile_info.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_customerlist_one.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\fragment_customerlist_one.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_myustomers.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_myustomers.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_browe.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_browe.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_frag_send_notification_home_page.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\frag_send_notification_home_page.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_topup.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\list_item_topup.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_icon.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_icon.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_topup.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_topup.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_up_arrow_home.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-ldpi\\ic_up_arrow_home.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_add.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_add.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_exit.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_exit.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_success.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_success.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_italic.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\lato_italic.ttf"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_blue_curve_button.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\blue_curve_button.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_topup_campaign.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_topup_campaign.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_corals_white.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_corals_white.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\anim_blinking_animation.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\anim\\blinking_animation.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_swipe_buton_shape.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\swipe_buton_shape.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_share.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\share.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_sendmessage.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_sendmessage.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_history_search_result.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\history_search_result.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_crown_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_crown_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border_gray_half.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\border_gray_half.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border_white.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\border_white.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_in_up.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\anim\\slide_in_up.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_frag_history_issue_points_history_previous.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\frag_history_issue_points_history_previous.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_payment_receive.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_payment_receive.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_hint_text_style.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\hint_text_style.ttf"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\anim_zoom_in.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\anim\\zoom_in.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_tick.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_tick.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_homenew.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\activity_homenew.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_send_notification.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\activity_send_notification.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\anim_blinking_animation1.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\anim\\blinking_animation1.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_history.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-ldpi\\ic_history.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_heavyitalic.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\lato_heavyitalic.ttf"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_crown_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-ldpi\\ic_crown_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_frag_history_issue_points_history_today.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\frag_history_issue_points_history_today.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_customer_visit_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_customer_visit_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_corals_white.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-ldpi\\ic_corals_white.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_alertdialog_yes_no.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\alertdialog_yes_no.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_history_search.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\history_search.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_navigation_drawable.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\navigation_drawable.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_voucher_layout_view.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\voucher_layout_view.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_frag_history_issue_points_history_base.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\frag_history_issue_points_history_base.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_history.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\list_item_history.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\anim_swipe_in_right.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\anim\\swipe_in_right.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_swipe_button_background.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\swipe_button_background.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_issue_points_scanner.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\fragment_issue_points_scanner.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_splash_new.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_splash_new.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_playstore.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_playstore.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_lightitalic.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\lato_lightitalic.ttf"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_calender.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_calender.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_marker2.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\marker2.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_icon.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_icon.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_actionbar_round_corner_background.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\actionbar_round_corner_background.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_history.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_history.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_qr.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_qr.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_red_btn.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\red_btn.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_alert_add_campaigns.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\alert_add_campaigns.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_semibolditalic.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\lato_semibolditalic.ttf"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_close.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_close.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_receivepayment.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\receivepayment.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_light.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\lato_light.ttf"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\anim_up_from_bottom.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\anim\\up_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_home_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_home_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\anim_flip_right.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\anim\\flip_right.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_home_icon.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_home_icon.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_home_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_home_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_bottom_sheet_redeem_product_note_alert_dialog.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\bottom_sheet_redeem_product_note_alert_dialog.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_up_arrow_home.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_up_arrow_home.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_history.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_history.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_icon_merchant.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_icon_merchant.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_sendmessage.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_sendmessage.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_clock.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_clock.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_blue_btn.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\blue_btn.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_cash_topup_screen_two.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\cash_topup_screen_two.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_medium.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\lato_medium.ttf"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_splash_new.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_splash_new.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_topup_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-ldpi\\ic_topup_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_scanner_screen_drawable_border.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\scanner_screen_drawable_border.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_sendmessage.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_sendmessage.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_topup.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_topup.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_plus.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\plus.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_home_content_main.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\home_content_main.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_alert_dialog.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\notification_alert_dialog.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_payment_receive_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_payment_receive_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_loading.gif.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\loading.gif"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_qr.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_qr.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tick.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\tick.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_crown_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_crown_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_sendmessage.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_sendmessage.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_bolditalic.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\lato_bolditalic.ttf"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_corner_curve.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\corner_curve.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_mediumitalic.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\lato_mediumitalic.ttf"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_home_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-ldpi\\ic_home_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bottom_sheet_curve.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\bottom_sheet_curve.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_edittext_corner.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\edittext_corner.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_failed.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_failed.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_browe.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_browe.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_history.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_history.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_splash_new.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_splash_new.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_alert_send_notification.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\alert_send_notification.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_edittext_border.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\edittext_border.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_voucher1.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\activity_voucher1.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_icon.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_icon.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\anim_recycler_animation.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\anim\\recycler_animation.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_thin.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\lato_thin.ttf"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_success_dialog.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\success_dialog.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_bottom_alertdiolag_view.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\bottom_alertdiolag_view.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border_black.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\border_black.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_topup.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_topup.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_qr.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_qr.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_performance_graph_home_page.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\activity_performance_graph_home_page.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_edit.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_edit.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_hairlineitalic.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\lato_hairlineitalic.ttf"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_wallet.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_wallet.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_redeem_points.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\activity_redeem_points.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_customer_visit_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-ldpi\\ic_customer_visit_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_customer_visit.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_customer_visit.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_award_cashback_success.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\fragment_award_cashback_success.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_heavy.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\lato_heavy.ttf"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_insights.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_insights.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_crown.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_crown.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_color_cursor.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\color_cursor.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_person.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_person.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_regular.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\lato_regular.ttf"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_round_background.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\button_round_background.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_up_arrow_home.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_up_arrow_home.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splashscreen.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\activity_splashscreen.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_icon.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_icon.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border_curve_gray.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\border_curve_gray.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_payment_receive_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_payment_receive_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_redeem_points.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_redeem_points.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_topup_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_topup_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_map_marker.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\map_marker.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_out.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\anim\\fade_out.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_payment_receive.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_payment_receive.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_message_template.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\list_item_message_template.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_exit.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_exit.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_receivepayment.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\receivepayment.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_nav_item_background.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\nav_item_background.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_voucher_setup_create.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\activity_voucher_setup_create.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_customer_list.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\list_item_customer_list.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_frag_notification_make_operations.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\frag_notification_make_operations.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_topup_campaign.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_topup_campaign.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_home_app_bar_main.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\home_app_bar_main.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_qr.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\activity_qr.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_frag_graph_month_details.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\frag_graph_month_details.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_customer_visit_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_customer_visit_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_award_cashback_scanner.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\fragment_award_cashback_scanner.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_insights.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-ldpi\\ic_insights.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_play_store.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_play_store.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_icon.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-ldpi\\ic_icon.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_hairline.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\lato_hairline.ttf"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bottom_sheet_dialog_background.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\bottom_sheet_dialog_background.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circle.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\circle.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\menu_activity_main_drawer.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\menu\\activity_main_drawer.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_history.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_history.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_exit.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_exit.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_history_search_base.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\history_search_base.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_add_list.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_add_list.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_redeem_points_success.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\fragment_redeem_points_success.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_corner_curve_bottom.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\corner_curve_bottom.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_arrow_up_big.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_arrow_up_big.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_crown.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_crown.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_toast_layout.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\custom_toast_layout.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_splash_gradient_bg.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\splash_gradient_bg.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\anim_flip_right_out.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\anim\\flip_right_out.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_history_today.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\history_today.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_delete.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\delete.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_frag_send_notification_enter_msg.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\frag_send_notification_enter_msg.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_up_arrow_home.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\ic_up_arrow_home.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_graph_btn_one.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\graph_btn_one.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_frag_notification_preview.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\frag_notification_preview.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_left_arrow_white.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_left_arrow_white.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_receive_payment_screen_two.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\receive_payment_screen_two.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_alert_show_qr.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\alert_show_qr.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border_gray_fill.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\border_gray_fill.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_terms_conditions.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\fragment_terms_conditions.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_myustomers.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_myustomers.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_performance_back.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\performance_back.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_add.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\add.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\raw_dev_server8443.crt.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\raw\\dev_server8443.crt"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_privacy_policy.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\fragment_privacy_policy.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_redeem_points.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_redeem_points.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_arrow_down.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_arrow_down.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_home_icon.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_home_icon.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_qr.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_qr.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_payment_receive_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_payment_receive_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_cash_topup_screen_three.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\cash_topup_screen_three.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_voucher_setup_preview.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\activity_voucher_setup_preview.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_keyboard_right_arrow.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_keyboard_right_arrow.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_black.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\lato_black.ttf"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_home_activity_main.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\home_activity_main.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_payment_receive.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_payment_receive.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\xml_provider_paths.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\xml\\provider_paths.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_tick_green.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_tick_green.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_toast_background.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\toast_background.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_insights.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_insights.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_topup_campaign.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xhdpi\\ic_topup_campaign.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_sendmessage.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-ldpi\\ic_sendmessage.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_blackitalic.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\lato_blackitalic.ttf"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_up_arrow_home.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_up_arrow_home.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_payment_receive.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_payment_receive.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_intermediate_alert_dialog_layout.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\intermediate_alert_dialog_layout.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_redeem_points.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_redeem_points.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_minus.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_minus.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_frag_template_list.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\frag_template_list.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_issue_points_history.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\activity_issue_points_history.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_crown.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_crown.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_issue_points_history.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\list_item_issue_points_history.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_customer_list_two.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\fragment_customer_list_two.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_arrow_downward_black_24dp.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_arrow_downward_black_24dp.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_receivepayment.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-ldpi\\receivepayment.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_corner_curve_top.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\corner_curve_top.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_myustomers.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-ldpi\\ic_myustomers.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_customer_visit_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_customer_visit_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_corals_white.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-hdpi\\ic_corals_white.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_topup_bg.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_topup_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_splash_new.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-ldpi\\ic_splash_new.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_topup.png.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-ldpi\\ic_topup.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_home_nav_header_main.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\home_nav_header_main.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_profile_image_background.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-xxhdpi\\profile_image_background.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_bottom_sheet_issue_points_note_alert_dialog.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\bottom_sheet_issue_points_note_alert_dialog.xml"
+    }
+]

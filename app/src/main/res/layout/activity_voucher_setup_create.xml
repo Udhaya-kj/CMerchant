@@ -1,0 +1,1709 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_voucher_create"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/actionbar_round_corner_background"
+        android:elevation="4dp"
+        android:textAlignment="center"
+        app:elevation="4dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:title="Create Voucher"
+        app:titleTextAppearance="@style/toolbarTitle"
+        app:titleTextColor="@color/matt_black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/fifteen_dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/parent_layout_type_P"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:text="Voucher for Reward points"
+                        android:textSize="@dimen/text_size_17sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_type_P"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_8dp"
+                        android:animateLayoutChanges="true"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:gravity="center|start"
+                            android:text="Voucher Title" />
+
+                        <EditText
+                            android:id="@+id/edit_redeem_title_P"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center|start"
+                            android:hint="Enter title"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/fifteen_dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:id="@+id/title_p_watcher"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|end"
+                            android:text="0/100"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|start"
+                            android:text="Voucher Description" />
+
+
+                        <EditText
+                            android:id="@+id/edit_redeem_desc_P"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center|start"
+                            android:hint="Enter description"
+                            android:minHeight="@dimen/height_70dp"
+                            android:padding="@dimen/margin_8dp"
+                            android:paddingLeft="@dimen/fifteen_dp"
+                            android:singleLine="false"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:id="@+id/desc_p_watcher"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|end"
+                            android:text="0/200"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|start"
+                            android:text="How many points are used for this voucher?" />
+
+                        <EditText
+                            android:id="@+id/edit_redeem_points_P"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center|start"
+                            android:hint="1 to 9999"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:maxLength="4"
+                            android:paddingLeft="@dimen/fifteen_dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center"
+                            android:text="When do you want to activate this voucher" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border">
+
+                            <TextView
+                                android:id="@+id/edit_start_date_P"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:hint="Select Activate Date"
+                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:paddingEnd="@dimen/marginTop_10dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center"
+                            android:text="When do you want this voucher to expire" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border">
+
+                            <TextView
+                                android:id="@+id/edit_expiry_date_P"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:hint="Select Expiry Date"
+                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/marginTop_10dp"
+                            android:gravity="center"
+                            android:text="Limit certain hours within a day when this voucher can be redeemed" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/edit_start_time_P"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:text="8:00"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:hint=" to "
+                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
+
+                            <TextView
+                                android:id="@+id/edit_expiry_time_P"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:text="23:00"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/marginTop_10dp"
+                            android:gravity="center|start"
+                            android:text="Can you make weekdays?"
+                            android:visibility="visible"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="0.7">
+
+                            <Button
+                                android:paddingLeft="0dp"
+                                android:paddingEnd="0dp"
+                                android:visibility="visible"
+                                android:id="@+id/btn_yes_sunday_P"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:background="@color/green_hase"
+                                android:text="Sun"
+                                android:gravity="center"
+                                android:textAllCaps="false"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:paddingLeft="0dp"
+                                android:paddingEnd="0dp"
+                                android:id="@+id/btn_yes_monday_P"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/green_hase"
+                                android:text="Mon"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:paddingLeft="0dp"
+                                android:paddingEnd="0dp"
+                                android:id="@+id/btn_yes_tuesday_P"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/green_hase"
+                                android:gravity="center"
+                                android:text="Tue"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:paddingLeft="0dp"
+                                android:paddingEnd="0dp"
+                                android:id="@+id/btn_yes_wedsnesday_P"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/green_hase"
+                                android:gravity="center"
+                                android:text="Wed"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
+                                android:id="@+id/btn_yes_thursday_P"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/green_hase"
+                                android:gravity="center"
+                                android:text="Thu"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
+                                android:id="@+id/btn_yes_friday_P"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/green_hase"
+                                android:gravity="center"
+                                android:text="Fri"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
+                                android:id="@+id/btn_yes_saturday_P"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/green_hase"
+                                android:gravity="center"
+                                android:text="Sat"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/fifteen_dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="Can customer share this voucher to others on whatsapp / facebook? " />
+
+                            <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+                                android:visibility="gone"
+                                android:id="@+id/toggle_P"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_5dp"
+                                custom:textToggleLeft="NO"
+                                custom:textToggleRight="YES" />
+                            <Switch
+                                android:id="@+id/switch_p"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/height_35dp"
+                                android:switchMinWidth="70dp"
+                                android:layout_marginTop="5dp"
+                                android:textOff="OFF"
+                                android:textOn ="ON"
+                                />
+                        </LinearLayout>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_45dp"
+                            android:layout_marginTop="@dimen/fifteen_dp"
+                            android:background="@android:color/transparent"
+                            android:elevation="@dimen/padding_4dp"
+                            custom:cardCornerRadius="@dimen/margin_5dp">
+
+                            <Button
+                                android:id="@+id/button_p"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/blue_color"
+                                android:text="Preview"
+                                android:textColor="@color/white" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/parent_layout_type_B"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:text="Setup redeem wallet balance for points voucher"
+                        android:textSize="@dimen/text_size_17sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_type_B"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_8dp"
+                        android:animateLayoutChanges="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:gravity="center|start"
+                            android:text="Voucher Title" />
+
+                        <EditText
+                            android:id="@+id/edit_redeem_title_B"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center|start"
+                            android:hint="Enter title"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/fifteen_dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:id="@+id/title_b_watcher"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|end"
+                            android:text="0/100"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|start"
+                            android:text="Voucher Description" />
+
+
+                        <EditText
+                            android:id="@+id/edit_redeem_desc_B"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center|start"
+                            android:hint="Enter description"
+                            android:minHeight="@dimen/height_70dp"
+                            android:padding="@dimen/margin_8dp"
+                            android:paddingLeft="@dimen/fifteen_dp"
+                            android:singleLine="false"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+                        <TextView
+                            android:id="@+id/desc_b_watcher"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|end"
+                            android:text="0/200"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|start"
+                            android:text="What amount do you wish to deposit to customer wallet?" />
+
+
+                        <EditText
+                            android:id="@+id/edit_wallet_amount_B"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center|start"
+                            android:hint="Enter amount"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal"
+                            android:padding="@dimen/margin_8dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|start"
+                            android:text="How many points are used for this voucher?" />
+
+
+                        <EditText
+
+                            android:id="@+id/edit_redeem_points_B"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center|start"
+                            android:hint="1 to 9999"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:maxLength="4"
+                            android:paddingLeft="@dimen/fifteen_dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center"
+                            android:text="When do you want to activate this voucher" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border">
+
+                            <TextView
+                                android:id="@+id/edit_start_date_B"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:hint="Select Activate Date"
+                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:paddingRight="@dimen/marginTop_10dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center"
+                            android:text="When do you want this voucher to expire" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border">
+
+                            <TextView
+                                android:id="@+id/edit_expiry_date_B"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:hint="Select Expiry Date"
+                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/marginTop_10dp"
+                            android:gravity="center"
+                            android:text="Limit certain hours within a day when this voucher can be redeemed" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border">
+
+                            <TextView
+                                android:id="@+id/edit_start_time_B"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:text="8:00"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:hint=" to "
+                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
+
+                            <TextView
+                                android:id="@+id/edit_expiry_time_B"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:text="23:00"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
+
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/marginTop_10dp"
+                            android:gravity="center|start"
+                            android:text="Can you make weekdays?"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="0.7">
+
+
+                            <Button
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
+                                android:id="@+id/btn_yes_sunday_B"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.1"
+                                android:background="@color/green_hase"
+                                android:text="Sun"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
+                                android:id="@+id/btn_yes_monday_B"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/green_hase"
+                                android:text="Mon"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
+                                android:id="@+id/btn_yes_tuesday_B"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/green_hase"
+                                android:gravity="center"
+                                android:text="Tue"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
+                                android:id="@+id/btn_yes_wedsnesday_B"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/green_hase"
+                                android:gravity="center"
+                                android:text="Wed"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
+                                android:id="@+id/btn_yes_thursday_B"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/green_hase"
+                                android:gravity="center"
+                                android:text="Thu"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
+                                android:id="@+id/btn_yes_friday_B"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/green_hase"
+                                android:gravity="center"
+                                android:text="Fri"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
+                                android:id="@+id/btn_yes_saturday_B"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/green_hase"
+                                android:gravity="center"
+                                android:text="Sat"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/marginTop_10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="Can customer share this voucher to others on whatsapp / facebook? " />
+
+                            <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+                                android:visibility="gone"
+                                android:id="@+id/toggle_B"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_5dp"
+                                custom:textToggleLeft="NO"
+                                custom:textToggleRight="YES" />
+                            <Switch
+                                android:id="@+id/switch_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/height_35dp"
+                                android:switchMinWidth="70dp"
+                                android:layout_marginTop="5dp"
+                                android:textOff="OFF"
+                                android:textOn ="ON"
+                                />
+                        </LinearLayout>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_45dp"
+                            android:layout_marginTop="@dimen/fifteen_dp"
+                            android:background="@android:color/transparent"
+                            android:elevation="@dimen/padding_4dp"
+                            custom:cardCornerRadius="@dimen/margin_5dp">
+
+                            <Button
+                                android:id="@+id/button_b"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/blue_color"
+                                android:text="Preview"
+                                android:textColor="@color/white" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/parent_layout_type_U"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:text="Setup Bulk Offer Voucher"
+                        android:textSize="@dimen/text_size_17sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/text_no_assigned"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fifteen_dp"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:text="You should have a assigned voucher to create bulk offer voucher"
+                        android:textColor="@color/red_color"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:visibility="gone" />
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_type_U"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_8dp"
+                        android:animateLayoutChanges="true"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:gravity="center|start"
+                            android:text="Voucher Title" />
+
+                        <EditText
+
+                            android:id="@+id/edit_redeem_title_U"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center|start"
+                            android:hint="Enter title"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/fifteen_dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:id="@+id/title_u_watcher"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|end"
+                            android:text="0/100"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|start"
+                            android:text="Voucher Description" />
+
+
+                        <EditText
+                            android:id="@+id/edit_redeem_desc_U"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center|start"
+                            android:hint="Enter description"
+                            android:minHeight="@dimen/height_70dp"
+                            android:padding="@dimen/margin_8dp"
+                            android:paddingLeft="@dimen/fifteen_dp"
+                            android:singleLine="false"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:id="@+id/desc_u_watcher"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|end"
+                            android:text="0/200"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|start"
+                            android:text="No.of vouchers to be issued(1-99)" />
+
+                        <EditText
+                            android:id="@+id/edit_vouchers_issue_count_U"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center|start"
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:paddingLeft="@dimen/text_size_15sp"
+                            android:singleLine="false"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|start"
+                            android:text="Assigned Voucher Id"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|start"
+                            android:text="Assigned Vouchers" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center"
+                            android:minHeight="@dimen/height_40dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/text_no_vouchers"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="There is no assigned voucher"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <RadioGroup
+                                android:id="@+id/assign_rgp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"></RadioGroup>
+
+                            <Spinner
+                                android:id="@+id/spinner_assigned_voucher"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center"
+                            android:text="When do you want to activate this voucher" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border">
+
+                            <TextView
+                                android:id="@+id/edit_start_date_U"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:hint="Select Activate Date"
+                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:paddingRight="@dimen/marginTop_10dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center"
+                            android:text="When do you want this voucher to expire" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border">
+
+                            <TextView
+                                android:id="@+id/edit_expiry_date_U"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:hint="Select Expiry Date"
+                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/marginTop_10dp"
+                            android:gravity="center"
+                            android:text="Limit certain hours within a day when this voucher can be redeemed" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border">
+
+                            <TextView
+                                android:id="@+id/edit_start_time_U"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:text="8:00"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:hint=" to "
+                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
+
+                            <TextView
+                                android:id="@+id/edit_expiry_time_U"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:text="23:00"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/marginTop_10dp"
+                            android:gravity="center|start"
+                            android:text="Can you make weekdays?"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="0.7">
+
+
+                            <Button
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
+                                android:id="@+id/btn_yes_sunday_U"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.1"
+                                android:background="@color/green_hase"
+                                android:text="Sun"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
+                                android:id="@+id/btn_yes_monday_U"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/green_hase"
+                                android:text="Mon"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
+                                android:id="@+id/btn_yes_tuesday_U"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/green_hase"
+                                android:gravity="center"
+                                android:text="Tue"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
+                                android:id="@+id/btn_yes_wedsnesday_U"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/green_hase"
+                                android:gravity="center"
+                                android:text="Wed"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
+                                android:id="@+id/btn_yes_thursday_U"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/green_hase"
+                                android:gravity="center"
+                                android:text="Thu"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
+                                android:id="@+id/btn_yes_friday_U"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/green_hase"
+                                android:gravity="center"
+                                android:text="Fri"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:id="@+id/btn_yes_saturday_U"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/green_hase"
+                                android:gravity="center"
+                                android:text="Sat"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/marginTop_10dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="Can customer share this voucher to others on whatsapp / facebook? " />
+
+                            <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+                                android:visibility="gone"
+                                android:id="@+id/toggle_U"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_5dp"
+                                custom:textToggleLeft="NO"
+                                custom:textToggleRight="YES" />
+                            <Switch
+                                android:id="@+id/switch_u"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/height_35dp"
+                                android:switchMinWidth="70dp"
+                                android:layout_marginTop="5dp"
+                                android:textOff="OFF"
+                                android:textOn ="ON"
+                                />
+                        </LinearLayout>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_45dp"
+                            android:layout_marginTop="@dimen/fifteen_dp"
+                            android:background="@android:color/transparent"
+                            android:elevation="@dimen/padding_4dp"
+                            custom:cardCornerRadius="@dimen/margin_5dp">
+
+                            <Button
+                                android:id="@+id/button_u"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/blue_color"
+                                android:text="Preview"
+                                android:textColor="@color/white" />
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/parent_layout_type_Z"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:text="Setup Assigned Voucher"
+                        android:textSize="@dimen/text_size_17sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_type_Z"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_8dp"
+                        android:animateLayoutChanges="true"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:gravity="center|start"
+                            android:text="Voucher Title" />
+
+                        <EditText
+
+                            android:id="@+id/edit_redeem_title_Z"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center|start"
+                            android:hint="Enter title"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/fifteen_dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:id="@+id/title_z_watcher"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|end"
+                            android:text="0/100"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|start"
+                            android:text="Voucher Description" />
+
+
+                        <EditText
+                            android:id="@+id/edit_redeem_desc_Z"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center|start"
+                            android:hint="Enter description"
+                            android:minHeight="@dimen/height_70dp"
+                            android:padding="@dimen/margin_8dp"
+                            android:paddingStart="@dimen/fifteen_dp"
+                            android:singleLine="false"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+                        <TextView
+                            android:id="@+id/desc_z_watcher"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|end"
+                            android:text="0/200"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center"
+                            android:text="When do you want to activate this voucher" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border">
+
+                            <TextView
+                                android:id="@+id/edit_start_date_Z"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:hint="Select Activate Date"
+                                android:paddingStart="@dimen/marginTop_10dp"
+                                android:paddingEnd="@dimen/marginTop_10dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center"
+                            android:text="When do you want this voucher to expire" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border">
+
+                            <TextView
+                                android:id="@+id/edit_expiry_date_Z"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:hint="Select Expiry Date"
+                                android:paddingStart="@dimen/marginTop_10dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/fifteen_dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="Can customer share this voucher to others on whatsapp / facebook? " />
+                            />
+
+                            <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+                                android:visibility="gone"
+                                android:id="@+id/toggle_Z"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_5dp"
+                                custom:textToggleLeft="NO"
+                                custom:textToggleRight="YES" />
+                            <Switch
+                                android:id="@+id/switch_z"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/height_35dp"
+                                android:switchMinWidth="70dp"
+                                android:layout_marginTop="5dp"
+                                android:textOff="OFF"
+                                android:textOn ="ON"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_45dp"
+                        android:layout_marginTop="@dimen/fifteen_dp"
+                        android:background="@android:color/transparent"
+                        android:elevation="@dimen/padding_4dp"
+                        custom:cardCornerRadius="@dimen/margin_5dp">
+
+                        <Button
+                            android:id="@+id/button_z"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/blue_color"
+                            android:text="Preview"
+                            android:textColor="@color/white" />
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/parent_layout_type_M"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:text="Setup Member get Member voucher"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_type_M"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_8dp"
+                        android:animateLayoutChanges="true"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:gravity="center|start"
+                            android:text="Voucher Title" />
+
+                        <EditText
+
+                            android:id="@+id/edit_redeem_title_M"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center|start"
+                            android:hint="Enter title"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/fifteen_dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+                        <TextView
+                            android:id="@+id/title_m_watcher"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|end"
+                            android:text="0/100"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|start"
+                            android:text="Voucher Description" />
+
+
+                        <EditText
+                            android:id="@+id/edit_redeem_desc_M"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center|start"
+                            android:hint="Enter description"
+                            android:minHeight="@dimen/height_70dp"
+                            android:padding="@dimen/margin_8dp"
+                            android:paddingStart="@dimen/fifteen_dp"
+                            android:singleLine="false"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+                        <TextView
+                            android:id="@+id/desc_m_watcher"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|end"
+                            android:text="0/200"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:gravity="center|start"
+                            android:text="Title for new customer" />
+
+                        <EditText
+                            android:id="@+id/edit_redeem_title_lead_M"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center|start"
+                            android:hint="Enter title for new customer"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/fifteen_dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:id="@+id/title_lead_m_watcher"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|end"
+                            android:text="0/100"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|start"
+                            android:text="Description for new customer " />
+
+                        <EditText
+                            android:id="@+id/edit_redeem_desc_lead_M"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center|start"
+                            android:hint="Enter description for new customer"
+                            android:minHeight="@dimen/height_70dp"
+                            android:padding="@dimen/margin_8dp"
+                            android:paddingStart="@dimen/fifteen_dp"
+                            android:singleLine="false"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:id="@+id/desc_lead_m_watcher"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|end"
+                            android:text="0/200"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|start"
+                            android:text="Referral Reward Points" />
+
+
+                        <EditText
+
+                            android:id="@+id/edit_redeem_points_M"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center|start"
+                            android:hint="1 to 9999"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:maxLength="4"
+                            android:paddingStart="@dimen/fifteen_dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center"
+                            android:text="When do you want to activate this voucher" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border">
+
+                            <TextView
+                                android:id="@+id/edit_start_date_M"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:hint="Select Activate Date"
+                                android:paddingStart="@dimen/marginTop_10dp"
+                                android:paddingEnd="@dimen/marginTop_10dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center"
+                            android:text="When do you want this voucher to expire" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border">
+
+                            <TextView
+                                android:id="@+id/edit_expiry_date_M"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:hint="Select Expiry Date"
+                                android:paddingStart="@dimen/marginTop_10dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/fifteen_dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="Can customer share this voucher to others on whatsapp / facebook? " />
+                            />
+
+                            <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+                                android:visibility="gone"
+                                android:id="@+id/toggle_M"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_5dp"
+                                custom:textToggleLeft="NO"
+                                custom:textToggleRight="YES" />
+                            <Switch
+                                android:id="@+id/switch_m"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/height_35dp"
+                                android:switchMinWidth="70dp"
+                                android:layout_marginTop="5dp"
+                                android:textOff="OFF"
+                                android:textOn ="ON"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_45dp"
+                        android:layout_marginTop="@dimen/fifteen_dp"
+                        android:background="@android:color/transparent"
+                        android:elevation="@dimen/padding_4dp"
+                        custom:cardCornerRadius="@dimen/margin_5dp">
+
+                        <Button
+                            android:id="@+id/button_m"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/blue_color"
+                            android:text="Preview"
+                            android:textColor="@color/white" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/issue_points_history_linear_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/issue_points_history_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:textSize="13sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="center"
+                android:id="@+id/back_to_search"
+                android:gravity="center"
+                android:text="Back to search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </TextView>
+        </LinearLayout>
+</LinearLayout>

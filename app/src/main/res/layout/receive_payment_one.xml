@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_receive_payment_one"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/actionbar_round_corner_background"
+        android:elevation="4dp"
+        android:textAlignment="center"
+        app:elevation="4dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:title="Receive Payments"
+        app:titleTextAppearance="@style/toolbarTitle"
+        app:titleTextColor="@color/white"
+        tools:targetApi="lollipop"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/enter_amount"
+                android:textAppearance="@style/subHeaderTextStyle"
+                android:textColor="@color/matt_black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/payment_curr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="2dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/currency_symbol"
+                    android:textAppearance="@style/headerTextStyle"
+                    android:textColor="@color/matt_black"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/topup_amount"
+                    style="@style/myEditText"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edittext_corner"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:hint="@string/initial_value"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:textAppearance="@style/subHeaderTextStyle"
+                    android:textSize="20sp"
+                    tools:ignore="Autofill" />
+            </LinearLayout>
+
+
+            <com.ebanx.swipebtn.SwipeButton
+                android:id="@+id/swipeButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="60dp"
+                android:visibility="gone"
+                app:button_background="@drawable/swipe_buton_shape"
+                app:button_bottom_padding="12dp"
+                app:button_image_disabled="@drawable/ic_keyboard_right_arrow"
+                app:button_image_enabled="@drawable/ic_success_swipe_button"
+                app:button_left_padding="10dp"
+                app:button_right_padding="10dp"
+                app:button_top_padding="12dp"
+                app:inner_text="        > > > "
+                app:inner_text_background="@drawable/swipe_button_background"
+                app:inner_text_bottom_padding="10dp"
+                app:inner_text_color="@color/btnGreen"
+                app:inner_text_size="30sp"
+                app:inner_text_top_padding="10dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

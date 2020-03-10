@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_gray_half"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/message_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="7dp"
+            android:singleLine="true"
+            android:text="@string/hello_blank_fragment"
+            android:textColor="@color/light_black"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/message_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.6"
+                android:maxLines="2"
+                android:padding="6dp"
+                android:text="@string/hello_blank_fragment"
+                android:textColor="@color/matt_black"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/preview"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end|bottom"
+                android:layout_weight="1"
+                android:contentDescription="@string/todo"
+                android:padding="3dp"
+                android:src="@drawable/preview"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

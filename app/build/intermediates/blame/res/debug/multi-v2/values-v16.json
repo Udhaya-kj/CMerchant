@@ -1,0 +1,57 @@
+{
+    "logs": [
+        {
+            "outputFile": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\TRIDENT MT5161\\.gradle\\caches\\transforms-2\\files-2.1\\e385c0c32f390fef5af39f795a2eff84\\appcompat-1.1.0\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "9",
+                        "startColumns": "4",
+                        "startOffsets": "449",
+                        "endLines": "12",
+                        "endColumns": "12",
+                        "endOffsets": "617"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\TRIDENT MT5161\\.gradle\\caches\\transforms-2\\files-2.1\\8e8b4b5f0d31edf5e5d7ecb231f84528\\core-1.2.0\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\TRIDENT MT5161\\.gradle\\caches\\transforms-2\\files-2.1\\98db37b708527085193d10ddad99a8c3\\jetified-sublimepickerlibrary-2.1.2\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2,5",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,232",
+                        "endLines": "4,7",
+                        "endColumns": "12,12",
+                        "endOffsets": "227,378"
+                    },
+                    "to": {
+                        "startLines": "3,6",
+                        "startColumns": "4,4",
+                        "startOffsets": "121,298",
+                        "endLines": "5,8",
+                        "endColumns": "12,12",
+                        "endOffsets": "293,444"
+                    }
+                }
+            ]
+        }
+    ]
+}

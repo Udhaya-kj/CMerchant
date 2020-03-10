@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/corner_curve"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="178dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        tools:ignore="Orientation">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/todo"
+            android:scaleType="centerCrop"
+            android:src="@drawable/restaurant_image"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            app:riv_corner_radius_top_left="10dp"
+            app:riv_corner_radius_top_right="10dp" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Merchant Name"
+            android:textAlignment="center"
+            android:textAppearance="@style/textStyle"
+            android:textColor="@color/light_black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/profile_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="end"
+            android:padding="5dp"
+            android:text="Admin"
+            android:textAlignment="center"
+            android:textAppearance="@style/textStyle"
+            android:textColor="@color/light_black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/profile_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="Merchant reference number"
+            android:textAlignment="center"
+            android:textAppearance="@style/textStyle"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/profile_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="1dp"
+            android:text="Merchant Country"
+            android:textAlignment="center"
+            android:textAppearance="@style/textStyle"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="@color/oldBlue"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="@string/close"
+            android:textAllCaps="false"
+            android:textAppearance="@style/buttontextStyle"
+            android:textColorHint="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
