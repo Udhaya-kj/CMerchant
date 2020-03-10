@@ -81,15 +81,35 @@
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
 
-                        <TextView
-                            android:id="@+id/title_p_watcher"
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center|end"
-                            android:text="0/100"
-                            android:textSize="12sp"
-                            android:visibility="visible" />
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tv_min_title_p"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="0dp"
+                                android:text="Enter at least 10 characters"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/title_p_watcher"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:gravity="end"
+                                android:text="0/100"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
 
                         <TextView
                             android:layout_width="match_parent"
@@ -113,15 +133,35 @@
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
 
-                        <TextView
-                            android:id="@+id/desc_p_watcher"
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center|end"
-                            android:text="0/200"
-                            android:textSize="12sp"
-                            android:visibility="visible" />
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tv_min_desc_p"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="0dp"
+                                android:text="Enter at least 25 characters"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/desc_p_watcher"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:gravity="end"
+                                android:text="0/200"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
 
                         <TextView
                             android:layout_width="match_parent"
@@ -148,7 +188,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center"
+                            android:gravity="center|start"
                             android:text="When do you want to activate this voucher" />
 
                         <LinearLayout
@@ -172,7 +212,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center"
+                            android:gravity="center|start"
                             android:text="When do you want this voucher to expire" />
 
                         <LinearLayout
@@ -196,7 +236,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
                             android:layout_marginTop="@dimen/marginTop_10dp"
-                            android:gravity="center"
+                            android:gravity="center|start"
                             android:text="Limit certain hours within a day when this voucher can be redeemed" />
 
                         <LinearLayout
@@ -242,8 +282,7 @@
                             android:layout_marginTop="@dimen/marginTop_10dp"
                             android:gravity="center|start"
                             android:text="Can you make weekdays?"
-                            android:visibility="visible"
-                            />
+                            android:visibility="visible" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -254,38 +293,36 @@
                             android:weightSum="0.7">
 
                             <Button
-                                android:paddingLeft="0dp"
-                                android:paddingEnd="0dp"
-                                android:visibility="visible"
                                 android:id="@+id/btn_yes_sunday_P"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.1"
                                 android:background="@color/green_hase"
-                                android:text="Sun"
                                 android:gravity="center"
-                                android:textAllCaps="false"
-                                android:singleLine="true"
-                                android:textColor="@color/white"
-                                android:textSize="10sp" />
-
-                            <Button
                                 android:paddingLeft="0dp"
                                 android:paddingEnd="0dp"
+                                android:singleLine="true"
+                                android:text="Sun"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="visible" />
+
+                            <Button
                                 android:id="@+id/btn_yes_monday_P"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="@dimen/margin_5dp"
                                 android:layout_weight="0.1"
                                 android:background="@color/green_hase"
+                                android:paddingLeft="0dp"
+                                android:paddingEnd="0dp"
                                 android:text="Mon"
                                 android:textAllCaps="false"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
                             <Button
-                                android:paddingLeft="0dp"
-                                android:paddingEnd="0dp"
                                 android:id="@+id/btn_yes_tuesday_P"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -293,14 +330,14 @@
                                 android:layout_weight="0.1"
                                 android:background="@color/green_hase"
                                 android:gravity="center"
+                                android:paddingLeft="0dp"
+                                android:paddingEnd="0dp"
                                 android:text="Tue"
                                 android:textAllCaps="false"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
                             <Button
-                                android:paddingLeft="0dp"
-                                android:paddingEnd="0dp"
                                 android:id="@+id/btn_yes_wedsnesday_P"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -308,14 +345,14 @@
                                 android:layout_weight="0.1"
                                 android:background="@color/green_hase"
                                 android:gravity="center"
+                                android:paddingLeft="0dp"
+                                android:paddingEnd="0dp"
                                 android:text="Wed"
                                 android:textAllCaps="false"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
                             <Button
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
                                 android:id="@+id/btn_yes_thursday_P"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -323,14 +360,14 @@
                                 android:layout_weight="0.1"
                                 android:background="@color/green_hase"
                                 android:gravity="center"
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
                                 android:text="Thu"
                                 android:textAllCaps="false"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
                             <Button
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
                                 android:id="@+id/btn_yes_friday_P"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -338,14 +375,14 @@
                                 android:layout_weight="0.1"
                                 android:background="@color/green_hase"
                                 android:gravity="center"
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
                                 android:text="Fri"
                                 android:textAllCaps="false"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
                             <Button
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
                                 android:id="@+id/btn_yes_saturday_P"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -353,6 +390,8 @@
                                 android:layout_weight="0.1"
                                 android:background="@color/green_hase"
                                 android:gravity="center"
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
                                 android:text="Sat"
                                 android:textAllCaps="false"
                                 android:textColor="@color/white"
@@ -373,22 +412,22 @@
                                 android:text="Can customer share this voucher to others on whatsapp / facebook? " />
 
                             <belka.us.androidtoggleswitch.widgets.ToggleSwitch
-                                android:visibility="gone"
                                 android:id="@+id/toggle_P"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/margin_5dp"
+                                android:visibility="gone"
                                 custom:textToggleLeft="NO"
                                 custom:textToggleRight="YES" />
+
                             <Switch
                                 android:id="@+id/switch_p"
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/height_35dp"
-                                android:switchMinWidth="70dp"
                                 android:layout_marginTop="5dp"
+                                android:switchMinWidth="70dp"
                                 android:textOff="OFF"
-                                android:textOn ="ON"
-                                />
+                                android:textOn="ON" />
                         </LinearLayout>
 
 
@@ -457,16 +496,34 @@
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
 
-                        <TextView
-                            android:id="@+id/title_b_watcher"
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center|end"
-                            android:text="0/100"
-                            android:textSize="12sp"
-                            android:visibility="visible" />
+                            android:orientation="horizontal"
+                            android:weightSum="1">
 
+                            <TextView
+                                android:id="@+id/tv_min_title_b"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="0dp"
+                                android:text="Enter at least 10 characters"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/title_b_watcher"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:gravity="end"
+                                android:text="0/100"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -489,15 +546,36 @@
                             android:singleLine="false"
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
-                        <TextView
-                            android:id="@+id/desc_b_watcher"
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center|end"
-                            android:text="0/200"
-                            android:textSize="12sp"
-                            android:visibility="visible" />
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tv_min_desc_b"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="0dp"
+                                android:text="Enter at least 25 characters"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/desc_b_watcher"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:gravity="end"
+                                android:text="0/200"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
 
                         <TextView
                             android:layout_width="match_parent"
@@ -547,7 +625,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center"
+                            android:gravity="center|start"
                             android:text="When do you want to activate this voucher" />
 
                         <LinearLayout
@@ -571,7 +649,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center"
+                            android:gravity="center|start"
                             android:text="When do you want this voucher to expire" />
 
                         <LinearLayout
@@ -595,7 +673,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
                             android:layout_marginTop="@dimen/marginTop_10dp"
-                            android:gravity="center"
+                            android:gravity="center|start"
                             android:text="Limit certain hours within a day when this voucher can be redeemed" />
 
                         <LinearLayout
@@ -655,33 +733,31 @@
 
 
                             <Button
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
                                 android:id="@+id/btn_yes_sunday_B"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="0.1"
                                 android:background="@color/green_hase"
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
                                 android:text="Sun"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
                             <Button
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
                                 android:id="@+id/btn_yes_monday_B"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_marginStart="@dimen/margin_5dp"
                                 android:layout_weight="0.1"
                                 android:background="@color/green_hase"
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
                                 android:text="Mon"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
                             <Button
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
                                 android:id="@+id/btn_yes_tuesday_B"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -689,13 +765,13 @@
                                 android:layout_weight="0.1"
                                 android:background="@color/green_hase"
                                 android:gravity="center"
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
                                 android:text="Tue"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
                             <Button
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
                                 android:id="@+id/btn_yes_wedsnesday_B"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -703,13 +779,13 @@
                                 android:layout_weight="0.1"
                                 android:background="@color/green_hase"
                                 android:gravity="center"
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
                                 android:text="Wed"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
                             <Button
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
                                 android:id="@+id/btn_yes_thursday_B"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -717,13 +793,13 @@
                                 android:layout_weight="0.1"
                                 android:background="@color/green_hase"
                                 android:gravity="center"
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
                                 android:text="Thu"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
                             <Button
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
                                 android:id="@+id/btn_yes_friday_B"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -731,13 +807,13 @@
                                 android:layout_weight="0.1"
                                 android:background="@color/green_hase"
                                 android:gravity="center"
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
                                 android:text="Fri"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
                             <Button
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
                                 android:id="@+id/btn_yes_saturday_B"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -745,6 +821,8 @@
                                 android:layout_weight="0.1"
                                 android:background="@color/green_hase"
                                 android:gravity="center"
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
                                 android:text="Sat"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
@@ -766,22 +844,22 @@
                                 android:text="Can customer share this voucher to others on whatsapp / facebook? " />
 
                             <belka.us.androidtoggleswitch.widgets.ToggleSwitch
-                                android:visibility="gone"
                                 android:id="@+id/toggle_B"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/margin_5dp"
+                                android:visibility="gone"
                                 custom:textToggleLeft="NO"
                                 custom:textToggleRight="YES" />
+
                             <Switch
                                 android:id="@+id/switch_b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/height_35dp"
-                                android:switchMinWidth="70dp"
                                 android:layout_marginTop="5dp"
+                                android:switchMinWidth="70dp"
                                 android:textOff="OFF"
-                                android:textOn ="ON"
-                                />
+                                android:textOn="ON" />
                         </LinearLayout>
 
 
@@ -866,15 +944,36 @@
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
 
-                        <TextView
-                            android:id="@+id/title_u_watcher"
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center|end"
-                            android:text="0/100"
-                            android:textSize="12sp"
-                            android:visibility="visible" />
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tv_min_title_u"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="0dp"
+                                android:text="Enter at least 10 characters"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/title_u_watcher"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:gravity="end"
+                                android:text="0/100"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+
 
                         <TextView
                             android:layout_width="match_parent"
@@ -898,15 +997,35 @@
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
 
-                        <TextView
-                            android:id="@+id/desc_u_watcher"
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center|end"
-                            android:text="0/200"
-                            android:textSize="12sp"
-                            android:visibility="visible" />
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tv_min_desc_u"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="0dp"
+                                android:text="Enter at least 25 characters"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/desc_u_watcher"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:gravity="end"
+                                android:text="0/200"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
 
                         <TextView
                             android:layout_width="match_parent"
@@ -980,7 +1099,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center"
+                            android:gravity="center|start"
                             android:text="When do you want to activate this voucher" />
 
                         <LinearLayout
@@ -1004,7 +1123,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center"
+                            android:gravity="center|start"
                             android:text="When do you want this voucher to expire" />
 
                         <LinearLayout
@@ -1028,7 +1147,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
                             android:layout_marginTop="@dimen/marginTop_10dp"
-                            android:gravity="center"
+                            android:gravity="center|start"
                             android:text="Limit certain hours within a day when this voucher can be redeemed" />
 
                         <LinearLayout
@@ -1087,33 +1206,31 @@
 
 
                             <Button
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
                                 android:id="@+id/btn_yes_sunday_U"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="0.1"
                                 android:background="@color/green_hase"
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
                                 android:text="Sun"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
                             <Button
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
                                 android:id="@+id/btn_yes_monday_U"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_marginStart="@dimen/margin_5dp"
                                 android:layout_weight="0.1"
                                 android:background="@color/green_hase"
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
                                 android:text="Mon"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
                             <Button
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
                                 android:id="@+id/btn_yes_tuesday_U"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -1121,13 +1238,13 @@
                                 android:layout_weight="0.1"
                                 android:background="@color/green_hase"
                                 android:gravity="center"
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
                                 android:text="Tue"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
                             <Button
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
                                 android:id="@+id/btn_yes_wedsnesday_U"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -1135,13 +1252,13 @@
                                 android:layout_weight="0.1"
                                 android:background="@color/green_hase"
                                 android:gravity="center"
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
                                 android:text="Wed"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
                             <Button
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
                                 android:id="@+id/btn_yes_thursday_U"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -1149,13 +1266,13 @@
                                 android:layout_weight="0.1"
                                 android:background="@color/green_hase"
                                 android:gravity="center"
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
                                 android:text="Thu"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
                             <Button
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
                                 android:id="@+id/btn_yes_friday_U"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -1163,13 +1280,13 @@
                                 android:layout_weight="0.1"
                                 android:background="@color/green_hase"
                                 android:gravity="center"
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
                                 android:text="Fri"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
                             <Button
-                                android:paddingStart="0dp"
-                                android:paddingEnd="0dp"
                                 android:id="@+id/btn_yes_saturday_U"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -1177,6 +1294,8 @@
                                 android:layout_weight="0.1"
                                 android:background="@color/green_hase"
                                 android:gravity="center"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
                                 android:text="Sat"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
@@ -1197,22 +1316,22 @@
                                 android:text="Can customer share this voucher to others on whatsapp / facebook? " />
 
                             <belka.us.androidtoggleswitch.widgets.ToggleSwitch
-                                android:visibility="gone"
                                 android:id="@+id/toggle_U"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/margin_5dp"
+                                android:visibility="gone"
                                 custom:textToggleLeft="NO"
                                 custom:textToggleRight="YES" />
+
                             <Switch
                                 android:id="@+id/switch_u"
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/height_35dp"
-                                android:switchMinWidth="70dp"
                                 android:layout_marginTop="5dp"
+                                android:switchMinWidth="70dp"
                                 android:textOff="OFF"
-                                android:textOn ="ON"
-                                />
+                                android:textOn="ON" />
                         </LinearLayout>
 
 
@@ -1284,15 +1403,37 @@
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
 
-                        <TextView
-                            android:id="@+id/title_z_watcher"
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center|end"
-                            android:text="0/100"
-                            android:textSize="12sp"
-                            android:visibility="visible" />
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tv_min_title_z"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="0dp"
+                                android:text="Enter at least 10 characters"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/title_z_watcher"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:gravity="end"
+                                android:text="0/100"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1315,22 +1456,42 @@
                             android:singleLine="false"
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
-                        <TextView
-                            android:id="@+id/desc_z_watcher"
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center|end"
-                            android:text="0/200"
-                            android:textSize="12sp"
-                            android:visibility="visible" />
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tv_min_desc_z"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="0dp"
+                                android:text="Enter at least 25 characters"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/desc_z_watcher"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:gravity="end"
+                                android:text="0/200"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
 
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center"
+                            android:gravity="center|start"
                             android:text="When do you want to activate this voucher" />
 
                         <LinearLayout
@@ -1354,7 +1515,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center"
+                            android:gravity="center|start"
                             android:text="When do you want this voucher to expire" />
 
                         <LinearLayout
@@ -1389,22 +1550,22 @@
                             />
 
                             <belka.us.androidtoggleswitch.widgets.ToggleSwitch
-                                android:visibility="gone"
                                 android:id="@+id/toggle_Z"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/margin_5dp"
+                                android:visibility="gone"
                                 custom:textToggleLeft="NO"
                                 custom:textToggleRight="YES" />
+
                             <Switch
                                 android:id="@+id/switch_z"
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/height_35dp"
-                                android:switchMinWidth="70dp"
                                 android:layout_marginTop="5dp"
+                                android:switchMinWidth="70dp"
                                 android:textOff="OFF"
-                                android:textOn ="ON"
-                                />
+                                android:textOn="ON" />
 
                         </LinearLayout>
                     </LinearLayout>
@@ -1476,15 +1637,36 @@
                             android:paddingStart="@dimen/fifteen_dp"
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
-                        <TextView
-                            android:id="@+id/title_m_watcher"
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center|end"
-                            android:text="0/100"
-                            android:textSize="12sp"
-                            android:visibility="visible" />
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tv_min_title_m"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="0dp"
+                                android:text="Enter at least 10 characters"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/title_m_watcher"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:gravity="end"
+                                android:text="0/100"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1507,20 +1689,42 @@
                             android:singleLine="false"
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
-                        <TextView
-                            android:id="@+id/desc_m_watcher"
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center|end"
-                            android:text="0/200"
-                            android:textSize="12sp"
-                            android:visibility="visible" />
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tv_min_desc_m"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="0dp"
+                                android:text="Enter at least 25 characters"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/desc_m_watcher"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:gravity="end"
+                                android:text="0/200"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
                             android:gravity="center|start"
+                            android:layout_marginTop="@dimen/margin_5dp"
                             android:text="Title for new customer" />
 
                         <EditText
@@ -1536,15 +1740,34 @@
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
 
-                        <TextView
-                            android:id="@+id/title_lead_m_watcher"
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center|end"
-                            android:text="0/100"
-                            android:textSize="12sp"
-                            android:visibility="visible" />
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tv_min_lead_title_m"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="0dp"
+                                android:text="Enter at least 10 characters"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/title_lead_m_watcher"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:gravity="end"
+                                android:text="0/100"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
 
 
                         <TextView
@@ -1568,15 +1791,35 @@
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
 
-                        <TextView
-                            android:id="@+id/desc_lead_m_watcher"
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center|end"
-                            android:text="0/200"
-                            android:textSize="12sp"
-                            android:visibility="visible" />
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tv_min_lead_desc_m"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="0dp"
+                                android:text="Enter at least 25 characters"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/desc_lead_m_watcher"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:gravity="end"
+                                android:text="0/200"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1605,7 +1848,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center"
+                            android:gravity="center|start"
                             android:text="When do you want to activate this voucher" />
 
                         <LinearLayout
@@ -1629,7 +1872,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
                             android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center"
+                            android:gravity="center|start"
                             android:text="When do you want this voucher to expire" />
 
                         <LinearLayout
@@ -1664,22 +1907,22 @@
                             />
 
                             <belka.us.androidtoggleswitch.widgets.ToggleSwitch
-                                android:visibility="gone"
                                 android:id="@+id/toggle_M"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/margin_5dp"
+                                android:visibility="gone"
                                 custom:textToggleLeft="NO"
                                 custom:textToggleRight="YES" />
+
                             <Switch
                                 android:id="@+id/switch_m"
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/height_35dp"
-                                android:switchMinWidth="70dp"
                                 android:layout_marginTop="5dp"
+                                android:switchMinWidth="70dp"
                                 android:textOff="OFF"
-                                android:textOn ="ON"
-                                />
+                                android:textOn="ON" />
 
                         </LinearLayout>
                     </LinearLayout>

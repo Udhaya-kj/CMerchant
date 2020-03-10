@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.Html;
@@ -88,6 +89,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
     private AlertDialogYesNo alertDialogYesNo;
     String redeem_type, redeem_id, bg_color;
     String selected_radio_voucher = null, selected_voucher_id = null;
+    TextView tv_min_title_p,tv_min_title_b,tv_min_title_u,tv_min_title_z,tv_min_title_m,tv_min_lead_title_m,tv_min_desc_p,tv_min_desc_b,tv_min_desc_u,tv_min_desc_z,tv_min_desc_m,tv_min_lead_desc_m;
     //SP for update redeem
     public static final String MyPREFERENCES_REDEEM_P = "MyPREFERENCES_REDEEM_P";
     public static final String MyPREFERENCES_REDEEM_B = "MyPREFERENCES_REDEEM_B";
@@ -206,6 +208,19 @@ public class VoucherSetupCreate extends AppCompatActivity {
         tv_count_desc_m = findViewById(R.id.desc_m_watcher);
         tv_count_lead_title_m = findViewById(R.id.title_lead_m_watcher);
         tv_count_lead_desc_m = findViewById(R.id.desc_lead_m_watcher);
+
+        tv_min_title_p = findViewById(R.id.tv_min_title_p);
+        tv_min_title_b = findViewById(R.id.tv_min_title_b);
+        tv_min_title_u = findViewById(R.id.tv_min_title_u);
+        tv_min_title_z = findViewById(R.id.tv_min_title_z);
+        tv_min_title_m = findViewById(R.id.tv_min_title_m);
+        tv_min_lead_title_m = findViewById(R.id.tv_min_lead_title_m);
+        tv_min_desc_p = findViewById(R.id.tv_min_desc_p);
+        tv_min_desc_b = findViewById(R.id.tv_min_desc_b);
+        tv_min_desc_u = findViewById(R.id.tv_min_desc_u);
+        tv_min_desc_z = findViewById(R.id.tv_min_desc_z);
+        tv_min_desc_m = findViewById(R.id.tv_min_desc_m);
+        tv_min_lead_desc_m = findViewById(R.id.tv_min_lead_desc_m);
 
         radioGroup = (RadioGroup) findViewById(R.id.assign_rgp);
         sharedpreferences_p_voucher = getSharedPreferences(MyPREFERENCES_REDEEM_P, Context.MODE_PRIVATE);
@@ -1970,9 +1985,9 @@ public class VoucherSetupCreate extends AppCompatActivity {
         Log.i("app---->", start_date + " , " + exp_date + "," + start_time + " , " + exp_time + " , " + getActDays_p);
         //&& Integer.parseInt(bonus) >= 1 && Integer.parseInt(bonus) <= 999999
         if (!TextUtils.isEmpty(title)) {
-            if (title.length() >= 8) {
+            if (title.length() >= 10) {
                 if (!TextUtils.isEmpty(desc)) {
-                    if (desc.length() >= 15) {
+                    if (desc.length() >= 25) {
                         if (!TextUtils.isEmpty(points)) {
                             if (!TextUtils.isEmpty(start_date) && !start_date.equals("Select Activate Date")) {
                                 if (!TextUtils.isEmpty(exp_date) && !exp_date.equals("Select Expiry Date")) {
@@ -2017,7 +2032,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                                         in.putExtra("sharable", sharable);
                                                         in.putExtra("mer_cd_redeem_id", mer_cd_redeem_id);
                                                         in.putExtra("create_update_code", create_update_code);
-                                                        in.putExtra("terms_conditions",terms_conditions);
+                                                        in.putExtra("terms_conditions", terms_conditions);
                                                         if (!TextUtils.isEmpty(bg_color)) {
                                                             in.putExtra("bg_color", bg_color);
                                                         }
@@ -2056,7 +2071,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                         }
 
                     } else {
-                        editText_desc_P.setError("Minimum 15chars");
+                        editText_desc_P.setError("Minimum 25chars");
                         editText_desc_P.requestFocus();
                     }
                 } else {
@@ -2066,7 +2081,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
 
             } else {
-                editText_title_P.setError("Minimum 8chars");
+                editText_title_P.setError("Minimum 10chars");
                 editText_title_P.requestFocus();
             }
 
@@ -2092,9 +2107,9 @@ public class VoucherSetupCreate extends AppCompatActivity {
         //&& Integer.parseInt(bonus) >= 1 && Integer.parseInt(bonus) <= 999999
 
         if (!TextUtils.isEmpty(title)) {
-            if (title.length() >= 8) {
+            if (title.length() >= 10) {
                 if (!TextUtils.isEmpty(desc)) {
-                    if (desc.length() >= 15) {
+                    if (desc.length() >= 25) {
                         if (!TextUtils.isEmpty(wallet)) {
                             if (!TextUtils.isEmpty(points)) {
                                 if (!TextUtils.isEmpty(start_date) && !start_date.equals("Select Activate Date")) {
@@ -2142,7 +2157,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                                             in.putExtra("sharable", sharable);
                                                             in.putExtra("mer_cd_redeem_id", mer_cd_redeem_id);
                                                             in.putExtra("create_update_code", create_update_code);
-                                                            in.putExtra("terms_conditions",terms_conditions);
+                                                            in.putExtra("terms_conditions", terms_conditions);
                                                             editor.putString(REDEEM_MER_CB_REDEEM_ID_B, mer_cd_redeem_id);
                                                             if (!TextUtils.isEmpty(bg_color)) {
                                                                 in.putExtra("bg_color", bg_color);
@@ -2186,7 +2201,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                         }
 
                     } else {
-                        editText_desc_B.setError("Minimum 15chars");
+                        editText_desc_B.setError("Minimum 25chars");
                         editText_desc_B.requestFocus();
                     }
                 } else {
@@ -2196,7 +2211,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
 
             } else {
-                editText_title_B.setError("Minimum 8chars");
+                editText_title_B.setError("Minimum 10chars");
                 editText_title_B.requestFocus();
             }
 
@@ -2223,9 +2238,9 @@ public class VoucherSetupCreate extends AppCompatActivity {
         //&& Integer.parseInt(bonus) >= 1 && Integer.parseInt(bonus) <= 999999
 
         if (!TextUtils.isEmpty(title)) {
-            if (title.length() >= 8) {
+            if (title.length() >= 10) {
                 if (!TextUtils.isEmpty(desc)) {
-                    if (desc.length() >= 15) {
+                    if (desc.length() >= 25) {
                         if (!TextUtils.isEmpty(voucher_count) && !voucher_count.startsWith("0")) {
                             if (!TextUtils.isEmpty(start_date) && !start_date.equals("Select Activate Date")) {
                                 if (!TextUtils.isEmpty(exp_date) && !exp_date.equals("Select Expiry Date")) {
@@ -2277,7 +2292,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                                             in.putExtra("act_days", getActDays_u);
                                                             in.putExtra("mer_cd_redeem_id", mer_cd_redeem_id);
                                                             in.putExtra("create_update_code", create_update_code);
-                                                            in.putExtra("terms_conditions",terms_conditions);
+                                                            in.putExtra("terms_conditions", terms_conditions);
                                                             if (!TextUtils.isEmpty(bg_color)) {
                                                                 in.putExtra("bg_color", bg_color);
                                                             }
@@ -2332,7 +2347,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                         }
 
                     } else {
-                        editText_desc_U.setError("Minimum 15chars");
+                        editText_desc_U.setError("Minimum 25chars");
                         editText_desc_U.requestFocus();
                     }
                 } else {
@@ -2342,7 +2357,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
 
             } else {
-                editText_title_U.setError("Minimum 8chars");
+                editText_title_U.setError("Minimum 10chars");
                 editText_title_U.requestFocus();
             }
 
@@ -2362,9 +2377,9 @@ public class VoucherSetupCreate extends AppCompatActivity {
         //&& Integer.parseInt(bonus) >= 1 && Integer.parseInt(bonus) <= 999999
 
         if (!TextUtils.isEmpty(title)) {
-            if (title.length() >= 8) {
+            if (title.length() >= 10) {
                 if (!TextUtils.isEmpty(desc)) {
-                    if (desc.length() >= 15) {
+                    if (desc.length() >= 25) {
                         if (!TextUtils.isEmpty(start_date) && !start_date.equals("Select Activate Date")) {
                             if (!TextUtils.isEmpty(exp_date) && !exp_date.equals("Select Expiry Date")) {
                                 //SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy hh:mm a");
@@ -2397,7 +2412,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                         in.putExtra("e_date", exp_date);
                                         in.putExtra("mer_cd_redeem_id", mer_cd_redeem_id);
                                         in.putExtra("create_update_code", create_update_code);
-                                        in.putExtra("terms_conditions",terms_conditions);
+                                        in.putExtra("terms_conditions", terms_conditions);
                                         if (!TextUtils.isEmpty(bg_color)) {
                                             in.putExtra("bg_color", bg_color);
                                         }
@@ -2423,7 +2438,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
 
                     } else {
-                        editText_desc_U.setError("Minimum 15chars");
+                        editText_desc_U.setError("Minimum 25chars");
                         editText_desc_U.requestFocus();
                     }
                 } else {
@@ -2433,7 +2448,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
 
             } else {
-                editText_title_U.setError("Minimum 8chars");
+                editText_title_U.setError("Minimum 10chars");
                 editText_title_U.requestFocus();
             }
 
@@ -2458,13 +2473,13 @@ public class VoucherSetupCreate extends AppCompatActivity {
         //&& Integer.parseInt(bonus) >= 1 && Integer.parseInt(bonus) <= 999999
 
         if (!TextUtils.isEmpty(title)) {
-            if (title.length() >= 8) {
+            if (title.length() >= 10) {
                 if (!TextUtils.isEmpty(desc)) {
-                    if (desc.length() >= 15) {
+                    if (desc.length() >= 25) {
                         if (!TextUtils.isEmpty(lead_title)) {
-                            if (lead_title.length() >= 8) {
+                            if (lead_title.length() >= 10) {
                                 if (!TextUtils.isEmpty(lead_desc)) {
-                                    if (lead_desc.length() >= 15) {
+                                    if (lead_desc.length() >= 25) {
                                         if (!TextUtils.isEmpty(points)) {
                                             if (!TextUtils.isEmpty(start_date) && !start_date.equals("Select Activate Date")) {
                                                 if (!TextUtils.isEmpty(exp_date) && !exp_date.equals("Select Expiry Date")) {
@@ -2503,7 +2518,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                                             in.putExtra("e_date", exp_date);
                                                             in.putExtra("mer_cd_redeem_id", mer_cd_redeem_id);
                                                             in.putExtra("create_update_code", create_update_code);
-                                                            in.putExtra("terms_conditions",terms_conditions);
+                                                            in.putExtra("terms_conditions", terms_conditions);
                                                             if (!TextUtils.isEmpty(bg_color)) {
                                                                 in.putExtra("bg_color", bg_color);
                                                             }
@@ -2531,7 +2546,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                             editText_points_M.requestFocus();
                                         }
                                     } else {
-                                        editText_desc_lead_M.setError("Minimum 15chars");
+                                        editText_desc_lead_M.setError("Minimum 25chars");
                                         editText_desc_lead_M.requestFocus();
                                     }
                                 } else {
@@ -2539,7 +2554,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                     editText_desc_lead_M.requestFocus();
                                 }
                             } else {
-                                editText_title_lead_M.setError("Minimum 8chars");
+                                editText_title_lead_M.setError("Minimum 10chars");
                                 editText_title_lead_M.requestFocus();
                             }
                         } else {
@@ -2547,7 +2562,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                             editText_title_lead_M.requestFocus();
                         }
                     } else {
-                        editText_desc_U.setError("Minimum 15chars");
+                        editText_desc_U.setError("Minimum 25chars");
                         editText_desc_U.requestFocus();
                     }
                 } else {
@@ -2556,7 +2571,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                 }
 
             } else {
-                editText_title_U.setError("Minimum 8chars");
+                editText_title_U.setError("Minimum 10chars");
                 editText_title_U.requestFocus();
             }
 
@@ -2936,7 +2951,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                     spinner_assg_voucher.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                         @Override
                                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                                           // Toast.makeText(VoucherSetupCreate.this, "" + assigned_id_list.get(position), Toast.LENGTH_SHORT).show();
+                                            // Toast.makeText(VoucherSetupCreate.this, "" + assigned_id_list.get(position), Toast.LENGTH_SHORT).show();
                                             selected_voucher_id = assigned_id_list.get(position);
                                         }
 
@@ -3342,6 +3357,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
         }
     }
 
+
     private final TextWatcher textWatcher_title_p = new TextWatcher() {
 
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -3350,10 +3366,19 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             //This sets a textview to the current length
-            tv_count_title_p.setText(String.valueOf(s.length() + "/100"));
+            if (s.length() < 10) {
+                tv_min_title_p.setVisibility(View.VISIBLE);
+                tv_count_title_p.setText(String.valueOf(s.length() + "/100"));
+                tv_count_title_p.setTextColor(getResources().getColor(R.color.red));
+            } else {
+                tv_min_title_p.setVisibility(View.INVISIBLE);
+                tv_count_title_p.setText(String.valueOf(s.length() + "/100"));
+                tv_count_title_p.setTextColor(getResources().getColor(R.color.green2));
+            }
         }
 
         public void afterTextChanged(Editable s) {
+
         }
     };
 
@@ -3365,7 +3390,15 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             //This sets a textview to the current length
-            tv_count_desc_p.setText(String.valueOf(s.length() + "/200"));
+            if (s.length() < 25) {
+                tv_min_desc_p.setVisibility(View.VISIBLE);
+                tv_count_desc_p.setText(String.valueOf(s.length() + "/200"));
+                tv_count_desc_p.setTextColor(getResources().getColor(R.color.red));
+            } else {
+                tv_min_desc_p.setVisibility(View.INVISIBLE);
+                tv_count_desc_p.setText(String.valueOf(s.length() + "/200"));
+                tv_count_desc_p.setTextColor(getResources().getColor(R.color.green2));
+            }
         }
 
         public void afterTextChanged(Editable s) {
@@ -3379,7 +3412,15 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             //This sets a textview to the current length
-            tv_count_title_b.setText(String.valueOf(s.length() + "/100"));
+            if (s.length() < 10) {
+                tv_min_title_b.setVisibility(View.VISIBLE);
+                tv_count_title_b.setText(String.valueOf(s.length() + "/100"));
+                tv_count_title_b.setTextColor(getResources().getColor(R.color.red));
+            } else {
+                tv_min_title_b.setVisibility(View.INVISIBLE);
+                tv_count_title_b.setText(String.valueOf(s.length() + "/100"));
+                tv_count_title_b.setTextColor(getResources().getColor(R.color.green2));
+            }
         }
 
         public void afterTextChanged(Editable s) {
@@ -3394,7 +3435,15 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             //This sets a textview to the current length
-            tv_count_desc_b.setText(String.valueOf(s.length() + "/200"));
+            if (s.length() < 25) {
+                tv_min_desc_b.setVisibility(View.VISIBLE);
+                tv_count_desc_b.setText(String.valueOf(s.length() + "/200"));
+                tv_count_desc_b.setTextColor(getResources().getColor(R.color.red));
+            } else {
+                tv_min_desc_b.setVisibility(View.INVISIBLE);
+                tv_count_desc_b.setText(String.valueOf(s.length() + "/200"));
+                tv_count_desc_b.setTextColor(getResources().getColor(R.color.green2));
+            }
         }
 
         public void afterTextChanged(Editable s) {
@@ -3408,7 +3457,15 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             //This sets a textview to the current length
-            tv_count_title_u.setText(String.valueOf(s.length() + "/100"));
+            if (s.length() < 10) {
+                tv_min_title_u.setVisibility(View.VISIBLE);
+                tv_count_title_u.setText(String.valueOf(s.length() + "/100"));
+                tv_count_title_u.setTextColor(getResources().getColor(R.color.red));
+            } else {
+                tv_min_title_u.setVisibility(View.INVISIBLE);
+                tv_count_title_u.setText(String.valueOf(s.length() + "/100"));
+                tv_count_title_u.setTextColor(getResources().getColor(R.color.green2));
+            }
         }
 
         public void afterTextChanged(Editable s) {
@@ -3423,7 +3480,15 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             //This sets a textview to the current length
-            tv_count_desc_u.setText(String.valueOf(s.length() + "/200"));
+            if (s.length() < 25) {
+                tv_min_desc_u.setVisibility(View.VISIBLE);
+                tv_count_desc_u.setText(String.valueOf(s.length() + "/200"));
+                tv_count_desc_u.setTextColor(getResources().getColor(R.color.red));
+            } else {
+                tv_min_desc_u.setVisibility(View.INVISIBLE);
+                tv_count_desc_u.setText(String.valueOf(s.length() + "/200"));
+                tv_count_desc_u.setTextColor(getResources().getColor(R.color.green2));
+            }
         }
 
         public void afterTextChanged(Editable s) {
@@ -3437,7 +3502,15 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             //This sets a textview to the current length
-            tv_count_title_z.setText(String.valueOf(s.length() + "/100"));
+            if (s.length() < 10) {
+                tv_min_title_z.setVisibility(View.VISIBLE);
+                tv_count_title_z.setText(String.valueOf(s.length() + "/100"));
+                tv_count_title_z.setTextColor(getResources().getColor(R.color.red));
+            } else {
+                tv_min_title_z.setVisibility(View.INVISIBLE);
+                tv_count_title_z.setText(String.valueOf(s.length() + "/100"));
+                tv_count_title_z.setTextColor(getResources().getColor(R.color.green2));
+            }
         }
 
         public void afterTextChanged(Editable s) {
@@ -3452,7 +3525,15 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             //This sets a textview to the current length
-            tv_count_desc_z.setText(String.valueOf(s.length() + "/200"));
+            if (s.length() < 25) {
+                tv_min_desc_z.setVisibility(View.VISIBLE);
+                tv_count_desc_z.setText(String.valueOf(s.length() + "/200"));
+                tv_count_desc_z.setTextColor(getResources().getColor(R.color.red));
+            } else {
+                tv_min_desc_z.setVisibility(View.INVISIBLE);
+                tv_count_desc_z.setText(String.valueOf(s.length() + "/200"));
+                tv_count_desc_z.setTextColor(getResources().getColor(R.color.green2));
+            }
         }
 
         public void afterTextChanged(Editable s) {
@@ -3466,7 +3547,16 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             //This sets a textview to the current length
-            tv_count_title_m.setText(String.valueOf(s.length() + "/100"));
+
+            if (s.length() < 10) {
+                tv_min_title_m.setVisibility(View.VISIBLE);
+                tv_count_title_m.setText(String.valueOf(s.length() + "/100"));
+                tv_count_title_m.setTextColor(getResources().getColor(R.color.red));
+            } else {
+                tv_min_title_m.setVisibility(View.INVISIBLE);
+                tv_count_title_m.setText(String.valueOf(s.length() + "/100"));
+                tv_count_title_m.setTextColor(getResources().getColor(R.color.green2));
+            }
         }
 
         public void afterTextChanged(Editable s) {
@@ -3481,7 +3571,15 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             //This sets a textview to the current length
-            tv_count_desc_m.setText(String.valueOf(s.length() + "/200"));
+            if (s.length() < 25) {
+                tv_min_desc_m.setVisibility(View.VISIBLE);
+                tv_count_desc_m.setText(String.valueOf(s.length() + "/200"));
+                tv_count_desc_m.setTextColor(getResources().getColor(R.color.red));
+            } else {
+                tv_min_desc_m.setVisibility(View.INVISIBLE);
+                tv_count_desc_m.setText(String.valueOf(s.length() + "/200"));
+                tv_count_desc_m.setTextColor(getResources().getColor(R.color.green2));
+            }
         }
 
         public void afterTextChanged(Editable s) {
@@ -3495,7 +3593,15 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             //This sets a textview to the current length
-            tv_count_lead_title_m.setText(String.valueOf(s.length() + "/100"));
+            if (s.length() < 10) {
+                tv_min_lead_title_m.setVisibility(View.VISIBLE);
+                tv_count_lead_title_m.setText(String.valueOf(s.length() + "/100"));
+                tv_count_lead_title_m.setTextColor(getResources().getColor(R.color.red));
+            } else {
+                tv_min_lead_title_m.setVisibility(View.INVISIBLE);
+                tv_count_lead_title_m.setText(String.valueOf(s.length() + "/100"));
+                tv_count_lead_title_m.setTextColor(getResources().getColor(R.color.green2));
+            }
         }
 
         public void afterTextChanged(Editable s) {
@@ -3510,7 +3616,15 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             //This sets a textview to the current length
-            tv_count_lead_desc_m.setText(String.valueOf(s.length() + "/200"));
+            if (s.length() < 25) {
+                tv_min_lead_desc_m.setVisibility(View.VISIBLE);
+                tv_count_lead_desc_m.setText(String.valueOf(s.length() + "/200"));
+                tv_count_lead_desc_m.setTextColor(getResources().getColor(R.color.red));
+            } else {
+                tv_min_lead_desc_m.setVisibility(View.INVISIBLE);
+                tv_count_lead_desc_m.setText(String.valueOf(s.length() + "/200"));
+                tv_count_lead_desc_m.setTextColor(getResources().getColor(R.color.green2));
+            }
         }
 
         public void afterTextChanged(Editable s) {
