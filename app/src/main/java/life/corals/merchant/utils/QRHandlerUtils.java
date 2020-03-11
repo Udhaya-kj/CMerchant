@@ -8,7 +8,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
-public abstract class QRHandlerUtils {
+public class QRHandlerUtils {
 
 	private static final String TAG = "QRHandlerUtils";
 
@@ -18,8 +18,6 @@ public abstract class QRHandlerUtils {
 
 	public static final String OUTLET_ID = "93";
 
-	private QrParserListener parserListener;
-
 	public static final String MERCHANT_ID = "mer-id";
 	public static final String CUSTOMER_ID = "cust_id";
 	public static final String REDEEM_TYPE = "redeem-type";
@@ -28,10 +26,12 @@ public abstract class QRHandlerUtils {
 	public static final String LEDGER_ID = "ledger-id";
 	public static final String COUNTRY_CODE = "contry-code";
 
+	private QrParserListener parserListener;
+
 	public QRHandlerUtils() {
 
 	}
-	
+
 	public void setParserListener(QrParserListener parserListener) {
 		this.parserListener = parserListener;
 	}
@@ -143,6 +143,7 @@ public abstract class QRHandlerUtils {
 				BigInteger bi2 = new BigInteger(snow.toString());
 				if (bi1.compareTo(bi2) == 1) {
 					chk3 = true;
+
 				} else {
 					System.out.println("current time greater:" + chk3);
 				}
@@ -550,27 +551,36 @@ public abstract class QRHandlerUtils {
 	}
 
 	public void parseVoucherQR(String QRS, QrParserListener listener) {
+
 		if (QRS.length() > 100) {
 			String ERROR_MSG = "";
 			boolean isError = false;
 			HashMap<String, String> hm = new HashMap<String, String>();
+
 			String QR_TYPE = QRS.substring(4, 5);
 			System.out.println(QR_TYPE);
+
 			if (!QR_TYPE.equalsIgnoreCase("R")) {
 				isError = true;
 				ERROR_MSG = "Invalid QR type";
 			}
+
 			QRS = QRS.substring(5);
+
 			if (!"26".equalsIgnoreCase(QRS.substring(0, 2)) && Integer.parseInt(QRS.substring(2, 4).toString()) != 58) {
 				isError = true;
 				ERROR_MSG = "Invalid QR Code";
 			}
+
 			QRS = QRS.substring(8);
+
 			if (!isError && !"life.corals".equalsIgnoreCase(QRS.substring(0, 11))) {
 				isError = true;
 				ERROR_MSG = "Invalid Domain Name";
 			}
+
 			QRS = QRS.substring(11);
+
 			if (!isError) {
 				if (!"01".equalsIgnoreCase(QRS.substring(0, 2))
 						&& Integer.parseInt(QRS.substring(2, 4).toString()) != 16) {
@@ -585,6 +595,7 @@ public abstract class QRHandlerUtils {
 					QRS = QRS.substring(16);
 				}
 			}
+
 			if (!isError) {
 				if (!"02".equalsIgnoreCase(QRS.substring(0, 2))
 						&& Integer.parseInt(QRS.substring(2, 4).toString()) != 15) {
@@ -599,6 +610,7 @@ public abstract class QRHandlerUtils {
 					QRS = QRS.substring(15);
 				}
 			}
+
 			if (!isError) {
 				if (!"03".equalsIgnoreCase(QRS.substring(0, 2))
 						&& Integer.parseInt(QRS.substring(2, 4).toString()) != 1) {
@@ -613,9 +625,12 @@ public abstract class QRHandlerUtils {
 					QRS = QRS.substring(1);
 				}
 			}
+
 			// if the QR is shared -- NODE 28 will be allocated
 			if ("28".equalsIgnoreCase(QRS.substring(0, 2))) {
+
 				QRS = QRS.substring(4);
+
 				if (!isError) {
 					if (!"00".equalsIgnoreCase(QRS.substring(0, 2))
 							&& Integer.parseInt(QRS.substring(2, 4).toString()) != 16) {
@@ -631,6 +646,7 @@ public abstract class QRHandlerUtils {
 					}
 				}
 			}
+
 			if (!isError) {
 				if (!"52".equalsIgnoreCase(QRS.substring(0, 2))
 						&& Integer.parseInt(QRS.substring(2, 4).toString()) != 2) {
@@ -645,13 +661,17 @@ public abstract class QRHandlerUtils {
 					QRS = QRS.substring(2);
 				}
 			}
+
 			System.out.println(QRS);
+
 			if (!"92".equalsIgnoreCase(QRS.substring(0, 2)) && Integer.parseInt(QRS.substring(2, 4).toString()) != 25) {
 				isError = true;
 				ERROR_MSG = "Invalid QR Code";
 			}
+
 			QRS = QRS.substring(4);
 			System.out.println(QRS);
+
 			if (!isError) {
 				if (!"00".equalsIgnoreCase(QRS.substring(0, 2))
 						&& Integer.parseInt(QRS.substring(2, 4).toString()) != 14) {
@@ -681,11 +701,14 @@ public abstract class QRHandlerUtils {
 					QRS = QRS.substring(3);
 				}
 			}
+
 			if (!"93".equalsIgnoreCase(QRS.substring(0, 2)) && Integer.parseInt(QRS.substring(2, 4).toString()) != 13) {
 				isError = true;
 				ERROR_MSG = "Invalid QR Code";
 			}
+
 			QRS = QRS.substring(4);
+
 			if (!isError) {
 				if (!"00".equalsIgnoreCase(QRS.substring(0, 2))
 						&& Integer.parseInt(QRS.substring(2, 4).toString()) != 9) {
@@ -699,11 +722,10 @@ public abstract class QRHandlerUtils {
 					hm.put(MERCHANT_ID, merID);
 				}
 			}
+
 			listener.onSuccess(hm, QRS, ERROR_MSG, QR_TYPE);
 		} else {
 			listener.onFailure("Invalid QR code");
 		}
 	}
-	public abstract void parsedData(HashMap<String, String> hashMap, String outletId, String authToken, String campaignId);
-	public abstract void onFailure(String result);
 }

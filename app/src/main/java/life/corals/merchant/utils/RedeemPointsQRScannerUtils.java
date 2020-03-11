@@ -31,7 +31,9 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
-public  abstract class RedeemPointsQRScannerUtils {
+import life.corals.merchant.fragments.RedeemPointsScanner;
+
+public abstract class RedeemPointsQRScannerUtils {
 
     private static final String TAG = "RedeemPointsQRScannerUtils";
     private SurfaceView surfaceView;
@@ -66,7 +68,6 @@ public  abstract class RedeemPointsQRScannerUtils {
     }
 
     private void initScanner() {
-        Log.d("parsedDataparsedData", "initScanner: ");
         barcodeDetector = new BarcodeDetector.Builder(mCtx)
                 .setBarcodeFormats(Barcode.QR_CODE)
                 .build();
@@ -76,34 +77,20 @@ public  abstract class RedeemPointsQRScannerUtils {
                 .setAutoFocusEnabled(true)
                 .build();
 
-        qrCodeParserUtils = new QRHandlerUtils() {
-
+        qrCodeParserUtils = new QRHandlerUtils();
+        QrParserListener qrParserListener = new QrParserListener() {
             @Override
-            public void parsedData(HashMap<String, String> hashMap, String outletId, String authToken, String campaignId) {
-                scanComplete = true;
-                ((Activity) mCtx).runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        Log.d("parsedDataparsedData", "run: ");
-                        parsedScanData(hashMap);
-                    }
-                });
+            public void onSuccess(HashMap<String, String> parsedData, String outletId, String authToken, String campaignId) {
+                parsedScanData(parsedData);
             }
 
             @Override
-            public void onFailure(final String result) {
-                scanComplete = true;
-                ((Activity) mCtx).runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        Log.d("parsedDataparsedData", "run:  2");
-                        onFailureScan(result);
-                    }
-                });
+            public void onFailure(String result) {
 
             }
         };
-        Log.d("parsedDataparsedData", "initScannersurfaceView: ");
+        qrCodeParserUtils.setParserListener(qrParserListener);
+
         surfaceView.getHolder().addCallback(new SurfaceHolder.Callback() {
             @Override
             public void surfaceCreated(SurfaceHolder holder) {
@@ -138,17 +125,7 @@ public  abstract class RedeemPointsQRScannerUtils {
                         scanComplete = true;
                         String qrData = barCodes.valueAt(0).displayValue;
 
-                        qrCodeParserUtils.parseVoucherQR(qrData, new QrParserListener() {
-                            @Override
-                            public void onSuccess(HashMap<String, String> parsedData, String outletId, String authToken, String campaignId) {
-                                Log.d("qrCodeParserUtils", "onSuccess: "+parsedData);
-                            }
-
-                            @Override
-                            public void onFailure(String result) {
-                                Log.d("qrCodeParserUtils", "onFailure: ");
-                            }
-                        });
+                        qrCodeParserUtils.parseVoucherQR(qrData, qrParserListener);
                     }
                 } catch (ArrayIndexOutOfBoundsException e) {
                     e.printStackTrace();

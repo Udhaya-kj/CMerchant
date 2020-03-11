@@ -202,8 +202,7 @@ public class Homenew extends AppCompatActivity implements SwipeRefreshLayout.OnR
             }
 
         }
-
-       if (preferences.getString(QR_CODE, "").equals("")) {
+        Log.d("Id-----", "findView: "+ preferences.getString(UNIQUE_ID, "")+","+preferences.getString(OUTLET_ID, ""));
             ParamProperties paramProperties = new ParamProperties();
             String countryName = paramProperties.getProperty(preferences.getString(MERCHANT_COUNTRY, ""), ParamProperties.COUNTRY_NAME);
             BusinessQRGenerator GenQr = null;
@@ -221,7 +220,7 @@ public class Homenew extends AppCompatActivity implements SwipeRefreshLayout.OnR
             SharedPreferences.Editor editor1 = preferences.edit();
             editor1.putString(QR_CODE, Objects.requireNonNull(GenQr).getQR_CODE_STRING());
             editor1.apply();
-        }
+
 
     }
 

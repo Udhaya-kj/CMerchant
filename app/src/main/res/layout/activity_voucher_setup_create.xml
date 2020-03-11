@@ -21,13 +21,17 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:focusableInTouchMode="true"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="true"
+            android:fillViewport="true"
             android:padding="@dimen/fifteen_dp">
 
             <LinearLayout
@@ -106,6 +110,7 @@
                                 android:layout_weight="0.2"
                                 android:gravity="end"
                                 android:text="0/100"
+                                android:textColor="@color/red"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
                         </LinearLayout>
@@ -158,6 +163,7 @@
                                 android:layout_weight="0.2"
                                 android:gravity="end"
                                 android:text="0/200"
+                                android:textColor="@color/red"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
                         </LinearLayout>
@@ -521,6 +527,7 @@
                                 android:layout_weight="0.2"
                                 android:gravity="end"
                                 android:text="0/100"
+                                android:textColor="@color/red"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
                         </LinearLayout>
@@ -572,6 +579,7 @@
                                 android:layout_weight="0.2"
                                 android:gravity="end"
                                 android:text="0/200"
+                                android:textColor="@color/red"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
                         </LinearLayout>
@@ -969,6 +977,7 @@
                                 android:layout_weight="0.2"
                                 android:gravity="end"
                                 android:text="0/100"
+                                android:textColor="@color/red"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
                         </LinearLayout>
@@ -1022,6 +1031,7 @@
                                 android:layout_weight="0.2"
                                 android:gravity="end"
                                 android:text="0/200"
+                                android:textColor="@color/red"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
                         </LinearLayout>
@@ -1429,6 +1439,7 @@
                                 android:layout_weight="0.2"
                                 android:gravity="end"
                                 android:text="0/100"
+                                android:textColor="@color/red"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
                         </LinearLayout>
@@ -1482,6 +1493,7 @@
                                 android:layout_weight="0.2"
                                 android:gravity="end"
                                 android:text="0/200"
+                                android:textColor="@color/red"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
                         </LinearLayout>
@@ -1663,6 +1675,7 @@
                                 android:layout_weight="0.2"
                                 android:gravity="end"
                                 android:text="0/100"
+                                android:textColor="@color/red"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
                         </LinearLayout>
@@ -1715,6 +1728,7 @@
                                 android:layout_weight="0.2"
                                 android:gravity="end"
                                 android:text="0/200"
+                                android:textColor="@color/red"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
                         </LinearLayout>
@@ -1765,6 +1779,7 @@
                                 android:layout_weight="0.2"
                                 android:gravity="end"
                                 android:text="0/100"
+                                android:textColor="@color/red"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
                         </LinearLayout>
@@ -1816,6 +1831,7 @@
                                 android:layout_weight="0.2"
                                 android:gravity="end"
                                 android:text="0/200"
+                                android:textColor="@color/red"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
                         </LinearLayout>

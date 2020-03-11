@@ -9,6 +9,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Handler;
 import android.provider.Settings;
+import android.util.Log;
 import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -81,33 +82,19 @@ public abstract class IssuePointsQRScannerUtils {
                 .setAutoFocusEnabled(true)
                 .build();
 
-        qrCodeParserUtils = new QRHandlerUtils() {
-
-
+        qrCodeParserUtils = new QRHandlerUtils();
+        QrParserListener qrParserListener = new QrParserListener() {
             @Override
-            public void parsedData(HashMap<String, String> hashMap, String outletId, String authToken, String campaignId) {
-                scanComplete = true;
-                ((Activity) mCtx).runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        parsedScanData(hashMap);
-                    }
-                });
+            public void onSuccess(HashMap<String, String> parsedData, String outletId, String authToken, String campaignId) {
+                parsedScanData(parsedData);
             }
 
             @Override
-            public void onFailure(final String result) {
-                scanComplete = true;
-                ((Activity) mCtx).runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        onFailureScan(result);
-                    }
-                });
+            public void onFailure(String result) {
 
             }
         };
-
+        qrCodeParserUtils.setParserListener(qrParserListener);
         surfaceView.getHolder().addCallback(new SurfaceHolder.Callback() {
             @Override
             public void surfaceCreated(SurfaceHolder holder) {
@@ -141,6 +128,7 @@ public abstract class IssuePointsQRScannerUtils {
                     if (barCodes.valueAt(0).displayValue.length() > 0 && !scanComplete) {
                         scanComplete = true;
                         String qrData = barCodes.valueAt(0).displayValue;
+                        Log.d("receiveDetections321", "receiveDetections: "+qrData);
                         qrCodeParserUtils.parseMyIssueQR(qrData);
                     }
                 } catch (ArrayIndexOutOfBoundsException e) {

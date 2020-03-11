@@ -78,6 +78,8 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:text="OK"
+                    android:textSize="14sp"
+                    android:singleLine="true"
                     android:textAllCaps="false"
                     android:textAppearance="@style/buttontextStyle"
                     android:textColorHint="@color/white" />

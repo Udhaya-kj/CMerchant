@@ -22,8 +22,11 @@ import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * VoucherManageBody
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-03-06T09:35:53.170Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-03-11T07:45:19.293Z")
 public class VoucherManageBody {
+  @SerializedName("caller_tye")
+  private String callerTye = null;
+
   @SerializedName("cust_id")
   private String custId = null;
 
@@ -35,6 +38,9 @@ public class VoucherManageBody {
 
   @SerializedName("voucher_id")
   private String voucherId = null;
+
+  @SerializedName("mobile_no")
+  private String mobileNo = null;
 
   @SerializedName("device_id")
   private String deviceId = null;
@@ -48,6 +54,24 @@ public class VoucherManageBody {
   @SerializedName("session_token")
   private String sessionToken = null;
 
+  public VoucherManageBody callerTye(String callerTye) {
+    this.callerTye = callerTye;
+    return this;
+  }
+
+   /**
+   * Get callerTye
+   * @return callerTye
+  **/
+  @Schema(description = "")
+  public String getCallerTye() {
+    return callerTye;
+  }
+
+  public void setCallerTye(String callerTye) {
+    this.callerTye = callerTye;
+  }
+
   public VoucherManageBody custId(String custId) {
     this.custId = custId;
     return this;
@@ -57,7 +81,7 @@ public class VoucherManageBody {
    * Get custId
    * @return custId
   **/
-   @Schema(description = "")
+  @Schema(description = "")
   public String getCustId() {
     return custId;
   }
@@ -75,7 +99,7 @@ public class VoucherManageBody {
    * Get merId
    * @return merId
   **/
-   @Schema(description = "")
+  @Schema(description = "")
   public String getMerId() {
     return merId;
   }
@@ -93,7 +117,7 @@ public class VoucherManageBody {
    * Get voucherType
    * @return voucherType
   **/
-   @Schema(description = "")
+  @Schema(description = "")
   public String getVoucherType() {
     return voucherType;
   }
@@ -111,13 +135,31 @@ public class VoucherManageBody {
    * Get voucherId
    * @return voucherId
   **/
-   @Schema(description = "")
+  @Schema(description = "")
   public String getVoucherId() {
     return voucherId;
   }
 
   public void setVoucherId(String voucherId) {
     this.voucherId = voucherId;
+  }
+
+  public VoucherManageBody mobileNo(String mobileNo) {
+    this.mobileNo = mobileNo;
+    return this;
+  }
+
+   /**
+   * Get mobileNo
+   * @return mobileNo
+  **/
+  @Schema(description = "")
+  public String getMobileNo() {
+    return mobileNo;
+  }
+
+  public void setMobileNo(String mobileNo) {
+    this.mobileNo = mobileNo;
   }
 
   public VoucherManageBody deviceId(String deviceId) {
@@ -129,7 +171,7 @@ public class VoucherManageBody {
    * Get deviceId
    * @return deviceId
   **/
-   @Schema(description = "")
+  @Schema(description = "")
   public String getDeviceId() {
     return deviceId;
   }
@@ -147,7 +189,7 @@ public class VoucherManageBody {
    * Get cbLedgerId
    * @return cbLedgerId
   **/
-   @Schema(description = "")
+  @Schema(description = "")
   public String getCbLedgerId() {
     return cbLedgerId;
   }
@@ -165,7 +207,7 @@ public class VoucherManageBody {
    * Get isSharedVoucherTxn
    * @return isSharedVoucherTxn
   **/
-   @Schema(description = "")
+  @Schema(description = "")
   public Boolean isIsSharedVoucherTxn() {
     return isSharedVoucherTxn;
   }
@@ -183,7 +225,7 @@ public class VoucherManageBody {
    * Get sessionToken
    * @return sessionToken
   **/
-   @Schema(description = "")
+  @Schema(description = "")
   public String getSessionToken() {
     return sessionToken;
   }
@@ -202,10 +244,12 @@ public class VoucherManageBody {
       return false;
     }
     VoucherManageBody voucherManageBody = (VoucherManageBody) o;
-    return Objects.equals(this.custId, voucherManageBody.custId) &&
+    return Objects.equals(this.callerTye, voucherManageBody.callerTye) &&
+        Objects.equals(this.custId, voucherManageBody.custId) &&
         Objects.equals(this.merId, voucherManageBody.merId) &&
         Objects.equals(this.voucherType, voucherManageBody.voucherType) &&
         Objects.equals(this.voucherId, voucherManageBody.voucherId) &&
+        Objects.equals(this.mobileNo, voucherManageBody.mobileNo) &&
         Objects.equals(this.deviceId, voucherManageBody.deviceId) &&
         Objects.equals(this.cbLedgerId, voucherManageBody.cbLedgerId) &&
         Objects.equals(this.isSharedVoucherTxn, voucherManageBody.isSharedVoucherTxn) &&
@@ -214,7 +258,7 @@ public class VoucherManageBody {
 
   @Override
   public int hashCode() {
-    return Objects.hash(custId, merId, voucherType, voucherId, deviceId, cbLedgerId, isSharedVoucherTxn, sessionToken);
+    return Objects.hash(callerTye, custId, merId, voucherType, voucherId, mobileNo, deviceId, cbLedgerId, isSharedVoucherTxn, sessionToken);
   }
 
 
@@ -223,10 +267,12 @@ public class VoucherManageBody {
     StringBuilder sb = new StringBuilder();
     sb.append("class VoucherManageBody {\n");
     
+    sb.append("    callerTye: ").append(toIndentedString(callerTye)).append("\n");
     sb.append("    custId: ").append(toIndentedString(custId)).append("\n");
     sb.append("    merId: ").append(toIndentedString(merId)).append("\n");
     sb.append("    voucherType: ").append(toIndentedString(voucherType)).append("\n");
     sb.append("    voucherId: ").append(toIndentedString(voucherId)).append("\n");
+    sb.append("    mobileNo: ").append(toIndentedString(mobileNo)).append("\n");
     sb.append("    deviceId: ").append(toIndentedString(deviceId)).append("\n");
     sb.append("    cbLedgerId: ").append(toIndentedString(cbLedgerId)).append("\n");
     sb.append("    isSharedVoucherTxn: ").append(toIndentedString(isSharedVoucherTxn)).append("\n");

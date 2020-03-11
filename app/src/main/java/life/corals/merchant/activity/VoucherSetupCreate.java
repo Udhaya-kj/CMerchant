@@ -63,7 +63,9 @@ import life.corals.merchant.utils.AppTimeOutManagerUtil;
 import life.corals.merchant.utils.IntermediateAlertDialog;
 import life.corals.merchant.utils.Util;
 
+import static life.corals.merchant.utils.Constants.DEVICE_ID;
 import static life.corals.merchant.utils.Constants.MERCHANT_DETAILS_PREFERENCE;
+import static life.corals.merchant.utils.Constants.MERCHANT_ID;
 
 public class VoucherSetupCreate extends AppCompatActivity {
 
@@ -168,7 +170,6 @@ public class VoucherSetupCreate extends AppCompatActivity {
     TextView tv_count_title_p, tv_count_desc_p, tv_count_title_b, tv_count_desc_b, tv_count_title_u, tv_count_desc_u, tv_count_title_z, tv_count_desc_z, tv_count_title_m, tv_count_desc_m, tv_count_lead_title_m, tv_count_lead_desc_m;
     String create_update_code = null, mer_cd_redeem_id = null, r_voucher_id = null, terms_conditions = null;
     private AppTimeOutManagerUtil appTimeOutManagerUtil;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -730,8 +731,8 @@ public class VoucherSetupCreate extends AppCompatActivity {
                     linearLayout_U.setVisibility(View.VISIBLE);
                     fetchRedeemVoucherListRequestBody = new FetchRedeemVoucherListRequestBody();
                     fetchRedeemVoucherListRequestBody.setCallerType("m");
-                    fetchRedeemVoucherListRequestBody.setMerId("120022732");
-                    fetchRedeemVoucherListRequestBody.setDeviceId("2002271337305070");
+                    fetchRedeemVoucherListRequestBody.setMerId( preferences.getString(MERCHANT_ID, ""));
+                    fetchRedeemVoucherListRequestBody.setDeviceId(preferences.getString(DEVICE_ID, ""));
                     fetchRedeemVoucherListRequestBody.setSessionToken("No-Token");
                     fetchRedeemVoucherListRequestBody.setVoucherType("Z");
                     fetchRedeemVoucherListRequestBody.setRequestCode(String.valueOf(GET_VOUCHER_LIST));
@@ -806,8 +807,8 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
                     fetchRedeemVoucherListRequestBody = new FetchRedeemVoucherListRequestBody();
                     fetchRedeemVoucherListRequestBody.setCallerType("m");
-                    fetchRedeemVoucherListRequestBody.setMerId("120022732");
-                    fetchRedeemVoucherListRequestBody.setDeviceId("2002271337305070");
+                    fetchRedeemVoucherListRequestBody.setMerId(preferences.getString(MERCHANT_ID, ""));
+                    fetchRedeemVoucherListRequestBody.setDeviceId(preferences.getString(DEVICE_ID, ""));
                     fetchRedeemVoucherListRequestBody.setSessionToken("No-Token");
                     fetchRedeemVoucherListRequestBody.setVoucherType("Z");
                     fetchRedeemVoucherListRequestBody.setRequestCode(String.valueOf(GET_VOUCHER_LIST));

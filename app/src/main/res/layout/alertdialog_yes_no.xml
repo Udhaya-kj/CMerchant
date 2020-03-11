@@ -92,10 +92,11 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:text="No"
+                    android:singleLine="true"
                     android:textAllCaps="false"
                     android:textAppearance="@style/buttontextStyle"
                     android:textColorHint="@color/white"
-                    android:textSize="16sp" />
+                    android:textSize="14sp" />
 
                 <View
                     android:layout_weight="0.3"
@@ -114,10 +115,11 @@
                     android:focusable="true"
                     android:padding="2dp"
                     android:text="Yes"
+                    android:singleLine="true"
                     android:textAllCaps="false"
                     android:textAppearance="@style/buttontextStyle"
                     android:textColorHint="@color/white"
-                    android:textSize="16sp" />
+                    android:textSize="14sp" />
 
                 <View
                     android:layout_weight="0.3"

@@ -35,7 +35,6 @@ public class ShowQrActivity extends AppCompatActivity {
 
     private View dotsLayout;
 
-    private View layouts;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +63,6 @@ public class ShowQrActivity extends AppCompatActivity {
         findView();
     }
     private void findView() {
-        layouts  = findViewById(R.id.view);
         TabLayout tabLayout = findViewById(R.id.tabLayout_graph);
 
         viewPager = findViewById(R.id.viewPager_graph);

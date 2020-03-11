@@ -459,9 +459,9 @@ public class SplashScreen extends AppCompatActivity {
                         editor.putString(OUTLET_ID, result.getOutletId());
                         editor.putString(TOTAL_CUSTOMERS, result.getTotCustomers());
                         editor.putString(MERCHANT_ID, result.getMerId());
-                        Log.d("TOTAL_CUSTOMERS", "onSuccess: " + result.getUniqueid());
-                        if (result.getUniqueid() != null) {
-                            editor.putString(UNIQUE_ID, result.getUniqueid());
+                        Log.d("TOTAL_CUSTOMERS", "onSuccess: " + result.getUniqueId());
+                        if (result.getUniqueId() != null) {
+                            editor.putString(UNIQUE_ID, result.getUniqueId());
                         }
                         editor.putString(DEVICE_ID, preferences1.getString(DEVICE_ID, ""));
                         sharedPreference.removeCampaignList();

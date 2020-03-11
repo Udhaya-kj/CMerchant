@@ -51,6 +51,10 @@ import life.corals.merchant.utils.AlertSuccess;
 import life.corals.merchant.utils.AppTimeOutManagerUtil;
 import life.corals.merchant.utils.IntermediateAlertDialog;
 
+import static life.corals.merchant.utils.Constants.DEVICE_ID;
+import static life.corals.merchant.utils.Constants.MERCHANT_DETAILS_PREFERENCE;
+import static life.corals.merchant.utils.Constants.MERCHANT_ID;
+
 public class VoucherSetupPreview extends AppCompatActivity {
 
     private MaterialButton ok_btn, cancel_btn, perf_btn, edit_btn;
@@ -78,7 +82,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
     FetchRedeemVoucherListRequestBody fetchRedeemVoucherListRequestBody;
     String create_update_code = null;
     private AppTimeOutManagerUtil appTimeOutManagerUtil;
-
+    private SharedPreferences preferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,6 +102,8 @@ public class VoucherSetupPreview extends AppCompatActivity {
                 onBackPressed();
             }
         });
+        preferences = getSharedPreferences(MERCHANT_DETAILS_PREFERENCE, MODE_PRIVATE);
+
         sharedpreferences_add_redeem = getSharedPreferences(MyPREFERENCES_ADD_VOUCHER, Context.MODE_PRIVATE);
         daysList = new ArrayList<>();
         gson = new Gson();
@@ -308,8 +314,8 @@ public class VoucherSetupPreview extends AppCompatActivity {
 
                     voucher_list.add(setUpRedemptionList);
                     SetUpVoucherList setUpVoucherList = new SetUpVoucherList();
-                    setUpVoucherList.setMerId("120022732");
-                    setUpVoucherList.setMerDeviceId("2002271337305070");
+                    setUpVoucherList.setMerId(preferences.getString(MERCHANT_ID, ""));
+                    setUpVoucherList.setMerDeviceId(preferences.getString(DEVICE_ID, ""));
                     setUpVoucherList.setVoucherList(voucher_list);
                     setUpVoucherList.setRequestCode("C");
                     Log.d("Voucher--->", "onClick: " + voucher_list);
@@ -539,8 +545,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
             desc_list.add(desc);
             if (!TextUtils.isEmpty(t_conditions)) {
                 validity_list.add(t_conditions);
-            }
-            else {
+            } else {
                 validity_list.add("Validity Period: " + startDate_conv + " to " + endDate_conv + ". Applicable for one redemption per customer." +
                         " Not valid with other offers. Merchant decision is final. Terms & conditions apply.");
             }
@@ -825,33 +830,37 @@ public class VoucherSetupPreview extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            new AlertSuccess(VoucherSetupPreview.this, "Done!", result.getStatusMsg()) {
-                                @Override
-                                public void onButtonClick() {
-                                    Intent in = new Intent(VoucherSetupPreview.this, VoucherSetupHome.class);
-                                    startActivity(in);
-                                    finish();
-                                    overridePendingTransition(R.anim.swipe_in_left, R.anim.swipe_in_left);
-                                }
-                            };
-                           /* LayoutInflater factory = LayoutInflater.from(VoucherSetupPreview.this);
-                            final View deleteDialogView = factory.inflate(R.layout.success_dialog, null);
-                            final AlertDialog deleteDialog = new AlertDialog.Builder(VoucherSetupPreview.this).create();
-                            TextView textView_delete = (TextView) deleteDialogView.findViewById(R.id.text_dialog);
-                            textView_delete.setText(result.getStatusMsg());
-                            deleteDialog.setView(deleteDialogView);
-                            deleteDialog.show();
+                            if (result.getStatusMsg().equals("Voucher deleted successfully")) {
+                                LayoutInflater factory = LayoutInflater.from(VoucherSetupPreview.this);
+                                final View deleteDialogView = factory.inflate(R.layout.success_dialog, null);
+                                final AlertDialog deleteDialog = new AlertDialog.Builder(VoucherSetupPreview.this).create();
+                                TextView textView_delete = (TextView) deleteDialogView.findViewById(R.id.text_dialog);
+                                textView_delete.setText(result.getStatusMsg());
+                                deleteDialog.setView(deleteDialogView);
+                                deleteDialog.show();
 
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    deleteDialog.dismiss();
-                                    Intent in = new Intent(VoucherSetupPreview.this, VoucherSetupHome.class);
-                                    startActivity(in);
-                                    finish();
-                                    overridePendingTransition(R.anim.swipe_in_left, R.anim.swipe_in_left);
-                                }
-                            }, 3000);*/
+                                new Handler().postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        deleteDialog.dismiss();
+                                        Intent in = new Intent(VoucherSetupPreview.this, VoucherSetupHome.class);
+                                        startActivity(in);
+                                        finish();
+                                        overridePendingTransition(R.anim.swipe_in_left, R.anim.swipe_in_left);
+                                    }
+                                }, 3000);
+                            } else {
+                                new AlertSuccess(VoucherSetupPreview.this, "Done!", result.getStatusMsg()) {
+                                    @Override
+                                    public void onButtonClick() {
+                                        Intent in = new Intent(VoucherSetupPreview.this, VoucherSetupHome.class);
+                                        startActivity(in);
+                                        finish();
+                                        overridePendingTransition(R.anim.swipe_in_left, R.anim.swipe_in_left);
+                                    }
+                                };
+                            }
+
                         }
                     });
 
@@ -1035,8 +1044,8 @@ public class VoucherSetupPreview extends AppCompatActivity {
         setUpRedemptionList.setMerCbRedeemId(mer_cb_redeem_id);
         voucher_list.add(setUpRedemptionList);
         SetUpVoucherList setUpVoucherList = new SetUpVoucherList();
-        setUpVoucherList.setMerId("120022732");
-        setUpVoucherList.setMerDeviceId("2002271337305070");
+        setUpVoucherList.setMerId(preferences.getString(MERCHANT_ID, ""));
+        setUpVoucherList.setMerDeviceId(preferences.getString(DEVICE_ID, ""));
         setUpVoucherList.setVoucherList(voucher_list);
         setUpVoucherList.setRequestCode("D");
 
@@ -1077,8 +1086,8 @@ public class VoucherSetupPreview extends AppCompatActivity {
 
         voucher_list.add(setUpRedemptionList);
         SetUpVoucherList setUpVoucherList = new SetUpVoucherList();
-        setUpVoucherList.setMerId("120022732");
-        setUpVoucherList.setMerDeviceId("2002271337305070");
+        setUpVoucherList.setMerId(preferences.getString(MERCHANT_ID, ""));
+        setUpVoucherList.setMerDeviceId( preferences.getString(DEVICE_ID, ""));
         setUpVoucherList.setVoucherList(voucher_list);
         setUpVoucherList.setRequestCode("U");
 

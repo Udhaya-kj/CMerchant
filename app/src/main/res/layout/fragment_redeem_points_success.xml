@@ -29,7 +29,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="10dp"
-                    android:text="Redeemption of points Successful!"
+                    android:text="Voucher Redeemption Successful!"
                     android:textAppearance="@style/headerTextStyle1"
                     android:textColor="@color/lytgreen"
                     android:textSize="22sp"
@@ -139,6 +139,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/layout_ref_award"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -169,6 +170,270 @@
                     <TextView
 
                         android:id="@+id/points_redeem_award"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:padding="5dp"
+                        android:textAppearance="@style/headerTextStyle1"
+                        android:textColor="@color/matt_black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_status_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="Status "
+                        android:textAppearance="@style/headerTextStyle1"
+                        android:textColor="@color/matt_black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textColor="@color/matt_black"
+                        android:textSize="20sp" />
+
+                    <TextView
+
+                        android:id="@+id/tv_status_message"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:padding="5dp"
+                        android:textAppearance="@style/headerTextStyle1"
+                        android:textColor="@color/matt_black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_cus_wallet_bal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="Customer Wallet Bal "
+                        android:textAppearance="@style/headerTextStyle1"
+                        android:textColor="@color/matt_black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textColor="@color/matt_black"
+                        android:textSize="20sp" />
+
+                    <TextView
+
+                        android:id="@+id/tv_cus_wallet_bal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:padding="5dp"
+                        android:textAppearance="@style/headerTextStyle1"
+                        android:textColor="@color/matt_black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_wallet_balance_exp_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="Wallet Bal Exp Date "
+                        android:textAppearance="@style/headerTextStyle1"
+                        android:textColor="@color/matt_black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textColor="@color/matt_black"
+                        android:textSize="20sp" />
+
+                    <TextView
+
+                        android:id="@+id/tv_wallet_balance_exp_date"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:padding="5dp"
+                        android:textAppearance="@style/headerTextStyle1"
+                        android:textColor="@color/matt_black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_redeem_deposit_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="Redeem Deposit Amount"
+                        android:textAppearance="@style/headerTextStyle1"
+                        android:textColor="@color/matt_black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textColor="@color/matt_black"
+                        android:textSize="20sp" />
+
+                    <TextView
+
+                        android:id="@+id/tv_redeem_deposit_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:padding="5dp"
+                        android:textAppearance="@style/headerTextStyle1"
+                        android:textColor="@color/matt_black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_points_bal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="Points Bal"
+                        android:textAppearance="@style/headerTextStyle1"
+                        android:textColor="@color/matt_black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textColor="@color/matt_black"
+                        android:textSize="20sp" />
+
+                    <TextView
+
+                        android:id="@+id/tv_points_bal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:padding="5dp"
+                        android:textAppearance="@style/headerTextStyle1"
+                        android:textColor="@color/matt_black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_points_exp_dt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="Points Exp Date "
+                        android:textAppearance="@style/headerTextStyle1"
+                        android:textColor="@color/matt_black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textColor="@color/matt_black"
+                        android:textSize="20sp" />
+
+                    <TextView
+
+                        android:id="@+id/tv_points_exp_dt"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="start"
@@ -219,8 +484,8 @@
                     android:layout_marginBottom="10dp"
                     android:numStars="5"
                     android:rating="3"
-                    android:scaleX="0.6"
-                    android:scaleY="0.6"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
                     android:textColor="@color/white"
                     app:changeable="true"
                     app:empty_color="@color/light_gray"

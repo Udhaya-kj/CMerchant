@@ -36,15 +36,22 @@ public abstract class TopUpQRScannerUtils {
     private static final String TAG = "TopUpQRScannerUtils";
     private SurfaceView surfaceView;
     private Context mCtx;
+
     private BarcodeDetector barcodeDetector;
     private CameraSource cameraSource;
+
     private QRHandlerUtils qrCodeParserUtils;
+
     private final Handler handler = new Handler();
     private Runnable runnable;
+
     private boolean scanComplete = false;
+
     private String merchantId;
     private String campaignId;
+
     private MerchantToast coralsToast;
+
     int a = 0;
 
     public TopUpQRScannerUtils(SurfaceView surfaceView, Context mCtx, String merchantId) {
@@ -74,31 +81,19 @@ public abstract class TopUpQRScannerUtils {
                 .setAutoFocusEnabled(true)
                 .build();
 
-        qrCodeParserUtils = new QRHandlerUtils() {
-
+        qrCodeParserUtils = new QRHandlerUtils();
+        QrParserListener qrParserListener = new QrParserListener() {
             @Override
-            public void parsedData(final HashMap<String, String> hashMap, final String outletId, final String authToken, final String campaignId) {
-                scanComplete = true;
-                ((Activity) mCtx).runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        parsedScanData(hashMap, outletId, authToken, campaignId);
-                    }
-                });
+            public void onSuccess(HashMap<String, String> parsedData, String outletId, String authToken, String campaignId) {
+                parsedScanData(parsedData,outletId,authToken,campaignId);
             }
 
             @Override
-            public void onFailure(final String result) {
-                scanComplete = true;
-                ((Activity) mCtx).runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        onFailureScan(result);
-                    }
-                });
+            public void onFailure(String result) {
 
             }
         };
+        qrCodeParserUtils.setParserListener(qrParserListener);
 
         surfaceView.getHolder().addCallback(new SurfaceHolder.Callback() {
             @Override
@@ -235,4 +230,3 @@ public abstract class TopUpQRScannerUtils {
     }
 
 }
-

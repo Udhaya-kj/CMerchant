@@ -3,14 +3,19 @@ package life.corals.merchant.fragments;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
 import com.google.android.material.button.MaterialButton;
+
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.Objects;
 
@@ -29,8 +34,8 @@ public class RedeemPointsSuccess extends BaseFragment {
     private String cust_id;
     private String redeem_message;
     private String status_message;
-    private String referral_reward;
-
+    private String referral_reward, cus_wallet_bal, wallet_balance_exp_date, redeem_deposit_amount, points_bal, points_exp_dt;
+    LinearLayout layout_ref_award, layout_status_msg, layout_cus_wallet_bal, layout_wallet_balance_exp_date, layout_redeem_deposit_amount, layout_points_bal, layout_points_exp_dt;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -42,6 +47,14 @@ public class RedeemPointsSuccess extends BaseFragment {
         redeem_message = Objects.requireNonNull(getArguments()).getString("redeem_message");
         status_message = Objects.requireNonNull(getArguments()).getString("status_message");
         referral_reward = Objects.requireNonNull(getArguments()).getString("referral_reward");
+
+        cus_wallet_bal = Objects.requireNonNull(getArguments()).getString("cus_wallet_bal");
+        wallet_balance_exp_date = Objects.requireNonNull(getArguments()).getString("wallet_balance_exp_date");
+        redeem_deposit_amount = Objects.requireNonNull(getArguments()).getString("redeem_deposit_amount");
+        points_bal = Objects.requireNonNull(getArguments()).getString("points_bal");
+        points_exp_dt = Objects.requireNonNull(getArguments()).getString("points_exp_dt");
+        Log.d("v_data---", "onCreateView: "+cus_name+","+cust_id+","+redeem_message+","+status_message+","+referral_reward+","+cus_wallet_bal+","+wallet_balance_exp_date+","+redeem_deposit_amount+","+points_bal+","+points_exp_dt);
+
         findView();
         return rootView;
     }
@@ -52,12 +65,89 @@ public class RedeemPointsSuccess extends BaseFragment {
         TextView tv_cust_refferal_award = rootView.findViewById(R.id.points_redeem_award);
         TextView tv_redeem_message = rootView.findViewById(R.id.tv_redeemMessage);
 
+        TextView tv_cus_wallet_bal = rootView.findViewById(R.id.tv_cus_wallet_bal);
+        TextView tv_wallet_balance_exp_date = rootView.findViewById(R.id.tv_wallet_balance_exp_date);
+        TextView tv_redeem_deposit_amount = rootView.findViewById(R.id.tv_redeem_deposit_amount);
+        TextView tv_points_bal = rootView.findViewById(R.id.tv_points_bal);
+        TextView tv_points_exp_dt = rootView.findViewById(R.id.tv_points_exp_dt);
+        layout_ref_award = (LinearLayout) rootView.findViewById(R.id.layout_ref_award);
+        layout_status_msg = (LinearLayout) rootView.findViewById(R.id.layout_status_msg);
+        layout_cus_wallet_bal = (LinearLayout) rootView.findViewById(R.id.layout_cus_wallet_bal);
+        layout_wallet_balance_exp_date = (LinearLayout) rootView.findViewById(R.id.layout_wallet_balance_exp_date);
+        layout_redeem_deposit_amount = (LinearLayout) rootView.findViewById(R.id.layout_redeem_deposit_amount);
+        layout_points_bal = (LinearLayout) rootView.findViewById(R.id.layout_points_bal);
+        layout_points_exp_dt = (LinearLayout) rootView.findViewById(R.id.layout_points_exp_dt   );
+
         MaterialButton okayButton = rootView.findViewById(R.id.redeem_success_okay_button);
 
-        tv_cust_name.setText(cus_name);
-        tv_cust_id.setText(cust_id);
-        tv_cust_refferal_award.setText(referral_reward);
-        tv_redeem_message.setText(redeem_message);
+        if(!StringUtils.isEmpty(cus_name)) {
+            tv_cust_name.setText(cus_name);
+        }
+        else {
+            tv_cust_name.setText("-");
+        }
+
+        if(!StringUtils.isEmpty(cust_id)) {
+            tv_cust_id.setText(cust_id);
+        }
+        else {
+            tv_cust_id.setText("-");
+        }
+
+
+        if(StringUtils.isNotEmpty(referral_reward)) {
+            Log.d("referral_reward---", "isNotEmpty ");
+            tv_cust_refferal_award.setText(referral_reward);
+        }
+        else {
+            Log.d("referral_reward---", "isNotEmpty  true");
+            layout_ref_award.setVisibility(View.GONE);
+        }
+
+        if(StringUtils.isNotBlank(referral_reward)) {
+            Log.d("referral_reward---", "isNotBlank ");
+            tv_cust_refferal_award.setText(referral_reward);
+        }
+        else {
+            Log.d("referral_reward---", "isNotBlank true");
+            layout_ref_award.setVisibility(View.GONE);
+        }
+
+        if(!StringUtils.isEmpty(cus_wallet_bal)) {
+            tv_cus_wallet_bal.setText(cus_wallet_bal);
+        }
+        else {
+            layout_cus_wallet_bal.setVisibility(View.GONE);
+        }
+
+        if(!StringUtils.isEmpty(wallet_balance_exp_date)  || wallet_balance_exp_date!=null) {
+            tv_wallet_balance_exp_date.setText(wallet_balance_exp_date);
+        }
+        else {
+            layout_cus_wallet_bal.setVisibility(View.GONE);
+        }
+
+        if(!StringUtils.isEmpty(redeem_deposit_amount)) {
+            tv_redeem_deposit_amount.setText(redeem_deposit_amount);
+        }
+        else {
+            layout_redeem_deposit_amount.setVisibility(View.GONE);
+        }
+
+        if(!StringUtils.isEmpty(points_bal)) {
+            tv_points_bal.setText(points_bal+" points");
+        }
+        else {
+            layout_points_bal.setVisibility(View.GONE);
+        }
+
+        if(!StringUtils.isEmpty(points_exp_dt)) {
+            tv_points_exp_dt.setText(points_exp_dt);
+        }
+        else {
+            layout_points_exp_dt.setVisibility(View.GONE);
+        }
+
 
         okayButton.setOnClickListener(new View.OnClickListener() {
             @Override

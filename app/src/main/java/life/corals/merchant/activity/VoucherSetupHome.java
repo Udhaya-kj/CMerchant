@@ -1,6 +1,7 @@
 package life.corals.merchant.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -33,6 +34,10 @@ import life.corals.merchant.utils.AppTimeOutManagerUtil;
 import life.corals.merchant.utils.IntermediateAlertDialog;
 import life.corals.merchant.utils.Util;
 
+import static life.corals.merchant.utils.Constants.DEVICE_ID;
+import static life.corals.merchant.utils.Constants.MERCHANT_DETAILS_PREFERENCE;
+import static life.corals.merchant.utils.Constants.MERCHANT_ID;
+
 public class VoucherSetupHome extends AppCompatActivity {
 
     CardView textView_add_redeem;
@@ -53,6 +58,7 @@ public class VoucherSetupHome extends AppCompatActivity {
     CardView cardView_p, cardView_b, cardView_u, cardView_z, cardView_m;
     private IntermediateAlertDialog intermediateAlertDialog;
     private AppTimeOutManagerUtil appTimeOutManagerUtil;
+    private SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,10 +66,9 @@ public class VoucherSetupHome extends AppCompatActivity {
         setContentView(R.layout.activity_redeem_setup_home);
 
         Toolbar toolbar = findViewById(R.id.toolbar_voucher_setup);
-
         toolbar.setTitleTextColor(getResources().getColor(R.color.matt_black));
         setSupportActionBar(toolbar);
-
+        preferences = Objects.requireNonNull(VoucherSetupHome.this).getSharedPreferences(MERCHANT_DETAILS_PREFERENCE, MODE_PRIVATE);
         appTimeOutManagerUtil = new AppTimeOutManagerUtil(VoucherSetupHome.this);
 
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
@@ -121,8 +126,8 @@ public class VoucherSetupHome extends AppCompatActivity {
 
         fetchRedeemVoucherListRequestBody = new FetchRedeemVoucherListRequestBody();
         fetchRedeemVoucherListRequestBody.setCallerType("m");
-        fetchRedeemVoucherListRequestBody.setMerId("120022732");
-        fetchRedeemVoucherListRequestBody.setDeviceId("2002271337305070");
+        fetchRedeemVoucherListRequestBody.setMerId(preferences.getString(MERCHANT_ID, ""));
+        fetchRedeemVoucherListRequestBody.setDeviceId(preferences.getString(DEVICE_ID, ""));
         fetchRedeemVoucherListRequestBody.setSessionToken("NoToken");
         fetchRedeemVoucherListRequestBody.setVoucherType("ALL");
         fetchRedeemVoucherListRequestBody.setRequestCode(String.valueOf(GET_VOUCHER_LIST));

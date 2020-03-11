@@ -18,14 +18,6 @@
         android:textColor="@color/matt_black"
         android:textSize="16sp" />
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:background="@color/LightGrey" />
-
     <androidx.cardview.widget.CardView
         android:layout_width="250dp"
         android:layout_height="250dp"
@@ -54,7 +46,7 @@
         android:text="Help text"
         android:padding="2dp"
         android:textSize="14sp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -88,6 +80,8 @@
             android:paddingStart="80dp"
             android:paddingEnd="80dp"
             android:text="Close"
+            android:textSize="14sp"
+            android:singleLine="true"
             android:textAllCaps="false"
             android:textAppearance="@style/buttontextStyle"
             android:textColorHint="@color/white" />

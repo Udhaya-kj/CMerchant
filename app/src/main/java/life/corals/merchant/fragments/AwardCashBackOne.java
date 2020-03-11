@@ -140,7 +140,6 @@ public class AwardCashBackOne extends BaseFragment {
                     MobilenumberLayout.setVisibility(View.VISIBLE);
                     mobileNumberLyayout.setErrorEnabled(false);
                 }
-
             }
         });
         scanQr.setOnClickListener(new View.OnClickListener() {

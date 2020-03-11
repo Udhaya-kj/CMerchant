@@ -39,15 +39,13 @@ public class VoucherPerformanceActivity extends AppCompatActivity {
 
         if (getIntent().getExtras() != null) {
             String title = getIntent().getStringExtra("title");
-
             tv_title.setText(title);
         }
-
-
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        overridePendingTransition(R.anim.swipe_in_left, R.anim.swipe_in_left);
     }
 }

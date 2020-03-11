@@ -1028,6 +1028,10 @@
         "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_customer_visit.xml"
     },
     {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_alert_bonus_redeem.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\alert_bonus_redeem.xml"
+    },
+    {
         "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_award_cashback_success.xml.flat",
         "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\fragment_award_cashback_success.xml"
     },

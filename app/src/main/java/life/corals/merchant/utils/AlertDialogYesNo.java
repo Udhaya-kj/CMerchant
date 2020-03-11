@@ -82,7 +82,7 @@ public abstract class AlertDialogYesNo {
             display.getSize(size);
 
             if (size.x > 720) {
-                width = size.x - 400;
+                width = size.x - 300;
             }
         }
         return width;
