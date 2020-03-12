@@ -51,4 +51,5 @@
     <dimen name="height_170dp">170dp</dimen>
     <dimen name="height_110dp">110dp</dimen>
     <dimen name="height_120dp">120dp</dimen>
+    <dimen name="voucher_title_margin">12dp</dimen>
 </resources>

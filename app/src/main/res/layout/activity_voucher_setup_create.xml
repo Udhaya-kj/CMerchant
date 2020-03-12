@@ -97,8 +97,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
-                                android:paddingStart="15dp"
-                                android:paddingEnd="0dp"
+
                                 android:text="Enter at least 10 characters"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
@@ -150,8 +149,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
-                                android:paddingStart="15dp"
-                                android:paddingEnd="0dp"
+
                                 android:text="Enter at least 25 characters"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
@@ -514,8 +512,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
-                                android:paddingStart="15dp"
-                                android:paddingEnd="0dp"
+
                                 android:text="Enter at least 10 characters"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
@@ -566,8 +563,6 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
-                                android:paddingStart="15dp"
-                                android:paddingEnd="0dp"
                                 android:text="Enter at least 25 characters"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
@@ -964,8 +959,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
-                                android:paddingStart="15dp"
-                                android:paddingEnd="0dp"
+
                                 android:text="Enter at least 10 characters"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
@@ -1018,8 +1012,6 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
-                                android:paddingStart="15dp"
-                                android:paddingEnd="0dp"
                                 android:text="Enter at least 25 characters"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
@@ -1426,8 +1418,6 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
-                                android:paddingStart="15dp"
-                                android:paddingEnd="0dp"
                                 android:text="Enter at least 10 characters"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
@@ -1480,8 +1470,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
-                                android:paddingStart="15dp"
-                                android:paddingEnd="0dp"
+
                                 android:text="Enter at least 25 characters"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
@@ -1662,8 +1651,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
-                                android:paddingStart="15dp"
-                                android:paddingEnd="0dp"
+
                                 android:text="Enter at least 10 characters"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
@@ -1715,8 +1703,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
-                                android:paddingStart="15dp"
-                                android:paddingEnd="0dp"
+
                                 android:text="Enter at least 25 characters"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
@@ -1766,8 +1753,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
-                                android:paddingStart="15dp"
-                                android:paddingEnd="0dp"
+
                                 android:text="Enter at least 10 characters"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
@@ -1818,8 +1804,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
-                                android:paddingStart="15dp"
-                                android:paddingEnd="0dp"
+
                                 android:text="Enter at least 25 characters"
                                 android:textSize="12sp"
                                 android:visibility="visible" />

@@ -71,7 +71,6 @@
     <string name="privacy_policy">Privacy Policy</string>
     <string name="privacy_policy_u"><u>Privacy policies</u></string>
     <string name="terms_and_conditions_u"><u>Terms and Conditions</u></string>
-    <string name="todo">TODO</string>
     <string name="insight_msg1">This week, you have awarded 100 points less so far compared to 1000 last week.</string>
     <string name="insight_msg2">Number of customers has reduced by 10 compare to 100 last week. </string>
 
@@ -482,5 +481,10 @@ Merchant Team</string>
     <string name="MGM_title">Member Get Member Voucher</string>
     <string name="voucher_types_question">Select a type of voucher you want to create?</string>
     <string name="History">History</string>
+    <string name="no_vouchers">No Vouchers</string>
+    <string name="add_voucher">Add Voucher</string>
+    <string name="your_vouchers">My Vouchers</string>
+    <string name="todo">TODO</string>
+
 
 </resources>

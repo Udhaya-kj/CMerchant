@@ -125,7 +125,7 @@ public class VoucherSetupTypes extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(VoucherSetupTypes.this, Homenew.class));
+        startActivity(new Intent(VoucherSetupTypes.this, VoucherSetupHome.class));
         finish();
         overridePendingTransition(R.anim.swipe_in_left, R.anim.swipe_in_left);
     }

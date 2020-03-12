@@ -2314,7 +2314,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                                     runOnUiThread(new Runnable() {
                                                         @Override
                                                         public void run() {
-                                                            AlertDialogFailure alertDialogFailure = new AlertDialogFailure(VoucherSetupCreate.this, "You should have a assigned voucher to create bulk offer voucher", "OK", "WARNING") {
+                                                            AlertDialogFailure alertDialogFailure = new AlertDialogFailure(VoucherSetupCreate.this, "You should have a assigned voucher to create bulk offer voucher", "OK", "") {
                                                                 @Override
                                                                 public void onButtonClick() {
                                                                     startActivity(new Intent(VoucherSetupCreate.this, VoucherSetupHome.class));
