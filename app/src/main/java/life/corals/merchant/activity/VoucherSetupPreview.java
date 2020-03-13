@@ -60,7 +60,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
     private MaterialButton ok_btn, cancel_btn, perf_btn, edit_btn;
     TextView textView_settings1, textView_settings2, text_ask_create_update;
     private List<SetUpRedemptionList> voucher_list;
-    String type_code, back_press_code, voucher_type, title, desc, lead_title, lead_desc, s_date, e_date, bg_color, st_time, e_time, getActDays, points, sharable, wallet, voucher_count, voucher_id, mer_cb_redeem_id, terms_conditions;
+    String type_code, back_press_code, voucher_type, title, desc, lead_title, lead_desc, s_date, e_date, bg_color, st_time, e_time, getActDays, points, sharable, wallet, voucher_count, voucher_id, mer_cb_redeem_id, terms_conditions,ref_reward_points;
     int daysCount = 0;
     private SharedPreferences sharedpreferences_add_redeem;
     public static final String MyPREFERENCES_ADD_VOUCHER = "MyPREFERENCES_ADD_VOUCHER";
@@ -89,7 +89,6 @@ public class VoucherSetupPreview extends AppCompatActivity {
         setContentView(R.layout.activity_voucher_setup_preview);
 
         appTimeOutManagerUtil = new AppTimeOutManagerUtil(VoucherSetupPreview.this);
-
         Toolbar toolbar = findViewById(R.id.toolbar_voucher_preview);
         toolbar.setTitleTextColor(getResources().getColor(R.color.matt_black));
         setSupportActionBar(toolbar);
@@ -264,7 +263,6 @@ public class VoucherSetupPreview extends AppCompatActivity {
                 desc = getIntent().getStringExtra("desc");
                 lead_title = getIntent().getStringExtra("lead_title");
                 lead_desc = getIntent().getStringExtra("lead_desc");
-                points = getIntent().getStringExtra("points");
                 s_date = getIntent().getStringExtra("s_date");
                 e_date = getIntent().getStringExtra("e_date");
                 sharable = getIntent().getStringExtra("sharable");
@@ -272,6 +270,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                 mer_cb_redeem_id = getIntent().getStringExtra("mer_cd_redeem_id");
                 isActive = getIntent().getBooleanExtra("isActive", true);
                 terms_conditions = getIntent().getStringExtra("terms_conditions");
+                ref_reward_points = getIntent().getStringExtra("ref_reward_points");
                 if (!TextUtils.isEmpty(sharable) && sharable.equals("1")) {
                     isSharable = true;
                 }
@@ -297,7 +296,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                     setUpRedemptionList.setRedeemActtime(st_time);
                     setUpRedemptionList.setRedeemEndtime(e_time);
                     if (voucher_type.equals("M")) {
-                        setUpRedemptionList.setReferralRewardPoints(points);
+                        setUpRedemptionList.setReferralRewardPoints(ref_reward_points);
                     } else {
                         setUpRedemptionList.setRedeemPoints(points);
                     }
@@ -413,6 +412,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                 in.putExtra("mer_cd_redeem_id", mer_cb_redeem_id);
                 in.putExtra("create_update_code", "0");
                 in.putExtra("terms_conditions", terms_conditions);
+                in.putExtra("ref_reward_points", ref_reward_points);
                 Log.d("Adapter---->", voucher_type + "," + title + "," + desc + "," + wallet + "," + points + " " + s_date + "," + st_time + " " + e_date + "," + e_time + "," + getActDays + "," + sharable + "," + bg_color + "," + voucher_count + "," + voucher_id);
                 startActivity(in);
                 finish();
@@ -506,35 +506,36 @@ public class VoucherSetupPreview extends AppCompatActivity {
             for (int i = 0; i < daysList.size(); i++) {
                 if (i == 0) {
                     days = daysList.get(i);
-                } else if (i == (daysList.size() - 1)) {
-                    days += " and " + daysList.get(i);
-                } else {
+                }  else {
                     days += ", " + daysList.get(i);
                 }
+
+                /*else if (i == (daysList.size() - 1)) {
+                    days += " and " + daysList.get(i);
+                }*/
                 Log.d("Days====>", "List=== " + days + " , " + daysCount);
             }
 
             if (daysCount == 7 && !TextUtils.isEmpty(s_time) && !TextUtils.isEmpty(e_time)) {
 
-                textView_settings1.setText("Voucher validity : " + startDate_conv + " to " + endDate_conv);
-                textView_settings2.setText("Voucher will be displayed for redemption on  All days between " + s_time + " to " + e_time);
+                textView_settings1.setText("Voucher is validity between " + startDate_conv + " to " + endDate_conv);
+                textView_settings2.setText("Voucher will be displayed to customer on  all days and redeemable between " + s_time + " - " + e_time);
 
 
             } else if (daysCount != 7 && !TextUtils.isEmpty(s_time) && !TextUtils.isEmpty(e_time)) {
 
-                textView_settings1.setText("Voucher validity : " + startDate_conv + " to " + endDate_conv);
-                textView_settings2.setText("Voucher will be displayed for redemption on " + days + " between " + s_time + " to " + e_time);
+                textView_settings1.setText("Voucher is validity between " + startDate_conv + " to " + endDate_conv);
+                textView_settings2.setText("Voucher will be displayed to customer on " + days + " and redeemable between " + s_time + " - " + e_time);
 
 
             } else if (TextUtils.isEmpty(String.valueOf(daysCount)) && TextUtils.isEmpty(s_time) && TextUtils.isEmpty(e_time)) {
 
-                textView_settings1.setText("Voucher validity : " + startDate_conv + " to " + endDate_conv);
+                textView_settings1.setText("Voucher is validity between " + startDate_conv + " to " + endDate_conv);
                 layout_settings2.setVisibility(View.GONE);
             }
 
         } else {
-            textView_settings1.setText("Voucher validity : " + startDate_conv + " to " + endDate_conv);
-            //textView_settings2.setText("Voucher will be displayed for redemption on " + days + " between " + s_time + " to " + e_time);
+            textView_settings1.setText("Voucher is validity between " + startDate_conv + " to " + endDate_conv);
             layout_settings2.setVisibility(View.GONE);
 
         }
@@ -975,6 +976,41 @@ public class VoucherSetupPreview extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
+
+                            if (voucher_type.equals("P")) {
+                                SharedPreferences preferences_p = getSharedPreferences(VoucherSetupCreate.MyPREFERENCES_REDEEM_P, Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor_bt = preferences_p.edit();
+                                editor_bt.clear();
+                                editor_bt.commit();
+
+                            } else if (voucher_type.equals("B")) {
+                                SharedPreferences preferences_p = getSharedPreferences(VoucherSetupCreate.MyPREFERENCES_REDEEM_B, Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor_bt = preferences_p.edit();
+                                editor_bt.clear();
+                                editor_bt.commit();
+
+
+                            } else if (voucher_type.equals("U")) {
+                                SharedPreferences preferences_p = getSharedPreferences(VoucherSetupCreate.MyPREFERENCES_REDEEM_U, Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor_bt = preferences_p.edit();
+                                editor_bt.clear();
+                                editor_bt.commit();
+
+                            } else if (voucher_type.equals("Z")) {
+                                SharedPreferences preferences_p = getSharedPreferences(VoucherSetupCreate.MyPREFERENCES_REDEEM_Z, Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor_bt = preferences_p.edit();
+                                editor_bt.clear();
+                                editor_bt.commit();
+
+
+                            } else if (voucher_type.equals("M")) {
+                                SharedPreferences preferences_p = getSharedPreferences(VoucherSetupCreate.MyPREFERENCES_REDEEM_M, Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor_bt = preferences_p.edit();
+                                editor_bt.clear();
+                                editor_bt.commit();
+
+                            }
+
                             LayoutInflater factory = LayoutInflater.from(VoucherSetupPreview.this);
                             final View deleteDialogView = factory.inflate(R.layout.success_dialog, null);
                             final AlertDialog deleteDialog = new AlertDialog.Builder(VoucherSetupPreview.this).create();
@@ -1068,7 +1104,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
         setUpRedemptionList.setRedeemActtime(st_time);
         setUpRedemptionList.setRedeemEndtime(e_time);
         if (voucher_type.equals("M")) {
-            setUpRedemptionList.setReferralRewardPoints(points);
+            setUpRedemptionList.setReferralRewardPoints(ref_reward_points);
         } else {
             setUpRedemptionList.setRedeemPoints(points);
         }
@@ -1076,7 +1112,12 @@ public class VoucherSetupPreview extends AppCompatActivity {
         setUpRedemptionList.setVoucherBg(bg_color);
         setUpRedemptionList.setAssignedVoucherCount(voucher_count);
         setUpRedemptionList.setRedeemActivedays(getActDays);
-        setUpRedemptionList.setAssignedVoucherId(voucher_id);
+        if (voucher_type.equals("U")) {
+            setUpRedemptionList.setAssignedVoucherId(voucher_id);
+        }
+        else {
+            setUpRedemptionList.setAssignedVoucherId("0");
+        }
         setUpRedemptionList.setMaxRedemptionAllowed("9999");
         setUpRedemptionList.setIsCustSharable(isSharable);
         setUpRedemptionList.setMerCbRedeemId(mer_cb_redeem_id);

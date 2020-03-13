@@ -27,11 +27,11 @@
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:focusableInTouchMode="true"
             android:descendantFocusability="blocksDescendants"
-            android:focusable="true"
             android:fillViewport="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
             android:padding="@dimen/fifteen_dp">
 
             <LinearLayout
@@ -61,7 +61,7 @@
                         android:id="@+id/layout_type_P"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="@dimen/margin_8dp"
+                        android:layout_marginTop="@dimen/marginTop_10dp"
                         android:animateLayoutChanges="true"
                         android:orientation="vertical"
                         android:visibility="visible">
@@ -81,7 +81,8 @@
                             android:hint="Enter title"
                             android:imeOptions="actionNext"
                             android:inputType="text"
-                            android:paddingLeft="@dimen/fifteen_dp"
+                            android:paddingStart="@dimen/fifteen_dp"
+                            android:paddingEnd="0dp"
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
 
@@ -97,8 +98,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
-
                                 android:text="Enter at least 10 characters"
+                                android:textColor="@color/grey_d"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
 
@@ -118,7 +119,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
                             android:text="Voucher Description" />
 
@@ -132,7 +133,8 @@
                             android:hint="Enter description"
                             android:minHeight="@dimen/height_70dp"
                             android:padding="@dimen/margin_8dp"
-                            android:paddingLeft="@dimen/fifteen_dp"
+                            android:paddingStart="@dimen/fifteen_dp"
+                            android:paddingEnd="0dp"
                             android:singleLine="false"
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
@@ -149,8 +151,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
-
-                                android:text="Enter at least 25 characters"
+                                android:text="Enter at least 15 characters"
+                                android:textColor="@color/grey_d"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
 
@@ -170,7 +172,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
                             android:text="How many points are used for this voucher?" />
 
@@ -180,18 +182,19 @@
                             android:layout_height="@dimen/height_40dp"
                             android:background="@drawable/edittext_border"
                             android:gravity="center|start"
-                            android:hint="1 to 9999"
+                            android:hint="1 to 99999"
                             android:imeOptions="actionDone"
                             android:inputType="numberDecimal"
-                            android:maxLength="4"
-                            android:paddingLeft="@dimen/fifteen_dp"
+                            android:maxLength="5"
+                            android:paddingStart="@dimen/fifteen_dp"
+                            android:paddingEnd="0dp"
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
                             android:text="When do you want to activate this voucher" />
 
@@ -205,8 +208,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:gravity="center|start"
-                                android:hint="Select Activate Date"
-                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:paddingStart="@dimen/marginTop_10dp"
                                 android:paddingEnd="@dimen/marginTop_10dp"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/text_size_16sp" />
@@ -215,7 +217,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
                             android:text="When do you want this voucher to expire" />
 
@@ -230,7 +232,8 @@
                                 android:layout_height="match_parent"
                                 android:gravity="center|start"
                                 android:hint="Select Expiry Date"
-                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:paddingStart="@dimen/marginTop_10dp"
+                                android:paddingEnd="0dp"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/text_size_16sp" />
 
@@ -239,13 +242,14 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/marginTop_10dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
                             android:text="Limit certain hours within a day when this voucher can be redeemed" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
                             android:background="@drawable/edittext_border"
                             android:orientation="horizontal">
 
@@ -254,7 +258,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:gravity="center|start"
-                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:paddingStart="@dimen/marginTop_10dp"
+                                android:paddingEnd="0dp"
                                 android:text="8:00"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/text_size_16sp" />
@@ -264,7 +269,8 @@
                                 android:layout_height="match_parent"
                                 android:gravity="center|start"
                                 android:hint=" to "
-                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:paddingStart="@dimen/marginTop_10dp"
+                                android:paddingEnd="0dp"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/text_size_16sp" />
 
@@ -273,7 +279,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:gravity="center|start"
-                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:paddingStart="@dimen/marginTop_10dp"
+                                android:paddingEnd="0dp"
                                 android:text="23:00"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/text_size_16sp" />
@@ -283,9 +290,9 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/marginTop_10dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
-                            android:text="Can you make weekdays?"
+                            android:text="@string/create_weekdays"
                             android:visibility="visible" />
 
                         <LinearLayout
@@ -301,9 +308,9 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.1"
-                                android:background="@color/green_hase"
+                                android:backgroundTint="@color/green_hase"
                                 android:gravity="center"
-                                android:paddingLeft="0dp"
+                                android:paddingStart="0dp"
                                 android:paddingEnd="0dp"
                                 android:singleLine="true"
                                 android:text="Sun"
@@ -318,8 +325,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="@dimen/margin_5dp"
                                 android:layout_weight="0.1"
-                                android:background="@color/green_hase"
-                                android:paddingLeft="0dp"
+                                android:backgroundTint="@color/green_hase"
+                                android:paddingStart="0dp"
                                 android:paddingEnd="0dp"
                                 android:text="Mon"
                                 android:textAllCaps="false"
@@ -332,9 +339,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="@dimen/margin_5dp"
                                 android:layout_weight="0.1"
-                                android:background="@color/green_hase"
+                                android:backgroundTint="@color/green_hase"
                                 android:gravity="center"
-                                android:paddingLeft="0dp"
+                                android:paddingStart="0dp"
                                 android:paddingEnd="0dp"
                                 android:text="Tue"
                                 android:textAllCaps="false"
@@ -347,9 +354,9 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginStart="@dimen/margin_5dp"
                                 android:layout_weight="0.1"
-                                android:background="@color/green_hase"
+                                android:backgroundTint="@color/green_hase"
                                 android:gravity="center"
-                                android:paddingLeft="0dp"
+                                android:paddingStart="0dp"
                                 android:paddingEnd="0dp"
                                 android:text="Wed"
                                 android:textAllCaps="false"
@@ -362,9 +369,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="@dimen/margin_5dp"
                                 android:layout_weight="0.1"
-                                android:background="@color/green_hase"
+                                android:backgroundTint="@color/green_hase"
                                 android:gravity="center"
-                                android:paddingLeft="0dp"
+                                android:paddingStart="0dp"
                                 android:paddingRight="0dp"
                                 android:text="Thu"
                                 android:textAllCaps="false"
@@ -377,10 +384,10 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginStart="@dimen/margin_5dp"
                                 android:layout_weight="0.1"
-                                android:background="@color/green_hase"
+                                android:backgroundTint="@color/green_hase"
                                 android:gravity="center"
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
                                 android:text="Fri"
                                 android:textAllCaps="false"
                                 android:textColor="@color/white"
@@ -392,10 +399,10 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="@dimen/margin_5dp"
                                 android:layout_weight="0.1"
-                                android:background="@color/green_hase"
+                                android:backgroundTint="@color/green_hase"
                                 android:gravity="center"
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
                                 android:text="Sat"
                                 android:textAllCaps="false"
                                 android:textColor="@color/white"
@@ -403,28 +410,30 @@
 
                         </LinearLayout>
 
+                        <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+                            android:id="@+id/toggle_P"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="@dimen/marginTop_10dp"
+                            android:visibility="gone"
+                            custom:textToggleLeft="NO"
+                            custom:textToggleRight="YES"
+                            custom:toggleWidth="80dp" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/fifteen_dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:gravity="center_vertical"
-                                android:text="Can customer share this voucher to others on whatsapp / facebook? " />
-
-                            <belka.us.androidtoggleswitch.widgets.ToggleSwitch
-                                android:id="@+id/toggle_P"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/margin_5dp"
-                                android:visibility="gone"
-                                custom:textToggleLeft="NO"
-                                custom:textToggleRight="YES" />
+                                android:text="@string/share_voucher_content" />
 
                             <Switch
+                                android:visibility="gone"
                                 android:id="@+id/switch_p"
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/height_35dp"
@@ -432,13 +441,39 @@
                                 android:switchMinWidth="70dp"
                                 android:textOff="OFF"
                                 android:textOn="ON" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/height_30dp"
+                                android:layout_marginTop="@dimen/marginTop_10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/sharable_no_p"
+                                    android:layout_width="70dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/grey"
+                                    android:gravity="center"
+                                    android:text="No" />
+
+                                <TextView
+                                    android:id="@+id/sharable_yes_p"
+                                    android:layout_width="70dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/green_hase"
+                                    android:gravity="center"
+                                    android:text="Yes"
+                                    android:textColor="@color/white" />
+
+                            </LinearLayout>
+
                         </LinearLayout>
 
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_45dp"
-                            android:layout_marginTop="@dimen/fifteen_dp"
+                            android:layout_marginTop="@dimen/marginTop_20dp"
                             android:background="@android:color/transparent"
                             android:elevation="@dimen/padding_4dp"
                             custom:cardCornerRadius="@dimen/margin_5dp">
@@ -453,7 +488,6 @@
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
                 </LinearLayout>
-
 
                 <LinearLayout
                     android:id="@+id/parent_layout_type_B"
@@ -477,7 +511,7 @@
                         android:id="@+id/layout_type_B"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="@dimen/margin_8dp"
+                        android:layout_marginTop="@dimen/marginTop_10dp"
                         android:animateLayoutChanges="true"
                         android:orientation="vertical">
 
@@ -496,7 +530,8 @@
                             android:hint="Enter title"
                             android:imeOptions="actionNext"
                             android:inputType="text"
-                            android:paddingLeft="@dimen/fifteen_dp"
+                            android:paddingStart="@dimen/fifteen_dp"
+                            android:paddingEnd="0dp"
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
 
@@ -512,8 +547,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
-
                                 android:text="Enter at least 10 characters"
+                                android:textColor="@color/grey_d"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
 
@@ -532,7 +567,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
                             android:text="Voucher Description" />
 
@@ -546,7 +581,8 @@
                             android:hint="Enter description"
                             android:minHeight="@dimen/height_70dp"
                             android:padding="@dimen/margin_8dp"
-                            android:paddingLeft="@dimen/fifteen_dp"
+                            android:paddingStart="@dimen/fifteen_dp"
+                            android:paddingEnd="0dp"
                             android:singleLine="false"
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
@@ -563,7 +599,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
-                                android:text="Enter at least 25 characters"
+                                android:text="Enter at least 15 characters"
+                                android:textColor="@color/grey_d"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
 
@@ -583,7 +620,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
                             android:text="What amount do you wish to deposit to customer wallet?" />
 
@@ -604,7 +641,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
                             android:text="How many points are used for this voucher?" />
 
@@ -616,18 +653,19 @@
                             android:layout_height="@dimen/height_40dp"
                             android:background="@drawable/edittext_border"
                             android:gravity="center|start"
-                            android:hint="1 to 9999"
+                            android:hint="1 to 99999"
                             android:imeOptions="actionDone"
                             android:inputType="numberDecimal"
-                            android:maxLength="4"
-                            android:paddingLeft="@dimen/fifteen_dp"
+                            android:maxLength="5"
+                            android:paddingStart="@dimen/fifteen_dp"
+                            android:paddingEnd="0dp"
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
                             android:text="When do you want to activate this voucher" />
 
@@ -641,9 +679,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:gravity="center|start"
-                                android:hint="Select Activate Date"
-                                android:paddingLeft="@dimen/marginTop_10dp"
-                                android:paddingRight="@dimen/marginTop_10dp"
+                                android:paddingStart="@dimen/marginTop_10dp"
+                                android:paddingEnd="@dimen/marginTop_10dp"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/text_size_16sp" />
                         </LinearLayout>
@@ -651,7 +688,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
                             android:text="When do you want this voucher to expire" />
 
@@ -666,7 +703,8 @@
                                 android:layout_height="match_parent"
                                 android:gravity="center|start"
                                 android:hint="Select Expiry Date"
-                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:paddingStart="@dimen/marginTop_10dp"
+                                android:paddingEnd="0dp"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/text_size_16sp" />
 
@@ -675,13 +713,14 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/marginTop_10dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
                             android:text="Limit certain hours within a day when this voucher can be redeemed" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
                             android:background="@drawable/edittext_border">
 
                             <TextView
@@ -689,7 +728,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:gravity="center|start"
-                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:paddingStart="@dimen/marginTop_10dp"
+                                android:paddingEnd="0dp"
                                 android:text="8:00"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/text_size_16sp" />
@@ -699,7 +739,8 @@
                                 android:layout_height="match_parent"
                                 android:gravity="center|start"
                                 android:hint=" to "
-                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:paddingStart="@dimen/marginTop_10dp"
+                                android:paddingEnd="0dp"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/text_size_16sp" />
 
@@ -708,7 +749,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:gravity="center|start"
-                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:paddingStart="@dimen/marginTop_10dp"
+                                android:paddingEnd="0dp"
                                 android:text="23:00"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/text_size_16sp" />
@@ -720,11 +762,9 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/marginTop_10dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
-                            android:text="Can you make weekdays?"
-
-                            />
+                            android:text="@string/create_weekdays" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -740,9 +780,9 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="0.1"
-                                android:background="@color/green_hase"
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
+                                android:backgroundTint="@color/green_hase"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
                                 android:text="Sun"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
@@ -753,9 +793,9 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginStart="@dimen/margin_5dp"
                                 android:layout_weight="0.1"
-                                android:background="@color/green_hase"
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
+                                android:backgroundTint="@color/green_hase"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
                                 android:text="Mon"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
@@ -766,10 +806,10 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginStart="@dimen/margin_5dp"
                                 android:layout_weight="0.1"
-                                android:background="@color/green_hase"
+                                android:backgroundTint="@color/green_hase"
                                 android:gravity="center"
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
                                 android:text="Tue"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
@@ -780,10 +820,10 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginStart="@dimen/margin_5dp"
                                 android:layout_weight="0.1"
-                                android:background="@color/green_hase"
+                                android:backgroundTint="@color/green_hase"
                                 android:gravity="center"
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
                                 android:text="Wed"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
@@ -794,10 +834,10 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginStart="@dimen/margin_5dp"
                                 android:layout_weight="0.1"
-                                android:background="@color/green_hase"
+                                android:backgroundTint="@color/green_hase"
                                 android:gravity="center"
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
                                 android:text="Thu"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
@@ -808,10 +848,10 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginStart="@dimen/margin_5dp"
                                 android:layout_weight="0.1"
-                                android:background="@color/green_hase"
+                                android:backgroundTint="@color/green_hase"
                                 android:gravity="center"
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
                                 android:text="Fri"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
@@ -822,10 +862,10 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginStart="@dimen/margin_5dp"
                                 android:layout_weight="0.1"
-                                android:background="@color/green_hase"
+                                android:backgroundTint="@color/green_hase"
                                 android:gravity="center"
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
                                 android:text="Sat"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
@@ -837,14 +877,14 @@
 
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/marginTop_10dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center_vertical"
-                                android:text="Can customer share this voucher to others on whatsapp / facebook? " />
+                                android:text="@string/share_voucher_content" />
 
                             <belka.us.androidtoggleswitch.widgets.ToggleSwitch
                                 android:id="@+id/toggle_B"
@@ -856,6 +896,7 @@
                                 custom:textToggleRight="YES" />
 
                             <Switch
+                                android:visibility="gone"
                                 android:id="@+id/switch_b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/height_35dp"
@@ -863,13 +904,39 @@
                                 android:switchMinWidth="70dp"
                                 android:textOff="OFF"
                                 android:textOn="ON" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/height_30dp"
+                                android:layout_marginTop="@dimen/marginTop_10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/sharable_no_b"
+                                    android:layout_width="70dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/grey"
+                                    android:gravity="center"
+                                    android:text="No" />
+
+                                <TextView
+                                    android:id="@+id/sharable_yes_b"
+                                    android:layout_width="70dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/green_hase"
+                                    android:gravity="center"
+                                    android:text="Yes"
+                                    android:textColor="@color/white" />
+
+                            </LinearLayout>
+
                         </LinearLayout>
 
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_45dp"
-                            android:layout_marginTop="@dimen/fifteen_dp"
+                            android:layout_marginTop="@dimen/marginTop_20dp"
                             android:background="@android:color/transparent"
                             android:elevation="@dimen/padding_4dp"
                             custom:cardCornerRadius="@dimen/margin_5dp">
@@ -885,9 +952,8 @@
                     </LinearLayout>
                 </LinearLayout>
 
-
                 <LinearLayout
-                    android:id="@+id/parent_layout_type_U"
+                    android:id="@+id/parent_layout_type_M"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_5dp"
@@ -900,29 +966,15 @@
                         android:layout_height="wrap_content"
                         android:clickable="false"
                         android:gravity="center"
-                        android:text="Setup Bulk Offer Voucher"
-                        android:textSize="@dimen/text_size_17sp"
+                        android:text="Setup Member get Member voucher"
+                        android:textSize="@dimen/text_size_16sp"
                         android:textStyle="bold" />
 
-
-                    <TextView
-                        android:id="@+id/text_no_assigned"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/fifteen_dp"
-                        android:clickable="false"
-                        android:gravity="center"
-                        android:text="You should have a assigned voucher to create bulk offer voucher"
-                        android:textColor="@color/red_color"
-                        android:textSize="@dimen/text_size_15sp"
-                        android:visibility="gone" />
-
-
                     <LinearLayout
-                        android:id="@+id/layout_type_U"
+                        android:id="@+id/layout_type_M"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="@dimen/margin_8dp"
+                        android:layout_marginTop="@dimen/marginTop_10dp"
                         android:animateLayoutChanges="true"
                         android:orientation="vertical"
                         android:visibility="visible">
@@ -935,7 +987,7 @@
 
                         <EditText
 
-                            android:id="@+id/edit_redeem_title_U"
+                            android:id="@+id/edit_redeem_title_M"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
                             android:background="@drawable/edittext_border"
@@ -943,7 +995,7 @@
                             android:hint="Enter title"
                             android:imeOptions="actionNext"
                             android:inputType="text"
-                            android:paddingLeft="@dimen/fifteen_dp"
+                            android:paddingStart="@dimen/field_margin_top"
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
 
@@ -955,17 +1007,17 @@
                             android:weightSum="1">
 
                             <TextView
-                                android:id="@+id/tv_min_title_u"
+                                android:id="@+id/tv_min_title_m"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
-
                                 android:text="Enter at least 10 characters"
+                                android:textColor="@color/grey_d"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
 
                             <TextView
-                                android:id="@+id/title_u_watcher"
+                                android:id="@+id/title_m_watcher"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.2"
@@ -977,17 +1029,16 @@
                         </LinearLayout>
 
 
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
                             android:text="Voucher Description" />
 
 
                         <EditText
-                            android:id="@+id/edit_redeem_desc_U"
+                            android:id="@+id/edit_redeem_desc_M"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/edittext_border"
@@ -995,7 +1046,7 @@
                             android:hint="Enter description"
                             android:minHeight="@dimen/height_70dp"
                             android:padding="@dimen/margin_8dp"
-                            android:paddingLeft="@dimen/fifteen_dp"
+                            android:paddingStart="@dimen/fifteen_dp"
                             android:singleLine="false"
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
@@ -1008,16 +1059,17 @@
                             android:weightSum="1">
 
                             <TextView
-                                android:id="@+id/tv_min_desc_u"
+                                android:id="@+id/tv_min_desc_m"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
-                                android:text="Enter at least 25 characters"
+                                android:text="Enter at least 15 characters"
+                                android:textColor="@color/grey_d"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
 
                             <TextView
-                                android:id="@+id/desc_u_watcher"
+                                android:id="@+id/desc_m_watcher"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.2"
@@ -1032,75 +1084,128 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
-                            android:text="No.of vouchers to be issued(1-99)" />
+                            android:text="Title for new customer" />
 
                         <EditText
-                            android:id="@+id/edit_vouchers_issue_count_U"
+                            android:id="@+id/edit_redeem_title_lead_M"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
                             android:background="@drawable/edittext_border"
                             android:gravity="center|start"
-                            android:imeOptions="actionDone"
-                            android:inputType="number"
-                            android:maxLength="2"
-                            android:paddingLeft="@dimen/text_size_15sp"
+                            android:hint="Enter title for new customer"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/field_margin_top"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tv_min_lead_title_m"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:text="Enter at least 10 characters"
+                                android:textColor="@color/grey_d"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/title_lead_m_watcher"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:gravity="end"
+                                android:text="0/100"
+                                android:textColor="@color/red"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
+                            android:gravity="center|start"
+                            android:text="Description for new customer " />
+
+                        <EditText
+                            android:id="@+id/edit_redeem_desc_lead_M"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center|start"
+                            android:hint="Enter description for new customer"
+                            android:minHeight="@dimen/height_70dp"
+                            android:padding="@dimen/margin_8dp"
+                            android:paddingStart="@dimen/fifteen_dp"
                             android:singleLine="false"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tv_min_lead_desc_m"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:text="Enter at least 15 characters"
+                                android:textColor="@color/grey_d"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/desc_lead_m_watcher"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:gravity="end"
+                                android:text="0/200"
+                                android:textColor="@color/red"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
+                            android:gravity="center|start"
+                            android:text="Referral Reward Points" />
+
+                        <EditText
+                            android:id="@+id/edit_redeem_points_M"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center|start"
+                            android:hint="1 to 99999"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:maxLength="5"
+                            android:paddingStart="@dimen/fifteen_dp"
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center|start"
-                            android:text="Assigned Voucher Id"
-                            android:visibility="gone" />
-
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center|start"
-                            android:text="Assigned Vouchers" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/edittext_border"
-                            android:gravity="center"
-                            android:minHeight="@dimen/height_40dp"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/text_no_vouchers"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="There is no assigned voucher"
-                                android:textStyle="bold"
-                                android:visibility="gone" />
-
-                            <RadioGroup
-                                android:id="@+id/assign_rgp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:visibility="gone"></RadioGroup>
-
-                            <Spinner
-                                android:id="@+id/spinner_assigned_voucher"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:visibility="gone" />
-
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
                             android:text="When do you want to activate this voucher" />
 
@@ -1110,13 +1215,12 @@
                             android:background="@drawable/edittext_border">
 
                             <TextView
-                                android:id="@+id/edit_start_date_U"
+                                android:id="@+id/edit_start_date_M"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:gravity="center|start"
-                                android:hint="Select Activate Date"
-                                android:paddingLeft="@dimen/marginTop_10dp"
-                                android:paddingRight="@dimen/marginTop_10dp"
+                                android:paddingStart="@dimen/marginTop_10dp"
+                                android:paddingEnd="@dimen/marginTop_10dp"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/text_size_16sp" />
                         </LinearLayout>
@@ -1124,7 +1228,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
                             android:text="When do you want this voucher to expire" />
 
@@ -1134,191 +1238,33 @@
                             android:background="@drawable/edittext_border">
 
                             <TextView
-                                android:id="@+id/edit_expiry_date_U"
+                                android:id="@+id/edit_expiry_date_M"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:gravity="center|start"
                                 android:hint="Select Expiry Date"
-                                android:paddingLeft="@dimen/marginTop_10dp"
+                                android:paddingStart="@dimen/marginTop_10dp"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/text_size_16sp" />
 
                         </LinearLayout>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/marginTop_10dp"
-                            android:gravity="center|start"
-                            android:text="Limit certain hours within a day when this voucher can be redeemed" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/height_40dp"
-                            android:background="@drawable/edittext_border">
-
-                            <TextView
-                                android:id="@+id/edit_start_time_U"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:gravity="center|start"
-                                android:paddingLeft="@dimen/marginTop_10dp"
-                                android:text="8:00"
-                                android:textColor="@color/black"
-                                android:textSize="@dimen/text_size_16sp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:gravity="center|start"
-                                android:hint=" to "
-                                android:paddingLeft="@dimen/marginTop_10dp"
-                                android:textColor="@color/black"
-                                android:textSize="@dimen/text_size_16sp" />
-
-                            <TextView
-                                android:id="@+id/edit_expiry_time_U"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:gravity="center|start"
-                                android:paddingLeft="@dimen/marginTop_10dp"
-                                android:text="23:00"
-                                android:textColor="@color/black"
-                                android:textSize="@dimen/text_size_16sp" />
-
-
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/marginTop_10dp"
-                            android:gravity="center|start"
-                            android:text="Can you make weekdays?"
-
-                            />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center"
-                            android:orientation="horizontal"
-                            android:weightSum="0.7">
-
-
-                            <Button
-                                android:id="@+id/btn_yes_sunday_U"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="0.1"
-                                android:background="@color/green_hase"
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
-                                android:text="Sun"
-                                android:textColor="@color/white"
-                                android:textSize="10sp" />
-
-                            <Button
-                                android:id="@+id/btn_yes_monday_U"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginStart="@dimen/margin_5dp"
-                                android:layout_weight="0.1"
-                                android:background="@color/green_hase"
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
-                                android:text="Mon"
-                                android:textColor="@color/white"
-                                android:textSize="10sp" />
-
-                            <Button
-                                android:id="@+id/btn_yes_tuesday_U"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginStart="@dimen/margin_5dp"
-                                android:layout_weight="0.1"
-                                android:background="@color/green_hase"
-                                android:gravity="center"
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
-                                android:text="Tue"
-                                android:textColor="@color/white"
-                                android:textSize="10sp" />
-
-                            <Button
-                                android:id="@+id/btn_yes_wedsnesday_U"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginStart="@dimen/margin_5dp"
-                                android:layout_weight="0.1"
-                                android:background="@color/green_hase"
-                                android:gravity="center"
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
-                                android:text="Wed"
-                                android:textColor="@color/white"
-                                android:textSize="10sp" />
-
-                            <Button
-                                android:id="@+id/btn_yes_thursday_U"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginStart="@dimen/margin_5dp"
-                                android:layout_weight="0.1"
-                                android:background="@color/green_hase"
-                                android:gravity="center"
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
-                                android:text="Thu"
-                                android:textColor="@color/white"
-                                android:textSize="10sp" />
-
-                            <Button
-                                android:id="@+id/btn_yes_friday_U"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginStart="@dimen/margin_5dp"
-                                android:layout_weight="0.1"
-                                android:background="@color/green_hase"
-                                android:gravity="center"
-                                android:paddingLeft="0dp"
-                                android:paddingRight="0dp"
-                                android:text="Fri"
-                                android:textColor="@color/white"
-                                android:textSize="10sp" />
-
-                            <Button
-                                android:id="@+id/btn_yes_saturday_U"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginStart="@dimen/margin_5dp"
-                                android:layout_weight="0.1"
-                                android:background="@color/green_hase"
-                                android:gravity="center"
-                                android:paddingStart="0dp"
-                                android:paddingEnd="0dp"
-                                android:text="Sat"
-                                android:textColor="@color/white"
-                                android:textSize="10sp" />
-
-                        </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/marginTop_10dp"
-                            android:orientation="vertical"
-                            android:visibility="gone">
+                            android:layout_marginTop="@dimen/field_margin_top"
+                            android:orientation="vertical">
 
                             <TextView
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:gravity="center_vertical"
-                                android:text="Can customer share this voucher to others on whatsapp / facebook? " />
+                                android:text="@string/share_voucher_content" />
+
 
                             <belka.us.androidtoggleswitch.widgets.ToggleSwitch
-                                android:id="@+id/toggle_U"
+                                android:id="@+id/toggle_M"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/margin_5dp"
@@ -1327,36 +1273,61 @@
                                 custom:textToggleRight="YES" />
 
                             <Switch
-                                android:id="@+id/switch_u"
+                                android:visibility="gone"
+                                android:id="@+id/switch_m"
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/height_35dp"
                                 android:layout_marginTop="5dp"
                                 android:switchMinWidth="70dp"
                                 android:textOff="OFF"
                                 android:textOn="ON" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/height_30dp"
+                                android:layout_marginTop="@dimen/marginTop_10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/sharable_no_m"
+                                    android:layout_width="70dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/grey"
+                                    android:gravity="center"
+                                    android:text="No" />
+
+                                <TextView
+                                    android:id="@+id/sharable_yes_m"
+                                    android:layout_width="70dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/green_hase"
+                                    android:gravity="center"
+                                    android:text="Yes"
+                                    android:textColor="@color/white" />
+
+                            </LinearLayout>
+
                         </LinearLayout>
-
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/height_45dp"
-                            android:layout_marginTop="@dimen/fifteen_dp"
-                            android:background="@android:color/transparent"
-                            android:elevation="@dimen/padding_4dp"
-                            custom:cardCornerRadius="@dimen/margin_5dp">
-
-                            <Button
-                                android:id="@+id/button_u"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/blue_color"
-                                android:text="Preview"
-                                android:textColor="@color/white" />
-                        </androidx.cardview.widget.CardView>
-
                     </LinearLayout>
-                </LinearLayout>
 
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_45dp"
+                        android:layout_marginTop="@dimen/marginTop_20dp"
+                        android:background="@android:color/transparent"
+                        android:elevation="@dimen/padding_4dp"
+                        custom:cardCornerRadius="@dimen/margin_5dp">
+
+                        <Button
+                            android:id="@+id/button_m"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/blue_color"
+                            android:text="Preview"
+                            android:textColor="@color/white" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/parent_layout_type_Z"
@@ -1380,7 +1351,7 @@
                         android:id="@+id/layout_type_Z"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="@dimen/margin_8dp"
+                        android:layout_marginTop="@dimen/marginTop_10dp"
                         android:animateLayoutChanges="true"
                         android:orientation="vertical"
                         android:visibility="visible">
@@ -1419,6 +1390,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
                                 android:text="Enter at least 10 characters"
+                                android:textColor="@color/grey_d"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
 
@@ -1435,11 +1407,10 @@
                         </LinearLayout>
 
 
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
                             android:text="Voucher Description" />
 
@@ -1453,7 +1424,7 @@
                             android:hint="Enter description"
                             android:minHeight="@dimen/height_70dp"
                             android:padding="@dimen/margin_8dp"
-                            android:paddingStart="@dimen/fifteen_dp"
+                            android:paddingStart="@dimen/field_margin_top"
                             android:singleLine="false"
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
@@ -1470,8 +1441,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
-
-                                android:text="Enter at least 25 characters"
+                                android:text="Enter at least 15 characters"
+                                android:textColor="@color/grey_d"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
 
@@ -1491,7 +1462,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
                             android:text="When do you want to activate this voucher" />
 
@@ -1505,7 +1476,6 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:gravity="center|start"
-                                android:hint="Select Activate Date"
                                 android:paddingStart="@dimen/marginTop_10dp"
                                 android:paddingEnd="@dimen/marginTop_10dp"
                                 android:textColor="@color/black"
@@ -1515,7 +1485,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
                             android:text="When do you want this voucher to expire" />
 
@@ -1540,15 +1510,14 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/fifteen_dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:gravity="center_vertical"
-                                android:text="Can customer share this voucher to others on whatsapp / facebook? " />
-                            />
+                                android:text="@string/share_voucher_content" />
 
                             <belka.us.androidtoggleswitch.widgets.ToggleSwitch
                                 android:id="@+id/toggle_Z"
@@ -1560,6 +1529,7 @@
                                 custom:textToggleRight="YES" />
 
                             <Switch
+                                android:visibility="gone"
                                 android:id="@+id/switch_z"
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/height_35dp"
@@ -1568,13 +1538,38 @@
                                 android:textOff="OFF"
                                 android:textOn="ON" />
 
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/height_30dp"
+                                android:layout_marginTop="@dimen/marginTop_10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/sharable_no_z"
+                                    android:layout_width="70dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/grey"
+                                    android:gravity="center"
+                                    android:text="No" />
+
+                                <TextView
+                                    android:id="@+id/sharable_yes_z"
+                                    android:layout_width="70dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/green_hase"
+                                    android:gravity="center"
+                                    android:text="Yes"
+                                    android:textColor="@color/white" />
+
+                            </LinearLayout>
+
                         </LinearLayout>
                     </LinearLayout>
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/height_45dp"
-                        android:layout_marginTop="@dimen/fifteen_dp"
+                        android:layout_marginTop="@dimen/marginTop_20dp"
                         android:background="@android:color/transparent"
                         android:elevation="@dimen/padding_4dp"
                         custom:cardCornerRadius="@dimen/margin_5dp">
@@ -1591,9 +1586,8 @@
 
                 </LinearLayout>
 
-
                 <LinearLayout
-                    android:id="@+id/parent_layout_type_M"
+                    android:id="@+id/parent_layout_type_U"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_5dp"
@@ -1606,15 +1600,29 @@
                         android:layout_height="wrap_content"
                         android:clickable="false"
                         android:gravity="center"
-                        android:text="Setup Member get Member voucher"
-                        android:textSize="@dimen/text_size_16sp"
+                        android:text="Setup Bulk Offer Voucher"
+                        android:textSize="@dimen/text_size_17sp"
                         android:textStyle="bold" />
 
+
+                    <TextView
+                        android:id="@+id/text_no_assigned"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fifteen_dp"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:text="You should have a assigned voucher to create bulk offer voucher"
+                        android:textColor="@color/red_color"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:visibility="gone" />
+
+
                     <LinearLayout
-                        android:id="@+id/layout_type_M"
+                        android:id="@+id/layout_type_U"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="@dimen/margin_8dp"
+                        android:layout_marginTop="@dimen/marginTop_10dp"
                         android:animateLayoutChanges="true"
                         android:orientation="vertical"
                         android:visibility="visible">
@@ -1627,7 +1635,7 @@
 
                         <EditText
 
-                            android:id="@+id/edit_redeem_title_M"
+                            android:id="@+id/edit_redeem_title_U"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
                             android:background="@drawable/edittext_border"
@@ -1636,6 +1644,7 @@
                             android:imeOptions="actionNext"
                             android:inputType="text"
                             android:paddingStart="@dimen/fifteen_dp"
+                            android:paddingEnd="0dp"
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
 
@@ -1647,17 +1656,17 @@
                             android:weightSum="1">
 
                             <TextView
-                                android:id="@+id/tv_min_title_m"
+                                android:id="@+id/tv_min_title_u"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
-
                                 android:text="Enter at least 10 characters"
+                                android:textColor="@color/grey_d"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
 
                             <TextView
-                                android:id="@+id/title_m_watcher"
+                                android:id="@+id/title_u_watcher"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.2"
@@ -1672,13 +1681,13 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
                             android:text="Voucher Description" />
 
 
                         <EditText
-                            android:id="@+id/edit_redeem_desc_M"
+                            android:id="@+id/edit_redeem_desc_U"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/edittext_border"
@@ -1686,7 +1695,8 @@
                             android:hint="Enter description"
                             android:minHeight="@dimen/height_70dp"
                             android:padding="@dimen/margin_8dp"
-                            android:paddingStart="@dimen/fifteen_dp"
+                            android:paddingStart="@dimen/field_margin_top"
+                            android:paddingEnd="0dp"
                             android:singleLine="false"
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
@@ -1699,17 +1709,17 @@
                             android:weightSum="1">
 
                             <TextView
-                                android:id="@+id/tv_min_desc_m"
+                                android:id="@+id/tv_min_desc_u"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
-
-                                android:text="Enter at least 25 characters"
+                                android:text="Enter at least 15 characters"
+                                android:textColor="@color/grey_d"
                                 android:textSize="12sp"
                                 android:visibility="visible" />
 
                             <TextView
-                                android:id="@+id/desc_m_watcher"
+                                android:id="@+id/desc_u_watcher"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.2"
@@ -1724,124 +1734,22 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
-                            android:layout_marginTop="@dimen/margin_5dp"
-                            android:text="Title for new customer" />
+                            android:text="No.of vouchers to be issued(1-99)" />
 
                         <EditText
-                            android:id="@+id/edit_redeem_title_lead_M"
+                            android:id="@+id/edit_vouchers_issue_count_U"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
                             android:background="@drawable/edittext_border"
                             android:gravity="center|start"
-                            android:hint="Enter title for new customer"
-                            android:imeOptions="actionNext"
-                            android:inputType="text"
-                            android:paddingStart="@dimen/fifteen_dp"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/text_size_16sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/margin_5dp"
-                            android:orientation="horizontal"
-                            android:weightSum="1">
-
-                            <TextView
-                                android:id="@+id/tv_min_lead_title_m"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.8"
-
-                                android:text="Enter at least 10 characters"
-                                android:textSize="12sp"
-                                android:visibility="visible" />
-
-                            <TextView
-                                android:id="@+id/title_lead_m_watcher"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.2"
-                                android:gravity="end"
-                                android:text="0/100"
-                                android:textColor="@color/red"
-                                android:textSize="12sp"
-                                android:visibility="visible" />
-                        </LinearLayout>
-
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center|start"
-                            android:text="Description for new customer " />
-
-                        <EditText
-                            android:id="@+id/edit_redeem_desc_lead_M"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/edittext_border"
-                            android:gravity="center|start"
-                            android:hint="Enter description for new customer"
-                            android:minHeight="@dimen/height_70dp"
-                            android:padding="@dimen/margin_8dp"
-                            android:paddingStart="@dimen/fifteen_dp"
-                            android:singleLine="false"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/text_size_16sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/margin_5dp"
-                            android:orientation="horizontal"
-                            android:weightSum="1">
-
-                            <TextView
-                                android:id="@+id/tv_min_lead_desc_m"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.8"
-
-                                android:text="Enter at least 25 characters"
-                                android:textSize="12sp"
-                                android:visibility="visible" />
-
-                            <TextView
-                                android:id="@+id/desc_lead_m_watcher"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.2"
-                                android:gravity="end"
-                                android:text="0/200"
-                                android:textColor="@color/red"
-                                android:textSize="12sp"
-                                android:visibility="visible" />
-                        </LinearLayout>
-
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
-                            android:gravity="center|start"
-                            android:text="Referral Reward Points" />
-
-
-                        <EditText
-
-                            android:id="@+id/edit_redeem_points_M"
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/height_40dp"
-                            android:background="@drawable/edittext_border"
-                            android:gravity="center|start"
-                            android:hint="1 to 9999"
                             android:imeOptions="actionDone"
-                            android:inputType="numberDecimal"
-                            android:maxLength="4"
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:paddingStart="@dimen/fifteen_dp"
+                            android:paddingEnd="0dp"
+                            android:singleLine="false"
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size_16sp" />
 
@@ -1849,6 +1757,53 @@
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
                             android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center|start"
+                            android:text="Assigned Voucher Id"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
+                            android:gravity="center|start"
+                            android:text="Assigned Vouchers" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center"
+                            android:minHeight="@dimen/height_40dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/text_no_vouchers"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="There is no assigned voucher"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <RadioGroup
+                                android:id="@+id/assign_rgp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"></RadioGroup>
+
+                            <Spinner
+                                android:id="@+id/spinner_assigned_voucher"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
                             android:text="When do you want to activate this voucher" />
 
@@ -1858,11 +1813,10 @@
                             android:background="@drawable/edittext_border">
 
                             <TextView
-                                android:id="@+id/edit_start_date_M"
+                                android:id="@+id/edit_start_date_U"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:gravity="center|start"
-                                android:hint="Select Activate Date"
                                 android:paddingStart="@dimen/marginTop_10dp"
                                 android:paddingEnd="@dimen/marginTop_10dp"
                                 android:textColor="@color/black"
@@ -1872,7 +1826,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_40dp"
-                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
                             android:gravity="center|start"
                             android:text="When do you want this voucher to expire" />
 
@@ -1882,70 +1836,199 @@
                             android:background="@drawable/edittext_border">
 
                             <TextView
-                                android:id="@+id/edit_expiry_date_M"
+                                android:id="@+id/edit_expiry_date_U"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:gravity="center|start"
                                 android:hint="Select Expiry Date"
                                 android:paddingStart="@dimen/marginTop_10dp"
+                                android:paddingEnd="0dp"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/text_size_16sp" />
 
                         </LinearLayout>
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
+                            android:gravity="center|start"
+                            android:text="Limit certain hours within a day when this voucher can be redeemed" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/fifteen_dp"
-                            android:orientation="vertical">
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:background="@drawable/edittext_border">
+
+                            <TextView
+                                android:id="@+id/edit_start_time_U"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:paddingStart="@dimen/marginTop_10dp"
+                                android:paddingEnd="0dp"
+                                android:text="8:00"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:gravity="center_vertical"
-                                android:text="Can customer share this voucher to others on whatsapp / facebook? " />
-                            />
+                                android:gravity="center|start"
+                                android:hint=" to "
+                                android:paddingStart="@dimen/marginTop_10dp"
+                                android:paddingEnd="0dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
 
-                            <belka.us.androidtoggleswitch.widgets.ToggleSwitch
-                                android:id="@+id/toggle_M"
+                            <TextView
+                                android:id="@+id/edit_expiry_time_U"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/margin_5dp"
-                                android:visibility="gone"
-                                custom:textToggleLeft="NO"
-                                custom:textToggleRight="YES" />
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:paddingStart="@dimen/marginTop_10dp"
+                                android:paddingEnd="0dp"
+                                android:text="23:00"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
 
-                            <Switch
-                                android:id="@+id/switch_m"
-                                android:layout_width="wrap_content"
-                                android:layout_height="@dimen/height_35dp"
-                                android:layout_marginTop="5dp"
-                                android:switchMinWidth="70dp"
-                                android:textOff="OFF"
-                                android:textOn="ON" />
 
                         </LinearLayout>
-                    </LinearLayout>
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/height_45dp"
-                        android:layout_marginTop="@dimen/fifteen_dp"
-                        android:background="@android:color/transparent"
-                        android:elevation="@dimen/padding_4dp"
-                        custom:cardCornerRadius="@dimen/margin_5dp">
-
-                        <Button
-                            android:id="@+id/button_m"
+                        <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/blue_color"
-                            android:text="Preview"
-                            android:textColor="@color/white" />
-                    </androidx.cardview.widget.CardView>
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
+                            android:gravity="center|start"
+                            android:text="@string/create_weekdays" />
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="0.7">
+
+
+                            <Button
+                                android:id="@+id/btn_yes_sunday_U"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.1"
+                                android:backgroundTint="@color/green_hase"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:text="Sun"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:id="@+id/btn_yes_monday_U"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:backgroundTint="@color/green_hase"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:text="Mon"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:id="@+id/btn_yes_tuesday_U"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:backgroundTint="@color/green_hase"
+                                android:gravity="center"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:text="Tue"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:id="@+id/btn_yes_wedsnesday_U"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:backgroundTint="@color/green_hase"
+                                android:gravity="center"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:text="Wed"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:id="@+id/btn_yes_thursday_U"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:backgroundTint="@color/green_hase"
+                                android:gravity="center"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:text="Thu"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:id="@+id/btn_yes_friday_U"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:backgroundTint="@color/green_hase"
+                                android:gravity="center"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:text="Fri"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:id="@+id/btn_yes_saturday_U"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:layout_weight="0.1"
+                                android:backgroundTint="@color/green_hase"
+                                android:gravity="center"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:text="Sat"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_45dp"
+                            android:layout_marginTop="@dimen/marginTop_20dp"
+                            android:background="@android:color/transparent"
+                            android:elevation="@dimen/padding_4dp"
+                            custom:cardCornerRadius="@dimen/margin_5dp">
+
+                            <Button
+                                android:id="@+id/button_u"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/blue_color"
+                                android:text="Preview"
+                                android:textColor="@color/white" />
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
                 </LinearLayout>
+
 
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>

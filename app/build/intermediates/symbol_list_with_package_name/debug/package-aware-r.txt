@@ -1451,6 +1451,7 @@ dimen fake_shadow_size
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
+dimen field_margin_top
 dimen fifteen_dp
 dimen height_100dp
 dimen height_110dp
@@ -1757,6 +1758,7 @@ dimen tooltip_precise_anchor_threshold
 dimen tooltip_vertical_padding
 dimen tooltip_y_offset_non_touch
 dimen tooltip_y_offset_touch
+dimen voucher_title_margin
 dimen week_button_size
 dimen week_button_state_on_circle_size
 drawable abc_ab_share_pack_mtrl_alpha
@@ -2032,6 +2034,8 @@ drawable restaurant_image
 drawable scanner_screen_drawable_border
 drawable shape_button
 drawable shape_rounded
+drawable sharable_left
+drawable sharable_right
 drawable share
 drawable sp_chevron_end
 drawable sp_chevron_start
@@ -2757,6 +2761,14 @@ id send_title
 id sendmesaage
 id separator
 id setup_btn
+id sharable_no_b
+id sharable_no_m
+id sharable_no_p
+id sharable_no_z
+id sharable_yes_b
+id sharable_yes_m
+id sharable_yes_p
+id sharable_yes_z
 id shortcut
 id showCustom
 id showHome
@@ -2800,7 +2812,6 @@ id switch_active
 id switch_b
 id switch_m
 id switch_p
-id switch_u
 id switch_z
 id tabLayout_graph
 id tabMode
@@ -2828,7 +2839,6 @@ id textView
 id textView5
 id textView7
 id text_add_redeem
-id text_add_redeem1
 id text_ask_create_update
 id text_desc
 id text_desc_b
@@ -2888,7 +2898,6 @@ id toast_message_text
 id toggle_B
 id toggle_M
 id toggle_P
-id toggle_U
 id toggle_Z
 id toggle_switches_container
 id toolbar
@@ -3353,6 +3362,7 @@ string acessibility_recurrence_choose_end_date_description
 string action_settings
 string activation_code
 string add_outlets
+string add_voucher
 string admin_text_one
 string admin_text_three
 string admin_text_two
@@ -3408,6 +3418,7 @@ string compose_own_message
 string confirm
 string continue_txt
 string corals_merchant
+string create_weekdays
 string currency_symbol
 string day_of_week_label_typeface
 string day_picker_description
@@ -3519,6 +3530,7 @@ string nav_header_title
 string navigation_drawer_close
 string navigation_drawer_open
 string next
+string no_vouchers
 string not_admin_text
 string notify_msg_one
 string notify_msg_two
@@ -3579,6 +3591,7 @@ string select_year
 string send_message
 string send_sms
 string set_up_one_now
+string share_voucher_content
 string show_qr_code
 string sp_date_picker_day_of_week_typeface
 string sp_date_picker_day_typeface
@@ -3632,6 +3645,7 @@ string wallet_balance
 string welcome
 string year_picker_description
 string yearly_plain
+string your_vouchers
 string zxing_app_name
 string zxing_button_ok
 string zxing_msg_camera_framework_bug

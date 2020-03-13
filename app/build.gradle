@@ -77,5 +77,6 @@ dependencies {
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
     //Toggle switch
     implementation 'us.belka:androidtoggleswitch:1.2.2'
+
 }
 apply plugin: 'com.google.gms.google-services'

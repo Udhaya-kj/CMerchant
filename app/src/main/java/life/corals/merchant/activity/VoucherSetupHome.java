@@ -325,8 +325,9 @@ public class VoucherSetupHome extends AppCompatActivity {
                         boolean isActive = redeemVouchers.get(t).isIsActive();
                         String mer_cb_redeem_id = redeemVouchers.get(t).getMerCbRedeemId();
                         String terms_conditions = redeemVouchers.get(t).getTermsAndConditions();
+                        String ref_points = redeemVouchers.get(t).getReferralRewardPoints();
 
-                        Log.d("VoucherList---", "data--: " + title + "," + desc + "," + redeem_type + "," + lead_title + "," + lead_desc);
+                        Log.d("VoucherList---", "data--: " + title + "," + desc + "," + redeem_type + "," + lead_title + "," + lead_desc+","+points+","+ref_points);
 
                         if (redeem_type.equals("P")) {
                             SetUpRedemptionList sp = new SetUpRedemptionList();
@@ -423,6 +424,7 @@ public class VoucherSetupHome extends AppCompatActivity {
                             sm.setRedeemDescription(desc);
                             sm.setLeadTitle(lead_title);
                             sm.setLeadDescription(lead_desc);
+                            sm.setReferralRewardPoints(ref_points);
                             sm.setRedeemActivedt(act_dt);
                             sm.setRedeemActtime(act_time);
                             sm.setRedeemExpdt(end_dt);

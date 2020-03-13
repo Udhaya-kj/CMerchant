@@ -141,6 +141,7 @@ public class Vouchers_RecyclerviewAdapter extends RecyclerView.Adapter<Vouchers_
                     in.putExtra("create_update_code", "0");
                     in.putExtra("isActive", setUpRedemptionList.isIsActive());
                     in.putExtra("terms_conditions",setUpRedemptionList.getTermsConditions());
+                    in.putExtra("ref_reward_points",setUpRedemptionList.getReferralRewardPoints());
                     Log.d("Adapter---->", position + "," + setUpRedemptionList.getRedeemType() + "," + setUpRedemptionList.getRedeemTitle() + " " + setUpRedemptionList.getRedeemDescription() + " " + setUpRedemptionList.getVoucherBg() + " " + setUpRedemptionList.getLeadTitle() + " " + setUpRedemptionList.getLeadDescription() + " " + setUpRedemptionList.getAssignedVoucherCount());
                     //e_date_list.get(position) + " " + e_time_list.get(position) + "," + act_dys_list.get(position) + "," + sharable_list.get(position)+","+sharable+","+voucher_bg_list.get(position));
                     context.startActivity(in);

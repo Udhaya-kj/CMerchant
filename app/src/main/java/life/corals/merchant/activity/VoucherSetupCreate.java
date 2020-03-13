@@ -71,12 +71,13 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
     LinearLayout linearLayout_P, linearLayout_B, linearLayout_U, linearLayout_Z, linearLayout_M, sub_layout_P, sub_layout_B, sub_layout_U, sub_layout_Z, sub_layout_M;
     Spinner spinner_assg_voucher;
-    ToggleSwitch toggleSwitch_P, toggleSwitch_B, toggleSwitch_U, toggleSwitch_Z, toggleSwitch_M;
-    Switch aSwitch_p, aSwitch_b, aSwitch_u, aSwitch_z, aSwitch_m;
+    ToggleSwitch toggleSwitch_P, toggleSwitch_B, toggleSwitch_Z, toggleSwitch_M;
+    Switch aSwitch_p, aSwitch_b, aSwitch_z, aSwitch_m;
     Button button_p, button_b, button_u, button_z, button_m;
     EditText editText_title_P, editText_desc_P, editText_points_P, editText_title_B, editText_desc_B, editText_points_B, editText_wallet_B, editText_title_U, editText_desc_U, editText_vouchers_count_U, editText_title_Z, editText_desc_Z, editText_title_M, editText_desc_M, editText_points_M, editText_title_lead_M, editText_desc_lead_M;
     TextView tv_start_date_P, tv_end_date_P, tv_start_time_P, tv_end_time_P, tv_start_date_B, tv_end_date_B, tv_start_time_B, tv_end_time_B, tv_start_date_U, tv_end_date_U, tv_start_time_U, tv_end_time_U, tv_start_date_Z, tv_end_date_Z, tv_start_date_M, tv_end_date_M;
-    int sharable_p = 0, sharable_b = 0, sharable_u = 0, sharable_z = 0, sharable_m = 0;
+    int sharable_p = 0, sharable_b = 0, sharable_z = 0, sharable_m = 0;
+    int sharable_p1 = 0, sharable_b1 = 0, sharable_z1 = 0, sharable_m1 = 0;
     ArrayList<String> assigned_id_list, assigned_voucher_list;
     String activeDays_p = null, activeDays_b = null, activeDays_u = null;
     boolean isActiveSunday_p = true, isActiveMonday_p = true, isActiveTuesday_p = true, isActiveWednesday_p = true, isActiveThursday_p = true, isActiveFriday_p = true, isActiveSaturday_p = true, isActiveSunday_b = true, isActiveMonday_b = true, isActiveTuesday_b = true, isActiveWednesday_b = true, isActiveThursday_b = true, isActiveFriday_b = true, isActiveSaturday_b = true, isActiveSunday_u = true, isActiveMonday_u = true, isActiveTuesday_u = true, isActiveWednesday_u = true, isActiveThursday_u = true, isActiveFriday_u = true, isActiveSaturday_u = true;
@@ -91,7 +92,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
     private AlertDialogYesNo alertDialogYesNo;
     String redeem_type, redeem_id, bg_color;
     String selected_radio_voucher = null, selected_voucher_id = null;
-    TextView tv_min_title_p,tv_min_title_b,tv_min_title_u,tv_min_title_z,tv_min_title_m,tv_min_lead_title_m,tv_min_desc_p,tv_min_desc_b,tv_min_desc_u,tv_min_desc_z,tv_min_desc_m,tv_min_lead_desc_m;
+    TextView tv_min_title_p, tv_min_title_b, tv_min_title_u, tv_min_title_z, tv_min_title_m, tv_min_lead_title_m, tv_min_desc_p, tv_min_desc_b, tv_min_desc_u, tv_min_desc_z, tv_min_desc_m, tv_min_lead_desc_m;
     //SP for update redeem
     public static final String MyPREFERENCES_REDEEM_P = "MyPREFERENCES_REDEEM_P";
     public static final String MyPREFERENCES_REDEEM_B = "MyPREFERENCES_REDEEM_B";
@@ -170,6 +171,8 @@ public class VoucherSetupCreate extends AppCompatActivity {
     TextView tv_count_title_p, tv_count_desc_p, tv_count_title_b, tv_count_desc_b, tv_count_title_u, tv_count_desc_u, tv_count_title_z, tv_count_desc_z, tv_count_title_m, tv_count_desc_m, tv_count_lead_title_m, tv_count_lead_desc_m;
     String create_update_code = null, mer_cd_redeem_id = null, r_voucher_id = null, terms_conditions = null;
     private AppTimeOutManagerUtil appTimeOutManagerUtil;
+    TextView tv_share_yes_p, tv_share_yes_b, tv_share_yes_z, tv_share_yes_m, tv_share_no_p, tv_share_no_b, tv_share_no_z, tv_share_no_m;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -196,6 +199,15 @@ public class VoucherSetupCreate extends AppCompatActivity {
         preferences = getSharedPreferences(MERCHANT_DETAILS_PREFERENCE, MODE_PRIVATE);
         assigned_voucher_list = new ArrayList<>();
         assigned_id_list = new ArrayList<>();
+
+        tv_share_yes_p = findViewById(R.id.sharable_yes_p);
+        tv_share_yes_b = findViewById(R.id.sharable_yes_b);
+        tv_share_yes_z = findViewById(R.id.sharable_yes_z);
+        tv_share_yes_m = findViewById(R.id.sharable_yes_m);
+        tv_share_no_p = findViewById(R.id.sharable_no_p);
+        tv_share_no_b = findViewById(R.id.sharable_no_b);
+        tv_share_no_z = findViewById(R.id.sharable_no_z);
+        tv_share_no_m = findViewById(R.id.sharable_no_m);
 
         tv_count_title_p = findViewById(R.id.title_p_watcher);
         tv_count_desc_p = findViewById(R.id.desc_p_watcher);
@@ -245,15 +257,24 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
         toggleSwitch_P = (ToggleSwitch) findViewById(R.id.toggle_P);
         toggleSwitch_B = (ToggleSwitch) findViewById(R.id.toggle_B);
-        toggleSwitch_U = (ToggleSwitch) findViewById(R.id.toggle_U);
         toggleSwitch_Z = (ToggleSwitch) findViewById(R.id.toggle_Z);
         toggleSwitch_M = (ToggleSwitch) findViewById(R.id.toggle_M);
 
         aSwitch_p = (Switch) findViewById(R.id.switch_p);
         aSwitch_b = (Switch) findViewById(R.id.switch_b);
-        aSwitch_u = (Switch) findViewById(R.id.switch_u);
         aSwitch_z = (Switch) findViewById(R.id.switch_z);
         aSwitch_m = (Switch) findViewById(R.id.switch_m);
+
+        aSwitch_p.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    aSwitch_p.setTextOn("Yes");
+                } else {
+                    aSwitch_p.setTextOff("No");
+                }
+            }
+        });
 
         button_p = (Button) findViewById(R.id.button_p);
         button_b = (Button) findViewById(R.id.button_b);
@@ -342,11 +363,11 @@ public class VoucherSetupCreate extends AppCompatActivity {
         btn_yes_fdday_u = (Button) findViewById(R.id.btn_yes_friday_U);
         btn_yes_strday_u = (Button) findViewById(R.id.btn_yes_saturday_U);
 
-        tv_start_date_P.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + "Select Activate Date" + "</u>  </font>"));
-        tv_start_date_B.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + "Select Activate Date" + "</u>  </font>"));
-        tv_start_date_U.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + "Select Activate Date" + "</u>  </font>"));
-        tv_start_date_Z.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + "Select Activate Date" + "</u>  </font>"));
-        tv_start_date_M.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + "Select Activate Date" + "</u>  </font>"));
+        tv_start_date_P.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + "Select Activation Date" + "</u>  </font>"));
+        tv_start_date_B.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + "Select Activation Date" + "</u>  </font>"));
+        tv_start_date_U.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + "Select Activation Date" + "</u>  </font>"));
+        tv_start_date_Z.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + "Select Activation Date" + "</u>  </font>"));
+        tv_start_date_M.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + "Select Activation Date" + "</u>  </font>"));
 
         tv_end_date_P.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + "Select Expiry Date" + "</u>  </font>"));
         tv_end_date_B.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + "Select Expiry Date" + "</u>  </font>"));
@@ -405,18 +426,6 @@ public class VoucherSetupCreate extends AppCompatActivity {
             }
         });
 
-        aSwitch_u.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    // The toggle is enabled
-                    sharable_u = 1;
-                } else {
-                    // The toggle is disabled
-                    sharable_u = 0;
-                }
-            }
-        });
         aSwitch_z.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -441,6 +450,116 @@ public class VoucherSetupCreate extends AppCompatActivity {
                 }
             }
         });
+
+        //shatable p
+        tv_share_yes_p.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tv_share_yes_p.setTextColor(getResources().getColor(R.color.white));
+                tv_share_no_p.setTextColor(getResources().getColor(R.color.black));
+                tv_share_yes_p.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                tv_share_no_p.setBackgroundColor(getResources().getColor(R.color.grey));
+                sharable_p1 = 1;
+                Toast.makeText(VoucherSetupCreate.this, "" + sharable_p1, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        tv_share_no_p.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                tv_share_yes_p.setTextColor(getResources().getColor(R.color.black));
+                tv_share_no_p.setTextColor(getResources().getColor(R.color.white));
+                tv_share_yes_p.setBackgroundColor(getResources().getColor(R.color.grey));
+                tv_share_no_p.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                sharable_p1 = 0;
+                //Toast.makeText(VoucherSetupCreate.this, ""+sharable_p1, Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        //shatable b
+        tv_share_yes_b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tv_share_yes_b.setTextColor(getResources().getColor(R.color.white));
+                tv_share_no_b.setTextColor(getResources().getColor(R.color.black));
+                tv_share_yes_b.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                tv_share_no_b.setBackgroundColor(getResources().getColor(R.color.grey));
+                sharable_b1 = 1;
+                //Toast.makeText(VoucherSetupCreate.this, ""+sharable_b1, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        tv_share_no_b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                tv_share_yes_b.setTextColor(getResources().getColor(R.color.black));
+                tv_share_no_b.setTextColor(getResources().getColor(R.color.white));
+                tv_share_yes_b.setBackgroundColor(getResources().getColor(R.color.grey));
+                tv_share_no_b.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                sharable_b1 = 0;
+                //Toast.makeText(VoucherSetupCreate.this, ""+sharable_b1, Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        //shatable z
+
+        tv_share_yes_z.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tv_share_yes_z.setTextColor(getResources().getColor(R.color.white));
+                tv_share_no_z.setTextColor(getResources().getColor(R.color.black));
+                tv_share_yes_z.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                tv_share_no_z.setBackgroundColor(getResources().getColor(R.color.grey));
+                sharable_z1 = 1;
+                //Toast.makeText(VoucherSetupCreate.this, ""+sharable_z1, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        tv_share_no_z.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                tv_share_yes_z.setTextColor(getResources().getColor(R.color.black));
+                tv_share_no_z.setTextColor(getResources().getColor(R.color.white));
+                tv_share_yes_z.setBackgroundColor(getResources().getColor(R.color.grey));
+                tv_share_no_z.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                sharable_z1 = 0;
+                // Toast.makeText(VoucherSetupCreate.this, ""+sharable_z1, Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        //shatable m
+        tv_share_yes_m.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tv_share_yes_m.setTextColor(getResources().getColor(R.color.white));
+                tv_share_no_m.setTextColor(getResources().getColor(R.color.black));
+                tv_share_yes_m.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                tv_share_no_m.setBackgroundColor(getResources().getColor(R.color.grey));
+                sharable_m1 = 1;
+                //Toast.makeText(VoucherSetupCreate.this, ""+sharable_m1, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        tv_share_no_m.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                tv_share_yes_m.setTextColor(getResources().getColor(R.color.black));
+                tv_share_no_m.setTextColor(getResources().getColor(R.color.white));
+                tv_share_yes_m.setBackgroundColor(getResources().getColor(R.color.grey));
+                tv_share_no_m.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                sharable_m1 = 0;
+                //Toast.makeText(VoucherSetupCreate.this, ""+sharable_m1, Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
         if (getIntent().getExtras() != null) {
             redeem_id = getIntent().getStringExtra("type_code");
             redeem_type = getIntent().getStringExtra("redeem_type");
@@ -451,205 +570,19 @@ public class VoucherSetupCreate extends AppCompatActivity {
             //redeem_id==2 (update voucher from preview)
             if (redeem_id.equals("2")) {
                 if (redeem_type.equals("P")) {
-                    String r_title = sharedpreferences_p_voucher.getString(REDEEM_TITLE_P, "");
-                    String r_desc = sharedpreferences_p_voucher.getString(REDEEM_DESCRIPTION_P, "");
-                    String r_point = sharedpreferences_p_voucher.getString(REDEEM_POINT_P, "");
-                    String r_a_date = sharedpreferences_p_voucher.getString(REDEEM_START_DATE_P, "");
-                    String r_a_time = sharedpreferences_p_voucher.getString(REDEEM_START_TIME_P, "");
-                    String r_e_date = sharedpreferences_p_voucher.getString(REDEEM_EXPIRY_DATE_P, "");
-                    String r_e_time = sharedpreferences_p_voucher.getString(REDEEM_EXPIRY_TIME_P, "");
-                    String r_week_days = sharedpreferences_p_voucher.getString(REDEEM_ACTIVE_DAYS_P, "");
-                    String r_is_sharable = sharedpreferences_p_voucher.getString(REDEEM_IS_SHARABLE_P, "");
-                    bg_color = sharedpreferences_p_voucher.getString(REDEEM_BG_COLOR_P, "");
-                    mer_cd_redeem_id = sharedpreferences_p_voucher.getString(REDEEM_MER_CB_REDEEM_ID_P, "");
-                    terms_conditions = sharedpreferences_p_voucher.getString(REDEEM_TERMS_CONDITIONS_P, "");
-                    Log.d("Redeem_Shared_data--->", "onCreate_P: " + r_title + "," + r_desc + "," + r_point + "," + r_a_date + "," + r_a_time + "," + r_e_date + "," + r_e_time + "," + r_week_days + "," + r_is_sharable);
-
-                    linearLayout_P.setVisibility(View.VISIBLE);
-                    if (!TextUtils.isEmpty(r_title) && !TextUtils.isEmpty(r_desc) && !TextUtils.isEmpty(r_point) && !TextUtils.isEmpty(r_a_date) && !TextUtils.isEmpty(r_a_time) && !TextUtils.isEmpty(r_e_date) && !TextUtils.isEmpty(r_e_time) && !TextUtils.isEmpty(r_week_days) && !TextUtils.isEmpty(r_is_sharable)) {
-                        editText_title_P.setText(r_title);
-                        editText_title_P.setSelection(r_title.length());
-                        editText_desc_P.setText(r_desc);
-                        editText_points_P.setText(r_point);
-                        editText_points_P.setEnabled(false);
-                        editText_points_P.setAlpha(0.5f);
-                        tv_start_date_P.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_a_date + "</u>  </font>"));
-                        tv_end_date_P.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_e_date + "</u>  </font>"));
-                        tv_start_time_P.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_a_time + "</u>  </font>"));
-                        tv_end_time_P.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_e_time + "</u>  </font>"));
-                        // toggleSwitch_P.setCheckedTogglePosition(Integer.parseInt(r_is_sharable));
-
-                        if (!TextUtils.isEmpty(r_is_sharable) && r_is_sharable.equals("1")) {
-                            aSwitch_p.setChecked(true);
-                        } else {
-                            aSwitch_p.setChecked(false);
-                        }
-                        activeWeekDays_p(r_week_days);
-                    }
+                    setProductVoucher();
 
                 } else if (redeem_type.equals("B")) {
-                    String r_title = sharedpreferences_b_voucher.getString(REDEEM_TITLE_B, "");
-                    String r_desc = sharedpreferences_b_voucher.getString(REDEEM_DESCRIPTION_B, "");
-                    String r_amount = sharedpreferences_b_voucher.getString(REDEEM_AMOUNT_B, "");
-                    String r_point = sharedpreferences_b_voucher.getString(REDEEM_POINT_B, "");
-                    String r_a_date = sharedpreferences_b_voucher.getString(REDEEM_START_DATE_B, "");
-                    String r_a_time = sharedpreferences_b_voucher.getString(REDEEM_START_TIME_B, "");
-                    String r_e_date = sharedpreferences_b_voucher.getString(REDEEM_EXPIRY_DATE_B, "");
-                    String r_e_time = sharedpreferences_b_voucher.getString(REDEEM_EXPIRY_TIME_B, "");
-                    String r_week_days = sharedpreferences_b_voucher.getString(REDEEM_ACTIVE_DAYS_B, "");
-                    String r_is_sharable = sharedpreferences_b_voucher.getString(REDEEM_IS_SHARABLE_B, "");
-                    bg_color = sharedpreferences_b_voucher.getString(REDEEM_BG_COLOR_B, "");
-                    mer_cd_redeem_id = sharedpreferences_b_voucher.getString(REDEEM_MER_CB_REDEEM_ID_B, "");
-                    terms_conditions = sharedpreferences_b_voucher.getString(REDEEM_TERMS_CONDITIONS_B, "");
-                    Log.d("Redeem_Shared_data--->", "onCreate_B: " + r_title + "," + r_desc + "," + r_amount + "," + r_point + "," + "," + r_a_date + "," + r_a_time + "," + r_e_date + "," + r_e_time + "," + r_week_days + "," + r_is_sharable);
-
-                    linearLayout_B.setVisibility(View.VISIBLE);
-                    if (!TextUtils.isEmpty(r_title) && !TextUtils.isEmpty(r_desc) && !TextUtils.isEmpty(r_amount) && !TextUtils.isEmpty(r_point) && !TextUtils.isEmpty(r_a_date) && !TextUtils.isEmpty(r_a_time) && !TextUtils.isEmpty(r_e_date) && !TextUtils.isEmpty(r_e_time) && !TextUtils.isEmpty(r_week_days) && !TextUtils.isEmpty(r_is_sharable)) {
-                        editText_title_B.setText(r_title);
-                        editText_title_B.setSelection(r_title.length());
-                        editText_desc_B.setText(r_desc);
-                        editText_wallet_B.setText(r_amount);
-                        editText_points_B.setText(r_point);
-                        editText_points_B.setEnabled(false);
-                        editText_points_B.setAlpha(0.5f);
-                        tv_start_date_B.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_a_date + "</u>  </font>"));
-                        tv_end_date_B.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_e_date + "</u>  </font>"));
-                        tv_start_time_B.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_a_time + "</u>  </font>"));
-                        tv_end_time_B.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_e_time + "</u>  </font>"));
-                        // toggleSwitch_B.setCheckedTogglePosition(Integer.parseInt(r_is_sharable));
-                        if (!TextUtils.isEmpty(r_is_sharable) && r_is_sharable.equals("1")) {
-                            aSwitch_b.setChecked(true);
-                        } else {
-                            aSwitch_b.setChecked(false);
-                        }
-                        activeWeekDays_b(r_week_days);
-                    }
+                    setWalletVoucher();
 
                 } else if (redeem_type.equals("U")) {
-                    linearLayout_U.setVisibility(View.VISIBLE);
-
-                    ArrayList<String> list_assigned = new ArrayList<>();
-                    ArrayList<String> list_assigned_id = new ArrayList<>();
-                    String r_title = sharedpreferences_u_voucher.getString(REDEEM_TITLE_U, "");
-                    String r_desc = sharedpreferences_u_voucher.getString(REDEEM_DESCRIPTION_U, "");
-                    String r_voucher_count = sharedpreferences_u_voucher.getString(REDEEM_VOUCHER_COUNT_U, "");
-                    r_voucher_id = sharedpreferences_u_voucher.getString(REDEEM_VOUCHER_ID_U, "");
-                    String r_a_date = sharedpreferences_u_voucher.getString(REDEEM_START_DATE_U, "");
-                    String r_a_time = sharedpreferences_u_voucher.getString(REDEEM_START_TIME_U, "");
-                    String r_e_date = sharedpreferences_u_voucher.getString(REDEEM_EXPIRY_DATE_U, "");
-                    String r_e_time = sharedpreferences_u_voucher.getString(REDEEM_EXPIRY_TIME_U, "");
-                    String r_week_days = sharedpreferences_u_voucher.getString(REDEEM_ACTIVE_DAYS_U, "");
-                    String assigned_vouchers = sharedpreferences_u_voucher.getString(REDEEM_ASSIGNED_VOUCHER_LIST_U, "");
-                    String assigned_voucher_id = sharedpreferences_u_voucher.getString(REDEEM_ASSIGNED_VOUCHER_ID_LIST_U, "");
-                    bg_color = sharedpreferences_u_voucher.getString(REDEEM_BG_COLOR_U, "");
-                    mer_cd_redeem_id = sharedpreferences_u_voucher.getString(REDEEM_MER_CB_REDEEM_ID_U, "");
-                    terms_conditions = sharedpreferences_u_voucher.getString(REDEEM_TERMS_CONDITIONS_U, "");
-                    Log.d("Redeem_Shared_data--->", "onCreate_U: " + r_title + "," + r_desc + "," + "," + r_voucher_count + "," + r_voucher_id + "," + r_a_date + "," + r_a_time + "," + r_e_date + "," + r_e_time + "," + r_week_days);
-
-                    list_assigned = new Gson().fromJson(assigned_vouchers, new TypeToken<ArrayList<String>>() {
-                    }.getType());
-                    list_assigned_id = new Gson().fromJson(assigned_voucher_id, new TypeToken<ArrayList<String>>() {
-                    }.getType());
-                    if (list_assigned.size() != 0) {
-                        textView_no_vouchers.setVisibility(View.GONE);
-                        textView_no_assigned_vouchers.setVisibility(View.GONE);
-                        spinner_assg_voucher.setVisibility(View.VISIBLE);
-                        ArrayAdapter a = new ArrayAdapter(VoucherSetupCreate.this, android.R.layout.simple_spinner_item, list_assigned);
-                        a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                        spinner_assg_voucher.setAdapter(a);
-                        spinner_assg_voucher.setPrompt("Select Assigned Voucher");
-                        int assg_id_pos = list_assigned_id.indexOf(r_voucher_id);
-                        String assg_value = list_assigned.get(assg_id_pos);
-                        Log.d("Assg_value---", "onCreate: " + assg_id_pos + "," + assg_value + "," + r_voucher_id);
-                        if (assg_value != null) {
-                            selected_voucher_id = r_voucher_id;
-                            int spinnerPosition = a.getPosition(assg_value);
-                            spinner_assg_voucher.setSelection(spinnerPosition);
-                            a.notifyDataSetChanged();
-                        }
-                        ArrayList<String> finalList_assigned_id = list_assigned_id;
-                        spinner_assg_voucher.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                            @Override
-                            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                                selected_voucher_id = finalList_assigned_id.get(position);
-                            }
-
-                            @Override
-                            public void onNothingSelected(AdapterView<?> parent) {
-                            }
-                        });
-                    }
-                    if (!TextUtils.isEmpty(r_title) && !TextUtils.isEmpty(r_desc) && !TextUtils.isEmpty(r_voucher_count) && !TextUtils.isEmpty(r_a_date) && !TextUtils.isEmpty(r_a_time) && !TextUtils.isEmpty(r_e_date) && !TextUtils.isEmpty(r_e_time) && !TextUtils.isEmpty(r_week_days)) {
-                        editText_title_U.setText(r_title);
-                        editText_title_U.setSelection(r_title.length());
-                        editText_desc_U.setText(r_desc);
-                        editText_vouchers_count_U.setText(r_voucher_count);
-                        tv_start_date_U.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_a_date + "</u>  </font>"));
-                        tv_end_date_U.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_e_date + "</u>  </font>"));
-                        tv_start_time_U.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_a_time + "</u>  </font>"));
-                        tv_end_time_U.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_e_time + "</u>  </font>"));
-                        activeWeekDays_u(r_week_days);
-                    }
+                    setBulkVoucher();
 
                 } else if (redeem_type.equals("Z")) {
-                    String r_title = sharedpreferences_z_voucher.getString(REDEEM_TITLE_Z, "");
-                    String r_desc = sharedpreferences_z_voucher.getString(REDEEM_DESCRIPTION_Z, "");
-                    String r_a_date = sharedpreferences_z_voucher.getString(REDEEM_START_DATE_Z, "");
-                    String r_e_date = sharedpreferences_z_voucher.getString(REDEEM_EXPIRY_DATE_Z, "");
-                    String r_is_sharable = sharedpreferences_z_voucher.getString(REDEEM_IS_SHARABLE_Z, "");
-                    bg_color = sharedpreferences_z_voucher.getString(REDEEM_BG_COLOR_Z, "");
-                    mer_cd_redeem_id = sharedpreferences_z_voucher.getString(REDEEM_MER_CB_REDEEM_ID_Z, "");
-                    terms_conditions = sharedpreferences_z_voucher.getString(REDEEM_TERMS_CONDITIONS_Z, "");
-                    Log.d("Redeem_Shared_data--->", "onCreate_Z: " + r_title + "," + r_desc + "," + r_a_date + "," + r_e_date + "," + r_is_sharable);
-
-                    linearLayout_Z.setVisibility(View.VISIBLE);
-                    if (!TextUtils.isEmpty(r_title) && !TextUtils.isEmpty(r_desc) && !TextUtils.isEmpty(r_a_date) && !TextUtils.isEmpty(r_e_date) && !TextUtils.isEmpty(r_is_sharable)) {
-                        editText_title_Z.setText(r_title);
-                        editText_title_Z.setSelection(r_title.length());
-                        editText_desc_Z.setText(r_desc);
-                        tv_start_date_Z.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_a_date + "</u>  </font>"));
-                        tv_end_date_Z.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_e_date + "</u>  </font>"));
-                        // toggleSwitch_Z.setCheckedTogglePosition(Integer.parseInt(r_is_sharable));
-                        if (!TextUtils.isEmpty(r_is_sharable) && r_is_sharable.equals("1")) {
-                            aSwitch_z.setChecked(true);
-                        } else {
-                            aSwitch_z.setChecked(false);
-                        }
-                    }
+                   setAssignedVoucher();
 
                 } else if (redeem_type.equals("M")) {
-                    String r_title = sharedpreferences_m_voucher.getString(REDEEM_TITLE_M, "");
-                    String r_desc = sharedpreferences_m_voucher.getString(REDEEM_DESCRIPTION_M, "");
-                    String r_lead_title = sharedpreferences_m_voucher.getString(REDEEM_LEAD_TITLE_M, "");
-                    String r_lead_desc = sharedpreferences_m_voucher.getString(REDEEM_LEAD_DESCRIPTION_M, "");
-                    String r_point = sharedpreferences_m_voucher.getString(REDEEM_POINT_M, "");
-                    String r_a_date = sharedpreferences_m_voucher.getString(REDEEM_START_DATE_M, "");
-                    String r_e_date = sharedpreferences_m_voucher.getString(REDEEM_EXPIRY_DATE_M, "");
-                    String r_is_sharable = sharedpreferences_m_voucher.getString(REDEEM_IS_SHARABLE_M, "");
-                    bg_color = sharedpreferences_m_voucher.getString(REDEEM_BG_COLOR_M, "");
-                    mer_cd_redeem_id = sharedpreferences_m_voucher.getString(REDEEM_MER_CB_REDEEM_ID_M, "");
-                    terms_conditions = sharedpreferences_m_voucher.getString(REDEEM_TERMS_CONDITIONS_M, "");
-                    Log.d("Redeem_Shared_data--->", "onCreate_M: " + r_title + "," + r_desc + "," + r_point + "," + r_a_date + "," + r_e_date + "," + r_is_sharable);
-
-                    linearLayout_M.setVisibility(View.VISIBLE);
-                    if (!TextUtils.isEmpty(r_title) && !TextUtils.isEmpty(r_desc) && !TextUtils.isEmpty(r_point) && !TextUtils.isEmpty(r_a_date) && !TextUtils.isEmpty(r_e_date) && !TextUtils.isEmpty(r_is_sharable)) {
-                        editText_title_M.setText(r_title);
-                        editText_title_M.setSelection(r_title.length());
-                        editText_desc_M.setText(r_desc);
-                        editText_title_lead_M.setText(r_lead_title);
-                        editText_desc_lead_M.setText(r_lead_desc);
-                        editText_points_M.setText(r_point);
-                        editText_points_M.setEnabled(false);
-                        editText_points_M.setAlpha(0.5f);
-                        tv_start_date_M.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_a_date + "</u>  </font>"));
-                        tv_end_date_M.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_e_date + "</u>  </font>"));
-                        //toggleSwitch_M.setCheckedTogglePosition(Integer.parseInt(r_is_sharable));
-                        if (!TextUtils.isEmpty(r_is_sharable) && r_is_sharable.equals("1")) {
-                            aSwitch_m.setChecked(true);
-                        } else {
-                            aSwitch_m.setChecked(false);
-                        }
-                    }
+                    setMGMVoucher();
                 }
             } else if (redeem_id.equals("0")) {
                 //create_update_code="0";
@@ -670,13 +603,14 @@ public class VoucherSetupCreate extends AppCompatActivity {
                 mer_cd_redeem_id = getIntent().getStringExtra("mer_cd_redeem_id");
                 terms_conditions = getIntent().getStringExtra("terms_conditions");
                 String get_share = getIntent().getStringExtra("sharable");
+                String ref_reward_points = getIntent().getStringExtra("ref_reward_points");
                 boolean sharable = true;
                 if (!TextUtils.isEmpty(get_share) && get_share.equals("1")) {
                     sharable = true;
                 } else {
                     sharable = false;
                 }
-                Log.d("Preview----", "onCreate: " + title + "," + desc + "," + points + "," + act_date + "," + exp_date + "," + act_time + "," + exp_time + "," + getActDays + "," + redeem_type + "," + sharable + "," + bg_color + "," + lead_title + "," + lead_desc + "," + assgn_vouher_count + "," + r_voucher_id);
+                Log.d("Preview----", "onCreate: " + ref_reward_points + "," + title + "," + desc + "," + points + "," + act_date + "," + exp_date + "," + act_time + "," + exp_time + "," + getActDays + "," + redeem_type + "," + sharable + "," + bg_color + "," + lead_title + "," + lead_desc + "," + assgn_vouher_count + "," + r_voucher_id);
 
 
                 if (redeem_type.equals("P")) {
@@ -694,9 +628,19 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
                     if (sharable) {
                         //sharable_p = 1;
-                        aSwitch_p.setChecked(true);
+                        //aSwitch_p.setChecked(true);
+                        tv_share_yes_p.setTextColor(getResources().getColor(R.color.white));
+                        tv_share_no_p.setTextColor(getResources().getColor(R.color.black));
+                        tv_share_yes_p.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                        tv_share_no_p.setBackgroundColor(getResources().getColor(R.color.grey));
+                        sharable_p1 = 1;
                     } else {
-                        aSwitch_p.setChecked(false);
+                        // aSwitch_p.setChecked(false);
+                        tv_share_yes_p.setTextColor(getResources().getColor(R.color.black));
+                        tv_share_no_p.setTextColor(getResources().getColor(R.color.white));
+                        tv_share_yes_p.setBackgroundColor(getResources().getColor(R.color.grey));
+                        tv_share_no_p.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                        sharable_p1 = 0;
                     }
                     //toggleSwitch_P.setCheckedTogglePosition(sharable_p);
                     //weekdays
@@ -719,9 +663,19 @@ public class VoucherSetupCreate extends AppCompatActivity {
                     //toggleSwitch_B.setCheckedTogglePosition(sharable_b);
                     if (sharable) {
                         //sharable_p = 1;
-                        aSwitch_b.setChecked(true);
+                        //aSwitch_b.setChecked(true);
+                        tv_share_yes_b.setTextColor(getResources().getColor(R.color.white));
+                        tv_share_no_b.setTextColor(getResources().getColor(R.color.black));
+                        tv_share_yes_b.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                        tv_share_no_b.setBackgroundColor(getResources().getColor(R.color.grey));
+                        sharable_b1 = 1;
                     } else {
-                        aSwitch_b.setChecked(false);
+                        //aSwitch_b.setChecked(false);
+                        tv_share_yes_b.setTextColor(getResources().getColor(R.color.black));
+                        tv_share_no_b.setTextColor(getResources().getColor(R.color.white));
+                        tv_share_yes_b.setBackgroundColor(getResources().getColor(R.color.grey));
+                        tv_share_no_b.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                        sharable_b1 = 0;
                     }
                     //weekdays
                     activeWeekDays_b(getActDays);
@@ -731,7 +685,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                     linearLayout_U.setVisibility(View.VISIBLE);
                     fetchRedeemVoucherListRequestBody = new FetchRedeemVoucherListRequestBody();
                     fetchRedeemVoucherListRequestBody.setCallerType("m");
-                    fetchRedeemVoucherListRequestBody.setMerId( preferences.getString(MERCHANT_ID, ""));
+                    fetchRedeemVoucherListRequestBody.setMerId(preferences.getString(MERCHANT_ID, ""));
                     fetchRedeemVoucherListRequestBody.setDeviceId(preferences.getString(DEVICE_ID, ""));
                     fetchRedeemVoucherListRequestBody.setSessionToken("No-Token");
                     fetchRedeemVoucherListRequestBody.setVoucherType("Z");
@@ -766,9 +720,19 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
                     if (sharable) {
                         //sharable_p = 1;
-                        aSwitch_z.setChecked(true);
+                        //aSwitch_z.setChecked(true);
+                        tv_share_yes_z.setTextColor(getResources().getColor(R.color.white));
+                        tv_share_no_z.setTextColor(getResources().getColor(R.color.black));
+                        tv_share_yes_z.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                        tv_share_no_z.setBackgroundColor(getResources().getColor(R.color.grey));
+                        sharable_z1 = 1;
                     } else {
-                        aSwitch_z.setChecked(false);
+                        //aSwitch_z.setChecked(false);
+                        tv_share_yes_z.setTextColor(getResources().getColor(R.color.black));
+                        tv_share_no_z.setTextColor(getResources().getColor(R.color.white));
+                        tv_share_yes_z.setBackgroundColor(getResources().getColor(R.color.grey));
+                        tv_share_no_z.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                        sharable_z1 = 0;
                     }
 
                 } else if (redeem_type.equals("M")) {
@@ -778,7 +742,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                     editText_desc_M.setText(desc);
                     editText_title_lead_M.setText(lead_title);
                     editText_desc_lead_M.setText(lead_desc);
-                    editText_points_M.setText(points);
+                    editText_points_M.setText(ref_reward_points);
                     editText_points_M.setEnabled(false);
                     editText_points_M.setAlpha(0.5f);
                     tv_start_date_M.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + act_date + "</u>  </font>"));
@@ -790,21 +754,33 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
                     if (sharable) {
                         //sharable_p = 1;
-                        aSwitch_m.setChecked(true);
+                        //aSwitch_m.setChecked(true);
+                        tv_share_yes_m.setTextColor(getResources().getColor(R.color.white));
+                        tv_share_no_m.setTextColor(getResources().getColor(R.color.black));
+                        tv_share_yes_m.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                        tv_share_no_m.setBackgroundColor(getResources().getColor(R.color.grey));
+                        sharable_m1 = 1;
                     } else {
-                        aSwitch_m.setChecked(false);
+                        //aSwitch_m.setChecked(false);
+
+                        tv_share_yes_m.setTextColor(getResources().getColor(R.color.black));
+                        tv_share_no_m.setTextColor(getResources().getColor(R.color.white));
+                        tv_share_yes_m.setBackgroundColor(getResources().getColor(R.color.grey));
+                        tv_share_no_m.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                        sharable_m1 = 0;
                     }
                 }
 
             } else {
                 //create_update_code="1";
                 if (redeem_type.equals("P")) {
-                    linearLayout_P.setVisibility(View.VISIBLE);
+                    //linearLayout_P.setVisibility(View.VISIBLE);
+                    setProductVoucher();
                 } else if (redeem_type.equals("B")) {
-                    linearLayout_B.setVisibility(View.VISIBLE);
+                    //linearLayout_B.setVisibility(View.VISIBLE);
+                    setWalletVoucher();
                 } else if (redeem_type.equals("U")) {
                     linearLayout_U.setVisibility(View.VISIBLE);
-
                     fetchRedeemVoucherListRequestBody = new FetchRedeemVoucherListRequestBody();
                     fetchRedeemVoucherListRequestBody.setCallerType("m");
                     fetchRedeemVoucherListRequestBody.setMerId(preferences.getString(MERCHANT_ID, ""));
@@ -818,10 +794,14 @@ public class VoucherSetupCreate extends AppCompatActivity {
                         Log.d("GET-U-Type----", "onCreate: " + e.getMessage());
                     }
 
+                      setBulkVoucher();
+
                 } else if (redeem_type.equals("Z")) {
-                    linearLayout_Z.setVisibility(View.VISIBLE);
+                    //linearLayout_Z.setVisibility(View.VISIBLE);
+                    setAssignedVoucher();
                 } else if (redeem_type.equals("M")) {
-                    linearLayout_M.setVisibility(View.VISIBLE);
+                    //linearLayout_M.setVisibility(View.VISIBLE);
+                    setMGMVoucher();
                 }
             }
         }
@@ -857,13 +837,6 @@ public class VoucherSetupCreate extends AppCompatActivity {
             @Override
             public void onToggleSwitchChangeListener(int position, boolean isChecked) {
                 sharable_b = position;
-            }
-        });
-        toggleSwitch_U.setOnToggleSwitchChangeListener(new ToggleSwitch.OnToggleSwitchChangeListener() {
-
-            @Override
-            public void onToggleSwitchChangeListener(int position, boolean isChecked) {
-                sharable_u = position;
             }
         });
         toggleSwitch_Z.setOnToggleSwitchChangeListener(new ToggleSwitch.OnToggleSwitchChangeListener() {
@@ -1834,6 +1807,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
     }
 
+
     public String getActDays_P() {
         if (isActiveSunday_p) {
             activeDays_p = "y";
@@ -1981,14 +1955,14 @@ public class VoucherSetupCreate extends AppCompatActivity {
         final String start_date = tv_start_date_P.getText().toString().trim();
         final String exp_time = tv_end_time_P.getText().toString().trim();
         final String start_time = tv_start_time_P.getText().toString().trim();
-        final String sharable = String.valueOf(sharable_p);
+        final String sharable = String.valueOf(sharable_p1);
         final String getActDays_p = getActDays_P();
         Log.i("app---->", start_date + " , " + exp_date + "," + start_time + " , " + exp_time + " , " + getActDays_p);
         //&& Integer.parseInt(bonus) >= 1 && Integer.parseInt(bonus) <= 999999
         if (!TextUtils.isEmpty(title)) {
             if (title.length() >= 10) {
                 if (!TextUtils.isEmpty(desc)) {
-                    if (desc.length() >= 25) {
+                    if (desc.length() >= 15) {
                         if (!TextUtils.isEmpty(points)) {
                             if (!TextUtils.isEmpty(start_date) && !start_date.equals("Select Activate Date")) {
                                 if (!TextUtils.isEmpty(exp_date) && !exp_date.equals("Select Expiry Date")) {
@@ -2072,7 +2046,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                         }
 
                     } else {
-                        editText_desc_P.setError("Minimum 25chars");
+                        editText_desc_P.setError("Minimum 15chars");
                         editText_desc_P.requestFocus();
                     }
                 } else {
@@ -2102,7 +2076,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
         final String start_date = tv_start_date_B.getText().toString().trim();
         final String exp_time = tv_end_time_B.getText().toString().trim();
         final String start_time = tv_start_time_B.getText().toString().trim();
-        final String sharable = String.valueOf(sharable_b);
+        final String sharable = String.valueOf(sharable_b1);
         final String getActDays_b = getActDays_B();
         Log.i("app---->", start_date + " , " + exp_date + "," + start_time + " , " + exp_time + " , " + getActDays_b);
         //&& Integer.parseInt(bonus) >= 1 && Integer.parseInt(bonus) <= 999999
@@ -2110,7 +2084,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
         if (!TextUtils.isEmpty(title)) {
             if (title.length() >= 10) {
                 if (!TextUtils.isEmpty(desc)) {
-                    if (desc.length() >= 25) {
+                    if (desc.length() >= 15) {
                         if (!TextUtils.isEmpty(wallet)) {
                             if (!TextUtils.isEmpty(points)) {
                                 if (!TextUtils.isEmpty(start_date) && !start_date.equals("Select Activate Date")) {
@@ -2202,7 +2176,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                         }
 
                     } else {
-                        editText_desc_B.setError("Minimum 25chars");
+                        editText_desc_B.setError("Minimum 15chars");
                         editText_desc_B.requestFocus();
                     }
                 } else {
@@ -2241,7 +2215,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
         if (!TextUtils.isEmpty(title)) {
             if (title.length() >= 10) {
                 if (!TextUtils.isEmpty(desc)) {
-                    if (desc.length() >= 25) {
+                    if (desc.length() >= 15) {
                         if (!TextUtils.isEmpty(voucher_count) && !voucher_count.startsWith("0")) {
                             if (!TextUtils.isEmpty(start_date) && !start_date.equals("Select Activate Date")) {
                                 if (!TextUtils.isEmpty(exp_date) && !exp_date.equals("Select Expiry Date")) {
@@ -2348,7 +2322,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                         }
 
                     } else {
-                        editText_desc_U.setError("Minimum 25chars");
+                        editText_desc_U.setError("Minimum 15chars");
                         editText_desc_U.requestFocus();
                     }
                 } else {
@@ -2373,14 +2347,14 @@ public class VoucherSetupCreate extends AppCompatActivity {
         final String desc = editText_desc_Z.getText().toString();
         final String exp_date = tv_end_date_Z.getText().toString().trim();
         final String start_date = tv_start_date_Z.getText().toString().trim();
-        final String sharable = String.valueOf(sharable_z);
+        final String sharable = String.valueOf(sharable_z1);
         Log.i("app---->", start_date + " , " + exp_date);
         //&& Integer.parseInt(bonus) >= 1 && Integer.parseInt(bonus) <= 999999
 
         if (!TextUtils.isEmpty(title)) {
             if (title.length() >= 10) {
                 if (!TextUtils.isEmpty(desc)) {
-                    if (desc.length() >= 25) {
+                    if (desc.length() >= 15) {
                         if (!TextUtils.isEmpty(start_date) && !start_date.equals("Select Activate Date")) {
                             if (!TextUtils.isEmpty(exp_date) && !exp_date.equals("Select Expiry Date")) {
                                 //SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy hh:mm a");
@@ -2439,7 +2413,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
 
                     } else {
-                        editText_desc_U.setError("Minimum 25chars");
+                        editText_desc_U.setError("Minimum 15chars");
                         editText_desc_U.requestFocus();
                     }
                 } else {
@@ -2469,18 +2443,18 @@ public class VoucherSetupCreate extends AppCompatActivity {
         final String exp_date = tv_end_date_M.getText().toString().trim();
         final String start_date = tv_start_date_M.getText().toString().trim();
         final String points = editText_points_M.getText().toString().trim();
-        final String sharable = String.valueOf(sharable_m);
+        final String sharable = String.valueOf(sharable_m1);
         Log.i("app---->", start_date + " , " + exp_date);
         //&& Integer.parseInt(bonus) >= 1 && Integer.parseInt(bonus) <= 999999
 
         if (!TextUtils.isEmpty(title)) {
             if (title.length() >= 10) {
                 if (!TextUtils.isEmpty(desc)) {
-                    if (desc.length() >= 25) {
+                    if (desc.length() >= 15) {
                         if (!TextUtils.isEmpty(lead_title)) {
                             if (lead_title.length() >= 10) {
                                 if (!TextUtils.isEmpty(lead_desc)) {
-                                    if (lead_desc.length() >= 25) {
+                                    if (lead_desc.length() >= 15) {
                                         if (!TextUtils.isEmpty(points)) {
                                             if (!TextUtils.isEmpty(start_date) && !start_date.equals("Select Activate Date")) {
                                                 if (!TextUtils.isEmpty(exp_date) && !exp_date.equals("Select Expiry Date")) {
@@ -2513,13 +2487,13 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                                             in.putExtra("desc", desc);
                                                             in.putExtra("lead_title", lead_title);
                                                             in.putExtra("lead_desc", lead_desc);
-                                                            in.putExtra("points", points);
                                                             in.putExtra("sharable", sharable);
                                                             in.putExtra("s_date", start_date);
                                                             in.putExtra("e_date", exp_date);
                                                             in.putExtra("mer_cd_redeem_id", mer_cd_redeem_id);
                                                             in.putExtra("create_update_code", create_update_code);
                                                             in.putExtra("terms_conditions", terms_conditions);
+                                                            in.putExtra("ref_reward_points", points);
                                                             if (!TextUtils.isEmpty(bg_color)) {
                                                                 in.putExtra("bg_color", bg_color);
                                                             }
@@ -2547,7 +2521,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                             editText_points_M.requestFocus();
                                         }
                                     } else {
-                                        editText_desc_lead_M.setError("Minimum 25chars");
+                                        editText_desc_lead_M.setError("Minimum 15chars");
                                         editText_desc_lead_M.requestFocus();
                                     }
                                 } else {
@@ -2563,7 +2537,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                             editText_title_lead_M.requestFocus();
                         }
                     } else {
-                        editText_desc_U.setError("Minimum 25chars");
+                        editText_desc_U.setError("Minimum 15chars");
                         editText_desc_U.requestFocus();
                     }
                 } else {
@@ -3391,7 +3365,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             //This sets a textview to the current length
-            if (s.length() < 25) {
+            if (s.length() < 15) {
                 tv_min_desc_p.setVisibility(View.VISIBLE);
                 tv_count_desc_p.setText(String.valueOf(s.length() + "/200"));
                 tv_count_desc_p.setTextColor(getResources().getColor(R.color.red));
@@ -3436,7 +3410,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             //This sets a textview to the current length
-            if (s.length() < 25) {
+            if (s.length() < 15) {
                 tv_min_desc_b.setVisibility(View.VISIBLE);
                 tv_count_desc_b.setText(String.valueOf(s.length() + "/200"));
                 tv_count_desc_b.setTextColor(getResources().getColor(R.color.red));
@@ -3481,7 +3455,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             //This sets a textview to the current length
-            if (s.length() < 25) {
+            if (s.length() < 15) {
                 tv_min_desc_u.setVisibility(View.VISIBLE);
                 tv_count_desc_u.setText(String.valueOf(s.length() + "/200"));
                 tv_count_desc_u.setTextColor(getResources().getColor(R.color.red));
@@ -3526,7 +3500,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             //This sets a textview to the current length
-            if (s.length() < 25) {
+            if (s.length() < 15) {
                 tv_min_desc_z.setVisibility(View.VISIBLE);
                 tv_count_desc_z.setText(String.valueOf(s.length() + "/200"));
                 tv_count_desc_z.setTextColor(getResources().getColor(R.color.red));
@@ -3572,7 +3546,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             //This sets a textview to the current length
-            if (s.length() < 25) {
+            if (s.length() < 15) {
                 tv_min_desc_m.setVisibility(View.VISIBLE);
                 tv_count_desc_m.setText(String.valueOf(s.length() + "/200"));
                 tv_count_desc_m.setTextColor(getResources().getColor(R.color.red));
@@ -3617,7 +3591,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             //This sets a textview to the current length
-            if (s.length() < 25) {
+            if (s.length() < 15) {
                 tv_min_lead_desc_m.setVisibility(View.VISIBLE);
                 tv_count_lead_desc_m.setText(String.valueOf(s.length() + "/200"));
                 tv_count_lead_desc_m.setTextColor(getResources().getColor(R.color.red));
@@ -3643,6 +3617,375 @@ public class VoucherSetupCreate extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         appTimeOutManagerUtil.onPauseApp();
+
+        Log.d("redeem_type---", "onPause: " + redeem_type);
+        if (redeem_type.equals("P")) {
+            final String title = editText_title_P.getText().toString();
+            final String desc = editText_desc_P.getText().toString();
+            final String points = editText_points_P.getText().toString();
+            final String exp_date = tv_end_date_P.getText().toString().trim();
+            final String start_date = tv_start_date_P.getText().toString().trim();
+            final String exp_time = tv_end_time_P.getText().toString().trim();
+            final String start_time = tv_start_time_P.getText().toString().trim();
+            final String sharable = String.valueOf(sharable_p1);
+            final String getActDays_p = getActDays_P();
+
+            SharedPreferences.Editor editor = sharedpreferences_p_voucher.edit();
+            editor.putString(REDEEM_POINT_P, points);
+            editor.putString(REDEEM_TITLE_P, title);
+            editor.putString(REDEEM_DESCRIPTION_P, desc);
+            editor.putString(REDEEM_START_DATE_P, start_date);
+            editor.putString(REDEEM_START_TIME_P, start_time);
+            editor.putString(REDEEM_EXPIRY_DATE_P, exp_date);
+            editor.putString(REDEEM_EXPIRY_TIME_P, exp_time);
+            editor.putString(REDEEM_ACTIVE_DAYS_P, getActDays_p);
+            editor.putString(REDEEM_IS_SHARABLE_P, sharable);
+            editor.putString(REDEEM_BG_COLOR_P, bg_color);
+            editor.putString(REDEEM_MER_CB_REDEEM_ID_P, mer_cd_redeem_id);
+            editor.commit();
+        } else if (redeem_type.equals("B")) {
+            final String title = editText_title_B.getText().toString();
+            final String desc = editText_desc_B.getText().toString();
+            final String points = editText_points_B.getText().toString();
+            final String wallet = editText_wallet_B.getText().toString();
+            final String exp_date = tv_end_date_B.getText().toString().trim();
+            final String start_date = tv_start_date_B.getText().toString().trim();
+            final String exp_time = tv_end_time_B.getText().toString().trim();
+            final String start_time = tv_start_time_B.getText().toString().trim();
+            final String sharable = String.valueOf(sharable_b1);
+            final String getActDays_b = getActDays_B();
+
+            SharedPreferences.Editor editor = sharedpreferences_b_voucher.edit();
+            editor.putString(REDEEM_TITLE_B, title);
+            editor.putString(REDEEM_DESCRIPTION_B, desc);
+            editor.putString(REDEEM_POINT_B, points);
+            editor.putString(REDEEM_AMOUNT_B, wallet);
+            editor.putString(REDEEM_START_DATE_B, start_date);
+            editor.putString(REDEEM_START_TIME_B, start_time);
+            editor.putString(REDEEM_EXPIRY_DATE_B, exp_date);
+            editor.putString(REDEEM_EXPIRY_TIME_B, exp_time);
+            editor.putString(REDEEM_ACTIVE_DAYS_B, getActDays_b);
+            editor.putString(REDEEM_IS_SHARABLE_B, sharable);
+            editor.putString(REDEEM_BG_COLOR_B, bg_color);
+            editor.commit();
+        } else if (redeem_type.equals("U")) {
+            final String title = editText_title_U.getText().toString();
+            final String desc = editText_desc_U.getText().toString();
+            final String voucher_count = editText_vouchers_count_U.getText().toString();
+            final String exp_date = tv_end_date_U.getText().toString().trim();
+            final String start_date = tv_start_date_U.getText().toString().trim();
+            final String exp_time = tv_end_time_U.getText().toString().trim();
+            final String start_time = tv_start_time_U.getText().toString().trim();
+            final String getActDays_u = getActDays_U();
+            String assignedList = new Gson().toJson(assigned_voucher_list);
+            String idList = new Gson().toJson(assigned_id_list);
+
+
+            SharedPreferences.Editor editor = sharedpreferences_u_voucher.edit();
+            editor.putString(REDEEM_TITLE_U, title);
+            editor.putString(REDEEM_DESCRIPTION_U, desc);
+            editor.putString(REDEEM_VOUCHER_COUNT_U, voucher_count);
+            editor.putString(REDEEM_VOUCHER_ID_U, selected_voucher_id);
+            editor.putString(REDEEM_START_DATE_U, start_date);
+            editor.putString(REDEEM_START_TIME_U, start_time);
+            editor.putString(REDEEM_EXPIRY_DATE_U, exp_date);
+            editor.putString(REDEEM_EXPIRY_TIME_U, exp_time);
+            editor.putString(REDEEM_ACTIVE_DAYS_U, getActDays_u);
+            editor.putString(REDEEM_ASSIGNED_VOUCHER_LIST_U, assignedList);
+            editor.putString(REDEEM_ASSIGNED_VOUCHER_ID_LIST_U, idList);
+            editor.putString(REDEEM_BG_COLOR_U, bg_color);
+            editor.putString(REDEEM_MER_CB_REDEEM_ID_U, mer_cd_redeem_id);
+            editor.commit();
+        } else if (redeem_type.equals("Z")) {
+            final String title = editText_title_Z.getText().toString();
+            final String desc = editText_desc_Z.getText().toString();
+            final String exp_date = tv_end_date_Z.getText().toString().trim();
+            final String start_date = tv_start_date_Z.getText().toString().trim();
+            final String sharable = String.valueOf(sharable_z1);
+
+            SharedPreferences.Editor editor = sharedpreferences_z_voucher.edit();
+            editor.putString(REDEEM_TITLE_Z, title);
+            editor.putString(REDEEM_DESCRIPTION_Z, desc);
+            editor.putString(REDEEM_START_DATE_Z, start_date);
+            editor.putString(REDEEM_EXPIRY_DATE_Z, exp_date);
+            editor.putString(REDEEM_IS_SHARABLE_Z, sharable);
+            editor.putString(REDEEM_BG_COLOR_Z, bg_color);
+            editor.putString(REDEEM_MER_CB_REDEEM_ID_Z, mer_cd_redeem_id);
+            editor.commit();
+        } else if (redeem_type.equals("M")) {
+            final String title = editText_title_M.getText().toString();
+            final String desc = editText_desc_M.getText().toString();
+            final String lead_title = editText_title_lead_M.getText().toString();
+            final String lead_desc = editText_desc_lead_M.getText().toString();
+            final String exp_date = tv_end_date_M.getText().toString().trim();
+            final String start_date = tv_start_date_M.getText().toString().trim();
+            final String points = editText_points_M.getText().toString().trim();
+            final String sharable = String.valueOf(sharable_m1);
+
+            SharedPreferences.Editor editor = sharedpreferences_m_voucher.edit();
+            editor.putString(REDEEM_TITLE_M, title);
+            editor.putString(REDEEM_DESCRIPTION_M, desc);
+            editor.putString(REDEEM_LEAD_TITLE_M, lead_title);
+            editor.putString(REDEEM_LEAD_DESCRIPTION_M, lead_desc);
+            editor.putString(REDEEM_POINT_M, points);
+            editor.putString(REDEEM_START_DATE_M, start_date);
+            editor.putString(REDEEM_EXPIRY_DATE_M, exp_date);
+            editor.putString(REDEEM_IS_SHARABLE_M, sharable);
+            editor.putString(REDEEM_BG_COLOR_M, bg_color);
+            editor.putString(REDEEM_MER_CB_REDEEM_ID_M, mer_cd_redeem_id);
+            editor.commit();
+        }
+
     }
+
+    public void setProductVoucher() {
+        String r_title = sharedpreferences_p_voucher.getString(REDEEM_TITLE_P, "");
+        String r_desc = sharedpreferences_p_voucher.getString(REDEEM_DESCRIPTION_P, "");
+        String r_point = sharedpreferences_p_voucher.getString(REDEEM_POINT_P, "");
+        String r_a_date = sharedpreferences_p_voucher.getString(REDEEM_START_DATE_P, "");
+        String r_a_time = sharedpreferences_p_voucher.getString(REDEEM_START_TIME_P, "");
+        String r_e_date = sharedpreferences_p_voucher.getString(REDEEM_EXPIRY_DATE_P, "");
+        String r_e_time = sharedpreferences_p_voucher.getString(REDEEM_EXPIRY_TIME_P, "");
+        String r_week_days = sharedpreferences_p_voucher.getString(REDEEM_ACTIVE_DAYS_P, "");
+        String r_is_sharable = sharedpreferences_p_voucher.getString(REDEEM_IS_SHARABLE_P, "");
+        bg_color = sharedpreferences_p_voucher.getString(REDEEM_BG_COLOR_P, "");
+        mer_cd_redeem_id = sharedpreferences_p_voucher.getString(REDEEM_MER_CB_REDEEM_ID_P, "");
+        terms_conditions = sharedpreferences_p_voucher.getString(REDEEM_TERMS_CONDITIONS_P, "");
+        Log.d("Redeem_Shared_data--->", "onCreate_P: " + r_title + "," + r_desc + "," + r_point + "," + r_a_date + "," + r_a_time + "," + r_e_date + "," + r_e_time + "," + r_week_days + "," + r_is_sharable);
+
+        linearLayout_P.setVisibility(View.VISIBLE);
+        if (!TextUtils.isEmpty(r_title) && !TextUtils.isEmpty(r_desc) && !TextUtils.isEmpty(r_point) && !TextUtils.isEmpty(r_a_date) && !TextUtils.isEmpty(r_a_time) && !TextUtils.isEmpty(r_e_date) && !TextUtils.isEmpty(r_e_time) && !TextUtils.isEmpty(r_week_days) && !TextUtils.isEmpty(r_is_sharable)) {
+            editText_title_P.setText(r_title);
+            editText_title_P.setSelection(r_title.length());
+            editText_desc_P.setText(r_desc);
+            editText_points_P.setText(r_point);
+            editText_points_P.setEnabled(false);
+            editText_points_P.setAlpha(0.5f);
+            tv_start_date_P.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_a_date + "</u>  </font>"));
+            tv_end_date_P.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_e_date + "</u>  </font>"));
+            tv_start_time_P.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_a_time + "</u>  </font>"));
+            tv_end_time_P.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_e_time + "</u>  </font>"));
+            // toggleSwitch_P.setCheckedTogglePosition(Integer.parseInt(r_is_sharable));
+
+            if (!TextUtils.isEmpty(r_is_sharable) && r_is_sharable.equals("1")) {
+                // aSwitch_p.setChecked(true);
+                tv_share_yes_p.setTextColor(getResources().getColor(R.color.white));
+                tv_share_no_p.setTextColor(getResources().getColor(R.color.black));
+                tv_share_yes_p.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                tv_share_no_p.setBackgroundColor(getResources().getColor(R.color.grey));
+                sharable_p1 = 1;
+            } else {
+                // aSwitch_p.setChecked(false);
+                tv_share_yes_p.setTextColor(getResources().getColor(R.color.black));
+                tv_share_no_p.setTextColor(getResources().getColor(R.color.white));
+                tv_share_yes_p.setBackgroundColor(getResources().getColor(R.color.grey));
+                tv_share_no_p.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                sharable_p1 = 0;
+            }
+            activeWeekDays_p(r_week_days);
+        }
+    }
+
+    public void setWalletVoucher() {
+
+        String r_title = sharedpreferences_b_voucher.getString(REDEEM_TITLE_B, "");
+        String r_desc = sharedpreferences_b_voucher.getString(REDEEM_DESCRIPTION_B, "");
+        String r_amount = sharedpreferences_b_voucher.getString(REDEEM_AMOUNT_B, "");
+        String r_point = sharedpreferences_b_voucher.getString(REDEEM_POINT_B, "");
+        String r_a_date = sharedpreferences_b_voucher.getString(REDEEM_START_DATE_B, "");
+        String r_a_time = sharedpreferences_b_voucher.getString(REDEEM_START_TIME_B, "");
+        String r_e_date = sharedpreferences_b_voucher.getString(REDEEM_EXPIRY_DATE_B, "");
+        String r_e_time = sharedpreferences_b_voucher.getString(REDEEM_EXPIRY_TIME_B, "");
+        String r_week_days = sharedpreferences_b_voucher.getString(REDEEM_ACTIVE_DAYS_B, "");
+        String r_is_sharable = sharedpreferences_b_voucher.getString(REDEEM_IS_SHARABLE_B, "");
+        bg_color = sharedpreferences_b_voucher.getString(REDEEM_BG_COLOR_B, "");
+        mer_cd_redeem_id = sharedpreferences_b_voucher.getString(REDEEM_MER_CB_REDEEM_ID_B, "");
+        terms_conditions = sharedpreferences_b_voucher.getString(REDEEM_TERMS_CONDITIONS_B, "");
+        Log.d("Redeem_Shared_data--->", "onCreate_B: " + r_title + "," + r_desc + "," + r_amount + "," + r_point + "," + "," + r_a_date + "," + r_a_time + "," + r_e_date + "," + r_e_time + "," + r_week_days + "," + r_is_sharable);
+
+        linearLayout_B.setVisibility(View.VISIBLE);
+        if (!TextUtils.isEmpty(r_title) && !TextUtils.isEmpty(r_desc) && !TextUtils.isEmpty(r_amount) && !TextUtils.isEmpty(r_point) && !TextUtils.isEmpty(r_a_date) && !TextUtils.isEmpty(r_a_time) && !TextUtils.isEmpty(r_e_date) && !TextUtils.isEmpty(r_e_time) && !TextUtils.isEmpty(r_week_days) && !TextUtils.isEmpty(r_is_sharable)) {
+            editText_title_B.setText(r_title);
+            editText_title_B.setSelection(r_title.length());
+            editText_desc_B.setText(r_desc);
+            editText_wallet_B.setText(r_amount);
+            editText_points_B.setText(r_point);
+            editText_points_B.setEnabled(false);
+            editText_points_B.setAlpha(0.5f);
+            tv_start_date_B.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_a_date + "</u>  </font>"));
+            tv_end_date_B.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_e_date + "</u>  </font>"));
+            tv_start_time_B.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_a_time + "</u>  </font>"));
+            tv_end_time_B.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_e_time + "</u>  </font>"));
+            // toggleSwitch_B.setCheckedTogglePosition(Integer.parseInt(r_is_sharable));
+            if (!TextUtils.isEmpty(r_is_sharable) && r_is_sharable.equals("1")) {
+                // aSwitch_b.setChecked(true);
+                tv_share_yes_b.setTextColor(getResources().getColor(R.color.white));
+                tv_share_no_b.setTextColor(getResources().getColor(R.color.black));
+                tv_share_yes_b.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                tv_share_no_b.setBackgroundColor(getResources().getColor(R.color.grey));
+                sharable_b1 = 1;
+            } else {
+                // aSwitch_b.setChecked(false);
+                tv_share_yes_b.setTextColor(getResources().getColor(R.color.black));
+                tv_share_no_b.setTextColor(getResources().getColor(R.color.white));
+                tv_share_yes_b.setBackgroundColor(getResources().getColor(R.color.grey));
+                tv_share_no_b.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                sharable_b1 = 0;
+            }
+            activeWeekDays_b(r_week_days);
+        }
+
+    }
+
+    public void setBulkVoucher() {
+        linearLayout_U.setVisibility(View.VISIBLE);
+        ArrayList<String> list_assigned = new ArrayList<>();
+        ArrayList<String> list_assigned_id = new ArrayList<>();
+        String r_title = sharedpreferences_u_voucher.getString(REDEEM_TITLE_U, "");
+        String r_desc = sharedpreferences_u_voucher.getString(REDEEM_DESCRIPTION_U, "");
+        String r_voucher_count = sharedpreferences_u_voucher.getString(REDEEM_VOUCHER_COUNT_U, "");
+        r_voucher_id = sharedpreferences_u_voucher.getString(REDEEM_VOUCHER_ID_U, "");
+        String r_a_date = sharedpreferences_u_voucher.getString(REDEEM_START_DATE_U, "");
+        String r_a_time = sharedpreferences_u_voucher.getString(REDEEM_START_TIME_U, "");
+        String r_e_date = sharedpreferences_u_voucher.getString(REDEEM_EXPIRY_DATE_U, "");
+        String r_e_time = sharedpreferences_u_voucher.getString(REDEEM_EXPIRY_TIME_U, "");
+        String r_week_days = sharedpreferences_u_voucher.getString(REDEEM_ACTIVE_DAYS_U, "");
+        String assigned_vouchers = sharedpreferences_u_voucher.getString(REDEEM_ASSIGNED_VOUCHER_LIST_U, "");
+        String assigned_voucher_id = sharedpreferences_u_voucher.getString(REDEEM_ASSIGNED_VOUCHER_ID_LIST_U, "");
+        bg_color = sharedpreferences_u_voucher.getString(REDEEM_BG_COLOR_U, "");
+        mer_cd_redeem_id = sharedpreferences_u_voucher.getString(REDEEM_MER_CB_REDEEM_ID_U, "");
+        terms_conditions = sharedpreferences_u_voucher.getString(REDEEM_TERMS_CONDITIONS_U, "");
+        Log.d("Redeem_Shared_data--->", "onCreate_U: " + r_title + "," + r_desc + "," + "," + r_voucher_count + "," + r_voucher_id + "," + r_a_date + "," + r_a_time + "," + r_e_date + "," + r_e_time + "," + r_week_days);
+
+        if(!TextUtils.isEmpty(assigned_vouchers) && !TextUtils.isEmpty(assigned_voucher_id)) {
+            list_assigned = new Gson().fromJson(assigned_vouchers, new TypeToken<ArrayList<String>>() {
+            }.getType());
+            list_assigned_id = new Gson().fromJson(assigned_voucher_id, new TypeToken<ArrayList<String>>() {
+            }.getType());
+        }
+        if (list_assigned.size() != 0) {
+            textView_no_vouchers.setVisibility(View.GONE);
+            textView_no_assigned_vouchers.setVisibility(View.GONE);
+            spinner_assg_voucher.setVisibility(View.VISIBLE);
+            ArrayAdapter a = new ArrayAdapter(VoucherSetupCreate.this, android.R.layout.simple_spinner_item, list_assigned);
+            a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spinner_assg_voucher.setAdapter(a);
+            spinner_assg_voucher.setPrompt("Select Assigned Voucher");
+            int assg_id_pos = list_assigned_id.indexOf(r_voucher_id);
+            String assg_value = list_assigned.get(assg_id_pos);
+            Log.d("Assg_value---", "onCreate: " + assg_id_pos + "," + assg_value + "," + r_voucher_id);
+            if (assg_value != null) {
+                selected_voucher_id = r_voucher_id;
+                int spinnerPosition = a.getPosition(assg_value);
+                spinner_assg_voucher.setSelection(spinnerPosition);
+                a.notifyDataSetChanged();
+            }
+            ArrayList<String> finalList_assigned_id = list_assigned_id;
+            spinner_assg_voucher.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    selected_voucher_id = finalList_assigned_id.get(position);
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+                }
+            });
+        }
+        if (!TextUtils.isEmpty(r_title) && !TextUtils.isEmpty(r_desc) && !TextUtils.isEmpty(r_voucher_count) && !TextUtils.isEmpty(r_a_date) && !TextUtils.isEmpty(r_a_time) && !TextUtils.isEmpty(r_e_date) && !TextUtils.isEmpty(r_e_time) && !TextUtils.isEmpty(r_week_days)) {
+            editText_title_U.setText(r_title);
+            editText_title_U.setSelection(r_title.length());
+            editText_desc_U.setText(r_desc);
+            editText_vouchers_count_U.setText(r_voucher_count);
+            tv_start_date_U.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_a_date + "</u>  </font>"));
+            tv_end_date_U.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_e_date + "</u>  </font>"));
+            tv_start_time_U.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_a_time + "</u>  </font>"));
+            tv_end_time_U.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_e_time + "</u>  </font>"));
+            activeWeekDays_u(r_week_days);
+        }
+    }
+
+    public void setAssignedVoucher() {
+        String r_title = sharedpreferences_z_voucher.getString(REDEEM_TITLE_Z, "");
+        String r_desc = sharedpreferences_z_voucher.getString(REDEEM_DESCRIPTION_Z, "");
+        String r_a_date = sharedpreferences_z_voucher.getString(REDEEM_START_DATE_Z, "");
+        String r_e_date = sharedpreferences_z_voucher.getString(REDEEM_EXPIRY_DATE_Z, "");
+        String r_is_sharable = sharedpreferences_z_voucher.getString(REDEEM_IS_SHARABLE_Z, "");
+        bg_color = sharedpreferences_z_voucher.getString(REDEEM_BG_COLOR_Z, "");
+        mer_cd_redeem_id = sharedpreferences_z_voucher.getString(REDEEM_MER_CB_REDEEM_ID_Z, "");
+        terms_conditions = sharedpreferences_z_voucher.getString(REDEEM_TERMS_CONDITIONS_Z, "");
+        Log.d("Redeem_Shared_data--->", "onCreate_Z: " + r_title + "," + r_desc + "," + r_a_date + "," + r_e_date + "," + r_is_sharable);
+
+        linearLayout_Z.setVisibility(View.VISIBLE);
+        if (!TextUtils.isEmpty(r_title) && !TextUtils.isEmpty(r_desc) && !TextUtils.isEmpty(r_a_date) && !TextUtils.isEmpty(r_e_date) && !TextUtils.isEmpty(r_is_sharable)) {
+            editText_title_Z.setText(r_title);
+            editText_title_Z.setSelection(r_title.length());
+            editText_desc_Z.setText(r_desc);
+            tv_start_date_Z.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_a_date + "</u>  </font>"));
+            tv_end_date_Z.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_e_date + "</u>  </font>"));
+            // toggleSwitch_Z.setCheckedTogglePosition(Integer.parseInt(r_is_sharable));
+            if (!TextUtils.isEmpty(r_is_sharable) && r_is_sharable.equals("1")) {
+                //aSwitch_z.setChecked(true);
+                tv_share_yes_z.setTextColor(getResources().getColor(R.color.white));
+                tv_share_no_z.setTextColor(getResources().getColor(R.color.black));
+                tv_share_yes_z.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                tv_share_no_z.setBackgroundColor(getResources().getColor(R.color.grey));
+                sharable_z1 = 1;
+            } else {
+                // aSwitch_z.setChecked(false);
+                tv_share_yes_z.setTextColor(getResources().getColor(R.color.black));
+                tv_share_no_z.setTextColor(getResources().getColor(R.color.white));
+                tv_share_yes_z.setBackgroundColor(getResources().getColor(R.color.grey));
+                tv_share_no_z.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                sharable_z1 = 0;
+            }
+        }
+    }
+
+    public void setMGMVoucher() {
+        String r_title = sharedpreferences_m_voucher.getString(REDEEM_TITLE_M, "");
+        String r_desc = sharedpreferences_m_voucher.getString(REDEEM_DESCRIPTION_M, "");
+        String r_lead_title = sharedpreferences_m_voucher.getString(REDEEM_LEAD_TITLE_M, "");
+        String r_lead_desc = sharedpreferences_m_voucher.getString(REDEEM_LEAD_DESCRIPTION_M, "");
+        String r_point = sharedpreferences_m_voucher.getString(REDEEM_POINT_M, "");
+        String r_a_date = sharedpreferences_m_voucher.getString(REDEEM_START_DATE_M, "");
+        String r_e_date = sharedpreferences_m_voucher.getString(REDEEM_EXPIRY_DATE_M, "");
+        String r_is_sharable = sharedpreferences_m_voucher.getString(REDEEM_IS_SHARABLE_M, "");
+        bg_color = sharedpreferences_m_voucher.getString(REDEEM_BG_COLOR_M, "");
+        mer_cd_redeem_id = sharedpreferences_m_voucher.getString(REDEEM_MER_CB_REDEEM_ID_M, "");
+        terms_conditions = sharedpreferences_m_voucher.getString(REDEEM_TERMS_CONDITIONS_M, "");
+        Log.d("Redeem_Shared_data--->", "onCreate_M: " + r_title + "," + r_desc + "," + r_point + "," + r_a_date + "," + r_e_date + "," + r_is_sharable);
+
+        linearLayout_M.setVisibility(View.VISIBLE);
+        if (!TextUtils.isEmpty(r_title) && !TextUtils.isEmpty(r_desc) && !TextUtils.isEmpty(r_point) && !TextUtils.isEmpty(r_a_date) && !TextUtils.isEmpty(r_e_date) && !TextUtils.isEmpty(r_is_sharable)) {
+            editText_title_M.setText(r_title);
+            editText_title_M.setSelection(r_title.length());
+            editText_desc_M.setText(r_desc);
+            editText_title_lead_M.setText(r_lead_title);
+            editText_desc_lead_M.setText(r_lead_desc);
+            editText_points_M.setText(r_point);
+            editText_points_M.setEnabled(false);
+            editText_points_M.setAlpha(0.5f);
+            tv_start_date_M.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_a_date + "</u>  </font>"));
+            tv_end_date_M.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + r_e_date + "</u>  </font>"));
+            //toggleSwitch_M.setCheckedTogglePosition(Integer.parseInt(r_is_sharable));
+            if (!TextUtils.isEmpty(r_is_sharable) && r_is_sharable.equals("1")) {
+                //aSwitch_m.setChecked(true);
+                tv_share_yes_m.setTextColor(getResources().getColor(R.color.white));
+                tv_share_no_m.setTextColor(getResources().getColor(R.color.black));
+                tv_share_yes_m.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                tv_share_no_m.setBackgroundColor(getResources().getColor(R.color.grey));
+                sharable_m1 = 1;
+            } else {
+                //aSwitch_m.setChecked(false);
+                tv_share_yes_m.setTextColor(getResources().getColor(R.color.black));
+                tv_share_no_m.setTextColor(getResources().getColor(R.color.white));
+                tv_share_yes_m.setBackgroundColor(getResources().getColor(R.color.grey));
+                tv_share_no_m.setBackgroundColor(getResources().getColor(R.color.green_hase));
+                sharable_m1 = 0;
+            }
+        }
+    }
+
 
 }

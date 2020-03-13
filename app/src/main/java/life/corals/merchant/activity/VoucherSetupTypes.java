@@ -24,10 +24,9 @@ public class VoucherSetupTypes extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_voucher1);
-        Toolbar toolbar = findViewById(R.id.toolbar_voucher_get_List);
 
         appTimeOutManagerUtil = new AppTimeOutManagerUtil(VoucherSetupTypes.this);
-
+        Toolbar toolbar = findViewById(R.id.toolbar_voucher_get_List);
         toolbar.setTitleTextColor(getResources().getColor(R.color.matt_black));
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
