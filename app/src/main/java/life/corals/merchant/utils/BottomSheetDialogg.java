@@ -49,7 +49,7 @@ public class BottomSheetDialogg implements View.OnClickListener {
         LinearLayout history = sheetView.findViewById(R.id.history);
         LinearLayout qr = sheetView.findViewById(R.id.qr);
 
-        //LinearLayout qr = sheetView.findViewById(R.id.qr);
+        LinearLayout exit = sheetView.findViewById(R.id.exit);
        // LinearLayout qr = sheetView.findViewById(R.id.qr);
         LinearLayout vocuherHome = sheetView.findViewById(R.id.vocuher_home);
 
@@ -66,12 +66,13 @@ public class BottomSheetDialogg implements View.OnClickListener {
         terms.setOnClickListener(this);
         policy.setOnClickListener(this);
         vocuherHome.setOnClickListener(this);
+        exit.setOnClickListener(this);
 
 
     }
 
     public void showBottomSheetDialog() {
-        if (bottomSheetDialog != null)
+        if (bottomSheetDialog != null && !bottomSheetDialog.isShowing())
             bottomSheetDialog.show();
     }
 
@@ -110,6 +111,11 @@ public class BottomSheetDialogg implements View.OnClickListener {
             ((Activity) mCtx).finish();
         }else if (v.getId() == R.id.vocuher_home) {
             mCtx.startActivity(new Intent(((Activity) mCtx), VoucherSetupHome.class));
+            ((Activity) mCtx).finish();
+        }
+        else if (v.getId() == R.id.exit) {
+            //mCtx.startActivity(new Intent(((Activity) mCtx), VoucherSetupHome.class));
+            bottomSheetDialog.cancel();
             ((Activity) mCtx).finish();
         }else {
             mCtx.startActivity(new Intent(((Activity) mCtx), SplashScreen.class));

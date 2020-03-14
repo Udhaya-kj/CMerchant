@@ -62,8 +62,8 @@
                         android:gravity="center">
 
                         <com.makeramen.roundedimageview.RoundedImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
                             android:src="@drawable/ic_myustomers">
 
                         </com.makeramen.roundedimageview.RoundedImageView>
@@ -118,8 +118,8 @@
                         android:gravity="center">
 
                         <com.makeramen.roundedimageview.RoundedImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
                             android:src="@drawable/ic_insights">
 
                         </com.makeramen.roundedimageview.RoundedImageView>
@@ -171,8 +171,8 @@
                         android:gravity="center">
 
                         <com.makeramen.roundedimageview.RoundedImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
                             android:src="@drawable/ic_sendmessage">
 
                         </com.makeramen.roundedimageview.RoundedImageView>
@@ -242,8 +242,8 @@
                         android:gravity="center">
 
                         <com.makeramen.roundedimageview.RoundedImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
                             android:src="@drawable/ic_topup_campaign">
 
                         </com.makeramen.roundedimageview.RoundedImageView>
@@ -297,8 +297,8 @@
                         android:gravity="center">
 
                         <com.makeramen.roundedimageview.RoundedImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
                             android:src="@drawable/ic_history">
 
                         </com.makeramen.roundedimageview.RoundedImageView>
@@ -350,8 +350,8 @@
                         android:gravity="center">
 
                         <com.makeramen.roundedimageview.RoundedImageView
-                            android:layout_width="40dp"
-                            android:layout_height="match_parent"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
                             android:src="@drawable/ic_qr">
 
                         </com.makeramen.roundedimageview.RoundedImageView>
@@ -421,8 +421,8 @@
                         android:gravity="center">
 
                         <com.makeramen.roundedimageview.RoundedImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
                             android:src="@drawable/crown">
 
                         </com.makeramen.roundedimageview.RoundedImageView>
@@ -461,7 +461,7 @@
                 app:cardElevation="2dp">
 
                 <LinearLayout
-                    android:id="@+id/redeem2"
+                    android:id="@+id/exit"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -475,9 +475,9 @@
                         android:gravity="center">
 
                         <com.makeramen.roundedimageview.RoundedImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:src="@drawable/ic_history">
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_exit">
 
                         </com.makeramen.roundedimageview.RoundedImageView>
                     </LinearLayout>
@@ -488,7 +488,7 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:singleLine="true"
-                        android:text="@string/History"
+                        android:text="@string/exit"
                         android:textAppearance="@style/textStyle"
                         android:textColor="@color/matt_black"
                         android:textSize="12sp">
@@ -505,6 +505,7 @@
             </View>
 
             <androidx.cardview.widget.CardView
+                android:visibility="invisible"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_weight="1.2"

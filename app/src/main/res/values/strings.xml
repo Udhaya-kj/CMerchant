@@ -487,5 +487,6 @@ Merchant Team</string>
     <string name="todo">TODO</string>
     <string name="share_voucher_content">Can customer share this voucher over whatsapp / facebook / instagram?</string>
     <string name="create_weekdays">Which weekdays does this voucher displayed to customer?</string>
+    <string name="exit">Exit</string>
 
 </resources>

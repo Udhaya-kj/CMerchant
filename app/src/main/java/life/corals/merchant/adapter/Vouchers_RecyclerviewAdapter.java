@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -36,8 +37,13 @@ import life.corals.merchant.utils.AlertDialogFailure;
 import life.corals.merchant.utils.AlertDialogYesNo;
 import life.corals.merchant.utils.IntermediateAlertDialog;
 
-public class Vouchers_RecyclerviewAdapter extends RecyclerView.Adapter<Vouchers_RecyclerviewAdapter.ViewHolder> {
+import static android.content.Context.MODE_PRIVATE;
+import static life.corals.merchant.utils.Constants.DEVICE_ID;
+import static life.corals.merchant.utils.Constants.MERCHANT_DETAILS_PREFERENCE;
+import static life.corals.merchant.utils.Constants.MERCHANT_ID;
 
+public class Vouchers_RecyclerviewAdapter extends RecyclerView.Adapter<Vouchers_RecyclerviewAdapter.ViewHolder> {
+    private SharedPreferences preferences;
     Context context;
     ArrayList<SetUpRedemptionList> setUpRedemptionLists;
     private IntermediateAlertDialog intermediateAlertDialog;
@@ -126,6 +132,7 @@ public class Vouchers_RecyclerviewAdapter extends RecyclerView.Adapter<Vouchers_
                     in.putExtra("desc", setUpRedemptionList.getRedeemDescription());
                     in.putExtra("lead_title", setUpRedemptionList.getLeadTitle());
                     in.putExtra("lead_desc", setUpRedemptionList.getLeadDescription());
+                    in.putExtra("pur_amount", setUpRedemptionList.getVoucherPurchaseAmount());
                     in.putExtra("points", setUpRedemptionList.getRedeemPoints());
                     in.putExtra("s_date", setUpRedemptionList.getRedeemActivedt());
                     in.putExtra("s_time", act_time);
@@ -142,7 +149,7 @@ public class Vouchers_RecyclerviewAdapter extends RecyclerView.Adapter<Vouchers_
                     in.putExtra("isActive", setUpRedemptionList.isIsActive());
                     in.putExtra("terms_conditions",setUpRedemptionList.getTermsConditions());
                     in.putExtra("ref_reward_points",setUpRedemptionList.getReferralRewardPoints());
-                    Log.d("Adapter---->", position + "," + setUpRedemptionList.getRedeemType() + "," + setUpRedemptionList.getRedeemTitle() + " " + setUpRedemptionList.getRedeemDescription() + " " + setUpRedemptionList.getVoucherBg() + " " + setUpRedemptionList.getLeadTitle() + " " + setUpRedemptionList.getLeadDescription() + " " + setUpRedemptionList.getAssignedVoucherCount());
+                    Log.d("Adapter---->", " Rectc : "+position + "," + setUpRedemptionList.getRedeemType() + "," + setUpRedemptionList.getRedeemTitle() + " " + setUpRedemptionList.getRedeemDescription() + " " + setUpRedemptionList.getVoucherBg() + " " + setUpRedemptionList.getLeadTitle() + " " + setUpRedemptionList.getLeadDescription() + " " + setUpRedemptionList.getAssignedVoucherCount()+","+setUpRedemptionList.getVoucherPurchaseAmount());
                     //e_date_list.get(position) + " " + e_time_list.get(position) + "," + act_dys_list.get(position) + "," + sharable_list.get(position)+","+sharable+","+voucher_bg_list.get(position));
                     context.startActivity(in);
                     ((Activity) context).finish();
@@ -189,6 +196,7 @@ public class Vouchers_RecyclerviewAdapter extends RecyclerView.Adapter<Vouchers_
     }
 
     private void callActivateAPI(String v_type,String merId,boolean isSharable) {
+        preferences = context.getSharedPreferences(MERCHANT_DETAILS_PREFERENCE, MODE_PRIVATE);
         intermediateAlertDialog = new IntermediateAlertDialog(context);
         SetUpRedemptionList setUpRedemptionList = new SetUpRedemptionList();
         setUpRedemptionList.setMerCbRedeemId(merId);
@@ -197,8 +205,8 @@ public class Vouchers_RecyclerviewAdapter extends RecyclerView.Adapter<Vouchers_
         setUpRedemptionList.setIsCustSharable(isSharable);
         voucher_list.add(setUpRedemptionList);
         SetUpVoucherList setUpVoucherList = new SetUpVoucherList();
-        setUpVoucherList.setMerId("120022732");
-        setUpVoucherList.setMerDeviceId("2002271337305070");
+        setUpVoucherList.setMerId(preferences.getString(MERCHANT_ID, ""));
+        setUpVoucherList.setMerDeviceId(preferences.getString(DEVICE_ID, ""));
         setUpVoucherList.setVoucherList(voucher_list);
         setUpVoucherList.setRequestCode("U");
         Log.d("Voucher--->", "onClick: " + voucher_list+" , "+v_type+","+merId+","+isSharable);

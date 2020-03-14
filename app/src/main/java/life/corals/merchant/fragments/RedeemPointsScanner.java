@@ -274,27 +274,52 @@ public class RedeemPointsScanner extends BaseFragment implements View.OnClickLis
                                         @Override
                                         public void run() {
 
-                                            SpannableString spannableString = new SpannableString(title);
-                                            spannableString.setSpan(new StyleSpan(Typeface.BOLD), 0, title.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                                            if (redeem_type.equals("M")) {
 
-                                            getActivity().runOnUiThread(new Runnable() {
-                                                @Override
-                                                public void run() {
-                                                    alertDialogYesNo = new AlertDialogYesNo(getActivity(), "Voucher Details", spannableString + "\n" + desc, "CONTINUE", "CANCEL") {
-                                                        @Override
-                                                        public void onOKButtonClick() {
-                                                            callRedeemAPI();
-                                                        }
+                                                SpannableString spannableString = new SpannableString(lead_title);
+                                                spannableString.setSpan(new StyleSpan(Typeface.BOLD), 0, lead_title.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-                                                        @Override
-                                                        public void onCancelButtonClick() {
-                                                            startActivity(new Intent(getActivity(), Homenew.class));
-                                                            Objects.requireNonNull(getActivity()).finish();
-                                                        }
-                                                    };
-                                                }
-                                            });
+                                                getActivity().runOnUiThread(new Runnable() {
+                                                    @Override
+                                                    public void run() {
+                                                        alertDialogYesNo = new AlertDialogYesNo(getActivity(), "Voucher Details", spannableString + "\n" + lead_desc, "CONTINUE", "CANCEL") {
+                                                            @Override
+                                                            public void onOKButtonClick() {
+                                                                callRedeemAPI();
+                                                            }
 
+                                                            @Override
+                                                            public void onCancelButtonClick() {
+                                                                startActivity(new Intent(getActivity(), Homenew.class));
+                                                                Objects.requireNonNull(getActivity()).finish();
+                                                            }
+                                                        };
+                                                    }
+                                                });
+
+                                            } else {
+
+                                                SpannableString spannableString = new SpannableString(title);
+                                                spannableString.setSpan(new StyleSpan(Typeface.BOLD), 0, title.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+                                                getActivity().runOnUiThread(new Runnable() {
+                                                    @Override
+                                                    public void run() {
+                                                        alertDialogYesNo = new AlertDialogYesNo(getActivity(), "Voucher Details", spannableString + "\n" + desc, "CONTINUE", "CANCEL") {
+                                                            @Override
+                                                            public void onOKButtonClick() {
+                                                                callRedeemAPI();
+                                                            }
+
+                                                            @Override
+                                                            public void onCancelButtonClick() {
+                                                                startActivity(new Intent(getActivity(), Homenew.class));
+                                                                Objects.requireNonNull(getActivity()).finish();
+                                                            }
+                                                        };
+                                                    }
+                                                });
+                                            }
 
                                         }
 
@@ -329,7 +354,6 @@ public class RedeemPointsScanner extends BaseFragment implements View.OnClickLis
                                         };
                                     }
                                 });
-
 
 
                             }

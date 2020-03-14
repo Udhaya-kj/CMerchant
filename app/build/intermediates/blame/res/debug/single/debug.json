@@ -1352,6 +1352,10 @@
         "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\cash_topup_screen_three.xml"
     },
     {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_alert_success_voucher.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\alert_success_voucher.xml"
+    },
+    {
         "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_voucher_setup_preview.xml.flat",
         "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\activity_voucher_setup_preview.xml"
     },

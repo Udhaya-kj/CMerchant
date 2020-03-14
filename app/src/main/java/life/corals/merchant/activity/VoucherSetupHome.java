@@ -317,6 +317,7 @@ public class VoucherSetupHome extends AppCompatActivity {
                         String max_redeem = redeemVouchers.get(t).getMaxRedemptionAllowed();
                         String assignedVoucherCount = redeemVouchers.get(t).getAssignedVoucherCount();
                         String voucher_bg = redeemVouchers.get(t).getVoucherBg();
+                        String pur_amount = redeemVouchers.get(t).getVoucherPurchaseAmount();
                         String points = redeemVouchers.get(t).getRedeemPoints();
                         String wallet = redeemVouchers.get(t).getRedeemDepositAmt();
                         String assgn_voucher_id = redeemVouchers.get(t).getAssignedVoucherId();
@@ -327,7 +328,7 @@ public class VoucherSetupHome extends AppCompatActivity {
                         String terms_conditions = redeemVouchers.get(t).getTermsAndConditions();
                         String ref_points = redeemVouchers.get(t).getReferralRewardPoints();
 
-                        Log.d("VoucherList---", "data--: " + title + "," + desc + "," + redeem_type + "," + lead_title + "," + lead_desc+","+points+","+ref_points);
+                        Log.d("VoucherList---", "data--: " + pur_amount+","+title + "," + desc + "," + redeem_type + "," + lead_title + "," + lead_desc+","+points+","+ref_points);
 
                         if (redeem_type.equals("P")) {
                             SetUpRedemptionList sp = new SetUpRedemptionList();
@@ -386,6 +387,7 @@ public class VoucherSetupHome extends AppCompatActivity {
                             su.setAssignedVoucherCount(assignedVoucherCount);
                             su.setVoucherBg(voucher_bg);
                             su.setRedeemPoints(points);
+                            su.setVoucherPurchaseAmount(pur_amount);
                             su.setRedeemDepositAmt(wallet);
                             su.setAssignedVoucherId(assgn_voucher_id);
                             su.setRedeemType(redeem_type);

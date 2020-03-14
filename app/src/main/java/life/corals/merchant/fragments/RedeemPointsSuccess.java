@@ -80,14 +80,14 @@ public class RedeemPointsSuccess extends BaseFragment {
 
         MaterialButton okayButton = rootView.findViewById(R.id.redeem_success_okay_button);
 
-        if(!StringUtils.isEmpty(cus_name)) {
+        if(StringUtils.isNotBlank(cus_name)) {
             tv_cust_name.setText(cus_name);
         }
         else {
             tv_cust_name.setText("-");
         }
 
-        if(!StringUtils.isEmpty(cust_id)) {
+        if(StringUtils.isNotBlank(cust_id)) {
             tv_cust_id.setText(cust_id);
         }
         else {
@@ -95,7 +95,7 @@ public class RedeemPointsSuccess extends BaseFragment {
         }
 
 
-        if(StringUtils.isNotEmpty(referral_reward)) {
+        if(StringUtils.isNotBlank(referral_reward)) {
             Log.d("referral_reward---", "isNotEmpty ");
             tv_cust_refferal_award.setText(referral_reward);
         }
@@ -104,44 +104,40 @@ public class RedeemPointsSuccess extends BaseFragment {
             layout_ref_award.setVisibility(View.GONE);
         }
 
-        if(StringUtils.isNotBlank(referral_reward)) {
-            Log.d("referral_reward---", "isNotBlank ");
-            tv_cust_refferal_award.setText(referral_reward);
-        }
-        else {
-            Log.d("referral_reward---", "isNotBlank true");
-            layout_ref_award.setVisibility(View.GONE);
-        }
 
-        if(!StringUtils.isEmpty(cus_wallet_bal)) {
+        if(StringUtils.isNotBlank(cus_wallet_bal)) {
             tv_cus_wallet_bal.setText(cus_wallet_bal);
+            Log.d("cus_wallet_bal---", "isNotBlank true :"+cus_wallet_bal);
         }
         else {
             layout_cus_wallet_bal.setVisibility(View.GONE);
+            Log.d("cus_wallet_bal---", "isNotBlank false");
         }
 
-        if(!StringUtils.isEmpty(wallet_balance_exp_date)  || wallet_balance_exp_date!=null) {
+        if(StringUtils.isNotBlank(wallet_balance_exp_date)) {
             tv_wallet_balance_exp_date.setText(wallet_balance_exp_date);
+            Log.d("wallet_bal_exp_date---", "isNotBlank true :" +wallet_balance_exp_date);
         }
         else {
-            layout_cus_wallet_bal.setVisibility(View.GONE);
+            layout_wallet_balance_exp_date.setVisibility(View.GONE);
+            Log.d("wallet_bal_exp_date---", "isNotBlank false");
         }
 
-        if(!StringUtils.isEmpty(redeem_deposit_amount)) {
+        if(StringUtils.isNotBlank(redeem_deposit_amount)) {
             tv_redeem_deposit_amount.setText(redeem_deposit_amount);
         }
         else {
             layout_redeem_deposit_amount.setVisibility(View.GONE);
         }
 
-        if(!StringUtils.isEmpty(points_bal)) {
+        if(StringUtils.isNotBlank(points_bal)) {
             tv_points_bal.setText(points_bal+" points");
         }
         else {
             layout_points_bal.setVisibility(View.GONE);
         }
 
-        if(!StringUtils.isEmpty(points_exp_dt)) {
+        if(StringUtils.isNotBlank(points_exp_dt)) {
             tv_points_exp_dt.setText(points_exp_dt);
         }
         else {

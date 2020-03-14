@@ -366,13 +366,13 @@
                             <Button
                                 android:id="@+id/btn_yes_thursday_P"
                                 android:layout_width="0dp"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
                                 android:layout_marginStart="@dimen/margin_5dp"
                                 android:layout_weight="0.1"
                                 android:backgroundTint="@color/green_hase"
                                 android:gravity="center"
                                 android:paddingStart="0dp"
-                                android:paddingRight="0dp"
+                                android:paddingEnd="0dp"
                                 android:text="Thu"
                                 android:textAllCaps="false"
                                 android:textColor="@color/white"
@@ -473,7 +473,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_45dp"
-                            android:layout_marginTop="@dimen/marginTop_20dp"
+                            android:layout_marginTop="@dimen/height_30dp"
                             android:background="@android:color/transparent"
                             android:elevation="@dimen/padding_4dp"
                             custom:cardCornerRadius="@dimen/margin_5dp">
@@ -784,6 +784,7 @@
                                 android:paddingStart="0dp"
                                 android:paddingEnd="0dp"
                                 android:text="Sun"
+                                android:textAllCaps="false"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
@@ -797,6 +798,7 @@
                                 android:paddingStart="0dp"
                                 android:paddingEnd="0dp"
                                 android:text="Mon"
+                                android:textAllCaps="false"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
@@ -811,6 +813,7 @@
                                 android:paddingStart="0dp"
                                 android:paddingEnd="0dp"
                                 android:text="Tue"
+                                android:textAllCaps="false"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
@@ -825,6 +828,7 @@
                                 android:paddingStart="0dp"
                                 android:paddingEnd="0dp"
                                 android:text="Wed"
+                                android:textAllCaps="false"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
@@ -839,6 +843,7 @@
                                 android:paddingStart="0dp"
                                 android:paddingEnd="0dp"
                                 android:text="Thu"
+                                android:textAllCaps="false"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
@@ -853,6 +858,7 @@
                                 android:paddingStart="0dp"
                                 android:paddingEnd="0dp"
                                 android:text="Fri"
+                                android:textAllCaps="false"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
@@ -867,6 +873,7 @@
                                 android:paddingStart="0dp"
                                 android:paddingEnd="0dp"
                                 android:text="Sat"
+                                android:textAllCaps="false"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
@@ -936,7 +943,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_45dp"
-                            android:layout_marginTop="@dimen/marginTop_20dp"
+                            android:layout_marginTop="@dimen/height_30dp"
                             android:background="@android:color/transparent"
                             android:elevation="@dimen/padding_4dp"
                             custom:cardCornerRadius="@dimen/margin_5dp">
@@ -1313,7 +1320,7 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/height_45dp"
-                        android:layout_marginTop="@dimen/marginTop_20dp"
+                        android:layout_marginTop="@dimen/height_30dp"
                         android:background="@android:color/transparent"
                         android:elevation="@dimen/padding_4dp"
                         custom:cardCornerRadius="@dimen/margin_5dp">
@@ -1569,7 +1576,7 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/height_45dp"
-                        android:layout_marginTop="@dimen/marginTop_20dp"
+                        android:layout_marginTop="@dimen/height_30dp"
                         android:background="@android:color/transparent"
                         android:elevation="@dimen/padding_4dp"
                         custom:cardCornerRadius="@dimen/margin_5dp">
@@ -1730,6 +1737,27 @@
                                 android:visibility="visible" />
                         </LinearLayout>
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:layout_marginTop="@dimen/field_margin_top"
+                            android:gravity="center|start"
+                            android:text="Voucher purchase amount" />
+
+                        <EditText
+                            android:id="@+id/edit_vouchers_purchase_amt_U"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40dp"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center|start"
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            android:paddingStart="@dimen/fifteen_dp"
+                            android:paddingEnd="0dp"
+                            android:singleLine="false"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1921,6 +1949,7 @@
                                 android:paddingStart="0dp"
                                 android:paddingEnd="0dp"
                                 android:text="Sun"
+                                android:textAllCaps="false"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
@@ -1934,6 +1963,7 @@
                                 android:paddingStart="0dp"
                                 android:paddingEnd="0dp"
                                 android:text="Mon"
+                                android:textAllCaps="false"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
@@ -1948,6 +1978,7 @@
                                 android:paddingStart="0dp"
                                 android:paddingEnd="0dp"
                                 android:text="Tue"
+                                android:textAllCaps="false"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
@@ -1962,6 +1993,7 @@
                                 android:paddingStart="0dp"
                                 android:paddingEnd="0dp"
                                 android:text="Wed"
+                                android:textAllCaps="false"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
@@ -1976,6 +2008,7 @@
                                 android:paddingStart="0dp"
                                 android:paddingEnd="0dp"
                                 android:text="Thu"
+                                android:textAllCaps="false"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
@@ -1990,6 +2023,7 @@
                                 android:paddingStart="0dp"
                                 android:paddingEnd="0dp"
                                 android:text="Fri"
+                                android:textAllCaps="false"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
@@ -2004,6 +2038,7 @@
                                 android:paddingStart="0dp"
                                 android:paddingEnd="0dp"
                                 android:text="Sat"
+                                android:textAllCaps="false"
                                 android:textColor="@color/white"
                                 android:textSize="10sp" />
 
@@ -2012,7 +2047,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height_45dp"
-                            android:layout_marginTop="@dimen/marginTop_20dp"
+                            android:layout_marginTop="@dimen/height_30dp"
                             android:background="@android:color/transparent"
                             android:elevation="@dimen/padding_4dp"
                             custom:cardCornerRadius="@dimen/margin_5dp">
