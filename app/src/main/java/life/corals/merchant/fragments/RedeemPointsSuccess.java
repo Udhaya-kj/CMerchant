@@ -53,7 +53,7 @@ public class RedeemPointsSuccess extends BaseFragment {
         redeem_deposit_amount = Objects.requireNonNull(getArguments()).getString("redeem_deposit_amount");
         points_bal = Objects.requireNonNull(getArguments()).getString("points_bal");
         points_exp_dt = Objects.requireNonNull(getArguments()).getString("points_exp_dt");
-        Log.d("v_data---", "onCreateView: "+cus_name+","+cust_id+","+redeem_message+","+status_message+","+referral_reward+","+cus_wallet_bal+","+wallet_balance_exp_date+","+redeem_deposit_amount+","+points_bal+","+points_exp_dt);
+        Log.d("v_data---", "onCreateView: " + cus_name + "," + cust_id + "," + redeem_message + "," + status_message + "," + referral_reward + "," + cus_wallet_bal + "," + wallet_balance_exp_date + "," + redeem_deposit_amount + "," + points_bal + "," + points_exp_dt);
 
         findView();
         return rootView;
@@ -76,74 +76,57 @@ public class RedeemPointsSuccess extends BaseFragment {
         layout_wallet_balance_exp_date = (LinearLayout) rootView.findViewById(R.id.layout_wallet_balance_exp_date);
         layout_redeem_deposit_amount = (LinearLayout) rootView.findViewById(R.id.layout_redeem_deposit_amount);
         layout_points_bal = (LinearLayout) rootView.findViewById(R.id.layout_points_bal);
-        layout_points_exp_dt = (LinearLayout) rootView.findViewById(R.id.layout_points_exp_dt   );
+        layout_points_exp_dt = (LinearLayout) rootView.findViewById(R.id.layout_points_exp_dt);
 
         MaterialButton okayButton = rootView.findViewById(R.id.redeem_success_okay_button);
 
-        if(StringUtils.isNotBlank(cus_name)) {
+        if (StringUtils.isNotBlank(cus_name)) {
             tv_cust_name.setText(cus_name);
-        }
-        else {
+        } else {
             tv_cust_name.setText("-");
         }
 
-        if(StringUtils.isNotBlank(cust_id)) {
+        if (StringUtils.isNotBlank(cust_id)) {
             tv_cust_id.setText(cust_id);
-        }
-        else {
+        } else {
             tv_cust_id.setText("-");
         }
 
-
-        if(StringUtils.isNotBlank(referral_reward)) {
-            Log.d("referral_reward---", "isNotEmpty ");
+        if (StringUtils.isNotBlank(referral_reward)) {
             tv_cust_refferal_award.setText(referral_reward);
-        }
-        else {
-            Log.d("referral_reward---", "isNotEmpty  true");
+        } else {
             layout_ref_award.setVisibility(View.GONE);
         }
 
-
-        if(StringUtils.isNotBlank(cus_wallet_bal)) {
+        if (StringUtils.isNotBlank(cus_wallet_bal)) {
             tv_cus_wallet_bal.setText(cus_wallet_bal);
-            Log.d("cus_wallet_bal---", "isNotBlank true :"+cus_wallet_bal);
-        }
-        else {
+        } else {
             layout_cus_wallet_bal.setVisibility(View.GONE);
-            Log.d("cus_wallet_bal---", "isNotBlank false");
         }
 
-        if(StringUtils.isNotBlank(wallet_balance_exp_date)) {
+        if (StringUtils.isNotBlank(wallet_balance_exp_date)) {
             tv_wallet_balance_exp_date.setText(wallet_balance_exp_date);
-            Log.d("wallet_bal_exp_date---", "isNotBlank true :" +wallet_balance_exp_date);
-        }
-        else {
+        } else {
             layout_wallet_balance_exp_date.setVisibility(View.GONE);
-            Log.d("wallet_bal_exp_date---", "isNotBlank false");
         }
 
-        if(StringUtils.isNotBlank(redeem_deposit_amount)) {
+        if (StringUtils.isNotBlank(redeem_deposit_amount)) {
             tv_redeem_deposit_amount.setText(redeem_deposit_amount);
-        }
-        else {
+        } else {
             layout_redeem_deposit_amount.setVisibility(View.GONE);
         }
 
-        if(StringUtils.isNotBlank(points_bal)) {
-            tv_points_bal.setText(points_bal+" points");
-        }
-        else {
+        if (StringUtils.isNotBlank(points_bal)) {
+            tv_points_bal.setText(points_bal + " points");
+        } else {
             layout_points_bal.setVisibility(View.GONE);
         }
 
-        if(StringUtils.isNotBlank(points_exp_dt)) {
+        if (StringUtils.isNotBlank(points_exp_dt)) {
             tv_points_exp_dt.setText(points_exp_dt);
-        }
-        else {
+        } else {
             layout_points_exp_dt.setVisibility(View.GONE);
         }
-
 
         okayButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -153,7 +136,6 @@ public class RedeemPointsSuccess extends BaseFragment {
                 getActivity().overridePendingTransition(R.anim.swipe_in_right, R.anim.swipe_in_right);
             }
         });
-
 
     }
 }

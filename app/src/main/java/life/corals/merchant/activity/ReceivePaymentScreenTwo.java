@@ -83,7 +83,7 @@ public class ReceivePaymentScreenTwo extends AppCompatActivity {
         setContentView(R.layout.receive_payment_screen_two);
         appTimeOutManagerUtil = new AppTimeOutManagerUtil(ReceivePaymentScreenTwo.this);
         this.setRequestedOrientation(
-                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         Toolbar toolbar = findViewById(R.id.toolbar_receive_payement_two);
         toolbar.setTitleTextColor(getResources().getColor(R.color.matt_black));
         setSupportActionBar(toolbar);

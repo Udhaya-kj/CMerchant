@@ -31,22 +31,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="@dimen/fifteen_dp"
             android:layout_marginStart="@dimen/margin_5dp"
             android:layout_marginEnd="0dp"
             android:weightSum="2">
             <TextView
+                style="@style/headerTextStyle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.8"
                 android:textColor="@color/black"
                 android:text="Title " />
             <TextView
+                style="@style/headerTextStyle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.1"
                 android:textColor="@color/black"
                 android:text=":" />
             <TextView
+                style="@style/headerTextStyle"
                 android:id="@+id/text_title_perf"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -60,22 +64,25 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginStart="@dimen/margin_5dp"
-            android:layout_marginTop="@dimen/fifteen_dp"
+            android:layout_marginTop="@dimen/marginTop_20dp"
             android:layout_marginEnd="0dp"
             android:weightSum="2">
             <TextView
+                style="@style/headerTextStyle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.8"
                 android:textColor="@color/black"
                 android:text="No.of Redemptions " />
             <TextView
+                style="@style/headerTextStyle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.1"
                 android:textColor="@color/black"
                 android:text=":" />
             <TextView
+                style="@style/headerTextStyle"
                 android:id="@+id/text_redemptions"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -89,22 +96,25 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginStart="@dimen/margin_5dp"
-            android:layout_marginTop="@dimen/fifteen_dp"
+            android:layout_marginTop="@dimen/marginTop_20dp"
             android:layout_marginEnd="0dp"
             android:weightSum="2">
             <TextView
+                style="@style/headerTextStyle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.8"
                 android:textColor="@color/black"
                 android:text="No.of sharing " />
             <TextView
+                style="@style/headerTextStyle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.1"
                 android:textColor="@color/black"
                 android:text=":" />
             <TextView
+                style="@style/headerTextStyle"
                 android:id="@+id/text_sharings"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"

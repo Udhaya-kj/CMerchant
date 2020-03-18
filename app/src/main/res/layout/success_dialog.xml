@@ -13,6 +13,7 @@
         android:layout_height="@dimen/height_50dp"
         android:gravity="center"
         android:text="Done!"
+        style="@style/headerTextStyle"
         android:textSize="19sp"
         android:textStyle="bold" />
 
@@ -22,6 +23,7 @@
         android:background="@color/grey_d" />
 
     <TextView
+        style="@style/subHeaderTextStyle"
         android:id="@+id/text_dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

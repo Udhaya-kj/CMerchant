@@ -15,7 +15,7 @@ public class ViewNotificationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         this.setRequestedOrientation(
-                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         Bundle bundle = getIntent().getExtras();
         try {
             if (bundle != null) {

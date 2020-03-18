@@ -18,12 +18,13 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * RedeemVoucher
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-03-10T11:04:04.220Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-03-18T06:54:33.363Z")
 public class RedeemVoucher {
   @SerializedName("mer_cb_redeem_id")
   private String merCbRedeemId = null;
@@ -73,9 +74,6 @@ public class RedeemVoucher {
   @SerializedName("terms_and_conditions")
   private String termsAndConditions = null;
 
-  @SerializedName("referal_award")
-  private String referalAward = null;
-
   @SerializedName("assigned_voucher_id")
   private String assignedVoucherId = null;
 
@@ -95,7 +93,7 @@ public class RedeemVoucher {
   private String voucherPurchaseAmount = null;
 
   @SerializedName("is_only_for_new_cust")
-  private String isOnlyForNewCust = null;
+  private Boolean isOnlyForNewCust = null;
 
   @SerializedName("referral_reward_points")
   private String referralRewardPoints = null;
@@ -115,7 +113,7 @@ public class RedeemVoucher {
    * Get merCbRedeemId
    * @return merCbRedeemId
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getMerCbRedeemId() {
     return merCbRedeemId;
   }
@@ -133,7 +131,7 @@ public class RedeemVoucher {
    * Get redeemActivedays
    * @return redeemActivedays
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getRedeemActivedays() {
     return redeemActivedays;
   }
@@ -151,7 +149,7 @@ public class RedeemVoucher {
    * Get redeemActivedt
    * @return redeemActivedt
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getRedeemActivedt() {
     return redeemActivedt;
   }
@@ -169,7 +167,7 @@ public class RedeemVoucher {
    * Get redeemActtime
    * @return redeemActtime
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getRedeemActtime() {
     return redeemActtime;
   }
@@ -187,7 +185,7 @@ public class RedeemVoucher {
    * Get redeemDepositAmt
    * @return redeemDepositAmt
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getRedeemDepositAmt() {
     return redeemDepositAmt;
   }
@@ -205,7 +203,7 @@ public class RedeemVoucher {
    * Get redeemDescription
    * @return redeemDescription
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getRedeemDescription() {
     return redeemDescription;
   }
@@ -223,7 +221,7 @@ public class RedeemVoucher {
    * Get redeemEndtime
    * @return redeemEndtime
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getRedeemEndtime() {
     return redeemEndtime;
   }
@@ -241,7 +239,7 @@ public class RedeemVoucher {
    * Get redeemExpdt
    * @return redeemExpdt
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getRedeemExpdt() {
     return redeemExpdt;
   }
@@ -267,7 +265,7 @@ public class RedeemVoucher {
    * Get redeemGrps
    * @return redeemGrps
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public List<RedeemGrp> getRedeemGrps() {
     return redeemGrps;
   }
@@ -285,7 +283,7 @@ public class RedeemVoucher {
    * Get redeemPoints
    * @return redeemPoints
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getRedeemPoints() {
     return redeemPoints;
   }
@@ -303,7 +301,7 @@ public class RedeemVoucher {
    * Get redeemTitle
    * @return redeemTitle
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getRedeemTitle() {
     return redeemTitle;
   }
@@ -321,7 +319,7 @@ public class RedeemVoucher {
    * Get redeemType
    * @return redeemType
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getRedeemType() {
     return redeemType;
   }
@@ -339,7 +337,7 @@ public class RedeemVoucher {
    * Get voucherBg
    * @return voucherBg
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getVoucherBg() {
     return voucherBg;
   }
@@ -357,7 +355,7 @@ public class RedeemVoucher {
    * Get leadTitle
    * @return leadTitle
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getLeadTitle() {
     return leadTitle;
   }
@@ -375,7 +373,7 @@ public class RedeemVoucher {
    * Get leadDescription
    * @return leadDescription
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getLeadDescription() {
     return leadDescription;
   }
@@ -393,31 +391,13 @@ public class RedeemVoucher {
    * Get termsAndConditions
    * @return termsAndConditions
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getTermsAndConditions() {
     return termsAndConditions;
   }
 
   public void setTermsAndConditions(String termsAndConditions) {
     this.termsAndConditions = termsAndConditions;
-  }
-
-  public RedeemVoucher referalAward(String referalAward) {
-    this.referalAward = referalAward;
-    return this;
-  }
-
-   /**
-   * Get referalAward
-   * @return referalAward
-  **/
-  @Schema(description = "")
-  public String getReferalAward() {
-    return referalAward;
-  }
-
-  public void setReferalAward(String referalAward) {
-    this.referalAward = referalAward;
   }
 
   public RedeemVoucher assignedVoucherId(String assignedVoucherId) {
@@ -429,7 +409,7 @@ public class RedeemVoucher {
    * Get assignedVoucherId
    * @return assignedVoucherId
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getAssignedVoucherId() {
     return assignedVoucherId;
   }
@@ -447,7 +427,7 @@ public class RedeemVoucher {
    * Get isCustSharable
    * @return isCustSharable
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public Boolean isIsCustSharable() {
     return isCustSharable;
   }
@@ -465,7 +445,7 @@ public class RedeemVoucher {
    * Get maxRedemptionAllowed
    * @return maxRedemptionAllowed
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getMaxRedemptionAllowed() {
     return maxRedemptionAllowed;
   }
@@ -483,7 +463,7 @@ public class RedeemVoucher {
    * Get assignedVoucherCount
    * @return assignedVoucherCount
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getAssignedVoucherCount() {
     return assignedVoucherCount;
   }
@@ -501,7 +481,7 @@ public class RedeemVoucher {
    * Get isActive
    * @return isActive
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public Boolean isIsActive() {
     return isActive;
   }
@@ -519,7 +499,7 @@ public class RedeemVoucher {
    * Get voucherPurchaseAmount
    * @return voucherPurchaseAmount
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getVoucherPurchaseAmount() {
     return voucherPurchaseAmount;
   }
@@ -528,7 +508,7 @@ public class RedeemVoucher {
     this.voucherPurchaseAmount = voucherPurchaseAmount;
   }
 
-  public RedeemVoucher isOnlyForNewCust(String isOnlyForNewCust) {
+  public RedeemVoucher isOnlyForNewCust(Boolean isOnlyForNewCust) {
     this.isOnlyForNewCust = isOnlyForNewCust;
     return this;
   }
@@ -537,12 +517,12 @@ public class RedeemVoucher {
    * Get isOnlyForNewCust
    * @return isOnlyForNewCust
   **/
-  @Schema(description = "")
-  public String getIsOnlyForNewCust() {
+@Schema(description = "")
+  public Boolean isIsOnlyForNewCust() {
     return isOnlyForNewCust;
   }
 
-  public void setIsOnlyForNewCust(String isOnlyForNewCust) {
+  public void setIsOnlyForNewCust(Boolean isOnlyForNewCust) {
     this.isOnlyForNewCust = isOnlyForNewCust;
   }
 
@@ -555,7 +535,7 @@ public class RedeemVoucher {
    * Get referralRewardPoints
    * @return referralRewardPoints
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getReferralRewardPoints() {
     return referralRewardPoints;
   }
@@ -573,7 +553,7 @@ public class RedeemVoucher {
    * Get purchasedVoucherId
    * @return purchasedVoucherId
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getPurchasedVoucherId() {
     return purchasedVoucherId;
   }
@@ -591,7 +571,7 @@ public class RedeemVoucher {
    * Get purchasedVoucherPurchasedDate
    * @return purchasedVoucherPurchasedDate
   **/
-  @Schema(description = "")
+@Schema(description = "")
   public String getPurchasedVoucherPurchasedDate() {
     return purchasedVoucherPurchasedDate;
   }
@@ -626,7 +606,6 @@ public class RedeemVoucher {
         Objects.equals(this.leadTitle, redeemVoucher.leadTitle) &&
         Objects.equals(this.leadDescription, redeemVoucher.leadDescription) &&
         Objects.equals(this.termsAndConditions, redeemVoucher.termsAndConditions) &&
-        Objects.equals(this.referalAward, redeemVoucher.referalAward) &&
         Objects.equals(this.assignedVoucherId, redeemVoucher.assignedVoucherId) &&
         Objects.equals(this.isCustSharable, redeemVoucher.isCustSharable) &&
         Objects.equals(this.maxRedemptionAllowed, redeemVoucher.maxRedemptionAllowed) &&
@@ -641,7 +620,7 @@ public class RedeemVoucher {
 
   @Override
   public int hashCode() {
-    return Objects.hash(merCbRedeemId, redeemActivedays, redeemActivedt, redeemActtime, redeemDepositAmt, redeemDescription, redeemEndtime, redeemExpdt, redeemGrps, redeemPoints, redeemTitle, redeemType, voucherBg, leadTitle, leadDescription, termsAndConditions, referalAward, assignedVoucherId, isCustSharable, maxRedemptionAllowed, assignedVoucherCount, isActive, voucherPurchaseAmount, isOnlyForNewCust, referralRewardPoints, purchasedVoucherId, purchasedVoucherPurchasedDate);
+    return Objects.hash(merCbRedeemId, redeemActivedays, redeemActivedt, redeemActtime, redeemDepositAmt, redeemDescription, redeemEndtime, redeemExpdt, redeemGrps, redeemPoints, redeemTitle, redeemType, voucherBg, leadTitle, leadDescription, termsAndConditions, assignedVoucherId, isCustSharable, maxRedemptionAllowed, assignedVoucherCount, isActive, voucherPurchaseAmount, isOnlyForNewCust, referralRewardPoints, purchasedVoucherId, purchasedVoucherPurchasedDate);
   }
 
 
@@ -666,7 +645,6 @@ public class RedeemVoucher {
     sb.append("    leadTitle: ").append(toIndentedString(leadTitle)).append("\n");
     sb.append("    leadDescription: ").append(toIndentedString(leadDescription)).append("\n");
     sb.append("    termsAndConditions: ").append(toIndentedString(termsAndConditions)).append("\n");
-    sb.append("    referalAward: ").append(toIndentedString(referalAward)).append("\n");
     sb.append("    assignedVoucherId: ").append(toIndentedString(assignedVoucherId)).append("\n");
     sb.append("    isCustSharable: ").append(toIndentedString(isCustSharable)).append("\n");
     sb.append("    maxRedemptionAllowed: ").append(toIndentedString(maxRedemptionAllowed)).append("\n");

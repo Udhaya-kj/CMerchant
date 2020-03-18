@@ -1012,6 +1012,10 @@
         "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\ic_edit.xml"
     },
     {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_poppins_bold.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\poppins_bold.ttf"
+    },
+    {
         "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_hairlineitalic.ttf.flat",
         "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\lato_hairlineitalic.ttf"
     },
@@ -1034,6 +1038,10 @@
     {
         "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_alert_bonus_redeem.xml.flat",
         "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\alert_bonus_redeem.xml"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_poppins_light.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\poppins_light.ttf"
     },
     {
         "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_award_cashback_success.xml.flat",
@@ -1146,6 +1154,10 @@
     {
         "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_spinner.xml.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\custom_spinner.xml"
     },
     {
         "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_foreground.png.flat",
@@ -1296,6 +1308,10 @@
         "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\alert_show_qr.xml"
     },
     {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_poppins_medium.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\poppins_medium.ttf"
+    },
+    {
         "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border_gray_fill.xml.flat",
         "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable\\border_gray_fill.xml"
     },
@@ -1436,6 +1452,10 @@
         "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\layout\\activity_issue_points_history.xml"
     },
     {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_poppins_regular.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\poppins_regular.ttf"
+    },
+    {
         "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_crown.png.flat",
         "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_crown.png"
     },
@@ -1482,6 +1502,10 @@
     {
         "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_topup_bg.png.flat",
         "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\drawable-mdpi\\ic_topup_bg.png"
+    },
+    {
+        "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\font_poppins_semi_bold.ttf.flat",
+        "source": "E:\\Apps\\CMerchant\\app\\src\\main\\res\\font\\poppins_semi_bold.ttf"
     },
     {
         "merged": "E:\\Apps\\CMerchant\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_splash_new.png.flat",

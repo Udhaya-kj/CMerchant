@@ -241,7 +241,7 @@ public class NotificationOnetoOnePreview extends BaseFragment {
 
     @Override
     public boolean onBackPressed() {
-        new AlertDialogYesNo(getActivity(), "Confirmation", "Are you sure want to Cancel?", "No", "Yes") {
+        new AlertDialogYesNo(getActivity(), "Confirmation", "Are you sure want to Cancel?", "YES", "NO") {
             @Override
             public void onOKButtonClick() {
                 CustomerListOne fragment1 = new CustomerListOne();

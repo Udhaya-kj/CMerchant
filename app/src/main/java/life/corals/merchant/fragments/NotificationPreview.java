@@ -154,7 +154,7 @@ public class NotificationPreview extends BaseFragment {
             }
         });
 
-        close.setOnClickListener(view -> new AlertDialogYesNo(getActivity(), "Confirmation", "Are you sure want to Cancel?", "No", "Yes") {
+        close.setOnClickListener(view -> new AlertDialogYesNo(getActivity(), "Confirmation", "Are you sure want to Cancel?", "YES", "NO") {
             @Override
             public void onOKButtonClick() {
                 NotificationHome notificationHome = new NotificationHome();

@@ -23,7 +23,7 @@ public class SendNotificationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_send_notification);
 
         this.setRequestedOrientation(
-                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         appTimeOutManagerUtil = new AppTimeOutManagerUtil(SendNotificationActivity.this);
 
         Fragment newFragment = new NotificationHome();

@@ -1,7 +1,6 @@
 package life.corals.merchant.adapter;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,11 +16,6 @@ import java.util.List;
 
 import life.corals.merchant.R;
 import life.corals.merchant.client.model.InlineResponse20018Customers;
-import life.corals.merchant.client.model.MerchantcampaignppcupdatemCashcampaigns;
-import life.corals.merchant.utils.MySharedPreference;
-
-import static android.content.Context.MODE_PRIVATE;
-import static life.corals.merchant.utils.Constants.MERCHANT_DETAILS_PREFERENCE;
 
 public class IssuePointsListAdapter extends RecyclerView.Adapter<IssuePointsListAdapter.MyViewHolder> {
 
@@ -78,9 +72,10 @@ public class IssuePointsListAdapter extends RecyclerView.Adapter<IssuePointsList
 
         holder.issueDate.setText(sdfDate.format(issueTime));
         holder.expiryDate.setText(sdfDate1.format(expTime));
-
+        Log.d("issue__History", "onBindViewHolder:  "+issueHistory.getTxnType());
         if (issueHistory.getTxnType()!=null){
-            if (issueHistory.getTxnType().equals("R")){
+
+            if (issueHistory.getTxnType().equals("R")) {
                 holder.issuepoints.setText("Points redeemed ");
                 holder.time.setText("Redeemed time");
                 holder.pointsAdded.setText(issueHistory.getPointsRedeemed() + " points");

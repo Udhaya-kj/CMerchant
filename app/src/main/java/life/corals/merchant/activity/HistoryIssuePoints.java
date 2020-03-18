@@ -34,7 +34,7 @@ public class HistoryIssuePoints extends AppCompatActivity  implements TabLayout.
         toolbar.setTitleTextColor(getResources().getColor(R.color.matt_black));
         toolbar.setTitleTextColor(getResources().getColor(R.color.matt_black));
         this.setRequestedOrientation(
-                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         Objects.requireNonNull(getSupportActionBar()).setHomeButtonEnabled(true);

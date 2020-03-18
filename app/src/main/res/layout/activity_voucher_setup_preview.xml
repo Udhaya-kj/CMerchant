@@ -21,183 +21,216 @@
         app:titleTextColor="@color/matt_black" />
 
 
-        <ScrollView
-            android:id="@+id/voucher_scrollview"
+    <ScrollView
+        android:id="@+id/voucher_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fitsSystemWindows="true"
+        tools:ignore="ExtraText">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:fitsSystemWindows="true"
-            tools:ignore="ExtraText">
+            android:background="@drawable/white_background_round_corner_8dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image_delete_voucher"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="Delete"
+                android:padding="4dp"
+                android:src="@drawable/delete" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp" />
+
+            <include layout="@layout/voucher_layout_view"
+                android:layout_marginStart="@dimen/marginTop_20dp"
+                android:layout_marginEnd="@dimen/marginTop_20dp"
+                android:visibility="gone"
+                tools:ignore="IncludeLayoutParam" />
+            <TextView
+                style="@style/headerTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="@dimen/height_30dp"
+                android:text="Your voucher settings"
+                android:textColor="@color/grey_d"
+                android:visibility="visible" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/white_background_round_corner_8dp"
-                android:orientation="vertical">
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
 
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_gravity="end"
-                    android:contentDescription="Delete"
-                    android:id="@+id/image_delete_voucher"
-                    android:src="@drawable/delete"
-                    android:padding="4dp"
-                    android:layout_marginEnd="20dp"
-                    />
-
-                <androidx.viewpager2.widget.ViewPager2
-                    android:id="@+id/viewpager"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:paddingStart="20dp"
-                    android:paddingEnd="20dp" />
-                ​
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
-                    android:layout_marginTop="@dimen/height_30dp"
-                    android:text="Your voucher settings"
-                    android:textStyle="bold"
-                    android:visibility="visible" />
+                    android:gravity="center"
+                    android:text="* " />
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/text_settings1"
+                    style="@style/subHeaderTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_settings2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:gravity="center"
+                    android:text="* " />
+
+                <TextView
+                    android:id="@+id/text_settings2"
+                    style="@style/subHeaderTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_settings3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:gravity="center"
+                    android:text="* " />
+
+                <TextView
+                    android:id="@+id/text_settings3"
+                    style="@style/subHeaderTextStyle"
+                    android:text="Swipe voucher to change background color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_edit_delete"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50dp"
+                android:layout_marginStart="@dimen/marginTop_10dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="@dimen/marginTop_10dp"
+                android:layout_marginBottom="@dimen/marginTop_10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/view_perf_button"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/marginTop_20dp"
+                    android:layout_weight="1"
+                    android:text="@string/v_performance"
+                    android:textColor="@color/blue_color"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/blue_color" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/edit_button"
+                    style="@style/buttontextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="@string/edit"
+                    android:textSize="14sp"
+                    app:backgroundTint="@color/blue_color"
+                    app:cornerRadius="8dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_create_voucher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginTop_10dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="@dimen/marginTop_10dp"
+                android:layout_marginBottom="@dimen/marginTop_10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_ask_create_update"
+                    style="@style/headerTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_5dp"
-                    android:orientation="horizontal"
-                    android:visibility="visible">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
-                        android:gravity="center"
-                        android:text="* " />
-
-                    <TextView
-                        android:id="@+id/text_settings1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
+                    android:gravity="center"
+                    android:text="Do you want to create this voucher?"
+                    android:textStyle="bold" />
 
                 <LinearLayout
-                    android:id="@+id/layout_settings2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:visibility="visible">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
-                        android:gravity="center"
-                        android:text="* " />
-
-                    <TextView
-                        android:id="@+id/text_settings2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:id="@+id/layout_edit_delete"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/height_50dp"
-                    android:layout_marginStart="@dimen/marginTop_10dp"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginEnd="@dimen/marginTop_10dp"
-                    android:layout_marginBottom="@dimen/marginTop_10dp"
+                    android:layout_marginTop="@dimen/marginTop_10dp"
                     android:gravity="center"
-                    android:weightSum="2"
                     android:orientation="horizontal"
-                    android:visibility="gone">
+                    android:weightSum="2">
 
                     <com.google.android.material.button.MaterialButton
-                        android:visibility="gone"
-                        android:id="@+id/view_perf_button"
+                        android:id="@+id/cancel_button"
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="@string/v_performance"
-                        android:layout_marginEnd="@dimen/marginTop_20dp"
-                        android:textSize="14sp"
+                        android:fontFamily="@font/lato_medium"
+                        android:text="@string/cancel"
                         android:textColor="@color/blue_color"
+                        android:textSize="14sp"
                         app:cornerRadius="8dp"
                         app:strokeColor="@color/blue_color" />
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/edit_button"
+                        android:id="@+id/ok_button"
+                        style="@style/buttontextStyle"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="2"
-                        android:text="@string/edit"
+                        android:layout_marginStart="@dimen/marginTop_20dp"
+                        android:layout_weight="1"
+                        android:text="@string/ok"
                         android:textSize="14sp"
                         app:backgroundTint="@color/blue_color"
                         app:cornerRadius="8dp" />
-
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/layout_create_voucher"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/marginTop_10dp"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginEnd="@dimen/marginTop_10dp"
-                    android:layout_marginBottom="@dimen/marginTop_10dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/text_ask_create_update"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        android:text="Do you want to create this voucher?"
-                         />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/height_50dp"
-                        android:layout_marginTop="@dimen/marginTop_10dp"
-                        android:weightSum="2"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/cancel_button"
-                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:text="@string/cancel"
-                            android:textSize="14sp"
-                            android:textColor="@color/blue_color"
-                            app:cornerRadius="8dp"
-                            app:strokeColor="@color/blue_color" />
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/ok_button"
-                            android:layout_marginStart="@dimen/marginTop_20dp"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:text="@string/ok"
-                            android:textSize="14sp"
-                            app:backgroundTint="@color/blue_color"
-                            app:cornerRadius="8dp" />
-                    </LinearLayout>
-
-                </LinearLayout>
             </LinearLayout>
-        </ScrollView>
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>

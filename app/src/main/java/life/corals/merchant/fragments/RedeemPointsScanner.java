@@ -200,7 +200,7 @@ public class RedeemPointsScanner extends BaseFragment implements View.OnClickLis
                 fetchVoucher(fetchRedeemVoucherListRequestBody);
             } catch (Exception e) {
                 intermediateAlertDialog.dismissAlertDialog();
-                new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Something went wrong") {
+                new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                     @Override
                     public void onButtonClick() {
 
@@ -282,7 +282,7 @@ public class RedeemPointsScanner extends BaseFragment implements View.OnClickLis
                                                 getActivity().runOnUiThread(new Runnable() {
                                                     @Override
                                                     public void run() {
-                                                        alertDialogYesNo = new AlertDialogYesNo(getActivity(), "Voucher Details", spannableString + "\n" + lead_desc, "CONTINUE", "CANCEL") {
+                                                      new AlertDialogYesNo(getActivity(), "Voucher Details", spannableString + "\n" + lead_desc, "CONTINUE", "CANCEL") {
                                                             @Override
                                                             public void onOKButtonClick() {
                                                                 callRedeemAPI();
@@ -305,7 +305,7 @@ public class RedeemPointsScanner extends BaseFragment implements View.OnClickLis
                                                 getActivity().runOnUiThread(new Runnable() {
                                                     @Override
                                                     public void run() {
-                                                        alertDialogYesNo = new AlertDialogYesNo(getActivity(), "Voucher Details", spannableString + "\n" + desc, "CONTINUE", "CANCEL") {
+                                                         new AlertDialogYesNo(getActivity(), "Voucher Details", spannableString + "\n" + desc, "CONTINUE", "CANCEL") {
                                                             @Override
                                                             public void onOKButtonClick() {
                                                                 callRedeemAPI();
@@ -397,7 +397,7 @@ public class RedeemPointsScanner extends BaseFragment implements View.OnClickLis
                 getRedreemVocuher(voucherManageBody);
             } catch (Exception e) {
                 intermediateAlertDialog.dismissAlertDialog();
-                new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Something went wrong") {
+                new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                     @Override
                     public void onButtonClick() {
                         startActivity(new Intent(getActivity(), Homenew.class));
@@ -427,7 +427,7 @@ public class RedeemPointsScanner extends BaseFragment implements View.OnClickLis
                 Objects.requireNonNull(getActivity()).runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Something went wrong") {
+                        new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                             @Override
                             public void onButtonClick() {
                                 startActivity(new Intent(getActivity(), Homenew.class));
@@ -560,7 +560,7 @@ public class RedeemPointsScanner extends BaseFragment implements View.OnClickLis
                                     }
                                 };
                             }*/ else {
-                            new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Something went wrong") {
+                            new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(getActivity(), Homenew.class));

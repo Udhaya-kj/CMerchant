@@ -483,7 +483,6 @@ Merchant Team</string>
     <string name="History">History</string>
     <string name="no_vouchers">No Vouchers</string>
     <string name="add_voucher">Add Voucher</string>
-    <string name="your_vouchers">My Vouchers</string>
     <string name="todo">TODO</string>
     <string name="share_voucher_content">Can customer share this voucher over whatsapp / facebook / instagram?</string>
     <string name="create_weekdays">Which weekdays does this voucher displayed to customer?</string>

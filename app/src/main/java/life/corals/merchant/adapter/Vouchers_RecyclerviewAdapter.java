@@ -63,7 +63,6 @@ public class Vouchers_RecyclerviewAdapter extends RecyclerView.Adapter<Vouchers_
 
     @Override
     public void onBindViewHolder(Vouchers_RecyclerviewAdapter.ViewHolder holder, final int position) {
-
         final SetUpRedemptionList setUpRedemptionList = setUpRedemptionLists.get(position);
         holder.tl.setText(setUpRedemptionList.getRedeemTitle());
         String date = setUpRedemptionList.getRedeemExpdt();
@@ -235,7 +234,7 @@ public class Vouchers_RecyclerviewAdapter extends RecyclerView.Adapter<Vouchers_
                     ((Activity) context).runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            new AlertDialogFailure(context, "Voucher not found. Please Try Again!", "OK", "Failed") {
+                            new AlertDialogFailure(context, " Please try again later!", "OK", "Voucher not found") {
                                 @Override
                                 public void onButtonClick() {
 

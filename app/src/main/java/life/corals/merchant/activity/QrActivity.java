@@ -71,7 +71,7 @@ public class QrActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new AlertShowQr(QrActivity.this, "Membership Registration QR","scan this QR using corals customer app to register as member","" ,finalRegisterQR) {
+                new AlertShowQr(QrActivity.this, "Membership Registration QR","Scan this QR using corals customer app to register as member","" ,finalRegisterQR) {
                     @Override
                     public void onButtonClick() {
 
@@ -84,7 +84,7 @@ public class QrActivity extends AppCompatActivity {
         appLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new AlertShowQr(QrActivity.this, "Customer App download QR", "scan this QR using your mobile","Alternatively you can search for corals life App in Play Store or App Store", finalCustomerAppQR) {
+                new AlertShowQr(QrActivity.this, "Customer App download QR", "Scan this QR using your mobile","Alternatively you can search for corals life App in Play Store or App Store", finalCustomerAppQR) {
                     @Override
                     public void onButtonClick() {
 

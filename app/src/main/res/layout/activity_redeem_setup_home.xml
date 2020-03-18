@@ -27,11 +27,11 @@
         android:layout_gravity="center"
         android:layout_weight="4"
         android:orientation="vertical">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/margin_8dp"
-    >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_8dp">
 
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
@@ -44,24 +44,12 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/text_intro"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        android:paddingStart="10dp"
-                        android:paddingEnd="10dp"
-                        android:text="@string/your_vouchers"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/voucher_title_margin"
-                        android:layout_marginEnd="@dimen/voucher_title_margin"
                         android:layout_marginTop="10dp"
+                        android:layout_marginEnd="@dimen/voucher_title_margin"
                         app:cardCornerRadius="8dp"
                         app:cardElevation="5dp">
 
@@ -79,13 +67,14 @@
                                 android:weightSum="1">
 
                                 <TextView
+                                    style="@style/headerTextStyle"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
+                                    android:layout_marginStart="@dimen/marginTop_10dp"
                                     android:layout_weight="0.88"
                                     android:gravity="center|start"
                                     android:paddingStart="4dp"
                                     android:paddingEnd="1dp"
-                                    android:layout_marginStart="@dimen/marginTop_10dp"
                                     android:text="@string/product_title"
                                     android:textSize="16sp"
                                     android:textStyle="bold" />
@@ -95,9 +84,9 @@
                                     android:layout_width="0dp"
                                     android:layout_height="40dp"
                                     android:layout_weight="0.12"
+                                    android:contentDescription="@string/todo"
                                     android:padding="7dp"
-                                    android:src="@drawable/plus"
-                                    android:contentDescription="@string/todo" />
+                                    android:src="@drawable/plus" />
 
                             </LinearLayout>
 
@@ -110,20 +99,20 @@
                                 android:layout_marginTop="5dp"
                                 android:layout_marginRight="10dp"
                                 android:layout_marginBottom="30dp"
+                                android:background="#F8F8F8"
                                 app:cardCornerRadius="8dp"
-                                app:cardElevation="2dp"
-                                android:background="#F8F8F8">
+                                app:cardElevation="2dp">
 
                                 <TextView
                                     android:id="@+id/text_no_voucher_p"
+                                    style="@style/headerTextStyle"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:gravity="center"
                                     android:text="@string/no_vouchers"
                                     android:textColor="@color/grey_d"
-                                    android:textStyle="bold"
                                     android:textSize="14sp"
-                                    />
+                                    android:textStyle="bold" />
                             </androidx.cardview.widget.CardView>
 
                             <androidx.recyclerview.widget.RecyclerView
@@ -135,11 +124,11 @@
                                 android:clickable="true"
                                 android:divider="@color/white"
                                 android:dividerHeight="8dp"
+                                android:focusable="true"
                                 android:longClickable="true"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:visibility="visible"
-                                android:focusable="true" />
+                                android:visibility="visible" />
 
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -148,8 +137,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/voucher_title_margin"
-                        android:layout_marginEnd="@dimen/voucher_title_margin"
                         android:layout_marginTop="60dp"
+                        android:layout_marginEnd="@dimen/voucher_title_margin"
                         app:cardCornerRadius="8dp"
                         app:cardElevation="5dp">
 
@@ -167,14 +156,15 @@
                                 android:weightSum="1">
 
                                 <TextView
+                                    style="@style/headerTextStyle"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
+                                    android:layout_marginStart="@dimen/marginTop_10dp"
                                     android:layout_weight="0.88"
                                     android:gravity="center|start"
                                     android:paddingStart="4dp"
                                     android:paddingEnd="1dp"
                                     android:text="@string/MGM_title"
-                                    android:layout_marginStart="@dimen/marginTop_10dp"
                                     android:textSize="16sp"
                                     android:textStyle="bold" />
 
@@ -183,9 +173,9 @@
                                     android:layout_width="0dp"
                                     android:layout_height="40dp"
                                     android:layout_weight="0.12"
+                                    android:contentDescription="@string/todo"
                                     android:padding="7dp"
-                                    android:src="@drawable/plus"
-                                    android:contentDescription="@string/todo" />
+                                    android:src="@drawable/plus" />
                             </LinearLayout>
 
                             <androidx.cardview.widget.CardView
@@ -196,20 +186,20 @@
                                 android:layout_marginTop="5dp"
                                 android:layout_marginEnd="10dp"
                                 android:layout_marginBottom="30dp"
+                                android:background="#F8F8F8"
                                 app:cardCornerRadius="8dp"
-                                app:cardElevation="2dp"
-                                android:background="#F8F8F8">
+                                app:cardElevation="2dp">
 
                                 <TextView
+                                    style="@style/headerTextStyle"
                                     android:id="@+id/text_no_voucher_m"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:gravity="center"
                                     android:text="@string/no_vouchers"
                                     android:textColor="@color/grey_d"
-                                    android:textStyle="bold"
                                     android:textSize="14sp"
-                                    />
+                                    android:textStyle="bold" />
                             </androidx.cardview.widget.CardView>
 
                             <androidx.recyclerview.widget.RecyclerView
@@ -221,11 +211,11 @@
                                 android:clickable="true"
                                 android:divider="@color/white"
                                 android:dividerHeight="8dp"
+                                android:focusable="true"
                                 android:longClickable="true"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:visibility="visible"
-                                android:focusable="true" />
+                                android:visibility="visible" />
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
@@ -233,8 +223,8 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="60dp"
                         android:layout_marginStart="@dimen/voucher_title_margin"
+                        android:layout_marginTop="60dp"
                         android:layout_marginEnd="@dimen/voucher_title_margin"
                         app:cardCornerRadius="8dp"
                         app:cardElevation="5dp">
@@ -253,14 +243,15 @@
                                 android:weightSum="1">
 
                                 <TextView
+                                    style="@style/headerTextStyle"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
+                                    android:layout_marginStart="@dimen/marginTop_10dp"
                                     android:layout_weight="0.88"
                                     android:gravity="center|start"
                                     android:paddingStart="4dp"
                                     android:paddingEnd="@dimen/marginTop_10dp"
                                     android:text="@string/assigned_title"
-                                    android:layout_marginStart="@dimen/marginTop_10dp"
                                     android:textSize="16sp"
                                     android:textStyle="bold" />
 
@@ -269,9 +260,9 @@
                                     android:layout_width="0dp"
                                     android:layout_height="40dp"
                                     android:layout_weight="0.12"
+                                    android:contentDescription="@string/todo"
                                     android:padding="7dp"
-                                    android:src="@drawable/plus"
-                                    android:contentDescription="@string/todo" />
+                                    android:src="@drawable/plus" />
                             </LinearLayout>
 
                             <androidx.cardview.widget.CardView
@@ -282,20 +273,20 @@
                                 android:layout_marginTop="5dp"
                                 android:layout_marginRight="10dp"
                                 android:layout_marginBottom="30dp"
+                                android:background="#F8F8F8"
                                 app:cardCornerRadius="8dp"
-                                app:cardElevation="2dp"
-                                android:background="#F8F8F8">
+                                app:cardElevation="2dp">
 
                                 <TextView
+                                    style="@style/headerTextStyle"
                                     android:id="@+id/text_no_voucher_z"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:gravity="center"
                                     android:text="@string/no_vouchers"
                                     android:textColor="@color/grey_d"
-                                    android:textStyle="bold"
                                     android:textSize="14sp"
-                                    />
+                                    android:textStyle="bold" />
                             </androidx.cardview.widget.CardView>
 
 
@@ -308,11 +299,11 @@
                                 android:clickable="true"
                                 android:divider="@color/white"
                                 android:dividerHeight="8dp"
+                                android:focusable="true"
                                 android:longClickable="true"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:visibility="visible"
-                                android:focusable="true" />
+                                android:visibility="visible" />
 
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -321,8 +312,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/voucher_title_margin"
-                        android:layout_marginEnd="@dimen/voucher_title_margin"
                         android:layout_marginTop="60dp"
+                        android:layout_marginEnd="@dimen/voucher_title_margin"
                         app:cardCornerRadius="8dp"
                         app:cardElevation="5dp">
 
@@ -340,14 +331,15 @@
                                 android:weightSum="1">
 
                                 <TextView
+                                    style="@style/headerTextStyle"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
+                                    android:layout_marginStart="@dimen/marginTop_10dp"
                                     android:layout_weight="0.88"
                                     android:gravity="center|start"
                                     android:paddingStart="4dp"
                                     android:paddingEnd="1dp"
                                     android:text="@string/bulk_title"
-                                    android:layout_marginStart="@dimen/marginTop_10dp"
                                     android:textSize="16sp"
                                     android:textStyle="bold" />
 
@@ -356,9 +348,9 @@
                                     android:layout_width="0dp"
                                     android:layout_height="40dp"
                                     android:layout_weight="0.12"
+                                    android:contentDescription="@string/todo"
                                     android:padding="7dp"
-                                    android:src="@drawable/plus"
-                                    android:contentDescription="@string/todo" />
+                                    android:src="@drawable/plus" />
                             </LinearLayout>
 
 
@@ -370,20 +362,20 @@
                                 android:layout_marginTop="5dp"
                                 android:layout_marginRight="10dp"
                                 android:layout_marginBottom="30dp"
+                                android:background="#F8F8F8"
                                 app:cardCornerRadius="8dp"
-                                app:cardElevation="2dp"
-                                android:background="#F8F8F8">
+                                app:cardElevation="2dp">
 
                                 <TextView
+                                    style="@style/headerTextStyle"
                                     android:id="@+id/text_no_voucher_u"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:gravity="center"
                                     android:text="@string/no_vouchers"
                                     android:textColor="@color/grey_d"
-                                    android:textStyle="bold"
                                     android:textSize="14sp"
-                                    />
+                                    android:textStyle="bold" />
                             </androidx.cardview.widget.CardView>
 
                             <androidx.recyclerview.widget.RecyclerView
@@ -395,19 +387,19 @@
                                 android:clickable="true"
                                 android:divider="@color/white"
                                 android:dividerHeight="8dp"
+                                android:focusable="true"
                                 android:longClickable="true"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:visibility="visible"
-                                android:focusable="true" />
+                                android:visibility="visible" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="60dp"
                         android:layout_marginStart="@dimen/voucher_title_margin"
+                        android:layout_marginTop="60dp"
                         android:layout_marginEnd="@dimen/voucher_title_margin"
                         android:layout_marginBottom="30dp"
                         app:cardCornerRadius="8dp"
@@ -427,13 +419,14 @@
                                 android:weightSum="1">
 
                                 <TextView
+                                    style="@style/headerTextStyle"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
+                                    android:layout_marginStart="@dimen/marginTop_10dp"
                                     android:layout_weight="0.88"
                                     android:gravity="center|start"
                                     android:paddingStart="4dp"
                                     android:paddingEnd="1dp"
-                                    android:layout_marginStart="@dimen/marginTop_10dp"
                                     android:text="@string/bonus_title"
                                     android:textSize="16sp"
                                     android:textStyle="bold" />
@@ -443,9 +436,9 @@
                                     android:layout_width="0dp"
                                     android:layout_height="40dp"
                                     android:layout_weight="0.12"
+                                    android:contentDescription="@string/todo"
                                     android:padding="7dp"
-                                    android:src="@drawable/plus"
-                                    android:contentDescription="@string/todo" />
+                                    android:src="@drawable/plus" />
                             </LinearLayout>
 
 
@@ -457,20 +450,20 @@
                                 android:layout_marginTop="5dp"
                                 android:layout_marginRight="10dp"
                                 android:layout_marginBottom="30dp"
+                                android:background="#F8F8F8"
                                 app:cardCornerRadius="8dp"
-                                app:cardElevation="2dp"
-                                android:background="#F8F8F8">
+                                app:cardElevation="2dp">
 
                                 <TextView
+                                    style="@style/headerTextStyle"
                                     android:id="@+id/text_no_voucher_b"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:gravity="center"
                                     android:text="@string/no_vouchers"
                                     android:textColor="@color/grey_d"
-                                    android:textStyle="bold"
                                     android:textSize="14sp"
-                                    />
+                                    android:textStyle="bold" />
                             </androidx.cardview.widget.CardView>
 
                             <androidx.recyclerview.widget.RecyclerView
@@ -482,11 +475,11 @@
                                 android:clickable="true"
                                 android:divider="@color/white"
                                 android:dividerHeight="8dp"
+                                android:focusable="true"
                                 android:longClickable="true"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:visibility="visible"
-                                android:focusable="true" />
+                                android:visibility="visible" />
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
@@ -497,10 +490,10 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/text_add_redeem"
-                android:layout_width="130dp"
+                android:layout_width="150dp"
                 android:layout_height="35dp"
                 android:layout_alignParentBottom="true"
-              android:layout_centerHorizontal="true"
+                android:layout_centerHorizontal="true"
                 android:layout_marginBottom="5dp"
                 app:cardBackgroundColor="@color/oldBlue"
                 app:cardCornerRadius="4dp">
@@ -510,27 +503,30 @@
                     android:layout_height="match_parent"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:text="@string/add_voucher"
+                    android:gravity="center"
                     android:weightSum="1">
 
                     <ImageView
+                        android:visibility="gone"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.2"
+                        android:contentDescription="@string/todo"
                         android:padding="4dp"
                         android:src="@drawable/add"
-                        android:tint="@color/white"
-                        android:contentDescription="@string/todo" />
+                        android:tint="@color/white" />
 
                     <TextView
+                        style="@style/headerTextStyle"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.8"
                         android:gravity="center"
                         android:text="@string/add_voucher"
+                        android:layout_gravity="center"
                         android:textColor="@color/white" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-</RelativeLayout>
+        </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

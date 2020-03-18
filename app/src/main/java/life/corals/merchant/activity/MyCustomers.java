@@ -23,7 +23,7 @@ public class MyCustomers extends AppCompatActivity {
         setContentView(R.layout.activity_my_customers);
         appTimeOutManagerUtil = new AppTimeOutManagerUtil(MyCustomers.this);
         this.setRequestedOrientation(
-                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {

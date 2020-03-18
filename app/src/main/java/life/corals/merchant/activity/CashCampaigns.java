@@ -156,7 +156,7 @@ public class CashCampaigns extends AppCompatActivity {
                         // response200Cashcampaigns.setExpiryDate(date);
                         cashcampaignsList.add(response200Cashcampaigns);
 
-                        new AlertDialogYesNo(CashCampaigns.this, "Confirmation", "Are you sure want to create new campaign?", "No", "Yes") {
+                        new AlertDialogYesNo(CashCampaigns.this, "Confirmation", "Are you sure want to create new campaign?", "YES", "NO") {
 
                             @Override
                             public void onOKButtonClick() {

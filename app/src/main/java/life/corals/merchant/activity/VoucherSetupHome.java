@@ -248,7 +248,6 @@ public class VoucherSetupHome extends AppCompatActivity {
     }
 
     public void fetchVoucherList(FetchRedeemVoucherListRequestBody requestBody) throws ApiException {
-
         Log.d("Voucher---", "uploadVoucher: " + requestBody);
         OkHttpApiClient okHttpApiClient = new OkHttpApiClient(Objects.requireNonNull(VoucherSetupHome.this));
         MerchantApisApi webMerchantApisApi = new MerchantApisApi();
@@ -258,12 +257,10 @@ public class VoucherSetupHome extends AppCompatActivity {
             @Override
             public void onFailure(ApiException e, int statusCode, Map<String, List<String>> responseHeaders) {
                 Log.d("VoucherList---", "onFailure: " + e.getMessage() + "," + statusCode);
-
                 if (intermediateAlertDialog != null) {
                     intermediateAlertDialog.dismissAlertDialog();
                 }
                 if (statusCode == 500) {
-
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -511,8 +508,6 @@ public class VoucherSetupHome extends AppCompatActivity {
                     if (intermediateAlertDialog != null) {
                         intermediateAlertDialog.dismissAlertDialog();
                     }
-
-
                 } else if (statusCode == 500) {
                     if (intermediateAlertDialog != null) {
                         intermediateAlertDialog.dismissAlertDialog();

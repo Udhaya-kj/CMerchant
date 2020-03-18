@@ -164,7 +164,7 @@ public class NotificationViewShceduledMsg extends BaseFragment {
                 } else {
                     a = "Are you sure want  to Activate this Message?";
                 }
-                new AlertDialogYesNo(getActivity(), "Confirmation", a, "No", "Yes") {
+                new AlertDialogYesNo(getActivity(), "Confirmation", a, "YES", "NO") {
                     @Override
                     public void onOKButtonClick() {
                         callUpdateAPI();

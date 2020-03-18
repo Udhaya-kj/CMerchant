@@ -48,7 +48,7 @@ public class ReceivePaymentScreenOne extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.receive_payment_one);
         this.setRequestedOrientation(
-                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         Toolbar toolbar = findViewById(R.id.toolbar_receive_payment_one);
         toolbar.setTitleTextColor(getResources().getColor(R.color.matt_black));
         setSupportActionBar(toolbar);

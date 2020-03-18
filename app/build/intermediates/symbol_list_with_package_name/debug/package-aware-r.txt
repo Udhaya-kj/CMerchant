@@ -2068,6 +2068,11 @@ font lato_semibold
 font lato_semibolditalic
 font lato_thin
 font lato_thinitalic
+font poppins_bold
+font poppins_light
+font poppins_medium
+font poppins_regular
+font poppins_semi_bold
 font quicksand_bold
 id ALT
 id BOTTOM_END
@@ -2170,7 +2175,6 @@ id ampm_layout
 id animator
 id app_link_qr
 id app_name
-id assign_rgp
 id async
 id auto
 id back_to_search
@@ -2504,6 +2508,7 @@ id layout_points_exp_dt
 id layout_redeem_deposit_amount
 id layout_ref_award
 id layout_settings2
+id layout_settings3
 id layout_share
 id layout_status_msg
 id layout_type_B
@@ -2511,6 +2516,7 @@ id layout_type_M
 id layout_type_P
 id layout_type_U
 id layout_type_Z
+id layout_voucher_preview
 id layout_wallet_balance_exp_date
 id left
 id light
@@ -2809,10 +2815,6 @@ id svRecurrenceOptionsMenu
 id swipe
 id swipeButton
 id switch_active
-id switch_b
-id switch_m
-id switch_p
-id switch_z
 id tabLayout_graph
 id tabMode
 id tag_accessibility_actions
@@ -2840,6 +2842,7 @@ id textView5
 id textView7
 id text_add_redeem
 id text_ask_create_update
+id text_assigned
 id text_desc
 id text_desc_b
 id text_desc_m
@@ -2850,7 +2853,6 @@ id text_dialog
 id text_expired
 id text_input_end_icon
 id text_input_start_icon
-id text_intro
 id text_layout
 id text_no_assigned
 id text_no_voucher_b
@@ -2862,6 +2864,7 @@ id text_no_vouchers
 id text_redemptions
 id text_settings1
 id text_settings2
+id text_settings3
 id text_sharings
 id text_terms_conditions
 id text_title
@@ -2895,10 +2898,6 @@ id title_u_watcher
 id title_z_watcher
 id toast_message_icon
 id toast_message_text
-id toggle_B
-id toggle_M
-id toggle_P
-id toggle_Z
 id toggle_switches_container
 id toolbar
 id toolbar_cashback_one
@@ -3155,6 +3154,7 @@ layout campaign_setup_one
 layout cash_topup_screen_three
 layout cash_topup_screen_two
 layout custom_dialog
+layout custom_spinner
 layout custom_toast_layout
 layout date_picker_header
 layout date_picker_layout
@@ -3648,7 +3648,6 @@ string wallet_balance
 string welcome
 string year_picker_description
 string yearly_plain
-string your_vouchers
 string zxing_app_name
 string zxing_button_ok
 string zxing_msg_camera_framework_bug
@@ -4418,9 +4417,14 @@ style headerTextStyle1
 style myEditText
 style navheaderTextStyle
 style subHeaderTextStyle
+style subTitleTextAppearance
+style subTitleTextAppearance2
 style textStyle
 style textStylebold
 style textStylehistory
+style titleTextAppearance
+style titleTextAppearance1
+style titleTextAppearance2
 style titleTextApperance
 style toolbarHeaderTextStyle
 style toolbarTitle

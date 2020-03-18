@@ -34,7 +34,7 @@ public class HistoryTopup extends AppCompatActivity implements TabLayout.OnTabSe
         setContentView(R.layout.activity_history);
         Toolbar toolbar = findViewById(R.id.toolbar_histry);
         this.setRequestedOrientation(
-                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         Objects.requireNonNull(getSupportActionBar()).setHomeButtonEnabled(true);

@@ -130,7 +130,7 @@ public class NotificationEditMessage extends BaseFragment {
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new AlertDialogYesNo(getActivity(), "Confirmation", "Are you sure want to update message ?", "No", "Yes") {
+                new AlertDialogYesNo(getActivity(), "Confirmation", "Are you sure want to update message ?", "YES", "NO") {
 
                     @Override
                     public void onOKButtonClick() {

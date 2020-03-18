@@ -49,6 +49,7 @@ import java.util.Objects;
 
 import belka.us.androidtoggleswitch.widgets.ToggleSwitch;
 import life.corals.merchant.R;
+import life.corals.merchant.adapter.AssignedSpinnerAdapter;
 import life.corals.merchant.client.ApiCallback;
 import life.corals.merchant.client.ApiException;
 import life.corals.merchant.client.OkHttpApiClient;
@@ -70,8 +71,6 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
     LinearLayout linearLayout_P, linearLayout_B, linearLayout_U, linearLayout_Z, linearLayout_M, sub_layout_P, sub_layout_B, sub_layout_U, sub_layout_Z, sub_layout_M;
     Spinner spinner_assg_voucher;
-    ToggleSwitch toggleSwitch_P, toggleSwitch_B, toggleSwitch_Z, toggleSwitch_M;
-    Switch aSwitch_p, aSwitch_b, aSwitch_z, aSwitch_m;
     Button button_p, button_b, button_u, button_z, button_m;
     EditText editText_title_P, editText_desc_P, editText_points_P, editText_title_B, editText_desc_B, editText_points_B, editText_wallet_B, editText_title_U, editText_desc_U, editText_vouchers_count_U, editText_vouchers_pur_amt_U, editText_title_Z, editText_desc_Z, editText_title_M, editText_desc_M, editText_points_M, editText_title_lead_M, editText_desc_lead_M;
     TextView tv_start_date_P, tv_end_date_P, tv_start_time_P, tv_end_time_P, tv_start_date_B, tv_end_date_B, tv_start_time_B, tv_end_time_B, tv_start_date_U, tv_end_date_U, tv_start_time_U, tv_end_time_U, tv_start_date_Z, tv_end_date_Z, tv_start_date_M, tv_end_date_M;
@@ -85,8 +84,6 @@ public class VoucherSetupCreate extends AppCompatActivity {
     DatePickerDialog datePickerDialog;
     private String start_date_p, end_date_p, start_time_p, end_time_p, start_date_b, end_date_b, start_time_b, end_time_b, start_date_u, end_date_u, start_time_u, end_time_u, start_date_z, end_date_z, start_time_z, end_time_z, start_date_m, end_date_m, start_time_m, end_time_m;
     TextView textView_no_vouchers, textView_no_assigned_vouchers;
-    public RadioGroup radioGroup;
-    RadioButton rbn;
     FetchRedeemVoucherListRequestBody fetchRedeemVoucherListRequestBody;
     private AlertDialogYesNo alertDialogYesNo;
     String redeem_type, redeem_id, bg_color;
@@ -235,7 +232,6 @@ public class VoucherSetupCreate extends AppCompatActivity {
         tv_min_desc_m = findViewById(R.id.tv_min_desc_m);
         tv_min_lead_desc_m = findViewById(R.id.tv_min_lead_desc_m);
 
-        radioGroup = (RadioGroup) findViewById(R.id.assign_rgp);
         sharedpreferences_p_voucher = getSharedPreferences(MyPREFERENCES_REDEEM_P, Context.MODE_PRIVATE);
         sharedpreferences_b_voucher = getSharedPreferences(MyPREFERENCES_REDEEM_B, Context.MODE_PRIVATE);
         sharedpreferences_u_voucher = getSharedPreferences(MyPREFERENCES_REDEEM_U, Context.MODE_PRIVATE);
@@ -255,26 +251,6 @@ public class VoucherSetupCreate extends AppCompatActivity {
         sub_layout_Z = (LinearLayout) findViewById(R.id.layout_type_Z);
         sub_layout_M = (LinearLayout) findViewById(R.id.layout_type_M);
 
-        toggleSwitch_P = (ToggleSwitch) findViewById(R.id.toggle_P);
-        toggleSwitch_B = (ToggleSwitch) findViewById(R.id.toggle_B);
-        toggleSwitch_Z = (ToggleSwitch) findViewById(R.id.toggle_Z);
-        toggleSwitch_M = (ToggleSwitch) findViewById(R.id.toggle_M);
-
-        aSwitch_p = (Switch) findViewById(R.id.switch_p);
-        aSwitch_b = (Switch) findViewById(R.id.switch_b);
-        aSwitch_z = (Switch) findViewById(R.id.switch_z);
-        aSwitch_m = (Switch) findViewById(R.id.switch_m);
-
-        aSwitch_p.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    aSwitch_p.setTextOn("Yes");
-                } else {
-                    aSwitch_p.setTextOff("No");
-                }
-            }
-        });
 
         button_p = (Button) findViewById(R.id.button_p);
         button_b = (Button) findViewById(R.id.button_b);
@@ -402,56 +378,6 @@ public class VoucherSetupCreate extends AppCompatActivity {
         editText_title_lead_M.addTextChangedListener(textWatcher_lead_title_m);
         editText_desc_lead_M.addTextChangedListener(textWatcher_lead_desc_m);
 
-        aSwitch_p.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    // The toggle is enabled
-                    sharable_p = 1;
-                } else {
-                    // The toggle is disabled
-                    sharable_p = 0;
-                }
-            }
-        });
-        aSwitch_b.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    // The toggle is enabled
-                    sharable_b = 1;
-                } else {
-                    // The toggle is disabled
-                    sharable_b = 0;
-                }
-            }
-        });
-
-        aSwitch_z.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    // The toggle is enabled
-                    sharable_z = 1;
-                } else {
-                    // The toggle is disabled
-                    sharable_z = 0;
-                }
-            }
-        });
-        aSwitch_m.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    // The toggle is enabled
-                    sharable_m = 1;
-                } else {
-                    // The toggle is disabled
-                    sharable_m = 0;
-                }
-            }
-        });
-
         //shatable p
         tv_share_yes_p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -459,7 +385,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                 tv_share_yes_p.setTextColor(getResources().getColor(R.color.white));
                 tv_share_no_p.setTextColor(getResources().getColor(R.color.black));
                 tv_share_yes_p.setBackgroundColor(getResources().getColor(R.color.green_hase));
-                tv_share_no_p.setBackgroundColor(getResources().getColor(R.color.grey));
+                tv_share_no_p.setBackgroundColor(getResources().getColor(R.color.red));
                 sharable_p1 = 1;
                 //Toast.makeText(VoucherSetupCreate.this, "" + sharable_p1, Toast.LENGTH_SHORT).show();
             }
@@ -471,7 +397,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
                 tv_share_yes_p.setTextColor(getResources().getColor(R.color.black));
                 tv_share_no_p.setTextColor(getResources().getColor(R.color.white));
-                tv_share_yes_p.setBackgroundColor(getResources().getColor(R.color.grey));
+                tv_share_yes_p.setBackgroundColor(getResources().getColor(R.color.red));
                 tv_share_no_p.setBackgroundColor(getResources().getColor(R.color.green_hase));
                 sharable_p1 = 0;
                 //Toast.makeText(VoucherSetupCreate.this, ""+sharable_p1, Toast.LENGTH_SHORT).show();
@@ -486,7 +412,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                 tv_share_yes_b.setTextColor(getResources().getColor(R.color.white));
                 tv_share_no_b.setTextColor(getResources().getColor(R.color.black));
                 tv_share_yes_b.setBackgroundColor(getResources().getColor(R.color.green_hase));
-                tv_share_no_b.setBackgroundColor(getResources().getColor(R.color.grey));
+                tv_share_no_b.setBackgroundColor(getResources().getColor(R.color.red));
                 sharable_b1 = 1;
                 //Toast.makeText(VoucherSetupCreate.this, ""+sharable_b1, Toast.LENGTH_SHORT).show();
             }
@@ -498,7 +424,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
                 tv_share_yes_b.setTextColor(getResources().getColor(R.color.black));
                 tv_share_no_b.setTextColor(getResources().getColor(R.color.white));
-                tv_share_yes_b.setBackgroundColor(getResources().getColor(R.color.grey));
+                tv_share_yes_b.setBackgroundColor(getResources().getColor(R.color.red));
                 tv_share_no_b.setBackgroundColor(getResources().getColor(R.color.green_hase));
                 sharable_b1 = 0;
                 //Toast.makeText(VoucherSetupCreate.this, ""+sharable_b1, Toast.LENGTH_SHORT).show();
@@ -514,7 +440,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                 tv_share_yes_z.setTextColor(getResources().getColor(R.color.white));
                 tv_share_no_z.setTextColor(getResources().getColor(R.color.black));
                 tv_share_yes_z.setBackgroundColor(getResources().getColor(R.color.green_hase));
-                tv_share_no_z.setBackgroundColor(getResources().getColor(R.color.grey));
+                tv_share_no_z.setBackgroundColor(getResources().getColor(R.color.red));
                 sharable_z1 = 1;
                 //Toast.makeText(VoucherSetupCreate.this, ""+sharable_z1, Toast.LENGTH_SHORT).show();
             }
@@ -526,7 +452,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
                 tv_share_yes_z.setTextColor(getResources().getColor(R.color.black));
                 tv_share_no_z.setTextColor(getResources().getColor(R.color.white));
-                tv_share_yes_z.setBackgroundColor(getResources().getColor(R.color.grey));
+                tv_share_yes_z.setBackgroundColor(getResources().getColor(R.color.red));
                 tv_share_no_z.setBackgroundColor(getResources().getColor(R.color.green_hase));
                 sharable_z1 = 0;
                 // Toast.makeText(VoucherSetupCreate.this, ""+sharable_z1, Toast.LENGTH_SHORT).show();
@@ -541,7 +467,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                 tv_share_yes_m.setTextColor(getResources().getColor(R.color.white));
                 tv_share_no_m.setTextColor(getResources().getColor(R.color.black));
                 tv_share_yes_m.setBackgroundColor(getResources().getColor(R.color.green_hase));
-                tv_share_no_m.setBackgroundColor(getResources().getColor(R.color.grey));
+                tv_share_no_m.setBackgroundColor(getResources().getColor(R.color.red));
                 sharable_m1 = 1;
                 //Toast.makeText(VoucherSetupCreate.this, ""+sharable_m1, Toast.LENGTH_SHORT).show();
             }
@@ -550,14 +476,12 @@ public class VoucherSetupCreate extends AppCompatActivity {
         tv_share_no_m.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 tv_share_yes_m.setTextColor(getResources().getColor(R.color.black));
                 tv_share_no_m.setTextColor(getResources().getColor(R.color.white));
-                tv_share_yes_m.setBackgroundColor(getResources().getColor(R.color.grey));
+                tv_share_yes_m.setBackgroundColor(getResources().getColor(R.color.red));
                 tv_share_no_m.setBackgroundColor(getResources().getColor(R.color.green_hase));
                 sharable_m1 = 0;
                 //Toast.makeText(VoucherSetupCreate.this, ""+sharable_m1, Toast.LENGTH_SHORT).show();
-
             }
         });
 
@@ -701,16 +625,21 @@ public class VoucherSetupCreate extends AppCompatActivity {
                         textView_no_vouchers.setVisibility(View.GONE);
                         textView_no_assigned_vouchers.setVisibility(View.GONE);
                         spinner_assg_voucher.setVisibility(View.VISIBLE);
-                        ArrayAdapter a = new ArrayAdapter(VoucherSetupCreate.this, android.R.layout.simple_spinner_item, list_assigned);
+                    /*    ArrayAdapter a = new ArrayAdapter(VoucherSetupCreate.this, android.R.layout.simple_spinner_item, list_assigned);
                         a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        spinner_assg_voucher.setAdapter(a);*/
+
+                        AssignedSpinnerAdapter a = new AssignedSpinnerAdapter(VoucherSetupCreate.this, list_assigned);
+                       // a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                         spinner_assg_voucher.setAdapter(a);
+
                         spinner_assg_voucher.setPrompt("Select Assigned Voucher");
                         int assg_id_pos = list_assigned_id.indexOf(r_voucher_id);
                         String assg_value = list_assigned.get(assg_id_pos);
                         Log.d("Assg_value---", "onCreate: " + assg_id_pos + "," + assg_value + "," + r_voucher_id);
                         if (assg_value != null) {
                             selected_voucher_id = r_voucher_id;
-                            int spinnerPosition = a.getPosition(assg_value);
+                            int spinnerPosition = list_assigned.indexOf(assg_value);
                             spinner_assg_voucher.setSelection(spinnerPosition);
                             a.notifyDataSetChanged();
                         }
@@ -869,15 +798,17 @@ public class VoucherSetupCreate extends AppCompatActivity {
                     if (sharable) {
                         //sharable_p = 1;
                         //aSwitch_p.setChecked(true);
-                        tv_share_yes_p.setTextColor(getResources().getColor(R.color.white));
-                        tv_share_no_p.setTextColor(getResources().getColor(R.color.black));
+
+                       /* tv_share_yes_p.setTextColor(getResources().getColor(R.color.white));
+                        tv_share_no_p.setTextColor(getResources().getColor(R.color.black));*/
                         tv_share_yes_p.setBackgroundColor(getResources().getColor(R.color.green_hase));
                         tv_share_no_p.setBackgroundColor(getResources().getColor(R.color.grey));
                         sharable_p1 = 1;
                     } else {
                         // aSwitch_p.setChecked(false);
-                        tv_share_yes_p.setTextColor(getResources().getColor(R.color.black));
-                        tv_share_no_p.setTextColor(getResources().getColor(R.color.white));
+
+                       /* tv_share_yes_p.setTextColor(getResources().getColor(R.color.black));
+                        tv_share_no_p.setTextColor(getResources().getColor(R.color.white));*/
                         tv_share_yes_p.setBackgroundColor(getResources().getColor(R.color.grey));
                         tv_share_no_p.setBackgroundColor(getResources().getColor(R.color.green_hase));
                         sharable_p1 = 0;
@@ -904,15 +835,17 @@ public class VoucherSetupCreate extends AppCompatActivity {
                     if (sharable) {
                         //sharable_p = 1;
                         //aSwitch_b.setChecked(true);
-                        tv_share_yes_b.setTextColor(getResources().getColor(R.color.white));
-                        tv_share_no_b.setTextColor(getResources().getColor(R.color.black));
+
+                        /*tv_share_yes_b.setTextColor(getResources().getColor(R.color.white));
+                        tv_share_no_b.setTextColor(getResources().getColor(R.color.black));*/
                         tv_share_yes_b.setBackgroundColor(getResources().getColor(R.color.green_hase));
                         tv_share_no_b.setBackgroundColor(getResources().getColor(R.color.grey));
                         sharable_b1 = 1;
                     } else {
                         //aSwitch_b.setChecked(false);
-                        tv_share_yes_b.setTextColor(getResources().getColor(R.color.black));
-                        tv_share_no_b.setTextColor(getResources().getColor(R.color.white));
+
+                      /*  tv_share_yes_b.setTextColor(getResources().getColor(R.color.black));
+                        tv_share_no_b.setTextColor(getResources().getColor(R.color.white));*/
                         tv_share_yes_b.setBackgroundColor(getResources().getColor(R.color.grey));
                         tv_share_no_b.setBackgroundColor(getResources().getColor(R.color.green_hase));
                         sharable_b1 = 0;
@@ -962,15 +895,17 @@ public class VoucherSetupCreate extends AppCompatActivity {
                     if (sharable) {
                         //sharable_p = 1;
                         //aSwitch_z.setChecked(true);
-                        tv_share_yes_z.setTextColor(getResources().getColor(R.color.white));
-                        tv_share_no_z.setTextColor(getResources().getColor(R.color.black));
+
+                      /*  tv_share_yes_z.setTextColor(getResources().getColor(R.color.white));
+                        tv_share_no_z.setTextColor(getResources().getColor(R.color.black));*/
                         tv_share_yes_z.setBackgroundColor(getResources().getColor(R.color.green_hase));
                         tv_share_no_z.setBackgroundColor(getResources().getColor(R.color.grey));
                         sharable_z1 = 1;
                     } else {
                         //aSwitch_z.setChecked(false);
-                        tv_share_yes_z.setTextColor(getResources().getColor(R.color.black));
-                        tv_share_no_z.setTextColor(getResources().getColor(R.color.white));
+
+                      /*  tv_share_yes_z.setTextColor(getResources().getColor(R.color.black));
+                        tv_share_no_z.setTextColor(getResources().getColor(R.color.white));*/
                         tv_share_yes_z.setBackgroundColor(getResources().getColor(R.color.grey));
                         tv_share_no_z.setBackgroundColor(getResources().getColor(R.color.green_hase));
                         sharable_z1 = 0;
@@ -996,16 +931,17 @@ public class VoucherSetupCreate extends AppCompatActivity {
                     if (sharable) {
                         //sharable_p = 1;
                         //aSwitch_m.setChecked(true);
-                        tv_share_yes_m.setTextColor(getResources().getColor(R.color.white));
-                        tv_share_no_m.setTextColor(getResources().getColor(R.color.black));
+
+                      /*  tv_share_yes_m.setTextColor(getResources().getColor(R.color.white));
+                        tv_share_no_m.setTextColor(getResources().getColor(R.color.black));*/
                         tv_share_yes_m.setBackgroundColor(getResources().getColor(R.color.green_hase));
                         tv_share_no_m.setBackgroundColor(getResources().getColor(R.color.grey));
                         sharable_m1 = 1;
                     } else {
                         //aSwitch_m.setChecked(false);
 
-                        tv_share_yes_m.setTextColor(getResources().getColor(R.color.black));
-                        tv_share_no_m.setTextColor(getResources().getColor(R.color.white));
+                     /*   tv_share_yes_m.setTextColor(getResources().getColor(R.color.black));
+                        tv_share_no_m.setTextColor(getResources().getColor(R.color.white));*/
                         tv_share_yes_m.setBackgroundColor(getResources().getColor(R.color.grey));
                         tv_share_no_m.setBackgroundColor(getResources().getColor(R.color.green_hase));
                         sharable_m1 = 0;
@@ -1046,54 +982,6 @@ public class VoucherSetupCreate extends AppCompatActivity {
                 }
             }
         }
-
-     /*   for (int i = 0; i < assigned_list.size(); i++) {
-            rbn = new RadioButton(this);
-            //rbn.setId(View.generateViewId());
-            rbn.setText(assigned_list.get(i));
-            final int finalI = i;
-            rbn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    String radiobtn_value = assigned_list.get(finalI);
-                    Toast.makeText(VoucherSetupCreate.this, "" + radiobtn_value, Toast.LENGTH_SHORT).show();
-                  *//*  Intent intent = new Intent("custom-message");
-                    intent.putExtra("item",radiobtn_value);
-                    LocalBroadcastManager.getInstance(context).sendBroadcast(intent);*//*
-                }
-            });
-            radioGroup.addView(rbn);
-        }*/
-
-
-        toggleSwitch_P.setOnToggleSwitchChangeListener(new ToggleSwitch.OnToggleSwitchChangeListener() {
-
-            @Override
-            public void onToggleSwitchChangeListener(int position, boolean isChecked) {
-                sharable_p = position;
-            }
-        });
-        toggleSwitch_B.setOnToggleSwitchChangeListener(new ToggleSwitch.OnToggleSwitchChangeListener() {
-
-            @Override
-            public void onToggleSwitchChangeListener(int position, boolean isChecked) {
-                sharable_b = position;
-            }
-        });
-        toggleSwitch_Z.setOnToggleSwitchChangeListener(new ToggleSwitch.OnToggleSwitchChangeListener() {
-
-            @Override
-            public void onToggleSwitchChangeListener(int position, boolean isChecked) {
-                sharable_z = position;
-            }
-        });
-        toggleSwitch_M.setOnToggleSwitchChangeListener(new ToggleSwitch.OnToggleSwitchChangeListener() {
-
-            @Override
-            public void onToggleSwitchChangeListener(int position, boolean isChecked) {
-                sharable_m = position;
-            }
-        });
 
         //Points
         btn_yes_sday_p.setOnClickListener(new View.OnClickListener() {
@@ -1153,7 +1041,6 @@ public class VoucherSetupCreate extends AppCompatActivity {
             public void onClick(View v) {
                 /*wed_status = "1";
                 btn_yes_wedday.setBackgroundResource(R.drawable.yes_select_selector);*/
-
                 if (isActiveWednesday_p) {
                     btn_yes_wedday_p.setBackgroundColor(getResources().getColor(R.color.dark_grey));
                     btn_yes_wedday_p.setTextColor(getResources().getColor(R.color.black));
@@ -1549,22 +1436,25 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                 } else {
                                     start_date_p = year + "-" + (monthOfYear + 1) + "-" + dayOfMonth;
                                 }
-
                                 // editText_start_dt.setText(date_active);
                                 tv_start_date_P.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + start_date_p + "</u>  </font>"));
                             }
                         }, mYear, mMonth, mDay);
 
-                datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
-                datePickerDialog.getDatePicker().setSpinnersShown(true);
-                datePickerDialog.getDatePicker().setCalendarViewShown(false);
-                //datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
-                //c.add(Calendar.YEAR, +5);
-                c.add(Calendar.MONTH, +12);
-                Date dOneMonthAgo = c.getTime();
-                long oneMonthAgoMillis = dOneMonthAgo.getTime();
-                datePickerDialog.getDatePicker().setMaxDate(oneMonthAgoMillis);
-                datePickerDialog.show();
+                try {
+                    datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+                    datePickerDialog.getDatePicker().setSpinnersShown(true);
+                    datePickerDialog.getDatePicker().setCalendarViewShown(false);
+                    //datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
+                    //c.add(Calendar.YEAR, +5);
+                    c.add(Calendar.MONTH, +3);
+                    Date dOneMonthAgo = c.getTime();
+                    long oneMonthAgoMillis = dOneMonthAgo.getTime();
+                    datePickerDialog.getDatePicker().setMaxDate(oneMonthAgoMillis);
+                    datePickerDialog.show();
+                } catch (Exception e) {
+                    Log.d("cal_p_st_date--->", "onClick: " + e.getMessage());
+                }
 
             }
         });
@@ -1602,17 +1492,20 @@ public class VoucherSetupCreate extends AppCompatActivity {
                             }
                         }, mYear, mMonth, mDay);
 
-
-                datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
-                datePickerDialog.getDatePicker().setSpinnersShown(true);
-                datePickerDialog.getDatePicker().setCalendarViewShown(false);
-                //datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
-                //c.add(Calendar.YEAR, +5);
-                c.add(Calendar.MONTH, +12);
-                Date dOneMonthAgo = c.getTime();
-                long oneMonthAgoMillis = dOneMonthAgo.getTime();
-                datePickerDialog.getDatePicker().setMaxDate(oneMonthAgoMillis);
-                datePickerDialog.show();
+                try {
+                    datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+                    datePickerDialog.getDatePicker().setSpinnersShown(true);
+                    datePickerDialog.getDatePicker().setCalendarViewShown(false);
+                    //datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
+                    //c.add(Calendar.YEAR, +5);
+                    c.add(Calendar.MONTH, +3);
+                    Date dOneMonthAgo = c.getTime();
+                    long oneMonthAgoMillis = dOneMonthAgo.getTime();
+                    datePickerDialog.getDatePicker().setMaxDate(oneMonthAgoMillis);
+                    datePickerDialog.show();
+                } catch (Exception e) {
+                    Log.d("calender_p_end_date--->", "onClick: " + e.getMessage());
+                }
 
             }
         });
@@ -1666,16 +1559,21 @@ public class VoucherSetupCreate extends AppCompatActivity {
                             }
                         }, mYear, mMonth, mDay);
 
-                datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
-                datePickerDialog.getDatePicker().setSpinnersShown(true);
-                datePickerDialog.getDatePicker().setCalendarViewShown(false);
-                //datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
-                //c.add(Calendar.YEAR, +5);
-                c.add(Calendar.MONTH, +12);
-                Date dOneMonthAgo = c.getTime();
-                long oneMonthAgoMillis = dOneMonthAgo.getTime();
-                datePickerDialog.getDatePicker().setMaxDate(oneMonthAgoMillis);
-                datePickerDialog.show();
+                try {
+                    datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+                    datePickerDialog.getDatePicker().setSpinnersShown(true);
+                    datePickerDialog.getDatePicker().setCalendarViewShown(false);
+                    //datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
+                    //c.add(Calendar.YEAR, +5);
+                    c.add(Calendar.MONTH, +3);
+                    Date dOneMonthAgo = c.getTime();
+                    long oneMonthAgoMillis = dOneMonthAgo.getTime();
+                    datePickerDialog.getDatePicker().setMaxDate(oneMonthAgoMillis);
+                    datePickerDialog.show();
+                } catch (Exception e) {
+                    Log.d("cal_b_start_date>", "onClick: " + e.getMessage());
+                }
+
 
             }
         });
@@ -1713,17 +1611,21 @@ public class VoucherSetupCreate extends AppCompatActivity {
                             }
                         }, mYear, mMonth, mDay);
 
+                try {
 
-                datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
-                datePickerDialog.getDatePicker().setSpinnersShown(true);
-                datePickerDialog.getDatePicker().setCalendarViewShown(false);
-                //datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
-                //c.add(Calendar.YEAR, +5);
-                c.add(Calendar.MONTH, +12);
-                Date dOneMonthAgo = c.getTime();
-                long oneMonthAgoMillis = dOneMonthAgo.getTime();
-                datePickerDialog.getDatePicker().setMaxDate(oneMonthAgoMillis);
-                datePickerDialog.show();
+                    datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+                    datePickerDialog.getDatePicker().setSpinnersShown(true);
+                    datePickerDialog.getDatePicker().setCalendarViewShown(false);
+                    //datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
+                    //c.add(Calendar.YEAR, +5);
+                    c.add(Calendar.MONTH, +3);
+                    Date dOneMonthAgo = c.getTime();
+                    long oneMonthAgoMillis = dOneMonthAgo.getTime();
+                    datePickerDialog.getDatePicker().setMaxDate(oneMonthAgoMillis);
+                    datePickerDialog.show();
+                } catch (Exception e) {
+                    Log.d("cal_b_end_date>", "onClick: " + e.getMessage());
+                }
 
             }
         });
@@ -1777,16 +1679,20 @@ public class VoucherSetupCreate extends AppCompatActivity {
                             }
                         }, mYear, mMonth, mDay);
 
-                datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
-                datePickerDialog.getDatePicker().setSpinnersShown(true);
-                datePickerDialog.getDatePicker().setCalendarViewShown(false);
-                //datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
-                //c.add(Calendar.YEAR, +5);
-                c.add(Calendar.MONTH, +12);
-                Date dOneMonthAgo = c.getTime();
-                long oneMonthAgoMillis = dOneMonthAgo.getTime();
-                datePickerDialog.getDatePicker().setMaxDate(oneMonthAgoMillis);
-                datePickerDialog.show();
+                try {
+                    datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+                    datePickerDialog.getDatePicker().setSpinnersShown(true);
+                    datePickerDialog.getDatePicker().setCalendarViewShown(false);
+                    //datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
+                    //c.add(Calendar.YEAR, +5);
+                    c.add(Calendar.MONTH, +3);
+                    Date dOneMonthAgo = c.getTime();
+                    long oneMonthAgoMillis = dOneMonthAgo.getTime();
+                    datePickerDialog.getDatePicker().setMaxDate(oneMonthAgoMillis);
+                    datePickerDialog.show();
+                } catch (Exception e) {
+                    Log.d("cal_u_start_date>", "onClick: " + e.getMessage());
+                }
 
             }
         });
@@ -1825,17 +1731,20 @@ public class VoucherSetupCreate extends AppCompatActivity {
                             }
                         }, mYear, mMonth, mDay);
 
-
-                datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
-                datePickerDialog.getDatePicker().setSpinnersShown(true);
-                datePickerDialog.getDatePicker().setCalendarViewShown(false);
-                //datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
-                //c.add(Calendar.YEAR, +5);
-                c.add(Calendar.MONTH, +12);
-                Date dOneMonthAgo = c.getTime();
-                long oneMonthAgoMillis = dOneMonthAgo.getTime();
-                datePickerDialog.getDatePicker().setMaxDate(oneMonthAgoMillis);
-                datePickerDialog.show();
+                try {
+                    datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+                    datePickerDialog.getDatePicker().setSpinnersShown(true);
+                    datePickerDialog.getDatePicker().setCalendarViewShown(false);
+                    //datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
+                    //c.add(Calendar.YEAR, +5);
+                    c.add(Calendar.MONTH, +3);
+                    Date dOneMonthAgo = c.getTime();
+                    long oneMonthAgoMillis = dOneMonthAgo.getTime();
+                    datePickerDialog.getDatePicker().setMaxDate(oneMonthAgoMillis);
+                    datePickerDialog.show();
+                } catch (Exception e) {
+                    Log.d("cal_u_end_date>", "onClick: " + e.getMessage());
+                }
 
             }
         });
@@ -1889,16 +1798,20 @@ public class VoucherSetupCreate extends AppCompatActivity {
                             }
                         }, mYear, mMonth, mDay);
 
-                datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
-                datePickerDialog.getDatePicker().setSpinnersShown(true);
-                datePickerDialog.getDatePicker().setCalendarViewShown(false);
-                //datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
-                //c.add(Calendar.YEAR, +5);
-                c.add(Calendar.MONTH, +12);
-                Date dOneMonthAgo = c.getTime();
-                long oneMonthAgoMillis = dOneMonthAgo.getTime();
-                datePickerDialog.getDatePicker().setMaxDate(oneMonthAgoMillis);
-                datePickerDialog.show();
+                try {
+                    datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+                    datePickerDialog.getDatePicker().setSpinnersShown(true);
+                    datePickerDialog.getDatePicker().setCalendarViewShown(false);
+                    //datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
+                    //c.add(Calendar.YEAR, +5);
+                    c.add(Calendar.MONTH, +12);
+                    Date dOneMonthAgo = c.getTime();
+                    long oneMonthAgoMillis = dOneMonthAgo.getTime();
+                    datePickerDialog.getDatePicker().setMaxDate(oneMonthAgoMillis);
+                    datePickerDialog.show();
+                } catch (Exception e) {
+                    Log.d("cal_z_start_date>", "onClick: " + e.getMessage());
+                }
 
             }
         });
@@ -1911,7 +1824,6 @@ public class VoucherSetupCreate extends AppCompatActivity {
                 mYear = c.get(Calendar.YEAR);
                 mMonth = c.get(Calendar.MONTH);
                 mDay = c.get(Calendar.DAY_OF_MONTH);
-
                 datePickerDialog = new DatePickerDialog(VoucherSetupCreate.this, android.R.style.Theme_Holo_Dialog_MinWidth,
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
@@ -1936,17 +1848,20 @@ public class VoucherSetupCreate extends AppCompatActivity {
                             }
                         }, mYear, mMonth, mDay);
 
-
-                datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
-                datePickerDialog.getDatePicker().setSpinnersShown(true);
-                datePickerDialog.getDatePicker().setCalendarViewShown(false);
-                //datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
-                //c.add(Calendar.YEAR, +5);
-                c.add(Calendar.MONTH, +12);
-                Date dOneMonthAgo = c.getTime();
-                long oneMonthAgoMillis = dOneMonthAgo.getTime();
-                datePickerDialog.getDatePicker().setMaxDate(oneMonthAgoMillis);
-                datePickerDialog.show();
+                try {
+                    datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+                    datePickerDialog.getDatePicker().setSpinnersShown(true);
+                    datePickerDialog.getDatePicker().setCalendarViewShown(false);
+                    //datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
+                    //c.add(Calendar.YEAR, +5);
+                    c.add(Calendar.MONTH, +12);
+                    Date dOneMonthAgo = c.getTime();
+                    long oneMonthAgoMillis = dOneMonthAgo.getTime();
+                    datePickerDialog.getDatePicker().setMaxDate(oneMonthAgoMillis);
+                    datePickerDialog.show();
+                } catch (Exception e) {
+                    Log.d("cal_z_end_date>", "onClick: " + e.getMessage());
+                }
 
             }
         });
@@ -1985,16 +1900,20 @@ public class VoucherSetupCreate extends AppCompatActivity {
                             }
                         }, mYear, mMonth, mDay);
 
+                try {
                 datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
                 datePickerDialog.getDatePicker().setSpinnersShown(true);
                 datePickerDialog.getDatePicker().setCalendarViewShown(false);
                 //datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
                 //c.add(Calendar.YEAR, +5);
-                c.add(Calendar.MONTH, +12);
+                c.add(Calendar.MONTH, +3);
                 Date dOneMonthAgo = c.getTime();
                 long oneMonthAgoMillis = dOneMonthAgo.getTime();
                 datePickerDialog.getDatePicker().setMaxDate(oneMonthAgoMillis);
                 datePickerDialog.show();
+                } catch (Exception e) {
+                    Log.d("cal_m_start_date>", "onClick: " + e.getMessage());
+                }
 
             }
         });
@@ -2031,21 +1950,22 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                 tv_end_date_M.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + end_date_m + "</u>  </font>"));
                             }
                         }, mYear, mMonth, mDay);
+                try {
                 datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
                 datePickerDialog.getDatePicker().setSpinnersShown(true);
                 datePickerDialog.getDatePicker().setCalendarViewShown(false);
                 //datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
                 //c.add(Calendar.YEAR, +5);
-                c.add(Calendar.MONTH, +12);
+                c.add(Calendar.MONTH, +3);
                 Date dOneMonthAgo = c.getTime();
                 long oneMonthAgoMillis = dOneMonthAgo.getTime();
                 datePickerDialog.getDatePicker().setMaxDate(oneMonthAgoMillis);
                 datePickerDialog.show();
-
+                } catch (Exception e) {
+                    Log.d("cal_m_end_date>", "onClick: " + e.getMessage());
+                }
             }
         });
-
-
     }
 
 
@@ -2210,14 +2130,14 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                     if (!TextUtils.isEmpty(start_time)) {
                                         if (!TextUtils.isEmpty(exp_time)) {
                                             if (!getActDays_p.equals("nnnnnnn")) {
-                                                try {
-                                                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+                                               // try {
+                                                   /* SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
                                                     String act_dt = start_date;
                                                     String exp_dt = exp_date;
                                                     Date date1 = sdf.parse(act_dt);
                                                     Date date2 = sdf.parse(exp_dt);
 
-                                                    if (date1.compareTo(date2) < 0) {
+                                                    if (date1.compareTo(date2) < 0) {*/
                                                         Log.i("app", "Date1 is before Date2");
                                                         SharedPreferences.Editor editor = sharedpreferences_p_voucher.edit();
                                                         editor.putString(REDEEM_POINT_P, points);
@@ -2255,13 +2175,13 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                                         finish();
                                                         overridePendingTransition(R.anim.swipe_in_right, R.anim.swipe_in_right);
 
-                                                    } else {
+                                                  /*  } else {
                                                         Toast.makeText(VoucherSetupCreate.this, "Please select valid active & expiry date", Toast.LENGTH_LONG).show();
                                                     }
 
                                                 } catch (ParseException e) {
                                                     e.printStackTrace();
-                                                }
+                                                }*/
 
                                             } else {
                                                 Toast.makeText(VoucherSetupCreate.this, "Please select active weekdays", Toast.LENGTH_LONG).show();
@@ -2333,14 +2253,14 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                             if (!TextUtils.isEmpty(exp_time)) {
                                                 if (!getActDays_b.equals("nnnnnnn")) {
                                                     //SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy hh:mm a");
-                                                    try {
-                                                        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+                                                   // try {
+                                                      /*  SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
                                                         String act_dt = start_date;
                                                         String exp_dt = exp_date;
                                                         Date date1 = sdf.parse(act_dt);
                                                         Date date2 = sdf.parse(exp_dt);
 
-                                                        if (date1.compareTo(date2) < 0) {
+                                                        if (date1.compareTo(date2) < 0) {*/
                                                             Log.i("app", "Date1 is before Date2");
 
                                                             SharedPreferences.Editor editor = sharedpreferences_b_voucher.edit();
@@ -2381,13 +2301,13 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                                             finish();
                                                             overridePendingTransition(R.anim.swipe_in_right, R.anim.swipe_in_right);
 
-                                                        } else {
+                                                       /* } else {
                                                             Toast.makeText(VoucherSetupCreate.this, "Please select valid active & expiry date", Toast.LENGTH_LONG).show();
                                                         }
 
                                                     } catch (ParseException e) {
                                                         e.printStackTrace();
-                                                    }
+                                                    }*/
 
                                                 } else {
                                                     Toast.makeText(VoucherSetupCreate.this, "Please select active weekdays", Toast.LENGTH_LONG).show();
@@ -2466,14 +2386,14 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                                 if (!getActDays_u.equals("nnnnnnn")) {
                                                     if (!TextUtils.isEmpty(selected_voucher_id)) {
                                                         //SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy hh:mm a");
-                                                        try {
-                                                            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+                                                        //try {
+                                                           /* SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
                                                             String act_dt = start_date;
                                                             String exp_dt = exp_date;
                                                             Date date1 = sdf.parse(act_dt);
                                                             Date date2 = sdf.parse(exp_dt);
 
-                                                            if (date1.compareTo(date2) < 0) {
+                                                            if (date1.compareTo(date2) < 0) {*/
                                                                 String assignedList = new Gson().toJson(assigned_voucher_list);
                                                                 String idList = new Gson().toJson(assigned_id_list);
 
@@ -2519,13 +2439,13 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                                                 startActivity(in);
                                                                 finish();
                                                                 overridePendingTransition(R.anim.swipe_in_right, R.anim.swipe_in_right);
-                                                            } else {
+                                                           /* } else {
                                                                 Toast.makeText(VoucherSetupCreate.this, "Please select valid active & expiry date", Toast.LENGTH_LONG).show();
                                                             }
 
                                                         } catch (ParseException e) {
                                                             e.printStackTrace();
-                                                        }
+                                                        }*/
                                                     } else {
                                                         //Toast.makeText(VoucherSetupCreate.this, "Please create assigned vouchers. Then try again!", Toast.LENGTH_LONG).show();
 
@@ -2605,14 +2525,14 @@ public class VoucherSetupCreate extends AppCompatActivity {
                         if (!TextUtils.isEmpty(start_date) && !start_date.equals("Select Activate Date")) {
                             if (!TextUtils.isEmpty(exp_date) && !exp_date.equals("Select Expiry Date")) {
                                 //SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy hh:mm a");
-                                try {
-                                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+                                //try {
+                                  /*  SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
                                     String act_dt = start_date;
                                     String exp_dt = exp_date;
                                     Date date1 = sdf.parse(act_dt);
                                     Date date2 = sdf.parse(exp_dt);
 
-                                    if (date1.compareTo(date2) < 0) {
+                                    if (date1.compareTo(date2) < 0) {*/
                                         Log.i("app", "Date1 is before Date2");
                                         SharedPreferences.Editor editor = sharedpreferences_z_voucher.edit();
                                         editor.putString(REDEEM_TITLE_Z, title);
@@ -2642,13 +2562,13 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                         finish();
                                         overridePendingTransition(R.anim.swipe_in_right, R.anim.swipe_in_right);
 
-                                    } else {
+                                  /*  } else {
                                         Toast.makeText(VoucherSetupCreate.this, "Please select valid active & expiry date", Toast.LENGTH_LONG).show();
                                     }
 
                                 } catch (ParseException e) {
                                     e.printStackTrace();
-                                }
+                                }*/
 
 
                             } else {
@@ -2706,14 +2626,13 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                             if (!TextUtils.isEmpty(start_date) && !start_date.equals("Select Activate Date")) {
                                                 if (!TextUtils.isEmpty(exp_date) && !exp_date.equals("Select Expiry Date")) {
                                                     //SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy hh:mm a");
-                                                    try {
-                                                        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+                                                   // try {
+                                                       /* SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
                                                         String act_dt = start_date;
                                                         String exp_dt = exp_date;
                                                         Date date1 = sdf.parse(act_dt);
                                                         Date date2 = sdf.parse(exp_dt);
-
-                                                        if (date1.compareTo(date2) < 0) {
+                                                        if (date1.compareTo(date2) < 0) {*/
                                                             Log.i("app", "Date1 is before Date2");
                                                             SharedPreferences.Editor editor = sharedpreferences_m_voucher.edit();
                                                             editor.putString(REDEEM_TITLE_M, title);
@@ -2727,6 +2646,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                                             editor.putString(REDEEM_BG_COLOR_M, bg_color);
                                                             editor.putString(REDEEM_MER_CB_REDEEM_ID_M, mer_cd_redeem_id);
                                                             editor.commit();
+
                                                             Intent in = new Intent(VoucherSetupCreate.this, VoucherSetupPreview.class);
                                                             in.putExtra("type_code", "1");
                                                             in.putExtra("redeem_type", "M");
@@ -2748,13 +2668,13 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                                             finish();
                                                             overridePendingTransition(R.anim.swipe_in_right, R.anim.swipe_in_right);
 
-                                                        } else {
+                                                    /*    } else {
                                                             Toast.makeText(VoucherSetupCreate.this, "Please select valid active & expiry date", Toast.LENGTH_LONG).show();
                                                         }
 
                                                     } catch (ParseException e) {
                                                         e.printStackTrace();
-                                                    }
+                                                    }*/
 
 
                                                 } else {
@@ -3093,18 +3013,15 @@ public class VoucherSetupCreate extends AppCompatActivity {
                 if (intermediateAlertDialog != null) {
                     intermediateAlertDialog.dismissAlertDialog();
                 }
+
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        alertDialogYesNo = new AlertDialogYesNo(VoucherSetupCreate.this, "", "Something went wrong. Please Try Again!", "YES", "OK") {
+                        AlertDialogFailure alertDialogFailure = new AlertDialogFailure(VoucherSetupCreate.this, " Please try again later!", "OK", "Something went wrong") {
                             @Override
-                            public void onOKButtonClick() {
-
-                            }
-
-                            @Override
-                            public void onCancelButtonClick() {
-
+                            public void onButtonClick() {
+                                startActivity(new Intent(VoucherSetupCreate.this, VoucherSetupHome.class));
+                                finish();
                             }
                         };
                     }
@@ -3114,7 +3031,6 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
             @Override
             public void onSuccess(RedeemVoucherListResponse result, int statusCode, Map<String, List<String>> responseHeaders) {
-
                 Log.d("VoucherList---", "onSuccess: " + result.getStatusCode() + " , " + statusCode);
                 if (intermediateAlertDialog != null) {
                     intermediateAlertDialog.dismissAlertDialog();
@@ -3140,8 +3056,13 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                 textView_no_assigned_vouchers.setVisibility(View.GONE);
                                 spinner_assg_voucher.setVisibility(View.VISIBLE);
 
-                                ArrayAdapter a = new ArrayAdapter(VoucherSetupCreate.this, android.R.layout.simple_spinner_item, assigned_voucher_list);
+                             /*   ArrayAdapter a = new ArrayAdapter(VoucherSetupCreate.this, android.R.layout.simple_spinner_item, assigned_voucher_list);
                                 a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                spinner_assg_voucher.setAdapter(a);
+                                spinner_assg_voucher.setPrompt("Select Assigned Voucher");*/
+
+                                AssignedSpinnerAdapter a = new AssignedSpinnerAdapter(VoucherSetupCreate.this, assigned_voucher_list);
+                                //a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                                 spinner_assg_voucher.setAdapter(a);
                                 spinner_assg_voucher.setPrompt("Select Assigned Voucher");
 
@@ -3152,7 +3073,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                     Log.d("Assg_value---", "onCreate: " + assg_id_pos + "," + assg_value + "," + r_voucher_id);
                                     if (assg_value != null) {
                                         selected_voucher_id = r_voucher_id;
-                                        int spinnerPosition = a.getPosition(assg_value);
+                                        int spinnerPosition = assigned_voucher_list.indexOf(assg_value);
                                         spinner_assg_voucher.setSelection(spinnerPosition);
                                         a.notifyDataSetChanged();
                                     }
@@ -3205,7 +3126,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            AlertDialogFailure alertDialogFailure = new AlertDialogFailure(VoucherSetupCreate.this, "Something went wrong. Please try again!", "OK", "FAILED") {
+                            AlertDialogFailure alertDialogFailure = new AlertDialogFailure(VoucherSetupCreate.this, " Please try again later!", "OK", "Something went wrong") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(VoucherSetupCreate.this, VoucherSetupHome.class));
@@ -3232,27 +3153,26 @@ public class VoucherSetupCreate extends AppCompatActivity {
                     });
 
                 } else if (Integer.parseInt(result.getStatusCode()) == 510) {
+
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            alertDialogYesNo = new AlertDialogYesNo(VoucherSetupCreate.this, "", "Requested Voucher type is Invalid", "OK", "OK") {
+                            AlertDialogFailure alertDialogFailure = new AlertDialogFailure(VoucherSetupCreate.this, "Requested Voucher type is Invalid", "OK", "FAILED") {
                                 @Override
-                                public void onOKButtonClick() {
-
-                                }
-
-                                @Override
-                                public void onCancelButtonClick() {
-
+                                public void onButtonClick() {
+                                    startActivity(new Intent(VoucherSetupCreate.this, VoucherSetupHome.class));
+                                    finish();
                                 }
                             };
                         }
                     });
+
+
                 } else {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            AlertDialogFailure alertDialogFailure = new AlertDialogFailure(VoucherSetupCreate.this, "Something went wrong. Please try again!", "OK", "FAILED") {
+                            AlertDialogFailure alertDialogFailure = new AlertDialogFailure(VoucherSetupCreate.this, " Please try again later!", "OK", "Something went wrong") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(VoucherSetupCreate.this, VoucherSetupHome.class));
@@ -3557,7 +3477,8 @@ public class VoucherSetupCreate extends AppCompatActivity {
                 if (intermediateAlertDialog != null) {
                     intermediateAlertDialog.dismissAlertDialog();
                 }
-                new AlertDialogFailure(this, "Please try again later", "OK", "Something went wrong") {
+                new AlertDialogFailure(this, "Please try again later!" +
+                        "", "OK", "Something went wrong") {
                     @Override
                     public void onButtonClick() {
                         startActivity(new Intent(VoucherSetupCreate.this, Homenew.class));

@@ -107,7 +107,7 @@ public class getCampaignlistAdapter extends RecyclerView.Adapter<getCampaignlist
                 campaignId = campaignLst.getCampaignid();
 
                 if (isChecked) {
-                    new AlertDialogYesNo(mCtx, "Confirmation", "Are you sure want activate Campaign?", "No", "Yes") {
+                    new AlertDialogYesNo(mCtx, "Confirmation", "Are you sure want activate Campaign?", "YES", "NO") {
                         @Override
                         public void onOKButtonClick() {
                             intermediateAlertDialog = new IntermediateAlertDialog(mCtx);
@@ -122,7 +122,7 @@ public class getCampaignlistAdapter extends RecyclerView.Adapter<getCampaignlist
                     };
 
                 } else {
-                    new AlertDialogYesNo(mCtx, "Confirmation", "Are you sure want to Deactivate campaign?", "No", "Yes") {
+                    new AlertDialogYesNo(mCtx, "Confirmation", "Are you sure want to Deactivate campaign?", "YES", "NO") {
 
                         @Override
                         public void onOKButtonClick() {

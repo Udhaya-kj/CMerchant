@@ -33,6 +33,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    style="@style/headerTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -69,6 +70,7 @@
                             android:padding="7dp">
 
                             <TextView
+                                style="@style/headerTextStyle"
                                 android:textColor="@color/matt_black"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -78,6 +80,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
+                                style="@style/subHeaderTextStyle"
                                 android:textColor="@color/grey_d"
                                 android:id="@+id/text_desc_p"
                                 android:layout_width="match_parent"
@@ -114,6 +117,7 @@
                             android:padding="7dp">
 
                             <TextView
+                                style="@style/headerTextStyle"
                                 android:textColor="@color/matt_black"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -123,6 +127,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
+                                style="@style/subHeaderTextStyle"
                                 android:textColor="@color/grey_d"
                                 android:id="@+id/text_desc_m"
                                 android:layout_width="match_parent"
@@ -158,6 +163,7 @@
                             android:padding="7dp">
 
                             <TextView
+                                style="@style/headerTextStyle"
                                 android:textColor="@color/matt_black"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -167,6 +173,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
+                                style="@style/subHeaderTextStyle"
                                 android:textColor="@color/grey_d"
                                 android:id="@+id/text_desc_z"
                                 android:layout_width="match_parent"
@@ -203,6 +210,7 @@
                             android:padding="7dp">
 
                             <TextView
+                                style="@style/headerTextStyle"
                                 android:textColor="@color/matt_black"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -212,6 +220,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
+                                style="@style/subHeaderTextStyle"
                                 android:textColor="@color/grey_d"
                                 android:id="@+id/text_desc_u"
                                 android:layout_width="match_parent"
@@ -249,6 +258,7 @@
                             android:padding="7dp">
 
                             <TextView
+                                style="@style/headerTextStyle"
                                 android:textColor="@color/matt_black"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -258,6 +268,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
+                                style="@style/subHeaderTextStyle"
                                 android:textColor="@color/grey_d"
                                 android:id="@+id/text_desc_b"
                                 android:layout_width="match_parent"

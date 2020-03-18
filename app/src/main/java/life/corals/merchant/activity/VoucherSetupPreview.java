@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.CompositePageTransformer;
 import androidx.viewpager2.widget.MarginPageTransformer;
@@ -25,6 +27,8 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.gson.Gson;
+
+import org.apache.commons.lang3.StringUtils;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -61,14 +65,14 @@ public class VoucherSetupPreview extends AppCompatActivity {
     private MaterialButton ok_btn, cancel_btn, perf_btn, edit_btn;
     TextView textView_settings1, textView_settings2, text_ask_create_update;
     private List<SetUpRedemptionList> voucher_list;
-    String type_code, back_press_code, voucher_type, title, desc, lead_title, lead_desc,pur_amount, s_date, e_date, bg_color, st_time, e_time, getActDays, points, sharable, wallet, voucher_count, voucher_id, mer_cb_redeem_id, terms_conditions,ref_reward_points;
+    String type_code, back_press_code, voucher_type, title, desc, lead_title, lead_desc, pur_amount, s_date, e_date, bg_color, st_time, e_time, getActDays, points, sharable, wallet, voucher_count, voucher_id, mer_cb_redeem_id, terms_conditions, ref_reward_points;
     int daysCount = 0;
     private SharedPreferences sharedpreferences_add_redeem;
     public static final String MyPREFERENCES_ADD_VOUCHER = "MyPREFERENCES_ADD_VOUCHER";
     public static final String ADD_VOUCHER = "ADD_VOUCHER";
     private Gson gson;
     private ArrayList<String> daysList;
-    private LinearLayout layout_settings2;
+    private LinearLayout layout_settings2, layout_settings3;
     ImageView imageView_delete;
     private String[] colors;
     private float initialX;
@@ -84,6 +88,12 @@ public class VoucherSetupPreview extends AppCompatActivity {
     String create_update_code = null;
     private AppTimeOutManagerUtil appTimeOutManagerUtil;
     private SharedPreferences preferences;
+    LinearLayout layout_preview_edit;
+    public TextView tv_title, tv_desc, tv_val;
+    CardView cardView;
+    View view;
+    LinearLayout layout_share;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -121,10 +131,19 @@ public class VoucherSetupPreview extends AppCompatActivity {
         colors_list.add("#12C06A");
         colors_list.add("#FF4081");
 
+        layout_share = (LinearLayout) findViewById(R.id.layout_share);
+        view = (View) findViewById(R.id.view_top);
+        tv_title = (TextView) findViewById(R.id.text_title);
+        tv_desc = (TextView) findViewById(R.id.text_desc);
+        tv_val = (TextView) findViewById(R.id.text_terms_conditions);
+        cardView = (CardView) findViewById(R.id.cardview_voucher);
+
+        layout_preview_edit = findViewById(R.id.layout_voucher_preview);
         layout_et_del = (LinearLayout) findViewById(R.id.layout_edit_delete);
         layout_create = (LinearLayout) findViewById(R.id.layout_create_voucher);
         scrollView_voucher = (ScrollView) findViewById(R.id.voucher_scrollview);
-        layout_settings2 = (LinearLayout) findViewById(R.id.layout_settings2);
+        layout_settings2 = findViewById(R.id.layout_settings2);
+        layout_settings3 = (LinearLayout) findViewById(R.id.layout_settings3);
         cancel_btn = (MaterialButton) findViewById(R.id.cancel_button);
         ok_btn = (MaterialButton) findViewById(R.id.ok_button);
         perf_btn = (MaterialButton) findViewById(R.id.view_perf_button);
@@ -171,18 +190,21 @@ public class VoucherSetupPreview extends AppCompatActivity {
             Log.d("Preview----", "preview: " + voucher_type + "," + type_code + "," + create_update_code);
             if (create_update_code.equals("0")) {
                 text_ask_create_update.setText("Do you want to update this voucher?");
+                layout_settings3.setVisibility(View.GONE);
             }
             if (type_code.equals("1")) {
                 Log.d("Preview----", "code: 1");
                 layout_et_del.setVisibility(View.GONE);
                 imageView_delete.setVisibility(View.GONE);
                 layout_create.setVisibility(View.VISIBLE);
-                viewPager2.dispatchSetActivated(true);
+                viewPager2.setVisibility(View.VISIBLE);
+                layout_preview_edit.setVisibility(View.GONE);
             } else if (type_code.equals("0")) {
                 layout_et_del.setVisibility(View.VISIBLE);
                 imageView_delete.setVisibility(View.VISIBLE);
                 layout_create.setVisibility(View.GONE);
-                viewPager2.dispatchSetActivated(false);
+                viewPager2.setVisibility(View.GONE);
+                layout_preview_edit.setVisibility(View.VISIBLE);
             }
             if (voucher_type.equals("P")) {
                 title = getIntent().getStringExtra("title");
@@ -201,7 +223,9 @@ public class VoucherSetupPreview extends AppCompatActivity {
                 if (!TextUtils.isEmpty(sharable) && sharable.equals("1")) {
                     isSharable = true;
                 }
-                voucherReview(title, desc, s_date, e_date, st_time, e_time, sharable, getActDays, terms_conditions);
+
+                voucherReview(title, desc, s_date, e_date, st_time, e_time, sharable, getActDays, terms_conditions, "P", points, bg_color);
+
                 Log.d("Preview----", "type 1=p: " + title + "," + desc + "," + s_date + "," + e_date + "," + st_time + "," + e_time + "," + sharable + "," + getActDays + "," + mer_cb_redeem_id + "," + isActive + "," + terms_conditions);
             } else if (voucher_type.equals("B")) {
                 title = getIntent().getStringExtra("title");
@@ -221,7 +245,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                 if (!TextUtils.isEmpty(sharable) && sharable.equals("1")) {
                     isSharable = true;
                 }
-                voucherReview(title, desc, s_date, e_date, st_time, e_time, sharable, getActDays, terms_conditions);
+                voucherReview(title, desc, s_date, e_date, st_time, e_time, sharable, getActDays, terms_conditions, "B", points, bg_color);
                 Log.d("Preview----", "type 1=b: " + title + "," + desc + "," + s_date + "," + e_date + "," + st_time + "," + e_time + "," + sharable + "," + getActDays + "," + mer_cb_redeem_id + "," + isActive + "," + terms_conditions);
 
             } else if (voucher_type.equals("U")) {
@@ -240,7 +264,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                 mer_cb_redeem_id = getIntent().getStringExtra("mer_cd_redeem_id");
                 isActive = getIntent().getBooleanExtra("isActive", true);
                 terms_conditions = getIntent().getStringExtra("terms_conditions");
-                voucherReview(title, desc, s_date, e_date, st_time, e_time, "", getActDays, terms_conditions);
+                voucherReview(title, desc, s_date, e_date, st_time, e_time, "", getActDays, terms_conditions, "U", points, bg_color);
                 Log.d("Preview----", "type 1=u: " + title + "," + desc + "," + s_date + "," + e_date + "," + st_time + "," + e_time + "," + sharable + "," + getActDays + "," + voucher_id + "," + mer_cb_redeem_id + "," + isActive + "," + terms_conditions);
 
             } else if (voucher_type.equals("Z")) {
@@ -256,8 +280,8 @@ public class VoucherSetupPreview extends AppCompatActivity {
                 if (!TextUtils.isEmpty(sharable) && sharable.equals("1")) {
                     isSharable = true;
                 }
-                voucherReview(title, desc, s_date, e_date, "", "", sharable, "", terms_conditions);
-                Log.d("Preview----", "type 1=z: " + title + "," + desc + "," + s_date + "," + e_date + "," + st_time + "," + e_time + "," + sharable + "," + getActDays + "," + mer_cb_redeem_id + "," + isActive + "," + terms_conditions);
+                voucherReview(title, desc, s_date, e_date, "", "", sharable, "", terms_conditions, "Z", "", bg_color);
+                Log.d("Preview----", "type 1=z: " + title + "," + desc + "," + s_date + "," + e_date + "," + st_time + "," + e_time + "," + sharable + "," + getActDays + "," + mer_cb_redeem_id + "," + isActive + "," + terms_conditions + "," + points);
 
             } else if (voucher_type.equals("M")) {
 
@@ -276,8 +300,8 @@ public class VoucherSetupPreview extends AppCompatActivity {
                 if (!TextUtils.isEmpty(sharable) && sharable.equals("1")) {
                     isSharable = true;
                 }
-                voucherReview(title, desc, s_date, e_date, "", "", sharable, "", terms_conditions);
-                Log.d("Preview----", "type 1=m: " + title + "," + desc + "," + s_date + "," + e_date + "," + st_time + "," + e_time + "," + sharable + "," + getActDays + "," + lead_title + "," + lead_desc + "," + mer_cb_redeem_id + "," + isActive + "," + terms_conditions);
+                voucherReview(title, desc, s_date, e_date, "", "", sharable, "", terms_conditions, "M", points, bg_color);
+                Log.d("Preview----", "type 1=m: " + title + "," + desc + "," + s_date + "," + e_date + "," + st_time + "," + e_time + "," + sharable + "," + getActDays + "," + lead_title + "," + lead_desc + "," + mer_cb_redeem_id + "," + isActive + "," + terms_conditions + "," + points);
             }
         }
 
@@ -309,15 +333,14 @@ public class VoucherSetupPreview extends AppCompatActivity {
                     setUpRedemptionList.setRedeemActivedays(getActDays);
                     if (voucher_type.equals("U")) {
                         setUpRedemptionList.setAssignedVoucherId(voucher_id);
-                    }
-                    else {
+                    } else {
                         setUpRedemptionList.setAssignedVoucherId("0");
                     }
                     setUpRedemptionList.setMaxRedemptionAllowed("9999");
                     setUpRedemptionList.setIsCustSharable(isSharable);
                     setUpRedemptionList.setRedeemDepositAmt(wallet);
-                    setUpRedemptionList.setLeadTitle(lead_title);
-                    setUpRedemptionList.setLeadDescription(lead_desc);
+                    setUpRedemptionList.setLeadTitle(title);
+                    setUpRedemptionList.setLeadDescription(desc);
 
                     voucher_list.add(setUpRedemptionList);
                     SetUpVoucherList setUpVoucherList = new SetUpVoucherList();
@@ -337,7 +360,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            new AlertDialogFailure(VoucherSetupPreview.this, " Please Try Again!", "OK", "Something went wrong.") {
+                            new AlertDialogFailure(VoucherSetupPreview.this, " Please try again later!", "OK", "Something went wrong") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(VoucherSetupPreview.this, VoucherSetupHome.class));
@@ -440,7 +463,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
         });
     }
 
-    public void voucherReview(String title, String desc, String s_date, String e_date, String s_time, String e_time, String sharable, String weekdays, String t_conditions) {
+    public void voucherReview(String title, String desc, String s_date, String e_date, String s_time, String e_time, String sharable, String weekdays, String t_conditions, String v_type, String points, String v_bg_color) {
 
         String startDate_conv = null, endDate_conv = null;
         if (!TextUtils.isEmpty(s_date) && !TextUtils.isEmpty(e_date)) {
@@ -456,6 +479,11 @@ public class VoucherSetupPreview extends AppCompatActivity {
                 Log.d("Date--->", "" + e.getMessage());
             }
         }
+
+        tv_title.setText(title);
+        tv_desc.setText(desc);
+        tv_val.setText(t_conditions);
+        cardView.setCardBackgroundColor(Color.parseColor(v_bg_color));
 
         if (!TextUtils.isEmpty(weekdays)) {
             char get1 = weekdays.charAt(0);
@@ -515,7 +543,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
             for (int i = 0; i < daysList.size(); i++) {
                 if (i == 0) {
                     days = daysList.get(i);
-                }  else {
+                } else {
                     days += ", " + daysList.get(i);
                 }
 
@@ -526,16 +554,13 @@ public class VoucherSetupPreview extends AppCompatActivity {
             }
 
             if (daysCount == 7 && !TextUtils.isEmpty(s_time) && !TextUtils.isEmpty(e_time)) {
-
                 textView_settings1.setText("Voucher is validity between " + startDate_conv + " to " + endDate_conv);
                 textView_settings2.setText("Voucher will be displayed to customer on  all days and redeemable between " + s_time + " - " + e_time);
-
 
             } else if (daysCount != 7 && !TextUtils.isEmpty(s_time) && !TextUtils.isEmpty(e_time)) {
 
                 textView_settings1.setText("Voucher is validity between " + startDate_conv + " to " + endDate_conv);
                 textView_settings2.setText("Voucher will be displayed to customer on " + days + " and redeemable between " + s_time + " - " + e_time);
-
 
             } else if (TextUtils.isEmpty(String.valueOf(daysCount)) && TextUtils.isEmpty(s_time) && TextUtils.isEmpty(e_time)) {
 
@@ -546,13 +571,17 @@ public class VoucherSetupPreview extends AppCompatActivity {
         } else {
             textView_settings1.setText("Voucher is validity between " + startDate_conv + " to " + endDate_conv);
             layout_settings2.setVisibility(View.GONE);
-
         }
 
-
         for (int i = 0; i < 6; i++) {
-            title_list.add(title);
-            desc_list.add(desc);
+
+            if (v_type.equals("M")) {
+                title_list.add("Refer and earn " + points + " points. Your friend Offer: " + title);
+                desc_list.add("Share this voucher and earn " + points + " points when your friend redeems. Your referral offer is: " + desc);
+            } else {
+                title_list.add(title);
+                desc_list.add(desc);
+            }
             if (!TextUtils.isEmpty(t_conditions)) {
                 validity_list.add(t_conditions);
             } else {
@@ -561,39 +590,53 @@ public class VoucherSetupPreview extends AppCompatActivity {
             }
             sharable_list.add(sharable);
         }
+        if (StringUtils.isNotBlank(v_bg_color)) {
+            int bg_color_pos = colors_list.indexOf(v_bg_color);
+            Log.d("Color_Pos---->", "voucherReview: " + bg_color_pos + "," + bg_color + "," + title_list.size());
+            viewPager2.setAdapter(new ViewSlider_RecyclerAdapter(title_list, desc_list, validity_list, colors_list, sharable_list));
+            viewPager2.setCurrentItem(bg_color_pos);
+            viewPager2.setClipToPadding(false);
+            viewPager2.setClipChildren(false);
+            viewPager2.setOffscreenPageLimit(3);
+            viewPager2.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
+            CompositePageTransformer compositePageTransformer = new CompositePageTransformer();
+            compositePageTransformer.addTransformer(new MarginPageTransformer(10));
+            compositePageTransformer.addTransformer(new ViewPager2.PageTransformer() {
+                @Override
+                public void transformPage(@NonNull View page, float position) {
+                    float r = 1 - Math.abs(position);
+                    page.setScaleY(0.85f + r * 0.15f);
+                }
+            });
+            viewPager2.setPageTransformer(compositePageTransformer);
+            viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+                @Override
+                public void onPageSelected(final int position) {
+                    super.onPageSelected(position);
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            bg_color = colors_list.get(position);
+                        }
+                    });
 
-        int bg_color_pos = colors_list.indexOf(bg_color);
-        Log.d("Color_Pos---->", "voucherReview: " + bg_color_pos + "," + bg_color + "," + title_list.size());
-        viewPager2.setAdapter(new ViewSlider_RecyclerAdapter(title_list, desc_list, validity_list, colors_list, sharable_list));
-        viewPager2.setCurrentItem(bg_color_pos);
-        viewPager2.setClipToPadding(false);
-        viewPager2.setClipChildren(false);
-        viewPager2.setOffscreenPageLimit(3);
-        viewPager2.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
-        CompositePageTransformer compositePageTransformer = new CompositePageTransformer();
-        compositePageTransformer.addTransformer(new MarginPageTransformer(10));
-        compositePageTransformer.addTransformer(new ViewPager2.PageTransformer() {
-            @Override
-            public void transformPage(@NonNull View page, float position) {
-                float r = 1 - Math.abs(position);
-                page.setScaleY(0.85f + r * 0.15f);
-            }
-        });
-        viewPager2.setPageTransformer(compositePageTransformer);
-        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(final int position) {
-                super.onPageSelected(position);
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        bg_color = colors_list.get(position);
-                    }
-                });
-
-            }
-        });
-
+                }
+            });
+        } else {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    new AlertDialogFailure(VoucherSetupPreview.this, "Please try again later!", "OK", "Something went wrong") {
+                        @Override
+                        public void onButtonClick() {
+                            startActivity(new Intent(VoucherSetupPreview.this, VoucherSetupHome.class));
+                            finish();
+                            overridePendingTransition(R.anim.swipe_in_left, R.anim.swipe_in_left);
+                        }
+                    };
+                }
+            });
+        }
     }
 
     @Override
@@ -650,7 +693,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            new AlertDialogFailure(VoucherSetupPreview.this, "Something went wrong. Please Try Again!", "OK", "Failed") {
+                            new AlertDialogFailure(VoucherSetupPreview.this, ". Please try again later!", "OK", "Something went wrong") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(VoucherSetupPreview.this, VoucherSetupHome.class));
@@ -730,6 +773,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                             final View deleteDialogView = factory.inflate(R.layout.success_dialog, null);
                             final AlertDialog deleteDialog = new AlertDialog.Builder(VoucherSetupPreview.this).create();
                             deleteDialog.setView(deleteDialogView);
+                            deleteDialog.setCancelable(false);
                             TextView textView_title = (TextView) deleteDialogView.findViewById(R.id.tv_title);
                             textView_title.setText("Done!");
                             TextView textView = (TextView) deleteDialogView.findViewById(R.id.text_dialog);
@@ -754,7 +798,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            new AlertDialogFailure(VoucherSetupPreview.this, "Something went wrong. Please Try Again!", "OK", "Failed") {
+                            new AlertDialogFailure(VoucherSetupPreview.this, " Please try again later!", "OK", "Something went wrong") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(VoucherSetupPreview.this, VoucherSetupHome.class));
@@ -798,7 +842,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            new AlertDialogFailure(VoucherSetupPreview.this, "Voucher not found. Please Try Again!", "OK", "Failed") {
+                            new AlertDialogFailure(VoucherSetupPreview.this, " Please try again later!", "OK", "Voucher not found") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(VoucherSetupPreview.this, VoucherSetupHome.class));
@@ -813,7 +857,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            new AlertDialogFailure(VoucherSetupPreview.this, "Something went wrong. Please Try Again!", "OK", "Failed") {
+                            new AlertDialogFailure(VoucherSetupPreview.this, " Please try again later!", "OK", "Something went wrong") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(VoucherSetupPreview.this, VoucherSetupHome.class));
@@ -851,6 +895,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                                 TextView textView_title = (TextView) deleteDialogView.findViewById(R.id.tv_title);
                                 textView_title.setText("Done!");
                                 deleteDialog.setView(deleteDialogView);
+                                deleteDialog.setCancelable(false);
                                 deleteDialog.show();
 
                                 new Handler().postDelayed(new Runnable() {
@@ -884,7 +929,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            new AlertDialogFailure(VoucherSetupPreview.this, "Something went wrong. Please Try Again!", "", "Failed") {
+                            new AlertDialogFailure(VoucherSetupPreview.this, " Please try again later!", "", "Something went wrong") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(VoucherSetupPreview.this, VoucherSetupHome.class));
@@ -943,7 +988,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            new AlertDialogFailure(VoucherSetupPreview.this, "Something went wrong. Please Try Again!", "OK", "Failed") {
+                            new AlertDialogFailure(VoucherSetupPreview.this, " Please try again later!", "OK", "Something went wrong") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(VoucherSetupPreview.this, VoucherSetupHome.class));
@@ -1030,6 +1075,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                             TextView textView_delete = (TextView) deleteDialogView.findViewById(R.id.text_dialog);
                             textView_delete.setText("Voucher updated successfully");
                             deleteDialog.setView(deleteDialogView);
+                            deleteDialog.setCancelable(false);
                             deleteDialog.show();
 
                             new Handler().postDelayed(new Runnable() {
@@ -1051,7 +1097,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            new AlertDialogFailure(VoucherSetupPreview.this, "Something went wrong. Please Try Again!", "OK", "Failed") {
+                            new AlertDialogFailure(VoucherSetupPreview.this, " Please try again later!", "OK", "Something went wrong") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(VoucherSetupPreview.this, VoucherSetupHome.class));
@@ -1128,8 +1174,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
         setUpRedemptionList.setRedeemActivedays(getActDays);
         if (voucher_type.equals("U")) {
             setUpRedemptionList.setAssignedVoucherId(voucher_id);
-        }
-        else {
+        } else {
             setUpRedemptionList.setAssignedVoucherId("0");
         }
         setUpRedemptionList.setMaxRedemptionAllowed("9999");
@@ -1142,7 +1187,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
         voucher_list.add(setUpRedemptionList);
         SetUpVoucherList setUpVoucherList = new SetUpVoucherList();
         setUpVoucherList.setMerId(preferences.getString(MERCHANT_ID, ""));
-        setUpVoucherList.setMerDeviceId( preferences.getString(DEVICE_ID, ""));
+        setUpVoucherList.setMerDeviceId(preferences.getString(DEVICE_ID, ""));
         setUpVoucherList.setVoucherList(voucher_list);
         setUpVoucherList.setRequestCode("U");
 

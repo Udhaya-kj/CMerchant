@@ -415,6 +415,7 @@ public class AwardCashBackOne extends BaseFragment {
                 Objects.requireNonNull(getActivity()).runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+
                         if (statusCode == 200) {
                             if (result != null) {
                                 intermediateAlertDialog.dismissAlertDialog();

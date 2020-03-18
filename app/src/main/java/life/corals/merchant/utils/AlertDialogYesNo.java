@@ -17,8 +17,8 @@ import java.util.Objects;
 import life.corals.merchant.R;
 
 public abstract class AlertDialogYesNo {
-    protected AlertDialogYesNo(Context mcntx, String title,String msg,String btn1,String btn2) {
-        AlertDialog(mcntx,title,msg,btn1,btn2);
+    protected AlertDialogYesNo(Context mcntx, String title,String msg,String okbtn1,String cancelbtn2) {
+        AlertDialog(mcntx,title,msg,okbtn1,cancelbtn2);
     }
 
     private void AlertDialog(Context mcntx,String title,String msg,String btn1,String btn2) {

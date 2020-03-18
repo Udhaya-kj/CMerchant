@@ -6,18 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
 import java.util.Objects;
-
 import life.corals.merchant.R;
 import life.corals.merchant.utils.AlertDialogFailure;
-
 import static life.corals.merchant.utils.Constants.INTENT_TEMP_CODE;
 
 
@@ -39,7 +35,6 @@ public class TermsAndConditions extends BaseFragment {
                 activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
                 activity.getSupportActionBar().setHomeAsUpIndicator(getActivity().getResources().getDrawable(R.drawable.ic_left_arrow_white));
                 toolbar.setTitle(getResources().getString(R.string.terms_conditions_title));
-
                 toolbar.setNavigationOnClickListener(v -> onBackPressed());
             }
         }
