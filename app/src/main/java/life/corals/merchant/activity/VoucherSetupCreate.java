@@ -11,10 +11,13 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.Html;
 import android.text.InputFilter;
+import android.text.InputType;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -190,7 +193,6 @@ public class VoucherSetupCreate extends AppCompatActivity {
         });
 
         appTimeOutManagerUtil = new AppTimeOutManagerUtil(VoucherSetupCreate.this);
-
         LocalBroadcastManager.getInstance(this).registerReceiver(mMessageReceiver,
                 new IntentFilter("custom-message"));
         preferences = getSharedPreferences(MERCHANT_DETAILS_PREFERENCE, MODE_PRIVATE);
@@ -378,12 +380,26 @@ public class VoucherSetupCreate extends AppCompatActivity {
         editText_title_lead_M.addTextChangedListener(textWatcher_lead_title_m);
         editText_desc_lead_M.addTextChangedListener(textWatcher_lead_desc_m);
 
+        editText_desc_P.setImeOptions(EditorInfo.IME_ACTION_NEXT);
+        editText_desc_P.setRawInputType(InputType.TYPE_CLASS_TEXT);
+
+        editText_desc_B.setImeOptions(EditorInfo.IME_ACTION_NEXT);
+        editText_desc_B.setRawInputType(InputType.TYPE_CLASS_TEXT);
+
+        editText_desc_U.setImeOptions(EditorInfo.IME_ACTION_NEXT);
+        editText_desc_U.setRawInputType(InputType.TYPE_CLASS_TEXT);
+
+        editText_desc_Z.setImeOptions(EditorInfo.IME_ACTION_NEXT);
+        editText_desc_Z.setRawInputType(InputType.TYPE_CLASS_TEXT);
+
+        editText_desc_M.setImeOptions(EditorInfo.IME_ACTION_NEXT);
+        editText_desc_M.setRawInputType(InputType.TYPE_CLASS_TEXT);
         //shatable p
         tv_share_yes_p.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tv_share_yes_p.setTextColor(getResources().getColor(R.color.white));
-                tv_share_no_p.setTextColor(getResources().getColor(R.color.black));
+              /*  tv_share_yes_p.setTextColor(getResources().getColor(R.color.white));
+                tv_share_no_p.setTextColor(getResources().getColor(R.color.black));*/
                 tv_share_yes_p.setBackgroundColor(getResources().getColor(R.color.green_hase));
                 tv_share_no_p.setBackgroundColor(getResources().getColor(R.color.red));
                 sharable_p1 = 1;
@@ -395,8 +411,8 @@ public class VoucherSetupCreate extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                tv_share_yes_p.setTextColor(getResources().getColor(R.color.black));
-                tv_share_no_p.setTextColor(getResources().getColor(R.color.white));
+                /*tv_share_yes_p.setTextColor(getResources().getColor(R.color.black));
+                tv_share_no_p.setTextColor(getResources().getColor(R.color.white));*/
                 tv_share_yes_p.setBackgroundColor(getResources().getColor(R.color.red));
                 tv_share_no_p.setBackgroundColor(getResources().getColor(R.color.green_hase));
                 sharable_p1 = 0;
@@ -409,8 +425,8 @@ public class VoucherSetupCreate extends AppCompatActivity {
         tv_share_yes_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tv_share_yes_b.setTextColor(getResources().getColor(R.color.white));
-                tv_share_no_b.setTextColor(getResources().getColor(R.color.black));
+               /* tv_share_yes_b.setTextColor(getResources().getColor(R.color.white));
+                tv_share_no_b.setTextColor(getResources().getColor(R.color.black));*/
                 tv_share_yes_b.setBackgroundColor(getResources().getColor(R.color.green_hase));
                 tv_share_no_b.setBackgroundColor(getResources().getColor(R.color.red));
                 sharable_b1 = 1;
@@ -422,8 +438,8 @@ public class VoucherSetupCreate extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                tv_share_yes_b.setTextColor(getResources().getColor(R.color.black));
-                tv_share_no_b.setTextColor(getResources().getColor(R.color.white));
+                /*tv_share_yes_b.setTextColor(getResources().getColor(R.color.black));
+                tv_share_no_b.setTextColor(getResources().getColor(R.color.white));*/
                 tv_share_yes_b.setBackgroundColor(getResources().getColor(R.color.red));
                 tv_share_no_b.setBackgroundColor(getResources().getColor(R.color.green_hase));
                 sharable_b1 = 0;
@@ -437,8 +453,8 @@ public class VoucherSetupCreate extends AppCompatActivity {
         tv_share_yes_z.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tv_share_yes_z.setTextColor(getResources().getColor(R.color.white));
-                tv_share_no_z.setTextColor(getResources().getColor(R.color.black));
+             /*   tv_share_yes_z.setTextColor(getResources().getColor(R.color.white));
+                tv_share_no_z.setTextColor(getResources().getColor(R.color.black));*/
                 tv_share_yes_z.setBackgroundColor(getResources().getColor(R.color.green_hase));
                 tv_share_no_z.setBackgroundColor(getResources().getColor(R.color.red));
                 sharable_z1 = 1;
@@ -450,8 +466,8 @@ public class VoucherSetupCreate extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                tv_share_yes_z.setTextColor(getResources().getColor(R.color.black));
-                tv_share_no_z.setTextColor(getResources().getColor(R.color.white));
+                /*tv_share_yes_z.setTextColor(getResources().getColor(R.color.black));
+                tv_share_no_z.setTextColor(getResources().getColor(R.color.white));*/
                 tv_share_yes_z.setBackgroundColor(getResources().getColor(R.color.red));
                 tv_share_no_z.setBackgroundColor(getResources().getColor(R.color.green_hase));
                 sharable_z1 = 0;
@@ -464,8 +480,8 @@ public class VoucherSetupCreate extends AppCompatActivity {
         tv_share_yes_m.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tv_share_yes_m.setTextColor(getResources().getColor(R.color.white));
-                tv_share_no_m.setTextColor(getResources().getColor(R.color.black));
+                /*tv_share_yes_m.setTextColor(getResources().getColor(R.color.white));
+                tv_share_no_m.setTextColor(getResources().getColor(R.color.black));*/
                 tv_share_yes_m.setBackgroundColor(getResources().getColor(R.color.green_hase));
                 tv_share_no_m.setBackgroundColor(getResources().getColor(R.color.red));
                 sharable_m1 = 1;
@@ -476,8 +492,8 @@ public class VoucherSetupCreate extends AppCompatActivity {
         tv_share_no_m.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tv_share_yes_m.setTextColor(getResources().getColor(R.color.black));
-                tv_share_no_m.setTextColor(getResources().getColor(R.color.white));
+                /*tv_share_yes_m.setTextColor(getResources().getColor(R.color.black));
+                tv_share_no_m.setTextColor(getResources().getColor(R.color.white));*/
                 tv_share_yes_m.setBackgroundColor(getResources().getColor(R.color.red));
                 tv_share_no_m.setBackgroundColor(getResources().getColor(R.color.green_hase));
                 sharable_m1 = 0;
@@ -496,7 +512,6 @@ public class VoucherSetupCreate extends AppCompatActivity {
             if (redeem_id.equals("2")) {
                 if (redeem_type.equals("P")) {
                     //setProductVoucher();
-
                     String r_title = sharedpreferences_p_voucher.getString(REDEEM_TITLE_P, "");
                     String r_desc = sharedpreferences_p_voucher.getString(REDEEM_DESCRIPTION_P, "");
                     String r_point = sharedpreferences_p_voucher.getString(REDEEM_POINT_P, "");
@@ -527,16 +542,16 @@ public class VoucherSetupCreate extends AppCompatActivity {
 
                         if (!TextUtils.isEmpty(r_is_sharable) && r_is_sharable.equals("1")) {
                             // aSwitch_p.setChecked(true);
-                            tv_share_yes_p.setTextColor(getResources().getColor(R.color.white));
-                            tv_share_no_p.setTextColor(getResources().getColor(R.color.black));
+                          /*  tv_share_yes_p.setTextColor(getResources().getColor(R.color.white));
+                            tv_share_no_p.setTextColor(getResources().getColor(R.color.black));*/
                             tv_share_yes_p.setBackgroundColor(getResources().getColor(R.color.green_hase));
-                            tv_share_no_p.setBackgroundColor(getResources().getColor(R.color.grey));
+                            tv_share_no_p.setBackgroundColor(getResources().getColor(R.color.red));
                             sharable_p1 = 1;
                         } else {
                             // aSwitch_p.setChecked(false);
-                            tv_share_yes_p.setTextColor(getResources().getColor(R.color.black));
-                            tv_share_no_p.setTextColor(getResources().getColor(R.color.white));
-                            tv_share_yes_p.setBackgroundColor(getResources().getColor(R.color.grey));
+                          /*  tv_share_yes_p.setTextColor(getResources().getColor(R.color.black));
+                            tv_share_no_p.setTextColor(getResources().getColor(R.color.white));*/
+                            tv_share_yes_p.setBackgroundColor(getResources().getColor(R.color.red));
                             tv_share_no_p.setBackgroundColor(getResources().getColor(R.color.green_hase));
                             sharable_p1 = 0;
                         }
@@ -577,16 +592,16 @@ public class VoucherSetupCreate extends AppCompatActivity {
                         // toggleSwitch_B.setCheckedTogglePosition(Integer.parseInt(r_is_sharable));
                         if (!TextUtils.isEmpty(r_is_sharable) && r_is_sharable.equals("1")) {
                             // aSwitch_b.setChecked(true);
-                            tv_share_yes_b.setTextColor(getResources().getColor(R.color.white));
-                            tv_share_no_b.setTextColor(getResources().getColor(R.color.black));
+                            /*tv_share_yes_b.setTextColor(getResources().getColor(R.color.white));
+                            tv_share_no_b.setTextColor(getResources().getColor(R.color.black));*/
                             tv_share_yes_b.setBackgroundColor(getResources().getColor(R.color.green_hase));
-                            tv_share_no_b.setBackgroundColor(getResources().getColor(R.color.grey));
+                            tv_share_no_b.setBackgroundColor(getResources().getColor(R.color.red));
                             sharable_b1 = 1;
                         } else {
                             // aSwitch_b.setChecked(false);
-                            tv_share_yes_b.setTextColor(getResources().getColor(R.color.black));
-                            tv_share_no_b.setTextColor(getResources().getColor(R.color.white));
-                            tv_share_yes_b.setBackgroundColor(getResources().getColor(R.color.grey));
+                           /* tv_share_yes_b.setTextColor(getResources().getColor(R.color.black));
+                            tv_share_no_b.setTextColor(getResources().getColor(R.color.white));*/
+                            tv_share_yes_b.setBackgroundColor(getResources().getColor(R.color.red));
                             tv_share_no_b.setBackgroundColor(getResources().getColor(R.color.green_hase));
                             sharable_b1 = 0;
                         }
@@ -691,16 +706,16 @@ public class VoucherSetupCreate extends AppCompatActivity {
                         // toggleSwitch_Z.setCheckedTogglePosition(Integer.parseInt(r_is_sharable));
                         if (!TextUtils.isEmpty(r_is_sharable) && r_is_sharable.equals("1")) {
                             //aSwitch_z.setChecked(true);
-                            tv_share_yes_z.setTextColor(getResources().getColor(R.color.white));
-                            tv_share_no_z.setTextColor(getResources().getColor(R.color.black));
+                            /*tv_share_yes_z.setTextColor(getResources().getColor(R.color.white));
+                            tv_share_no_z.setTextColor(getResources().getColor(R.color.black));*/
                             tv_share_yes_z.setBackgroundColor(getResources().getColor(R.color.green_hase));
-                            tv_share_no_z.setBackgroundColor(getResources().getColor(R.color.grey));
+                            tv_share_no_z.setBackgroundColor(getResources().getColor(R.color.red));
                             sharable_z1 = 1;
                         } else {
                             // aSwitch_z.setChecked(false);
-                            tv_share_yes_z.setTextColor(getResources().getColor(R.color.black));
-                            tv_share_no_z.setTextColor(getResources().getColor(R.color.white));
-                            tv_share_yes_z.setBackgroundColor(getResources().getColor(R.color.grey));
+                        /*    tv_share_yes_z.setTextColor(getResources().getColor(R.color.black));
+                            tv_share_no_z.setTextColor(getResources().getColor(R.color.white));*/
+                            tv_share_yes_z.setBackgroundColor(getResources().getColor(R.color.red));
                             tv_share_no_z.setBackgroundColor(getResources().getColor(R.color.green_hase));
                             sharable_z1 = 0;
                         }
@@ -737,16 +752,16 @@ public class VoucherSetupCreate extends AppCompatActivity {
                         //toggleSwitch_M.setCheckedTogglePosition(Integer.parseInt(r_is_sharable));
                         if (!TextUtils.isEmpty(r_is_sharable) && r_is_sharable.equals("1")) {
                             //aSwitch_m.setChecked(true);
-                            tv_share_yes_m.setTextColor(getResources().getColor(R.color.white));
-                            tv_share_no_m.setTextColor(getResources().getColor(R.color.black));
+                            /*tv_share_yes_m.setTextColor(getResources().getColor(R.color.white));
+                            tv_share_no_m.setTextColor(getResources().getColor(R.color.black));*/
                             tv_share_yes_m.setBackgroundColor(getResources().getColor(R.color.green_hase));
-                            tv_share_no_m.setBackgroundColor(getResources().getColor(R.color.grey));
+                            tv_share_no_m.setBackgroundColor(getResources().getColor(R.color.red));
                             sharable_m1 = 1;
                         } else {
                             //aSwitch_m.setChecked(false);
-                            tv_share_yes_m.setTextColor(getResources().getColor(R.color.black));
-                            tv_share_no_m.setTextColor(getResources().getColor(R.color.white));
-                            tv_share_yes_m.setBackgroundColor(getResources().getColor(R.color.grey));
+                        /*    tv_share_yes_m.setTextColor(getResources().getColor(R.color.black));
+                            tv_share_no_m.setTextColor(getResources().getColor(R.color.white));*/
+                            tv_share_yes_m.setBackgroundColor(getResources().getColor(R.color.red));
                             tv_share_no_m.setBackgroundColor(getResources().getColor(R.color.green_hase));
                             sharable_m1 = 0;
                         }
@@ -785,7 +800,9 @@ public class VoucherSetupCreate extends AppCompatActivity {
                 if (redeem_type.equals("P")) {
                     linearLayout_P.setVisibility(View.VISIBLE);
                     editText_title_P.setText(title);
-                    editText_title_P.setSelection(title.length());
+                    if(title.length()!=0) {
+                        editText_title_P.setSelection(title.length());
+                    }
                     editText_desc_P.setText(desc);
                     editText_points_P.setText(points);
                     editText_points_P.setEnabled(false);
@@ -802,14 +819,14 @@ public class VoucherSetupCreate extends AppCompatActivity {
                        /* tv_share_yes_p.setTextColor(getResources().getColor(R.color.white));
                         tv_share_no_p.setTextColor(getResources().getColor(R.color.black));*/
                         tv_share_yes_p.setBackgroundColor(getResources().getColor(R.color.green_hase));
-                        tv_share_no_p.setBackgroundColor(getResources().getColor(R.color.grey));
+                        tv_share_no_p.setBackgroundColor(getResources().getColor(R.color.red));
                         sharable_p1 = 1;
                     } else {
                         // aSwitch_p.setChecked(false);
 
                        /* tv_share_yes_p.setTextColor(getResources().getColor(R.color.black));
                         tv_share_no_p.setTextColor(getResources().getColor(R.color.white));*/
-                        tv_share_yes_p.setBackgroundColor(getResources().getColor(R.color.grey));
+                        tv_share_yes_p.setBackgroundColor(getResources().getColor(R.color.red));
                         tv_share_no_p.setBackgroundColor(getResources().getColor(R.color.green_hase));
                         sharable_p1 = 0;
                     }
@@ -820,7 +837,9 @@ public class VoucherSetupCreate extends AppCompatActivity {
                 } else if (redeem_type.equals("B")) {
                     linearLayout_B.setVisibility(View.VISIBLE);
                     editText_title_B.setText(title);
-                    editText_title_B.setSelection(title.length());
+                    if(title.length()!=0) {
+                        editText_title_B.setSelection(title.length());
+                    }
                     editText_desc_B.setText(desc);
                     editText_points_B.setText(points);
                     editText_points_B.setEnabled(false);
@@ -839,14 +858,14 @@ public class VoucherSetupCreate extends AppCompatActivity {
                         /*tv_share_yes_b.setTextColor(getResources().getColor(R.color.white));
                         tv_share_no_b.setTextColor(getResources().getColor(R.color.black));*/
                         tv_share_yes_b.setBackgroundColor(getResources().getColor(R.color.green_hase));
-                        tv_share_no_b.setBackgroundColor(getResources().getColor(R.color.grey));
+                        tv_share_no_b.setBackgroundColor(getResources().getColor(R.color.red));
                         sharable_b1 = 1;
                     } else {
                         //aSwitch_b.setChecked(false);
 
                       /*  tv_share_yes_b.setTextColor(getResources().getColor(R.color.black));
                         tv_share_no_b.setTextColor(getResources().getColor(R.color.white));*/
-                        tv_share_yes_b.setBackgroundColor(getResources().getColor(R.color.grey));
+                        tv_share_yes_b.setBackgroundColor(getResources().getColor(R.color.red));
                         tv_share_no_b.setBackgroundColor(getResources().getColor(R.color.green_hase));
                         sharable_b1 = 0;
                     }
@@ -870,7 +889,9 @@ public class VoucherSetupCreate extends AppCompatActivity {
                     }
 
                     editText_title_U.setText(title);
-                    editText_title_U.setSelection(title.length());
+                    if(title.length()!=0) {
+                        editText_title_U.setSelection(title.length());
+                    }
                     editText_desc_U.setText(desc);
                     editText_vouchers_pur_amt_U.setText(pur_amount);
                     editText_vouchers_count_U.setText(assgn_vouher_count);
@@ -883,7 +904,9 @@ public class VoucherSetupCreate extends AppCompatActivity {
                 } else if (redeem_type.equals("Z")) {
                     linearLayout_Z.setVisibility(View.VISIBLE);
                     editText_title_Z.setText(title);
-                    editText_title_Z.setSelection(title.length());
+                    if(title.length()!=0) {
+                        editText_title_Z.setSelection(title.length());
+                    }
                     editText_desc_Z.setText(desc);
                     tv_start_date_Z.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + act_date + "</u>  </font>"));
                     tv_end_date_Z.setText(Html.fromHtml("<font color=#3B91CD>  <u>" + exp_date + "</u>  </font>"));
@@ -899,14 +922,14 @@ public class VoucherSetupCreate extends AppCompatActivity {
                       /*  tv_share_yes_z.setTextColor(getResources().getColor(R.color.white));
                         tv_share_no_z.setTextColor(getResources().getColor(R.color.black));*/
                         tv_share_yes_z.setBackgroundColor(getResources().getColor(R.color.green_hase));
-                        tv_share_no_z.setBackgroundColor(getResources().getColor(R.color.grey));
+                        tv_share_no_z.setBackgroundColor(getResources().getColor(R.color.red));
                         sharable_z1 = 1;
                     } else {
                         //aSwitch_z.setChecked(false);
 
                       /*  tv_share_yes_z.setTextColor(getResources().getColor(R.color.black));
                         tv_share_no_z.setTextColor(getResources().getColor(R.color.white));*/
-                        tv_share_yes_z.setBackgroundColor(getResources().getColor(R.color.grey));
+                        tv_share_yes_z.setBackgroundColor(getResources().getColor(R.color.red));
                         tv_share_no_z.setBackgroundColor(getResources().getColor(R.color.green_hase));
                         sharable_z1 = 0;
                     }
@@ -914,7 +937,9 @@ public class VoucherSetupCreate extends AppCompatActivity {
                 } else if (redeem_type.equals("M")) {
                     linearLayout_M.setVisibility(View.VISIBLE);
                     editText_title_M.setText(title);
-                    editText_title_M.setSelection(title.length());
+                    if(title.length()!=0) {
+                        editText_title_M.setSelection(title.length());
+                    }
                     editText_desc_M.setText(desc);
                     editText_title_lead_M.setText(lead_title);
                     editText_desc_lead_M.setText(lead_desc);
@@ -935,14 +960,14 @@ public class VoucherSetupCreate extends AppCompatActivity {
                       /*  tv_share_yes_m.setTextColor(getResources().getColor(R.color.white));
                         tv_share_no_m.setTextColor(getResources().getColor(R.color.black));*/
                         tv_share_yes_m.setBackgroundColor(getResources().getColor(R.color.green_hase));
-                        tv_share_no_m.setBackgroundColor(getResources().getColor(R.color.grey));
+                        tv_share_no_m.setBackgroundColor(getResources().getColor(R.color.red));
                         sharable_m1 = 1;
                     } else {
                         //aSwitch_m.setChecked(false);
 
                      /*   tv_share_yes_m.setTextColor(getResources().getColor(R.color.black));
                         tv_share_no_m.setTextColor(getResources().getColor(R.color.white));*/
-                        tv_share_yes_m.setBackgroundColor(getResources().getColor(R.color.grey));
+                        tv_share_yes_m.setBackgroundColor(getResources().getColor(R.color.red));
                         tv_share_no_m.setBackgroundColor(getResources().getColor(R.color.green_hase));
                         sharable_m1 = 0;
                     }
@@ -2118,7 +2143,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
         final String start_time = tv_start_time_P.getText().toString().trim();
         final String sharable = String.valueOf(sharable_p1);
         final String getActDays_p = getActDays_P();
-        Log.i("app---->", start_date + " , " + exp_date + "," + start_time + " , " + exp_time + " , " + getActDays_p + " , " + sharable);
+        Log.i("app---->", title+","+start_date + " , " + exp_date + "," + start_time + " , " + exp_time + " , " + getActDays_p + " , " + sharable);
         //&& Integer.parseInt(bonus) >= 1 && Integer.parseInt(bonus) <= 999999
         if (!TextUtils.isEmpty(title)) {
             if (title.length() >= 10) {
@@ -2423,7 +2448,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                                                 in.putExtra("pur_amount", pur_amt);
                                                                 in.putExtra("v_count", voucher_count);
                                                                 in.putExtra("v_id", selected_voucher_id);
-                                                                in.putExtra("points", "0");
+                                                               // in.putExtra("points", "0");
                                                                 in.putExtra("s_date", start_date);
                                                                 in.putExtra("e_date", exp_date);
                                                                 in.putExtra("s_time", start_time);
@@ -2618,10 +2643,10 @@ public class VoucherSetupCreate extends AppCompatActivity {
             if (title.length() >= 10) {
                 if (!TextUtils.isEmpty(desc)) {
                     if (desc.length() >= 15) {
-                        if (!TextUtils.isEmpty(lead_title)) {
+                  /*      if (!TextUtils.isEmpty(lead_title)) {
                             if (lead_title.length() >= 10) {
                                 if (!TextUtils.isEmpty(lead_desc)) {
-                                    if (lead_desc.length() >= 15) {
+                                    if (lead_desc.length() >= 15) {*/
                                         if (!TextUtils.isEmpty(points)) {
                                             if (!TextUtils.isEmpty(start_date) && !start_date.equals("Select Activate Date")) {
                                                 if (!TextUtils.isEmpty(exp_date) && !exp_date.equals("Select Expiry Date")) {
@@ -2687,7 +2712,8 @@ public class VoucherSetupCreate extends AppCompatActivity {
                                             editText_points_M.setError("Enter valid points");
                                             editText_points_M.requestFocus();
                                         }
-                                    } else {
+
+                             /*       } else {
                                         editText_desc_lead_M.setError("Minimum 15chars");
                                         editText_desc_lead_M.requestFocus();
                                     }
@@ -2702,7 +2728,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                         } else {
                             editText_title_lead_M.setError("Enter valid new customer title");
                             editText_title_lead_M.requestFocus();
-                        }
+                        }*/
                     } else {
                         editText_desc_U.setError("Minimum 15chars");
                         editText_desc_U.requestFocus();

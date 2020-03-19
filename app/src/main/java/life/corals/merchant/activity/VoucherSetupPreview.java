@@ -65,7 +65,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
     private MaterialButton ok_btn, cancel_btn, perf_btn, edit_btn;
     TextView textView_settings1, textView_settings2, text_ask_create_update;
     private List<SetUpRedemptionList> voucher_list;
-    String type_code, back_press_code, voucher_type, title, desc, lead_title, lead_desc, pur_amount, s_date, e_date, bg_color, st_time, e_time, getActDays, points, sharable, wallet, voucher_count, voucher_id, mer_cb_redeem_id, terms_conditions, ref_reward_points;
+    String type_code, back_press_code, voucher_type, actual_title, title, desc, lead_title, lead_desc, pur_amount, s_date, e_date, bg_color, st_time, e_time, getActDays, points, sharable, wallet, voucher_count, voucher_id, mer_cb_redeem_id, terms_conditions, ref_reward_points;
     int daysCount = 0;
     private SharedPreferences sharedpreferences_add_redeem;
     public static final String MyPREFERENCES_ADD_VOUCHER = "MyPREFERENCES_ADD_VOUCHER";
@@ -199,12 +199,16 @@ public class VoucherSetupPreview extends AppCompatActivity {
                 layout_create.setVisibility(View.VISIBLE);
                 viewPager2.setVisibility(View.VISIBLE);
                 layout_preview_edit.setVisibility(View.GONE);
+                layout_settings3.setVisibility(View.VISIBLE);
+
             } else if (type_code.equals("0")) {
                 layout_et_del.setVisibility(View.VISIBLE);
                 imageView_delete.setVisibility(View.VISIBLE);
                 layout_create.setVisibility(View.GONE);
                 viewPager2.setVisibility(View.GONE);
                 layout_preview_edit.setVisibility(View.VISIBLE);
+                layout_settings3.setVisibility(View.GONE);
+
             }
             if (voucher_type.equals("P")) {
                 title = getIntent().getStringExtra("title");
@@ -223,7 +227,6 @@ public class VoucherSetupPreview extends AppCompatActivity {
                 if (!TextUtils.isEmpty(sharable) && sharable.equals("1")) {
                     isSharable = true;
                 }
-
                 voucherReview(title, desc, s_date, e_date, st_time, e_time, sharable, getActDays, terms_conditions, "P", points, bg_color);
 
                 Log.d("Preview----", "type 1=p: " + title + "," + desc + "," + s_date + "," + e_date + "," + st_time + "," + e_time + "," + sharable + "," + getActDays + "," + mer_cb_redeem_id + "," + isActive + "," + terms_conditions);
@@ -300,7 +303,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                 if (!TextUtils.isEmpty(sharable) && sharable.equals("1")) {
                     isSharable = true;
                 }
-                voucherReview(title, desc, s_date, e_date, "", "", sharable, "", terms_conditions, "M", points, bg_color);
+                voucherReview(title, desc, s_date, e_date, "", "", sharable, "", terms_conditions, "M", ref_reward_points, bg_color);
                 Log.d("Preview----", "type 1=m: " + title + "," + desc + "," + s_date + "," + e_date + "," + st_time + "," + e_time + "," + sharable + "," + getActDays + "," + lead_title + "," + lead_desc + "," + mer_cb_redeem_id + "," + isActive + "," + terms_conditions + "," + points);
             }
         }
@@ -314,6 +317,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                     callUpdateAPI();
                 } else if (!TextUtils.isEmpty(create_update_code) && create_update_code.equals("1")) {
                     //create voucher
+                    intermediateAlertDialog = new IntermediateAlertDialog(VoucherSetupPreview.this);
                     SetUpRedemptionList setUpRedemptionList = new SetUpRedemptionList();
                     setUpRedemptionList.setRedeemTitle(title);
                     setUpRedemptionList.setRedeemDescription(desc);
@@ -445,7 +449,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                 in.putExtra("create_update_code", "0");
                 in.putExtra("terms_conditions", terms_conditions);
                 in.putExtra("ref_reward_points", ref_reward_points);
-                Log.d("Adapter---->", voucher_type + "," + title + "," + desc + "," + wallet + "," + points + " " + s_date + "," + st_time + " " + e_date + "," + e_time + "," + getActDays + "," + sharable + "," + bg_color + "," + voucher_count + "," + voucher_id);
+                Log.d("Adapter---->", actual_title + "," + voucher_type + "," + title + "," + desc + "," + wallet + "," + points + " " + s_date + "," + st_time + " " + e_date + "," + e_time + "," + getActDays + "," + sharable + "," + bg_color + "," + voucher_count + "," + voucher_id);
                 startActivity(in);
                 finish();
                 overridePendingTransition(R.anim.swipe_in_right, R.anim.swipe_in_right);
@@ -480,10 +484,26 @@ public class VoucherSetupPreview extends AppCompatActivity {
             }
         }
 
-        tv_title.setText(title);
-        tv_desc.setText(desc);
-        tv_val.setText(t_conditions);
-        cardView.setCardBackgroundColor(Color.parseColor(v_bg_color));
+        if (StringUtils.isNotBlank(title) && StringUtils.isNotBlank(desc) && StringUtils.isNotBlank(t_conditions) && StringUtils.isNotBlank(v_bg_color)) {
+            if (v_type.equals("M")) {
+
+                tv_title.setText("Refer and earn " + points + " points. Your friend Offer : " + "\""+title+"\"");
+                tv_desc.setText("Share this voucher and earn " + points + " points when your friend redeems. Your referral offer is : " + "\""+desc+"\"");
+                tv_val.setText(t_conditions);
+                cardView.setCardBackgroundColor(Color.parseColor(v_bg_color));
+
+            } else {
+
+                if (StringUtils.isNotBlank(points)) {
+                    tv_title.setText(title + " for " + points + " points");
+                } else {
+                    tv_title.setText(title);
+                }
+                tv_desc.setText(desc);
+                tv_val.setText(t_conditions);
+                cardView.setCardBackgroundColor(Color.parseColor(v_bg_color));
+            }
+        }
 
         if (!TextUtils.isEmpty(weekdays)) {
             char get1 = weekdays.charAt(0);
@@ -576,67 +596,57 @@ public class VoucherSetupPreview extends AppCompatActivity {
         for (int i = 0; i < 6; i++) {
 
             if (v_type.equals("M")) {
-                title_list.add("Refer and earn " + points + " points. Your friend Offer: " + title);
-                desc_list.add("Share this voucher and earn " + points + " points when your friend redeems. Your referral offer is: " + desc);
+                title_list.add("Refer and earn " + points + " points. Your friend Offer : "+"\""+title+"\"");
+                desc_list.add("Share this voucher and earn " + points + " points when your friend redeems. Your referral offer is : " +"\""+ desc+"\"");
             } else {
-                title_list.add(title);
+                if (StringUtils.isEmpty(points)) {
+                    title_list.add(title);
+                } else {
+                    title_list.add(title + " for " + points + " points");
+                }
                 desc_list.add(desc);
             }
-            if (!TextUtils.isEmpty(t_conditions)) {
-                validity_list.add(t_conditions);
-            } else {
-                validity_list.add("Validity Period: " + startDate_conv + " to " + endDate_conv + ". Applicable for one redemption per customer." +
-                        " Not valid with other offers. Merchant decision is final. Terms & conditions apply.");
-            }
+
+            validity_list.add("Validity Period: " + startDate_conv + " to " + endDate_conv + ". Applicable for one redemption only." +
+                    " Not valid with other offers. Merchant decision is final. Terms & conditions apply.");
+
             sharable_list.add(sharable);
         }
+        int bg_color_pos = 0;
         if (StringUtils.isNotBlank(v_bg_color)) {
-            int bg_color_pos = colors_list.indexOf(v_bg_color);
-            Log.d("Color_Pos---->", "voucherReview: " + bg_color_pos + "," + bg_color + "," + title_list.size());
-            viewPager2.setAdapter(new ViewSlider_RecyclerAdapter(title_list, desc_list, validity_list, colors_list, sharable_list));
-            viewPager2.setCurrentItem(bg_color_pos);
-            viewPager2.setClipToPadding(false);
-            viewPager2.setClipChildren(false);
-            viewPager2.setOffscreenPageLimit(3);
-            viewPager2.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
-            CompositePageTransformer compositePageTransformer = new CompositePageTransformer();
-            compositePageTransformer.addTransformer(new MarginPageTransformer(10));
-            compositePageTransformer.addTransformer(new ViewPager2.PageTransformer() {
-                @Override
-                public void transformPage(@NonNull View page, float position) {
-                    float r = 1 - Math.abs(position);
-                    page.setScaleY(0.85f + r * 0.15f);
-                }
-            });
-            viewPager2.setPageTransformer(compositePageTransformer);
-            viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-                @Override
-                public void onPageSelected(final int position) {
-                    super.onPageSelected(position);
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            bg_color = colors_list.get(position);
-                        }
-                    });
-
-                }
-            });
-        } else {
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    new AlertDialogFailure(VoucherSetupPreview.this, "Please try again later!", "OK", "Something went wrong") {
-                        @Override
-                        public void onButtonClick() {
-                            startActivity(new Intent(VoucherSetupPreview.this, VoucherSetupHome.class));
-                            finish();
-                            overridePendingTransition(R.anim.swipe_in_left, R.anim.swipe_in_left);
-                        }
-                    };
-                }
-            });
+            bg_color_pos = colors_list.indexOf(v_bg_color);
         }
+        Log.d("Color_Pos---->", "voucherReview: " + bg_color_pos + "," + bg_color + "," + title_list.size());
+        viewPager2.setAdapter(new ViewSlider_RecyclerAdapter(title_list, desc_list, validity_list, colors_list, sharable_list));
+        viewPager2.setCurrentItem(bg_color_pos);
+        viewPager2.setClipToPadding(false);
+        viewPager2.setClipChildren(false);
+        viewPager2.setOffscreenPageLimit(3);
+        viewPager2.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
+        CompositePageTransformer compositePageTransformer = new CompositePageTransformer();
+        compositePageTransformer.addTransformer(new MarginPageTransformer(10));
+        compositePageTransformer.addTransformer(new ViewPager2.PageTransformer() {
+            @Override
+            public void transformPage(@NonNull View page, float position) {
+                float r = 1 - Math.abs(position);
+                page.setScaleY(0.85f + r * 0.15f);
+            }
+        });
+        viewPager2.setPageTransformer(compositePageTransformer);
+        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(final int position) {
+                super.onPageSelected(position);
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        bg_color = colors_list.get(position);
+                    }
+                });
+
+            }
+        });
+
     }
 
     @Override
@@ -672,7 +682,9 @@ public class VoucherSetupPreview extends AppCompatActivity {
             @Override
             public void onFailure(final ApiException e, int statusCode, Map<String, List<String>> responseHeaders) {
                 Log.d("Failedddd--->", "Code : 1 " + e.toString() + "," + statusCode);
-
+                if (intermediateAlertDialog != null) {
+                    intermediateAlertDialog.dismissAlertDialog();
+                }
                 if (statusCode == 500) {
 
                     runOnUiThread(new Runnable() {
@@ -712,6 +724,9 @@ public class VoucherSetupPreview extends AppCompatActivity {
             @Override
             public void onSuccess(SetUpVoucherResponse result, int statusCode, Map<String, List<String>> responseHeaders) {
                 Log.d("Failed--->", "Code :" + result.getStatusCode() + "," + result);
+                if (intermediateAlertDialog != null) {
+                    intermediateAlertDialog.dismissAlertDialog();
+                }
                 if (Integer.parseInt(result.getStatusCode()) == 406) {
                     Log.d("Failed--->", "Code : 2");
 
@@ -728,7 +743,6 @@ public class VoucherSetupPreview extends AppCompatActivity {
                             };
                         }
                     });
-
 
                 } else if (Integer.parseInt(result.getStatusCode()) == 200) {
                     if (voucher_type.equals("P")) {

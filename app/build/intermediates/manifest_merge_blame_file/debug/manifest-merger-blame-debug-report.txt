@@ -88,466 +88,465 @@
 46-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:15:9-46
 47        android:supportsRtl="true"
 47-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:16:9-35
-48        android:testOnly="true"
-49        android:theme="@style/AppTheme" >
-49-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:17:9-40
-50        <activity
-50-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:19:9-20:68
-51            android:name="life.corals.merchant.activity.VoucherPerformanceActivity"
-51-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:19:19-70
-52            android:theme="@style/AppTheme.NoActionBar" />
-52-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:20:13-56
-53        <activity
-53-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:21:9-23:59
-54            android:name="life.corals.merchant.activity.VoucherSetupTypes"
-54-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:22:13-55
-55            android:theme="@style/AppTheme.NoActionBar" />
-55-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:23:13-56
-56        <activity
-56-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:24:9-26:59
-57            android:name="life.corals.merchant.activity.VoucherSetupPreview"
-57-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:25:13-57
-58            android:theme="@style/AppTheme.NoActionBar" />
-58-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:26:13-56
-59        <activity
-59-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:27:9-29:59
-60            android:name="life.corals.merchant.activity.VoucherSetupCreate"
-60-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:28:13-56
-61            android:theme="@style/AppTheme.NoActionBar" />
-61-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:29:13-56
-62        <activity
-62-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:30:9-32:59
-63            android:name="life.corals.merchant.activity.VoucherSetupHome"
-63-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:31:13-54
-64            android:theme="@style/AppTheme.NoActionBar" />
-64-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:32:13-56
-65        <activity
-65-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:33:9-35:59
-66            android:name="life.corals.merchant.activity.ShowQrActivity"
-66-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:34:13-52
-67            android:theme="@style/AppTheme.NoActionBar" />
-67-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:35:13-56
-68        <activity
-68-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:36:9-38:59
-69            android:name="life.corals.merchant.activity.QrActivity"
-69-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:37:13-48
-70            android:theme="@style/AppTheme.NoActionBar" />
-70-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:38:13-56
-71        <activity
-71-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:39:9-52:20
-72            android:name="life.corals.merchant.activity.SplashScreen"
-72-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:40:13-50
-73            android:theme="@style/AppTheme.SplashNoActionBar" >
-73-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:41:13-62
-74            <intent-filter>
-74-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:42:13-51:29
-75                <action android:name="android.intent.action.MAIN" />
-75-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:43:17-69
-75-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:43:25-66
-76
-77                <category android:name="android.intent.category.DEFAULT" />
-77-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:45:17-76
-77-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:45:27-73
-78
-79                <action android:name="android.intent.action.MAIN" />
-79-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:43:17-69
-79-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:43:25-66
-80                <action android:name="android.intent.action.VIEW" />
-80-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:48:17-69
-80-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:48:25-66
-81
-82                <category android:name="android.intent.category.LAUNCHER" />
-82-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:50:17-77
-82-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:50:27-74
-83            </intent-filter>
-84        </activity>
-85        <activity
-85-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:53:9-55:59
-86            android:name="life.corals.merchant.activity.Homenew"
-86-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:54:13-45
-87            android:theme="@style/AppTheme.NoActionBar" />
-87-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:55:13-56
-88        <activity
-88-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:56:9-58:59
-89            android:name="life.corals.merchant.activity.SendNotificationActivity"
-89-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:57:13-62
-90            android:theme="@style/AppTheme.NoActionBar" />
-90-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:58:13-56
-91        <activity
-91-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:59:9-61:59
-92            android:name="life.corals.merchant.activity.HistoryIssuePoints"
-92-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:60:13-56
-93            android:theme="@style/AppTheme.NoActionBar" />
-93-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:61:13-56
-94        <activity
-94-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:62:9-64:59
-95            android:name="life.corals.merchant.activity.AwardCashbackActivity"
-95-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:63:13-59
-96            android:theme="@style/AppTheme.NoActionBar" />
-96-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:64:13-56
-97        <activity
-97-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:65:9-67:59
-98            android:name="life.corals.merchant.activity.MyCustomers"
-98-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:66:13-49
-99            android:theme="@style/AppTheme.NoActionBar" />
-99-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:67:13-56
-100        <activity
-100-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:68:9-70:59
-101            android:name="life.corals.merchant.activity.IntroActivity"
-101-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:69:13-51
-102            android:theme="@style/AppTheme.NoActionBar" />
-102-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:70:13-56
-103        <activity
-103-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:71:9-73:59
-104            android:name="life.corals.merchant.activity.TermsandConditions"
-104-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:72:13-56
-105            android:theme="@style/AppTheme.NoActionBar" />
-105-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:73:13-56
-106        <activity
-106-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:74:9-76:59
-107            android:name="life.corals.merchant.activity.PrivacyPolicy"
-107-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:75:13-51
-108            android:theme="@style/AppTheme.NoActionBar" />
-108-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:76:13-56
-109        <activity
-109-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:77:9-79:59
-110            android:name="life.corals.merchant.activity.CashCampaigns"
-110-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:78:13-51
-111            android:theme="@style/AppTheme.NoActionBar" />
-111-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:79:13-56
-112        <activity
-112-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:80:9-82:59
-113            android:name="life.corals.merchant.activity.PerformanceActivity"
-113-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:81:13-57
-114            android:theme="@style/AppTheme.NoActionBar" />
-114-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:82:13-56
-115        <activity
-115-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:83:9-85:59
-116            android:name="life.corals.merchant.activity.PerformanceGraphHomePage"
-116-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:84:13-62
-117            android:theme="@style/AppTheme.NoActionBar" />
-117-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:85:13-56
-118        <activity
-118-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:86:9-88:59
-119            android:name="life.corals.merchant.activity.CashTopupScreenScanner"
-119-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:87:13-60
-120            android:theme="@style/AppTheme.NoActionBar" />
-120-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:88:13-56
-121        <activity
-121-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:89:9-91:59
-122            android:name="life.corals.merchant.activity.CashTopupScreenSuccess"
-122-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:90:13-60
-123            android:theme="@style/AppTheme.NoActionBar" />
-123-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:91:13-56
-124        <activity
-124-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:92:9-94:59
-125            android:name="life.corals.merchant.activity.ReceivePaymentScreenTwo"
-125-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:93:13-61
-126            android:theme="@style/AppTheme.NoActionBar" />
-126-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:94:13-56
-127        <activity
-127-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:95:9-98:64
-128            android:name="life.corals.merchant.activity.ReceivePaymentScreenOne"
-128-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:96:13-61
-129            android:theme="@style/AppTheme.NoActionBar"
-129-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:97:13-56
-130            android:windowSoftInputMode="stateAlwaysVisible" />
-130-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:98:13-61
-131        <activity
-131-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:99:9-101:59
-132            android:name="life.corals.merchant.activity.HistoryTopup"
-132-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:100:13-50
-133            android:theme="@style/AppTheme.NoActionBar" />
-133-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:101:13-56
-134        <activity
-134-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:102:9-104:59
-135            android:name="life.corals.merchant.activity.RedeeemPoints"
-135-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:103:13-51
-136            android:theme="@style/AppTheme.NoActionBar" />
-136-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:104:13-56
-137        <activity
-137-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:105:9-107:59
-138            android:name="life.corals.merchant.activity.HistoryHomePage"
-138-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:106:13-53
-139            android:theme="@style/AppTheme.NoActionBar" />
-139-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:107:13-56
-140        <activity
-140-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:108:9-110:59
-141            android:name="life.corals.merchant.activity.ViewNotificationActivity"
-141-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:109:13-62
-142            android:theme="@style/AppTheme.NoActionBar" />
-142-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:110:13-56
-143
-144        <service
-144-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:112:9-120:19
-145            android:name="life.corals.merchant.fcm.MyFirebaseMessagingService"
-145-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:113:13-59
-146            android:enabled="true"
-146-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:114:13-35
-147            android:exported="false" >
-147-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:115:13-37
-148            <intent-filter>
-148-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:116:13-119:29
-149                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-149-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:117:17-78
-149-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:117:25-75
-150                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-150-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:118:17-81
-150-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:118:25-78
-151            </intent-filter>
-152        </service>
-153
-154        <meta-data
-154-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:122:9-124:61
-155            android:name="com.google.firebase.messaging.default_notification_color"
-155-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:123:13-84
-156            android:resource="@android:color/transparent" />
-156-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:124:13-58
-157        <meta-data
-157-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:125:9-127:69
-158            android:name="com.google.android.gms.version"
-158-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:126:13-58
-159            android:value="@integer/google_play_services_version" />
-159-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:127:13-66
-160        <meta-data
-160-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:128:9-130:39
-161            android:name="com.google.android.gms.vision.DEPENDENCIES"
-161-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:129:13-70
-162            android:value="barcode" />
-162-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:130:13-36
-163        <meta-data
-163-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:131:9-133:58
-164            android:name="com.google.firebase.messaging.default_notification_icon"
-164-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:132:13-83
-165            android:resource="@drawable/ic_splash_new" />
-165-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:133:13-55
-166
-167        <provider
-168            android:name="androidx.core.content.FileProvider"
-168-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:136:13-62
-169            android:authorities="life.corals.merchant.provider"
-169-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:137:13-60
-170            android:exported="false"
-170-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:138:13-37
-171            android:grantUriPermissions="true" >
-171-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:139:13-47
-172            <meta-data
-172-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:140:13-142:58
-173                android:name="android.support.FILE_PROVIDER_PATHS"
-173-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:141:17-67
-174                android:resource="@xml/provider_paths" />
-174-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:142:17-55
-175        </provider>
-176
-177        <activity
-177-->[com.karumi:dexter:4.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\ecb6d2caf5769e8a877c60cfccdd01d6\jetified-dexter-4.2.0\AndroidManifest.xml:27:9-29:72
-178            android:name="com.karumi.dexter.DexterActivity"
-178-->[com.karumi:dexter:4.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\ecb6d2caf5769e8a877c60cfccdd01d6\jetified-dexter-4.2.0\AndroidManifest.xml:28:13-60
-179            android:theme="@style/Dexter.Internal.Theme.Transparent" />
-179-->[com.karumi:dexter:4.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\ecb6d2caf5769e8a877c60cfccdd01d6\jetified-dexter-4.2.0\AndroidManifest.xml:29:13-69
-180        <activity
-180-->[com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\de0f73072dbf321f94dc092ba85497a2\jetified-zxing-android-embedded-3.2.0\AndroidManifest.xml:46:9-52:63
-181            android:name="com.journeyapps.barcodescanner.CaptureActivity"
-181-->[com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\de0f73072dbf321f94dc092ba85497a2\jetified-zxing-android-embedded-3.2.0\AndroidManifest.xml:47:13-74
-182            android:clearTaskOnLaunch="true"
-182-->[com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\de0f73072dbf321f94dc092ba85497a2\jetified-zxing-android-embedded-3.2.0\AndroidManifest.xml:48:13-45
-183            android:screenOrientation="sensorLandscape"
-183-->[com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\de0f73072dbf321f94dc092ba85497a2\jetified-zxing-android-embedded-3.2.0\AndroidManifest.xml:49:13-56
-184            android:stateNotNeeded="true"
-184-->[com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\de0f73072dbf321f94dc092ba85497a2\jetified-zxing-android-embedded-3.2.0\AndroidManifest.xml:50:13-42
-185            android:theme="@style/zxing_CaptureTheme"
-185-->[com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\de0f73072dbf321f94dc092ba85497a2\jetified-zxing-android-embedded-3.2.0\AndroidManifest.xml:51:13-54
-186            android:windowSoftInputMode="stateAlwaysHidden" />
-186-->[com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\de0f73072dbf321f94dc092ba85497a2\jetified-zxing-android-embedded-3.2.0\AndroidManifest.xml:52:13-60
-187        <!--
-188             FirebaseMessagingService performs security checks at runtime,
-189             but set to not exported to explicitly avoid allowing another app to call it.
-190        -->
-191        <service
-191-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:28:9-34:19
-192            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-192-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:29:13-82
-193            android:exported="false" >
-193-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:30:13-37
-194            <intent-filter android:priority="-500" >
-194-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:31:13-33:29
-194-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:31:28-51
-195                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-195-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:117:17-78
-195-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:117:25-75
-196            </intent-filter>
-197        </service>
-198        <service
-198-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:35:9-41:19
-199            android:name="com.google.firebase.components.ComponentDiscoveryService"
-199-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:36:13-84
-200            android:directBootAware="true"
-200-->[com.google.firebase:firebase-common:19.3.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\f490f55074a73e601662d954401a0dd4\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
-201            android:exported="false" >
-201-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:37:13-37
-202            <meta-data
-202-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:38:13-40:85
-203                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-203-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:39:17-119
-204                android:value="com.google.firebase.components.ComponentRegistrar" />
-204-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:40:17-82
-205            <meta-data
-205-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\33ef527348a7d463dc81d5243cb56ca2\jetified-firebase-auth-19.2.0\AndroidManifest.xml:36:13-38:85
-206                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-206-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\33ef527348a7d463dc81d5243cb56ca2\jetified-firebase-auth-19.2.0\AndroidManifest.xml:37:17-109
-207                android:value="com.google.firebase.components.ComponentRegistrar" />
-207-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\33ef527348a7d463dc81d5243cb56ca2\jetified-firebase-auth-19.2.0\AndroidManifest.xml:38:17-82
-208            <meta-data
-208-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\2eea85f397e5d83a820a22b923f27f05\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:28:13-30:85
-209                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-209-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\2eea85f397e5d83a820a22b923f27f05\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:29:17-115
-210                android:value="com.google.firebase.components.ComponentRegistrar" />
-210-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\2eea85f397e5d83a820a22b923f27f05\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:30:17-82
-211            <meta-data
-211-->[com.google.android.gms:play-services-measurement-api:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\c62db534d25116e51a69637a8585cb08\jetified-play-services-measurement-api-17.2.3\AndroidManifest.xml:30:13-32:85
-212                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-212-->[com.google.android.gms:play-services-measurement-api:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\c62db534d25116e51a69637a8585cb08\jetified-play-services-measurement-api-17.2.3\AndroidManifest.xml:31:17-139
-213                android:value="com.google.firebase.components.ComponentRegistrar" />
-213-->[com.google.android.gms:play-services-measurement-api:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\c62db534d25116e51a69637a8585cb08\jetified-play-services-measurement-api-17.2.3\AndroidManifest.xml:32:17-82
-214            <meta-data
-214-->[com.google.firebase:firebase-iid:20.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b5bb10ba15d79df9d54222ee164addcc\jetified-firebase-iid-20.1.0\AndroidManifest.xml:32:13-34:85
-215                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
-215-->[com.google.firebase:firebase-iid:20.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b5bb10ba15d79df9d54222ee164addcc\jetified-firebase-iid-20.1.0\AndroidManifest.xml:33:17-96
-216                android:value="com.google.firebase.components.ComponentRegistrar" />
-216-->[com.google.firebase:firebase-iid:20.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b5bb10ba15d79df9d54222ee164addcc\jetified-firebase-iid-20.1.0\AndroidManifest.xml:34:17-82
-217            <meta-data
-217-->[com.google.firebase:firebase-installations:16.0.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\e33fa344e44f09af689e8648802f6c37\jetified-firebase-installations-16.0.0\AndroidManifest.xml:17:13-19:85
-218                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-218-->[com.google.firebase:firebase-installations:16.0.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\e33fa344e44f09af689e8648802f6c37\jetified-firebase-installations-16.0.0\AndroidManifest.xml:18:17-127
-219                android:value="com.google.firebase.components.ComponentRegistrar" />
-219-->[com.google.firebase:firebase-installations:16.0.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\e33fa344e44f09af689e8648802f6c37\jetified-firebase-installations-16.0.0\AndroidManifest.xml:19:17-82
-220        </service>
-221
-222        <activity
-222-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\33ef527348a7d463dc81d5243cb56ca2\jetified-firebase-auth-19.2.0\AndroidManifest.xml:24:9-31:50
-223            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
-223-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\33ef527348a7d463dc81d5243cb56ca2\jetified-firebase-auth-19.2.0\AndroidManifest.xml:25:13-85
-224            android:excludeFromRecents="true"
-224-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\33ef527348a7d463dc81d5243cb56ca2\jetified-firebase-auth-19.2.0\AndroidManifest.xml:26:13-46
-225            android:exported="true"
-225-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\33ef527348a7d463dc81d5243cb56ca2\jetified-firebase-auth-19.2.0\AndroidManifest.xml:27:13-36
-226            android:launchMode="singleTask"
-226-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\33ef527348a7d463dc81d5243cb56ca2\jetified-firebase-auth-19.2.0\AndroidManifest.xml:28:13-44
-227            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
-227-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\33ef527348a7d463dc81d5243cb56ca2\jetified-firebase-auth-19.2.0\AndroidManifest.xml:29:13-102
-228            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-228-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\33ef527348a7d463dc81d5243cb56ca2\jetified-firebase-auth-19.2.0\AndroidManifest.xml:30:13-72
-229
-230        <receiver
-230-->[com.google.firebase:firebase-iid:20.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b5bb10ba15d79df9d54222ee164addcc\jetified-firebase-iid-20.1.0\AndroidManifest.xml:37:9-44:20
-231            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-231-->[com.google.firebase:firebase-iid:20.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b5bb10ba15d79df9d54222ee164addcc\jetified-firebase-iid-20.1.0\AndroidManifest.xml:38:13-78
-232            android:exported="true"
-232-->[com.google.firebase:firebase-iid:20.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b5bb10ba15d79df9d54222ee164addcc\jetified-firebase-iid-20.1.0\AndroidManifest.xml:39:13-36
-233            android:permission="com.google.android.c2dm.permission.SEND" >
-233-->[com.google.firebase:firebase-iid:20.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b5bb10ba15d79df9d54222ee164addcc\jetified-firebase-iid-20.1.0\AndroidManifest.xml:40:13-73
-234            <intent-filter>
-234-->[com.google.firebase:firebase-iid:20.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b5bb10ba15d79df9d54222ee164addcc\jetified-firebase-iid-20.1.0\AndroidManifest.xml:41:13-43:29
-235                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-235-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:118:17-81
-235-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:118:25-78
-236            </intent-filter>
-237        </receiver>
-238
-239        <provider
-239-->[com.google.firebase:firebase-common:19.3.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\f490f55074a73e601662d954401a0dd4\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
-240            android:name="com.google.firebase.provider.FirebaseInitProvider"
-240-->[com.google.firebase:firebase-common:19.3.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\f490f55074a73e601662d954401a0dd4\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
-241            android:authorities="life.corals.merchant.firebaseinitprovider"
-241-->[com.google.firebase:firebase-common:19.3.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\f490f55074a73e601662d954401a0dd4\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
-242            android:exported="false"
-242-->[com.google.firebase:firebase-common:19.3.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\f490f55074a73e601662d954401a0dd4\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
-243            android:initOrder="100" />
-243-->[com.google.firebase:firebase-common:19.3.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\f490f55074a73e601662d954401a0dd4\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
-244
-245        <activity
-245-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\9ca4842d5d1fef7b24f66ad8820b54e6\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
-246            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-246-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\9ca4842d5d1fef7b24f66ad8820b54e6\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
-247            android:exported="false"
-247-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\9ca4842d5d1fef7b24f66ad8820b54e6\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
-248            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-248-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\9ca4842d5d1fef7b24f66ad8820b54e6\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
-249
-250        <receiver
-250-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:29:9-33:20
-251            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-251-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:30:13-85
-252            android:enabled="true"
-252-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:31:13-35
-253            android:exported="false" >
-253-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:32:13-37
-254        </receiver>
-255        <receiver
-255-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:34:9-42:20
-256            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
-256-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:35:13-100
-257            android:enabled="true"
-257-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:36:13-35
-258            android:exported="true"
-258-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:37:13-36
-259            android:permission="android.permission.INSTALL_PACKAGES" >
-259-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:38:13-69
-260            <intent-filter>
-260-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:39:13-41:29
-261                <action android:name="com.android.vending.INSTALL_REFERRER" />
-261-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:40:17-79
-261-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:40:25-76
-262            </intent-filter>
-263        </receiver>
-264
-265        <service
-265-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:44:9-47:40
-266            android:name="com.google.android.gms.measurement.AppMeasurementService"
-266-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:45:13-84
-267            android:enabled="true"
-267-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:46:13-35
-268            android:exported="false" />
-268-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:47:13-37
-269        <service
-269-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:48:9-52:72
-270            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-270-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:49:13-87
-271            android:enabled="true"
-271-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:50:13-35
-272            android:exported="false"
-272-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:51:13-37
-273            android:permission="android.permission.BIND_JOB_SERVICE" />
-273-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:52:13-69
-274        <service
-274-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\2181cb666e99f8215339a78544dccee1\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:29:9-35:19
-275            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-275-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\2181cb666e99f8215339a78544dccee1\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:30:13-103
-276            android:exported="false" >
-276-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\2181cb666e99f8215339a78544dccee1\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:31:13-37
-277            <meta-data
-277-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\2181cb666e99f8215339a78544dccee1\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:32:13-34:39
-278                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-278-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\2181cb666e99f8215339a78544dccee1\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:33:17-94
-279                android:value="cct" />
-279-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\2181cb666e99f8215339a78544dccee1\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:34:17-36
-280        </service>
-281        <service
-281-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\35b4e45ff8b26fe6c7e801e98d25cc21\jetified-transport-runtime-2.2.0\AndroidManifest.xml:26:9-30:19
-282            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-282-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\35b4e45ff8b26fe6c7e801e98d25cc21\jetified-transport-runtime-2.2.0\AndroidManifest.xml:27:13-117
-283            android:exported="false"
-283-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\35b4e45ff8b26fe6c7e801e98d25cc21\jetified-transport-runtime-2.2.0\AndroidManifest.xml:28:13-37
-284            android:permission="android.permission.BIND_JOB_SERVICE" >
-284-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\35b4e45ff8b26fe6c7e801e98d25cc21\jetified-transport-runtime-2.2.0\AndroidManifest.xml:29:13-69
-285        </service>
-286
-287        <receiver
-287-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\35b4e45ff8b26fe6c7e801e98d25cc21\jetified-transport-runtime-2.2.0\AndroidManifest.xml:32:9-34:40
-288            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-288-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\35b4e45ff8b26fe6c7e801e98d25cc21\jetified-transport-runtime-2.2.0\AndroidManifest.xml:33:13-132
-289            android:exported="false" />
-289-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\35b4e45ff8b26fe6c7e801e98d25cc21\jetified-transport-runtime-2.2.0\AndroidManifest.xml:34:13-37
-290    </application>
-291
-292</manifest>
+48        android:theme="@style/AppTheme" >
+48-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:17:9-40
+49        <activity
+49-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:19:9-20:68
+50            android:name="life.corals.merchant.activity.VoucherPerformanceActivity"
+50-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:19:19-70
+51            android:theme="@style/AppTheme.NoActionBar" />
+51-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:20:13-56
+52        <activity
+52-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:21:9-23:59
+53            android:name="life.corals.merchant.activity.VoucherSetupTypes"
+53-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:22:13-55
+54            android:theme="@style/AppTheme.NoActionBar" />
+54-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:23:13-56
+55        <activity
+55-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:24:9-26:59
+56            android:name="life.corals.merchant.activity.VoucherSetupPreview"
+56-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:25:13-57
+57            android:theme="@style/AppTheme.NoActionBar" />
+57-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:26:13-56
+58        <activity
+58-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:27:9-29:59
+59            android:name="life.corals.merchant.activity.VoucherSetupCreate"
+59-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:28:13-56
+60            android:theme="@style/AppTheme.NoActionBar" />
+60-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:29:13-56
+61        <activity
+61-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:30:9-32:59
+62            android:name="life.corals.merchant.activity.VoucherSetupHome"
+62-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:31:13-54
+63            android:theme="@style/AppTheme.NoActionBar" />
+63-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:32:13-56
+64        <activity
+64-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:33:9-35:59
+65            android:name="life.corals.merchant.activity.ShowQrActivity"
+65-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:34:13-52
+66            android:theme="@style/AppTheme.NoActionBar" />
+66-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:35:13-56
+67        <activity
+67-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:36:9-38:59
+68            android:name="life.corals.merchant.activity.QrActivity"
+68-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:37:13-48
+69            android:theme="@style/AppTheme.NoActionBar" />
+69-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:38:13-56
+70        <activity
+70-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:39:9-52:20
+71            android:name="life.corals.merchant.activity.SplashScreen"
+71-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:40:13-50
+72            android:theme="@style/AppTheme.SplashNoActionBar" >
+72-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:41:13-62
+73            <intent-filter>
+73-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:42:13-51:29
+74                <action android:name="android.intent.action.MAIN" />
+74-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:43:17-69
+74-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:43:25-66
+75
+76                <category android:name="android.intent.category.DEFAULT" />
+76-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:45:17-76
+76-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:45:27-73
+77
+78                <action android:name="android.intent.action.MAIN" />
+78-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:43:17-69
+78-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:43:25-66
+79                <action android:name="android.intent.action.VIEW" />
+79-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:48:17-69
+79-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:48:25-66
+80
+81                <category android:name="android.intent.category.LAUNCHER" />
+81-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:50:17-77
+81-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:50:27-74
+82            </intent-filter>
+83        </activity>
+84        <activity
+84-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:53:9-55:59
+85            android:name="life.corals.merchant.activity.Homenew"
+85-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:54:13-45
+86            android:theme="@style/AppTheme.NoActionBar" />
+86-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:55:13-56
+87        <activity
+87-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:56:9-58:59
+88            android:name="life.corals.merchant.activity.SendNotificationActivity"
+88-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:57:13-62
+89            android:theme="@style/AppTheme.NoActionBar" />
+89-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:58:13-56
+90        <activity
+90-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:59:9-61:59
+91            android:name="life.corals.merchant.activity.HistoryIssuePoints"
+91-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:60:13-56
+92            android:theme="@style/AppTheme.NoActionBar" />
+92-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:61:13-56
+93        <activity
+93-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:62:9-64:59
+94            android:name="life.corals.merchant.activity.AwardCashbackActivity"
+94-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:63:13-59
+95            android:theme="@style/AppTheme.NoActionBar" />
+95-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:64:13-56
+96        <activity
+96-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:65:9-67:59
+97            android:name="life.corals.merchant.activity.MyCustomers"
+97-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:66:13-49
+98            android:theme="@style/AppTheme.NoActionBar" />
+98-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:67:13-56
+99        <activity
+99-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:68:9-70:59
+100            android:name="life.corals.merchant.activity.IntroActivity"
+100-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:69:13-51
+101            android:theme="@style/AppTheme.NoActionBar" />
+101-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:70:13-56
+102        <activity
+102-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:71:9-73:59
+103            android:name="life.corals.merchant.activity.TermsandConditions"
+103-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:72:13-56
+104            android:theme="@style/AppTheme.NoActionBar" />
+104-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:73:13-56
+105        <activity
+105-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:74:9-76:59
+106            android:name="life.corals.merchant.activity.PrivacyPolicy"
+106-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:75:13-51
+107            android:theme="@style/AppTheme.NoActionBar" />
+107-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:76:13-56
+108        <activity
+108-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:77:9-79:59
+109            android:name="life.corals.merchant.activity.CashCampaigns"
+109-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:78:13-51
+110            android:theme="@style/AppTheme.NoActionBar" />
+110-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:79:13-56
+111        <activity
+111-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:80:9-82:59
+112            android:name="life.corals.merchant.activity.PerformanceActivity"
+112-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:81:13-57
+113            android:theme="@style/AppTheme.NoActionBar" />
+113-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:82:13-56
+114        <activity
+114-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:83:9-85:59
+115            android:name="life.corals.merchant.activity.PerformanceGraphHomePage"
+115-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:84:13-62
+116            android:theme="@style/AppTheme.NoActionBar" />
+116-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:85:13-56
+117        <activity
+117-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:86:9-88:59
+118            android:name="life.corals.merchant.activity.TopupScreenScanner"
+118-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:87:13-56
+119            android:theme="@style/AppTheme.NoActionBar" />
+119-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:88:13-56
+120        <activity
+120-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:89:9-91:59
+121            android:name="life.corals.merchant.activity.TopupScreenSuccess"
+121-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:90:13-56
+122            android:theme="@style/AppTheme.NoActionBar" />
+122-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:91:13-56
+123        <activity
+123-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:92:9-94:59
+124            android:name="life.corals.merchant.activity.ReceivePaymentScreenTwo"
+124-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:93:13-61
+125            android:theme="@style/AppTheme.NoActionBar" />
+125-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:94:13-56
+126        <activity
+126-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:95:9-98:64
+127            android:name="life.corals.merchant.activity.ReceivePaymentScreenOne"
+127-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:96:13-61
+128            android:theme="@style/AppTheme.NoActionBar"
+128-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:97:13-56
+129            android:windowSoftInputMode="stateAlwaysVisible" />
+129-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:98:13-61
+130        <activity
+130-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:99:9-101:59
+131            android:name="life.corals.merchant.activity.HistoryTopup"
+131-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:100:13-50
+132            android:theme="@style/AppTheme.NoActionBar" />
+132-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:101:13-56
+133        <activity
+133-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:102:9-104:59
+134            android:name="life.corals.merchant.activity.RedeeemPoints"
+134-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:103:13-51
+135            android:theme="@style/AppTheme.NoActionBar" />
+135-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:104:13-56
+136        <activity
+136-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:105:9-107:59
+137            android:name="life.corals.merchant.activity.HistoryHomePage"
+137-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:106:13-53
+138            android:theme="@style/AppTheme.NoActionBar" />
+138-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:107:13-56
+139        <activity
+139-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:108:9-110:59
+140            android:name="life.corals.merchant.activity.ViewNotificationActivity"
+140-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:109:13-62
+141            android:theme="@style/AppTheme.NoActionBar" />
+141-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:110:13-56
+142
+143        <service
+143-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:112:9-120:19
+144            android:name="life.corals.merchant.fcm.MyFirebaseMessagingService"
+144-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:113:13-59
+145            android:enabled="true"
+145-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:114:13-35
+146            android:exported="false" >
+146-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:115:13-37
+147            <intent-filter>
+147-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:116:13-119:29
+148                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+148-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:117:17-78
+148-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:117:25-75
+149                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+149-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:118:17-81
+149-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:118:25-78
+150            </intent-filter>
+151        </service>
+152
+153        <meta-data
+153-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:122:9-124:61
+154            android:name="com.google.firebase.messaging.default_notification_color"
+154-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:123:13-84
+155            android:resource="@android:color/transparent" />
+155-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:124:13-58
+156        <meta-data
+156-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:125:9-127:69
+157            android:name="com.google.android.gms.version"
+157-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:126:13-58
+158            android:value="@integer/google_play_services_version" />
+158-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:127:13-66
+159        <meta-data
+159-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:128:9-130:39
+160            android:name="com.google.android.gms.vision.DEPENDENCIES"
+160-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:129:13-70
+161            android:value="barcode" />
+161-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:130:13-36
+162        <meta-data
+162-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:131:9-133:58
+163            android:name="com.google.firebase.messaging.default_notification_icon"
+163-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:132:13-83
+164            android:resource="@drawable/ic_splash_new" />
+164-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:133:13-55
+165
+166        <provider
+167            android:name="androidx.core.content.FileProvider"
+167-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:136:13-62
+168            android:authorities="life.corals.merchant.provider"
+168-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:137:13-60
+169            android:exported="false"
+169-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:138:13-37
+170            android:grantUriPermissions="true" >
+170-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:139:13-47
+171            <meta-data
+171-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:140:13-142:58
+172                android:name="android.support.FILE_PROVIDER_PATHS"
+172-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:141:17-67
+173                android:resource="@xml/provider_paths" />
+173-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:142:17-55
+174        </provider>
+175
+176        <activity
+176-->[com.karumi:dexter:4.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\ecb6d2caf5769e8a877c60cfccdd01d6\jetified-dexter-4.2.0\AndroidManifest.xml:27:9-29:72
+177            android:name="com.karumi.dexter.DexterActivity"
+177-->[com.karumi:dexter:4.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\ecb6d2caf5769e8a877c60cfccdd01d6\jetified-dexter-4.2.0\AndroidManifest.xml:28:13-60
+178            android:theme="@style/Dexter.Internal.Theme.Transparent" />
+178-->[com.karumi:dexter:4.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\ecb6d2caf5769e8a877c60cfccdd01d6\jetified-dexter-4.2.0\AndroidManifest.xml:29:13-69
+179        <activity
+179-->[com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\de0f73072dbf321f94dc092ba85497a2\jetified-zxing-android-embedded-3.2.0\AndroidManifest.xml:46:9-52:63
+180            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+180-->[com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\de0f73072dbf321f94dc092ba85497a2\jetified-zxing-android-embedded-3.2.0\AndroidManifest.xml:47:13-74
+181            android:clearTaskOnLaunch="true"
+181-->[com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\de0f73072dbf321f94dc092ba85497a2\jetified-zxing-android-embedded-3.2.0\AndroidManifest.xml:48:13-45
+182            android:screenOrientation="sensorLandscape"
+182-->[com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\de0f73072dbf321f94dc092ba85497a2\jetified-zxing-android-embedded-3.2.0\AndroidManifest.xml:49:13-56
+183            android:stateNotNeeded="true"
+183-->[com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\de0f73072dbf321f94dc092ba85497a2\jetified-zxing-android-embedded-3.2.0\AndroidManifest.xml:50:13-42
+184            android:theme="@style/zxing_CaptureTheme"
+184-->[com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\de0f73072dbf321f94dc092ba85497a2\jetified-zxing-android-embedded-3.2.0\AndroidManifest.xml:51:13-54
+185            android:windowSoftInputMode="stateAlwaysHidden" />
+185-->[com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\de0f73072dbf321f94dc092ba85497a2\jetified-zxing-android-embedded-3.2.0\AndroidManifest.xml:52:13-60
+186        <!--
+187             FirebaseMessagingService performs security checks at runtime,
+188             but set to not exported to explicitly avoid allowing another app to call it.
+189        -->
+190        <service
+190-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:28:9-34:19
+191            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+191-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:29:13-82
+192            android:exported="false" >
+192-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:30:13-37
+193            <intent-filter android:priority="-500" >
+193-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:31:13-33:29
+193-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:31:28-51
+194                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+194-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:117:17-78
+194-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:117:25-75
+195            </intent-filter>
+196        </service>
+197        <service
+197-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:35:9-41:19
+198            android:name="com.google.firebase.components.ComponentDiscoveryService"
+198-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:36:13-84
+199            android:directBootAware="true"
+199-->[com.google.firebase:firebase-common:19.3.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\f490f55074a73e601662d954401a0dd4\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
+200            android:exported="false" >
+200-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:37:13-37
+201            <meta-data
+201-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:38:13-40:85
+202                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+202-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:39:17-119
+203                android:value="com.google.firebase.components.ComponentRegistrar" />
+203-->[com.google.firebase:firebase-messaging:20.1.1] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b394d9c95405961ca258d862553aae62\jetified-firebase-messaging-20.1.1\AndroidManifest.xml:40:17-82
+204            <meta-data
+204-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\33ef527348a7d463dc81d5243cb56ca2\jetified-firebase-auth-19.2.0\AndroidManifest.xml:36:13-38:85
+205                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+205-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\33ef527348a7d463dc81d5243cb56ca2\jetified-firebase-auth-19.2.0\AndroidManifest.xml:37:17-109
+206                android:value="com.google.firebase.components.ComponentRegistrar" />
+206-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\33ef527348a7d463dc81d5243cb56ca2\jetified-firebase-auth-19.2.0\AndroidManifest.xml:38:17-82
+207            <meta-data
+207-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\2eea85f397e5d83a820a22b923f27f05\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:28:13-30:85
+208                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+208-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\2eea85f397e5d83a820a22b923f27f05\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:29:17-115
+209                android:value="com.google.firebase.components.ComponentRegistrar" />
+209-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\2eea85f397e5d83a820a22b923f27f05\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:30:17-82
+210            <meta-data
+210-->[com.google.android.gms:play-services-measurement-api:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\c62db534d25116e51a69637a8585cb08\jetified-play-services-measurement-api-17.2.3\AndroidManifest.xml:30:13-32:85
+211                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+211-->[com.google.android.gms:play-services-measurement-api:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\c62db534d25116e51a69637a8585cb08\jetified-play-services-measurement-api-17.2.3\AndroidManifest.xml:31:17-139
+212                android:value="com.google.firebase.components.ComponentRegistrar" />
+212-->[com.google.android.gms:play-services-measurement-api:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\c62db534d25116e51a69637a8585cb08\jetified-play-services-measurement-api-17.2.3\AndroidManifest.xml:32:17-82
+213            <meta-data
+213-->[com.google.firebase:firebase-iid:20.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b5bb10ba15d79df9d54222ee164addcc\jetified-firebase-iid-20.1.0\AndroidManifest.xml:32:13-34:85
+214                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+214-->[com.google.firebase:firebase-iid:20.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b5bb10ba15d79df9d54222ee164addcc\jetified-firebase-iid-20.1.0\AndroidManifest.xml:33:17-96
+215                android:value="com.google.firebase.components.ComponentRegistrar" />
+215-->[com.google.firebase:firebase-iid:20.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b5bb10ba15d79df9d54222ee164addcc\jetified-firebase-iid-20.1.0\AndroidManifest.xml:34:17-82
+216            <meta-data
+216-->[com.google.firebase:firebase-installations:16.0.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\e33fa344e44f09af689e8648802f6c37\jetified-firebase-installations-16.0.0\AndroidManifest.xml:17:13-19:85
+217                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+217-->[com.google.firebase:firebase-installations:16.0.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\e33fa344e44f09af689e8648802f6c37\jetified-firebase-installations-16.0.0\AndroidManifest.xml:18:17-127
+218                android:value="com.google.firebase.components.ComponentRegistrar" />
+218-->[com.google.firebase:firebase-installations:16.0.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\e33fa344e44f09af689e8648802f6c37\jetified-firebase-installations-16.0.0\AndroidManifest.xml:19:17-82
+219        </service>
+220
+221        <activity
+221-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\33ef527348a7d463dc81d5243cb56ca2\jetified-firebase-auth-19.2.0\AndroidManifest.xml:24:9-31:50
+222            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+222-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\33ef527348a7d463dc81d5243cb56ca2\jetified-firebase-auth-19.2.0\AndroidManifest.xml:25:13-85
+223            android:excludeFromRecents="true"
+223-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\33ef527348a7d463dc81d5243cb56ca2\jetified-firebase-auth-19.2.0\AndroidManifest.xml:26:13-46
+224            android:exported="true"
+224-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\33ef527348a7d463dc81d5243cb56ca2\jetified-firebase-auth-19.2.0\AndroidManifest.xml:27:13-36
+225            android:launchMode="singleTask"
+225-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\33ef527348a7d463dc81d5243cb56ca2\jetified-firebase-auth-19.2.0\AndroidManifest.xml:28:13-44
+226            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+226-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\33ef527348a7d463dc81d5243cb56ca2\jetified-firebase-auth-19.2.0\AndroidManifest.xml:29:13-102
+227            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+227-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\33ef527348a7d463dc81d5243cb56ca2\jetified-firebase-auth-19.2.0\AndroidManifest.xml:30:13-72
+228
+229        <receiver
+229-->[com.google.firebase:firebase-iid:20.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b5bb10ba15d79df9d54222ee164addcc\jetified-firebase-iid-20.1.0\AndroidManifest.xml:37:9-44:20
+230            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+230-->[com.google.firebase:firebase-iid:20.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b5bb10ba15d79df9d54222ee164addcc\jetified-firebase-iid-20.1.0\AndroidManifest.xml:38:13-78
+231            android:exported="true"
+231-->[com.google.firebase:firebase-iid:20.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b5bb10ba15d79df9d54222ee164addcc\jetified-firebase-iid-20.1.0\AndroidManifest.xml:39:13-36
+232            android:permission="com.google.android.c2dm.permission.SEND" >
+232-->[com.google.firebase:firebase-iid:20.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b5bb10ba15d79df9d54222ee164addcc\jetified-firebase-iid-20.1.0\AndroidManifest.xml:40:13-73
+233            <intent-filter>
+233-->[com.google.firebase:firebase-iid:20.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\b5bb10ba15d79df9d54222ee164addcc\jetified-firebase-iid-20.1.0\AndroidManifest.xml:41:13-43:29
+234                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+234-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:118:17-81
+234-->E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:118:25-78
+235            </intent-filter>
+236        </receiver>
+237
+238        <provider
+238-->[com.google.firebase:firebase-common:19.3.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\f490f55074a73e601662d954401a0dd4\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
+239            android:name="com.google.firebase.provider.FirebaseInitProvider"
+239-->[com.google.firebase:firebase-common:19.3.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\f490f55074a73e601662d954401a0dd4\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
+240            android:authorities="life.corals.merchant.firebaseinitprovider"
+240-->[com.google.firebase:firebase-common:19.3.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\f490f55074a73e601662d954401a0dd4\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
+241            android:exported="false"
+241-->[com.google.firebase:firebase-common:19.3.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\f490f55074a73e601662d954401a0dd4\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
+242            android:initOrder="100" />
+242-->[com.google.firebase:firebase-common:19.3.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\f490f55074a73e601662d954401a0dd4\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
+243
+244        <activity
+244-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\9ca4842d5d1fef7b24f66ad8820b54e6\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+245            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+245-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\9ca4842d5d1fef7b24f66ad8820b54e6\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+246            android:exported="false"
+246-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\9ca4842d5d1fef7b24f66ad8820b54e6\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+247            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+247-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\9ca4842d5d1fef7b24f66ad8820b54e6\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+248
+249        <receiver
+249-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:29:9-33:20
+250            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+250-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:30:13-85
+251            android:enabled="true"
+251-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:31:13-35
+252            android:exported="false" >
+252-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:32:13-37
+253        </receiver>
+254        <receiver
+254-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:34:9-42:20
+255            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+255-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:35:13-100
+256            android:enabled="true"
+256-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:36:13-35
+257            android:exported="true"
+257-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:37:13-36
+258            android:permission="android.permission.INSTALL_PACKAGES" >
+258-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:38:13-69
+259            <intent-filter>
+259-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:39:13-41:29
+260                <action android:name="com.android.vending.INSTALL_REFERRER" />
+260-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:40:17-79
+260-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:40:25-76
+261            </intent-filter>
+262        </receiver>
+263
+264        <service
+264-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:44:9-47:40
+265            android:name="com.google.android.gms.measurement.AppMeasurementService"
+265-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:45:13-84
+266            android:enabled="true"
+266-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:46:13-35
+267            android:exported="false" />
+267-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:47:13-37
+268        <service
+268-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:48:9-52:72
+269            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+269-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:49:13-87
+270            android:enabled="true"
+270-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:50:13-35
+271            android:exported="false"
+271-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:51:13-37
+272            android:permission="android.permission.BIND_JOB_SERVICE" />
+272-->[com.google.android.gms:play-services-measurement:17.2.3] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\66870409c9b0231345b56ed616244f3c\jetified-play-services-measurement-17.2.3\AndroidManifest.xml:52:13-69
+273        <service
+273-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\2181cb666e99f8215339a78544dccee1\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:29:9-35:19
+274            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+274-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\2181cb666e99f8215339a78544dccee1\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:30:13-103
+275            android:exported="false" >
+275-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\2181cb666e99f8215339a78544dccee1\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:31:13-37
+276            <meta-data
+276-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\2181cb666e99f8215339a78544dccee1\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:32:13-34:39
+277                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+277-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\2181cb666e99f8215339a78544dccee1\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:33:17-94
+278                android:value="cct" />
+278-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\2181cb666e99f8215339a78544dccee1\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:34:17-36
+279        </service>
+280        <service
+280-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\35b4e45ff8b26fe6c7e801e98d25cc21\jetified-transport-runtime-2.2.0\AndroidManifest.xml:26:9-30:19
+281            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+281-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\35b4e45ff8b26fe6c7e801e98d25cc21\jetified-transport-runtime-2.2.0\AndroidManifest.xml:27:13-117
+282            android:exported="false"
+282-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\35b4e45ff8b26fe6c7e801e98d25cc21\jetified-transport-runtime-2.2.0\AndroidManifest.xml:28:13-37
+283            android:permission="android.permission.BIND_JOB_SERVICE" >
+283-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\35b4e45ff8b26fe6c7e801e98d25cc21\jetified-transport-runtime-2.2.0\AndroidManifest.xml:29:13-69
+284        </service>
+285
+286        <receiver
+286-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\35b4e45ff8b26fe6c7e801e98d25cc21\jetified-transport-runtime-2.2.0\AndroidManifest.xml:32:9-34:40
+287            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+287-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\35b4e45ff8b26fe6c7e801e98d25cc21\jetified-transport-runtime-2.2.0\AndroidManifest.xml:33:13-132
+288            android:exported="false" />
+288-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\TRIDENT MT5161\.gradle\caches\transforms-2\files-2.1\35b4e45ff8b26fe6c7e801e98d25cc21\jetified-transport-runtime-2.2.0\AndroidManifest.xml:34:13-37
+289    </application>
+290
+291</manifest>

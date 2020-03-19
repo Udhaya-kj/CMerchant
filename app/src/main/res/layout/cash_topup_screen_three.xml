@@ -20,7 +20,7 @@
         app:titleTextColor="@color/white">
     </androidx.appcompat.widget.Toolbar>-->
 <LinearLayout
-    android:layout_marginTop="25dp"
+    android:layout_marginTop="50dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <TextView
@@ -127,9 +127,9 @@
         android:layout_marginTop="0dp"
         android:layout_marginBottom="2dp"
         android:text="@string/okay"
-        android:layout_marginStart="3dp"
-        android:layout_marginEnd="3dp"
-      android:backgroundTint="@color/btnGreen"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/btnGreen"
         android:textAllCaps="false"
         android:textColor="@color/white"
       />

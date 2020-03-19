@@ -443,6 +443,9 @@ public class VoucherSetupHome extends AppCompatActivity {
                             setUpRedemptionLists_M.add(sm);
                         }
                     }
+               /*     for(){
+                        setUpRedemptionLists_M.get(0).getRedeemExpdt().
+                    }*/
                     Log.d("VoucherList---", "onSuccess: " + setUpRedemptionLists_P.size() + "," + setUpRedemptionLists_B.size() + "," + setUpRedemptionLists_U.size() + "," + setUpRedemptionLists_Z.size() + "," + setUpRedemptionLists_M.size());
 
                     runOnUiThread(new Runnable() {
@@ -459,7 +462,6 @@ public class VoucherSetupHome extends AppCompatActivity {
                                 recyclerView_P.setVisibility(View.GONE);
                                 cardView_p.setVisibility(View.VISIBLE);
                             }
-
                             if (setUpRedemptionLists_B.size() != 0) {
                                 recyclerView_B.setVisibility(View.VISIBLE);
                                 cardView_b.setVisibility(View.GONE);

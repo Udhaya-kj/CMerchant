@@ -399,18 +399,18 @@ ADDED from E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:83:9-85:59
 		ADDED from E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:85:13-56
 	android:name
 		ADDED from E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:84:13-62
-activity#life.corals.merchant.activity.CashTopupScreenScanner
+activity#life.corals.merchant.activity.TopupScreenScanner
 ADDED from E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:86:9-88:59
 	android:theme
 		ADDED from E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:88:13-56
 	android:name
-		ADDED from E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:87:13-60
-activity#life.corals.merchant.activity.CashTopupScreenSuccess
+		ADDED from E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:87:13-56
+activity#life.corals.merchant.activity.TopupScreenSuccess
 ADDED from E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:89:9-91:59
 	android:theme
 		ADDED from E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:91:13-56
 	android:name
-		ADDED from E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:90:13-60
+		ADDED from E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:90:13-56
 activity#life.corals.merchant.activity.ReceivePaymentScreenTwo
 ADDED from E:\Apps\CMerchant\app\src\main\AndroidManifest.xml:92:9-94:59
 	android:theme

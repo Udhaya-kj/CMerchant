@@ -1,39 +1,47 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="30dp"
     android:layout_marginEnd="30dp"
-    android:background="@android:color/transparent"
-    android:orientation="vertical"
-    android:padding="@dimen/fifteen_dp">
+    app:cardCornerRadius="10dp">
 
-    <TextView
-        android:id="@+id/tv_title"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/height_50dp"
-        android:gravity="center"
-        android:text="Done!"
-        style="@style/headerTextStyle"
-        android:textSize="19sp"
-        android:textStyle="bold" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:background="@color/grey_d" />
-
-    <TextView
-        style="@style/subHeaderTextStyle"
-        android:id="@+id/text_dialog"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginBottom="20dp"
-        android:gravity="center"
-        android:layout_gravity="center_horizontal"
-        android:textColor="#ff000000"
-        android:textSize="17sp" />
+        android:orientation="vertical"
+        android:background="@color/white"
+       >
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/headerTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_50dp"
+            android:gravity="center"
+            android:text="Done!"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey_d" />
+
+        <TextView
+            android:id="@+id/text_dialog"
+            style="@style/subHeaderTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:textColor="#ff000000"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -132,7 +132,7 @@ public class Homenew extends AppCompatActivity implements SwipeRefreshLayout.OnR
             @Override
             public void onClick(View v) {
                 // issue.startAnimation(buttonClick);
-                startActivity(new Intent(Homenew.this, CashTopupScreenScanner.class));
+                startActivity(new Intent(Homenew.this, TopupScreenScanner.class));
                 finish();
             }
         });

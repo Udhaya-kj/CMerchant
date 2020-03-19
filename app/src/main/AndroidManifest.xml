@@ -84,10 +84,10 @@
             android:name=".activity.PerformanceGraphHomePage"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.CashTopupScreenScanner"
+            android:name=".activity.TopupScreenScanner"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.CashTopupScreenSuccess"
+            android:name=".activity.TopupScreenSuccess"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.ReceivePaymentScreenTwo"

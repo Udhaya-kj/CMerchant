@@ -18,10 +18,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.TimeZone;
 
 import life.corals.merchant.R;
 import life.corals.merchant.activity.VoucherSetupHome;
@@ -66,9 +68,9 @@ public class Vouchers_RecyclerviewAdapter extends RecyclerView.Adapter<Vouchers_
         final SetUpRedemptionList setUpRedemptionList = setUpRedemptionLists.get(position);
         holder.tl.setText(setUpRedemptionList.getRedeemTitle());
         String date = setUpRedemptionList.getRedeemExpdt();
-        Log.d("IsActive---", "onBindViewHolder: " + setUpRedemptionList.isIsActive());
+        Log.d("IsActive---", "onBindViewHolder: " + setUpRedemptionList.isIsActive()+","+date);
         if (setUpRedemptionList.isIsActive().toString().equals("true")) {
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+      /*      SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             Date strDate = null;
             try {
                 strDate = sdf.parse(date);
@@ -81,7 +83,32 @@ public class Vouchers_RecyclerviewAdapter extends RecyclerView.Adapter<Vouchers_
             } else {
                 Log.d("Date---", "catalog not outdated");
                 holder.textView_expired.setVisibility(View.GONE);
+            }*/
+
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            Date c_date = new Date();
+
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            Date strDate = null,curDate = null;
+            try {
+                curDate = sdf.parse(dateFormat.format(c_date));
+                strDate = sdf.parse(date);
+            } catch (ParseException e) {
+                e.printStackTrace();
             }
+
+            if (curDate.compareTo(strDate) > 0) {
+                holder.textView_expired.setVisibility(View.VISIBLE);
+                Log.i("app---->", "Date1 is after Date2 : Expired1 :"+curDate+" , "+strDate+" , "+curDate.compareTo(strDate));
+            } else if (curDate.compareTo(strDate) < 0) {
+                holder.textView_expired.setVisibility(View.GONE);
+                Log.i("app---->", "Date1 is before Date2 : Not Expired2 :"+curDate+" , "+strDate+" , "+curDate.compareTo(strDate));
+            }  else if (curDate.compareTo(strDate) == 0) {
+                holder.textView_expired.setVisibility(View.GONE);
+                Log.i("app---->", "Date1 is equal to Date2 : Not Expired3 :"+curDate+" , "+strDate+" , "+curDate.compareTo(strDate));
+            }
+
+
         } else {
             holder.textView_expired.setVisibility(View.VISIBLE);
             holder.textView_expired.setText("Inactive");
@@ -322,6 +349,15 @@ public class Vouchers_RecyclerviewAdapter extends RecyclerView.Adapter<Vouchers_
 
             }
         });
+    }
+
+    public static final String DATE_FORMAT_1 = "dd-MM-yyyy";
+
+    public static String getCurrentDate() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT_1);
+        dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+        Date today = Calendar.getInstance().getTime();
+        return dateFormat.format(today);
     }
 }
 

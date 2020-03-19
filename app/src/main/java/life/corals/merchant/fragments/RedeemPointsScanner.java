@@ -129,7 +129,7 @@ public class RedeemPointsScanner extends BaseFragment implements View.OnClickLis
                                     callAPI_getRedeemDetails();
 
                                 } else {
-                                    new AlertDialogFailure(getActivity(), "This is not your redeem offer", "OK", "Failed") {
+                                    new AlertDialogFailure(getActivity(), "This is not your offer", "OK", "Failed") {
                                         @Override
                                         public void onButtonClick() {
                                             onBackPressed();
@@ -424,6 +424,7 @@ public class RedeemPointsScanner extends BaseFragment implements View.OnClickLis
 
             @Override
             public void onFailure(ApiException e, int statusCode, Map<String, List<String>> responseHeaders) {
+                Log.d("Redeem---", "run: " + statusCode);
                 Objects.requireNonNull(getActivity()).runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -487,79 +488,7 @@ public class RedeemPointsScanner extends BaseFragment implements View.OnClickLis
                                         Objects.requireNonNull(getActivity()).finish();
                                     }
                                 };
-                        } /*else if (Integer.parseInt(result.getStatusCode()) == 408) {
-                                new AlertDialogFailure(getActivity(), "Voucher expired", "OK", "Oops !") {
-                                    @Override
-                                    public void onButtonClick() {
-                                        startActivity(new Intent(getActivity(), Homenew.class));
-                                        Objects.requireNonNull(getActivity()).finish();
-                                    }
-                                };
-                            } else if (Integer.parseInt(result.getStatusCode()) == 403) {
-                                new AlertDialogFailure(getActivity(), "Voucher not redeemable today", "OK", "Oops !") {
-                                    @Override
-                                    public void onButtonClick() {
-                                        startActivity(new Intent(getActivity(), Homenew.class));
-                                        Objects.requireNonNull(getActivity()).finish();
-                                    }
-                                };
-                            } else if (Integer.parseInt(result.getStatusCode()) == 503) {
-                                new AlertDialogFailure(getActivity(), result.getStatusMessage(), "OK", "Oops !") {
-                                    @Override
-                                    public void onButtonClick() {
-                                        startActivity(new Intent(getActivity(), Homenew.class));
-                                        Objects.requireNonNull(getActivity()).finish();
-                                    }
-                                };
-                            } else if (Integer.parseInt(result.getStatusCode()) == 509) {
-                                new AlertDialogFailure(getActivity(), "Points expired", "OK", "Oops !") {
-                                    @Override
-                                    public void onButtonClick() {
-                                        startActivity(new Intent(getActivity(), Homenew.class));
-                                        Objects.requireNonNull(getActivity()).finish();
-                                    }
-                                };
-                            } else if (Integer.parseInt(result.getStatusCode()) == 410) {
-                                new AlertDialogFailure(getActivity(), "Point balance is zero", "OK", "Oops !") {
-                                    @Override
-                                    public void onButtonClick() {
-                                        startActivity(new Intent(getActivity(), Homenew.class));
-                                        Objects.requireNonNull(getActivity()).finish();
-                                    }
-                                };
-                            } else if (Integer.parseInt(result.getStatusCode()) == 507) {
-                                new AlertDialogFailure(getActivity(), "Point balance is not enough to redeem this offer", "OK", "Oops !") {
-                                    @Override
-                                    public void onButtonClick() {
-                                        startActivity(new Intent(getActivity(), Homenew.class));
-                                        Objects.requireNonNull(getActivity()).finish();
-                                    }
-                                };
-                            } else if (Integer.parseInt(result.getStatusCode()) == 502) {
-                                new AlertDialogFailure(getActivity(), "Cashback data not found", "OK", "Oops !") {
-                                    @Override
-                                    public void onButtonClick() {
-                                        startActivity(new Intent(getActivity(), Homenew.class));
-                                        Objects.requireNonNull(getActivity()).finish();
-                                    }
-                                };
-                            } else if (Integer.parseInt(result.getStatusCode()) == 409) {
-                                new AlertDialogFailure(getActivity(), "Redeem voucher failed", "OK", "Oops !") {
-                                    @Override
-                                    public void onButtonClick() {
-                                        startActivity(new Intent(getActivity(), Homenew.class));
-                                        Objects.requireNonNull(getActivity()).finish();
-                                    }
-                                };
-                            } else {
-                                new AlertDialogFailure(getActivity(), "Something went wrong \n Please try again later", "OK", "Oops !") {
-                                    @Override
-                                    public void onButtonClick() {
-                                        startActivity(new Intent(getActivity(), Homenew.class));
-                                        Objects.requireNonNull(getActivity()).finish();
-                                    }
-                                };
-                            }*/ else {
+                        } else {
                             new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                                 @Override
                                 public void onButtonClick() {
