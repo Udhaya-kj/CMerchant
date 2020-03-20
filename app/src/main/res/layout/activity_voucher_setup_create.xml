@@ -54,7 +54,7 @@
                         android:layout_height="wrap_content"
                         android:clickable="false"
                         android:gravity="center"
-                        android:text="Voucher for Reward points"
+                        android:text="Voucher for Reward Points"
                         android:textSize="@dimen/text_size_17sp"
                         android:textStyle="bold" />
 

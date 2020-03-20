@@ -300,7 +300,7 @@ public class PerformanceActivity extends AppCompatActivity {
                 getInsightsSummary(body);
             } catch (Exception e) {
                 intermediateAlertDialog.dismissAlertDialog();
-                new AlertDialogFailure(this, "Please try again later", "OK", "Something went wrong") {
+                new AlertDialogFailure(this, "Please try again later!", "OK", "Something went wrong") {
                     @Override
                     public void onButtonClick() {
                         startActivity(new Intent(PerformanceActivity.this, Homenew.class));
@@ -339,7 +339,7 @@ public class PerformanceActivity extends AppCompatActivity {
                     Log.d("InlineResponseSummary", "onSuccess: " + e + "  " + statusCode);
                     intermediateAlertDialog.dismissAlertDialog();
                     if (statusCode == 404) {
-                        new AlertDialogFailure(PerformanceActivity.this, "Please try again later", "OK", "Invalid merchant id (or) Device id") {
+                        new AlertDialogFailure(PerformanceActivity.this, "Please try again later!", "OK", "Invalid merchant id (or) Device id") {
                             @Override
                             public void onButtonClick() {
                                 startActivity(new Intent(PerformanceActivity.this, PerformanceActivity.class));
@@ -347,7 +347,7 @@ public class PerformanceActivity extends AppCompatActivity {
                             }
                         };
                     } else if (statusCode == 406) {
-                        new AlertDialogFailure(PerformanceActivity.this, "Please try again later", "OK", "Invalid request type") {
+                        new AlertDialogFailure(PerformanceActivity.this, "Please try again later!", "OK", "Invalid request type") {
                             @Override
                             public void onButtonClick() {
                                 startActivity(new Intent(PerformanceActivity.this, PerformanceActivity.class));
@@ -355,7 +355,7 @@ public class PerformanceActivity extends AppCompatActivity {
                             }
                         };
                     } else {
-                        new AlertDialogFailure(PerformanceActivity.this, "Please try again later", "OK", "Something went wrong") {
+                        new AlertDialogFailure(PerformanceActivity.this, "Please try again later!", "OK", "Something went wrong") {
                             @Override
                             public void onButtonClick() {
                                 startActivity(new Intent(PerformanceActivity.this, PerformanceActivity.class));

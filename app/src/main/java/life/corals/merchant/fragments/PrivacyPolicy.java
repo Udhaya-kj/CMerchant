@@ -78,7 +78,7 @@ public class PrivacyPolicy extends BaseFragment {
             fragmentTransaction.replace(R.id.frame_layout_intro_activity, fragment1);
             fragmentTransaction.commit();
         } else {
-            new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Something went wrong") {
+            new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                 @Override
                 public void onButtonClick() {
                     Objects.requireNonNull(getActivity()).finish();

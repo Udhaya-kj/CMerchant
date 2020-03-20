@@ -247,7 +247,7 @@ public class Homenew extends AppCompatActivity implements SwipeRefreshLayout.OnR
                     mSwipeRefreshLayout.setRefreshing(false);
                 }
                 intermediateAlertDialog.dismissAlertDialog();
-                new AlertDialogFailure(this, "Please try again later", "OK", "Something went wrong") {
+                new AlertDialogFailure(this, "Please try again later!", "OK", "Something went wrong") {
                     @Override
                     public void onButtonClick() {
                         startActivity(new Intent(Homenew.this, Homenew.class));
@@ -292,7 +292,7 @@ public class Homenew extends AppCompatActivity implements SwipeRefreshLayout.OnR
                         mSwipeRefreshLayout.setRefreshing(false);
                     }
                     if (statusCode == 404) {
-                        new AlertDialogFailure(Homenew.this, "Please try again later", "Close", "Something went wrong") {
+                        new AlertDialogFailure(Homenew.this, "Please try again later!", "Close", "Something went wrong") {
                             @Override
                             public void onButtonClick() {
                                 //startActivity(new Intent(Homenew.this, PerformanceActivity.class));
@@ -300,7 +300,7 @@ public class Homenew extends AppCompatActivity implements SwipeRefreshLayout.OnR
                             }
                         };
                     } else if (statusCode == 406) {
-                        new AlertDialogFailure(Homenew.this, "Please try again later", "Close", "Something went wrong") {
+                        new AlertDialogFailure(Homenew.this, "Please try again later!", "Close", "Something went wrong") {
                             @Override
                             public void onButtonClick() {
                                // startActivity(new Intent(Homenew.this, PerformanceActivity.class));
@@ -308,7 +308,7 @@ public class Homenew extends AppCompatActivity implements SwipeRefreshLayout.OnR
                             }
                         };
                     } else {
-                        new AlertDialogFailure(Homenew.this, "Please try again later", "Close", "Something went wrong") {
+                        new AlertDialogFailure(Homenew.this, "Please try again later!", "Close", "Something went wrong") {
                             @Override
                             public void onButtonClick() {
                                 //startActivity(new Intent(Homenew.this, PerformanceActivity.class));

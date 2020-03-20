@@ -190,7 +190,7 @@ public class HistorySearchResult extends BaseFragment {
                             });
 
                         } else {
-                            new AlertDialogFailure(getActivity(), "Please try again later", "Ok", "Something went wrong") {
+                            new AlertDialogFailure(getActivity(), "Please try again later!", "Ok", "Something went wrong") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(getActivity(), Homenew.class));
@@ -281,7 +281,7 @@ public class HistorySearchResult extends BaseFragment {
                                         swipeRefreshLayout.setRefreshing(false);
                                     }
                                     intermediateAlertDialog.dismissAlertDialog();
-                                    new AlertDialogFailure(getActivity(), "Please try again later", "Retry", "Something went wrong") {
+                                    new AlertDialogFailure(getActivity(), "Please try again later!", "Retry", "Something went wrong") {
                                         @Override
                                         public void onButtonClick() {
                                             callApi();

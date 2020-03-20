@@ -2814,6 +2814,7 @@ id surfaceView
 id svRecurrenceOptionsMenu
 id swipe
 id swipeButton
+id swipeRefreshLayout
 id switch_active
 id tabLayout_graph
 id tabMode

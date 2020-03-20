@@ -179,7 +179,7 @@ public class HistryIssuePointsPrevious extends BaseFragment implements SwipeRefr
                             swipeRefreshLayout.setRefreshing(false);
                         }
                         if (statusCode == 404) {
-                            new AlertDialogFailure(getActivity(), "Customers not found", "OK", "Failed") {
+                            new AlertDialogFailure(getActivity(), "Customers not found", "OK", "") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(getActivity(), Homenew.class));
@@ -188,7 +188,7 @@ public class HistryIssuePointsPrevious extends BaseFragment implements SwipeRefr
                                 }
                             };
                         } else if (statusCode == 501) {
-                            new AlertDialogFailure(getActivity(), "Your are  not issued cashback", "OK", "Failed") {
+                            new AlertDialogFailure(getActivity(), "Your are  not issued cashback", "OK", "") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(getActivity(), Homenew.class));
@@ -197,7 +197,7 @@ public class HistryIssuePointsPrevious extends BaseFragment implements SwipeRefr
                                 }
                             };
                         } else {
-                            new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Something went wrong") {
+                            new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(getActivity(), Homenew.class));
@@ -250,7 +250,7 @@ public class HistryIssuePointsPrevious extends BaseFragment implements SwipeRefr
                                 swipeRefreshLayout.setRefreshing(false);
                             }
                             intermediateAlertDialog.dismissAlertDialog();
-                            new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Something went wrong") {
+                            new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(getActivity(), Homenew.class));
@@ -298,7 +298,7 @@ public class HistryIssuePointsPrevious extends BaseFragment implements SwipeRefr
             issuePointsHistory(body);
         } catch (ApiException e) {
             e.printStackTrace();
-            new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Something went wrong") {
+            new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                 @Override
                 public void onButtonClick() {
                     startActivity(new Intent(getActivity(), HistoryHomePage.class));

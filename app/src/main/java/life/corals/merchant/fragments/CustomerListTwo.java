@@ -179,7 +179,7 @@ public class CustomerListTwo extends BaseFragment {
                     public void run() {
 
                         intermediateAlertDialog.dismissAlertDialog();
-                        new AlertDialogFailure(getActivity(), "Please try again later", "Ok", "Something went wrong") {
+                        new AlertDialogFailure(getActivity(), "Please try again later!", "Ok", "Something went wrong") {
                             @Override
                             public void onButtonClick() {
                                 startActivity(new Intent(getActivity(), Homenew.class));
@@ -255,7 +255,7 @@ public class CustomerListTwo extends BaseFragment {
                         @Override
                         public void run() {
                             intermediateAlertDialog.dismissAlertDialog();
-                            new AlertDialogFailure(getActivity(), "Please try again later", "Retry", "Something went wrong") {
+                            new AlertDialogFailure(getActivity(), "Please try again later!", "Retry", "Something went wrong") {
                                 @Override
                                 public void onButtonClick() {
                                     callApi();

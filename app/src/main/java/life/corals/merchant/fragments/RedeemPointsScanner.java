@@ -129,7 +129,7 @@ public class RedeemPointsScanner extends BaseFragment implements View.OnClickLis
                                     callAPI_getRedeemDetails();
 
                                 } else {
-                                    new AlertDialogFailure(getActivity(), "This is not your offer", "OK", "Failed") {
+                                    new AlertDialogFailure(getActivity(), "Invalid voucher scanned", "OK", "") {
                                         @Override
                                         public void onButtonClick() {
                                             onBackPressed();
@@ -138,7 +138,7 @@ public class RedeemPointsScanner extends BaseFragment implements View.OnClickLis
                                 }
                             } else {
                                 redeemProductBottomSheet.dismissOnProceed();
-                                new AlertDialogFailure(getActivity(), "Invalid QR", "OK", "Failed") {
+                                new AlertDialogFailure(getActivity(), "Invalid QR", "OK", "") {
                                     @Override
                                     public void onButtonClick() {
                                         onBackPressed();
@@ -148,7 +148,7 @@ public class RedeemPointsScanner extends BaseFragment implements View.OnClickLis
 
                         } else {
                             redeemProductBottomSheet.dismissOnProceed();
-                            new AlertDialogFailure(getActivity(), "Invalid QR", "OK", "Failed") {
+                            new AlertDialogFailure(getActivity(), "Invalid QR", "OK", "") {
                                 @Override
                                 public void onButtonClick() {
                                     onBackPressed();
@@ -166,7 +166,7 @@ public class RedeemPointsScanner extends BaseFragment implements View.OnClickLis
                     @Override
                     public void run() {
                         redeemProductBottomSheet.dismissNoteAlertDialog();
-                        new AlertDialogFailure(getActivity(), result, "OK", "Failed") {
+                        new AlertDialogFailure(getActivity(), result, "OK", "") {
                             @Override
                             public void onButtonClick() {
                                 onBackPressed();
@@ -282,7 +282,7 @@ public class RedeemPointsScanner extends BaseFragment implements View.OnClickLis
                                                 getActivity().runOnUiThread(new Runnable() {
                                                     @Override
                                                     public void run() {
-                                                      new AlertDialogYesNo(getActivity(), "Voucher Details", spannableString + "\n" + lead_desc, "CONTINUE", "CANCEL") {
+                                                      new AlertDialogYesNo(getActivity(), "Redeem Voucher", spannableString + "\n" + lead_desc, "CONTINUE", "CANCEL") {
                                                             @Override
                                                             public void onOKButtonClick() {
                                                                 callRedeemAPI();
@@ -305,7 +305,7 @@ public class RedeemPointsScanner extends BaseFragment implements View.OnClickLis
                                                 getActivity().runOnUiThread(new Runnable() {
                                                     @Override
                                                     public void run() {
-                                                         new AlertDialogYesNo(getActivity(), "Voucher Details", spannableString + "\n" + desc, "CONTINUE", "CANCEL") {
+                                                         new AlertDialogYesNo(getActivity(), "Redeem Voucher", spannableString + "\n" + desc, "CONTINUE", "CANCEL") {
                                                             @Override
                                                             public void onOKButtonClick() {
                                                                 callRedeemAPI();
@@ -331,7 +331,7 @@ public class RedeemPointsScanner extends BaseFragment implements View.OnClickLis
                                 getActivity().runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        new AlertDialogFailure(getActivity(), "Voucher already redeemed", "OK", "Failed") {
+                                        new AlertDialogFailure(getActivity(), "Voucher already redeemed", "OK", "") {
                                             @Override
                                             public void onButtonClick() {
                                                 startActivity(new Intent(getActivity(), Homenew.class));

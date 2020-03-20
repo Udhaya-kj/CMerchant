@@ -128,7 +128,7 @@ public class AwardCashbackScanner extends BaseFragment implements View.OnClickLi
                                 qrTopUpNoteBottomSheet.showQRNoteAlertDialog(issueamount, stringHashMap.get("mobile_no"));
                             } else {
                                 qrTopUpNoteBottomSheet.dismissOnProceed();
-                                new AlertDialogFailure(getActivity(), "Invalid QR", "Ok", "Failed") {
+                                new AlertDialogFailure(getActivity(), "Invalid QR", "Ok", "") {
                                     @Override
                                     public void onButtonClick() {
                                         onBackPressed();
@@ -138,7 +138,7 @@ public class AwardCashbackScanner extends BaseFragment implements View.OnClickLi
 
                         } else {
                             qrTopUpNoteBottomSheet.dismissOnProceed();
-                            new AlertDialogFailure(getActivity(), "Invalid QR", "Ok", "Failed") {
+                            new AlertDialogFailure(getActivity(), "Invalid QR", "Ok", "") {
                                 @Override
                                 public void onButtonClick() {
                                     onBackPressed();
@@ -156,7 +156,7 @@ public class AwardCashbackScanner extends BaseFragment implements View.OnClickLi
                 Objects.requireNonNull(getActivity()).runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        new AlertDialogFailure(getActivity(), result, "Ok", "Failed") {
+                        new AlertDialogFailure(getActivity(), result, "Ok", "") {
                             @Override
                             public void onButtonClick() {
                                 onBackPressed();
@@ -181,7 +181,7 @@ public class AwardCashbackScanner extends BaseFragment implements View.OnClickLi
                 cbIssuesPpoints(body);
             } catch (Exception e) {
                 intermediateAlertDialog.dismissAlertDialog();
-                new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Something went wrong") {
+                new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                     @Override
                     public void onButtonClick() {
                         startActivity(new Intent(getActivity(), Homenew.class));
@@ -224,56 +224,56 @@ public class AwardCashbackScanner extends BaseFragment implements View.OnClickLi
                         qrTopUpNoteBottomSheet.dismissNoteAlertDialog();
                         intermediateAlertDialog.dismissAlertDialog();
                         if (statusCode == 501) {
-                            new AlertDialogFailure(getActivity(), "You have not activated cashback module! Contact support to activate.", "OK", "Failed") {
+                            new AlertDialogFailure(getActivity(), "You have not activated cashback module! Contact support to activate.", "OK", "") {
                                 @Override
                                 public void onButtonClick() {
                                     onBackPressed();
                                 }
                             };
                         } else if (statusCode == 409) {
-                            new AlertDialogFailure(getActivity(), "Invalid Merchant", "OK", "Failed") {
+                            new AlertDialogFailure(getActivity(), "Invalid Merchant", "OK", "") {
                                 @Override
                                 public void onButtonClick() {
                                     onBackPressed();
                                 }
                             };
                         } else if (statusCode == 406) {
-                            new AlertDialogFailure(getActivity(), "Cashback not eligible for this purchase!", "OK", "Failed") {
+                            new AlertDialogFailure(getActivity(), "Cashback not eligible for this purchase!", "OK", "") {
                                 @Override
                                 public void onButtonClick() {
                                     onBackPressed();
                                 }
                             };
                         } else if (statusCode == 401) {
-                            new AlertDialogFailure(getActivity(), "Cashback issue failed \n ", "OK", "Failed") {
+                            new AlertDialogFailure(getActivity(), "Cashback issue failed \n ", "OK", "") {
                                 @Override
                                 public void onButtonClick() {
                                     onBackPressed();
                                 }
                             };
                         } else if (statusCode == 404) {
-                            new AlertDialogFailure(getActivity(), "Customer is not a member of your program", "OK", "Failed") {
+                            new AlertDialogFailure(getActivity(), "Customer is not a member of your program", "OK", "") {
                                 @Override
                                 public void onButtonClick() {
                                     onBackPressed();
                                 }
                             };
                         } else if (statusCode == 405) {
-                            new AlertDialogFailure(getActivity(), "Cashback time expired", "OK", "Failed") {
+                            new AlertDialogFailure(getActivity(), "Cashback time expired", "OK", "") {
                                 @Override
                                 public void onButtonClick() {
                                     onBackPressed();
                                 }
                             };
                         } else if (statusCode == 204) {
-                            new AlertDialogFailure(getActivity(), "Customer cashback points record is not available", "OK", "Failed") {
+                            new AlertDialogFailure(getActivity(), "Customer cashback points record is not available", "OK", "") {
                                 @Override
                                 public void onButtonClick() {
                                     onBackPressed();
                                 }
                             };
                         } else {
-                            new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Something went wrong") {
+                            new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                                 @Override
                                 public void onButtonClick() {
                                     onBackPressed();
@@ -304,7 +304,7 @@ public class AwardCashbackScanner extends BaseFragment implements View.OnClickLi
                                 successIntent(points, totalpoints, pointsExpiry, customerAppUsing, customerId, isNewCustomer);
                             } else {
                                 intermediateAlertDialog.dismissAlertDialog();
-                                new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Something went wrong") {
+                                new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                                     @Override
                                     public void onButtonClick() {
                                         startActivity(new Intent(getActivity(), Homenew.class));
@@ -315,7 +315,7 @@ public class AwardCashbackScanner extends BaseFragment implements View.OnClickLi
                             }
                         } else {
                             intermediateAlertDialog.dismissAlertDialog();
-                            new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Something went wrong") {
+                            new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(getActivity(), Homenew.class));

@@ -161,7 +161,7 @@ public class MonthDetails extends BaseFragment {
             } catch (Exception e) {
                 Log.d("getWeekRewardPoints", "getRe---exception: " + e);
                 intermediateAlertDialog.dismissAlertDialog();
-                new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Something went wrong") {
+                new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                     @Override
                     public void onButtonClick() {
                         startActivity(new Intent(getActivity(), Homenew.class));
@@ -220,7 +220,7 @@ public class MonthDetails extends BaseFragment {
                 Objects.requireNonNull(getActivity()).runOnUiThread(() -> {
                     intermediateAlertDialog.dismissAlertDialog();
                     if (statusCode == 404) {
-                        new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Invalid merchant id (or) Device id") {
+                        new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Invalid merchant id (or) Device id") {
                             @Override
                             public void onButtonClick() {
                                 startActivity(new Intent(getActivity(), PerformanceActivity.class));
@@ -228,7 +228,7 @@ public class MonthDetails extends BaseFragment {
                             }
                         };
                     } else if (statusCode == 406) {
-                        new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Invalid request type") {
+                        new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Invalid request type") {
                             @Override
                             public void onButtonClick() {
                                 startActivity(new Intent(getActivity(), PerformanceActivity.class));
@@ -236,7 +236,7 @@ public class MonthDetails extends BaseFragment {
                             }
                         };
                     } else {
-                        new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Something went wrong") {
+                        new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                             @Override
                             public void onButtonClick() {
                                 startActivity(new Intent(getActivity(), PerformanceActivity.class));
@@ -262,7 +262,7 @@ public class MonthDetails extends BaseFragment {
                             addToEntry(result.getListNew(), getResources().getColor(R.color.bluehome));
                             addToEntry(result.getListOld(), getResources().getColor(R.color.btnGreen));
                         } else {
-                            new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Something went wrong") {
+                            new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(getActivity(), PerformanceActivity.class));

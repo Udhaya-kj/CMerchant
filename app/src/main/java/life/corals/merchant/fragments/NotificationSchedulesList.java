@@ -136,7 +136,7 @@ public class NotificationSchedulesList extends BaseFragment implements SwipeRefr
             } catch (Exception e) {
 
                 intermediateAlertDialog.dismissAlertDialog();
-                new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Something went wrong") {
+                new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                     @Override
                     public void onButtonClick() {
                         startActivity(new Intent(getActivity(), Homenew.class));
@@ -178,7 +178,7 @@ public class NotificationSchedulesList extends BaseFragment implements SwipeRefr
                         }
 
                         if (statusCode == 404) {
-                            new AlertDialogFailure(getActivity(), "You are not  valid Merchant \n", "OK", "Failed") {
+                            new AlertDialogFailure(getActivity(), "You are not  valid Merchant \n", "OK", "") {
                                 @Override
                                 public void onButtonClick() {
                                     NotificationHome searchresult = new NotificationHome();
@@ -189,7 +189,7 @@ public class NotificationSchedulesList extends BaseFragment implements SwipeRefr
                                 }
                             };
                         } else if (statusCode == 406) {
-                            new AlertDialogFailure(getActivity(), "Invalid Title or Message", "OK", "Failed") {
+                            new AlertDialogFailure(getActivity(), "Invalid Title or Message", "OK", "") {
                                 @Override
                                 public void onButtonClick() {
                                     NotificationHome searchresult = new NotificationHome();
@@ -200,7 +200,7 @@ public class NotificationSchedulesList extends BaseFragment implements SwipeRefr
                                 }
                             };
                         } else {
-                            new AlertDialogFailure(getActivity(), "Something went wrong", "OK", "Failed") {
+                            new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                                 @Override
                                 public void onButtonClick() {
                                     NotificationHome searchresult = new NotificationHome();
@@ -288,7 +288,7 @@ public class NotificationSchedulesList extends BaseFragment implements SwipeRefr
             getRequestBody();
             getListofScheduleMessage(body);
         } catch (Exception e) {
-            new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Something went wrong") {
+            new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                 @Override
                 public void onButtonClick() {
                     NotificationHome fragment1 = new NotificationHome();

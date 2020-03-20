@@ -212,7 +212,7 @@ public class NotificationViewShceduledMsg extends BaseFragment {
                 updateScheduleMessage(body);
             } catch (Exception e) {
                 intermediateAlertDialog.dismissAlertDialog();
-                new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Something went wrong") {
+                new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                     @Override
                     public void onButtonClick() {
                         startActivity(new Intent(getActivity(), Homenew.class));

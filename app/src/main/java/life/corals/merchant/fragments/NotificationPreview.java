@@ -140,7 +140,7 @@ public class NotificationPreview extends BaseFragment {
                 } else if (tempCode == 2) {
                     callAllCustomerCreateAPI();
                 } else {
-                    new AlertDialogFailure(getActivity(), "Something went wrong", "OK", "Failed") {
+                    new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                         @Override
                         public void onButtonClick() {
                             NotificationHome searchresult = new NotificationHome();
@@ -181,7 +181,7 @@ public class NotificationPreview extends BaseFragment {
                 createSchedule(body25);
             } catch (Exception e) {
                 intermediateAlertDialog.dismissAlertDialog();
-                new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Something went wrong") {
+                new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                     @Override
                     public void onButtonClick() {
                         NotificationHome searchresult = new NotificationHome();
@@ -231,7 +231,7 @@ public class NotificationPreview extends BaseFragment {
                 createSchedule(body25);
             } catch (Exception e) {
                 intermediateAlertDialog.dismissAlertDialog();
-                new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Something went wrong") {
+                new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                     @Override
                     public void onButtonClick() {
                         NotificationHome searchresult = new NotificationHome();
@@ -292,7 +292,7 @@ public class NotificationPreview extends BaseFragment {
                                 }
                             };
                         } else if (statusCode == 406) {
-                            new AlertDialogFailure(getActivity(), "Invalid Title or Message", "OK", "Failed") {
+                            new AlertDialogFailure(getActivity(), "Invalid Title or Message", "OK", "") {
                                 @Override
                                 public void onButtonClick() {
                                     NotificationHome searchresult = new NotificationHome();
@@ -303,7 +303,7 @@ public class NotificationPreview extends BaseFragment {
                                 }
                             };
                         } else if (statusCode == 405) {
-                            new AlertDialogFailure(getActivity(), "You have reached maximum limit(5)", "OK", "Failed") {
+                            new AlertDialogFailure(getActivity(), "You have reached maximum limit(5)", "OK", "") {
                                 @Override
                                 public void onButtonClick() {
                                     NotificationHome searchresult = new NotificationHome();
@@ -314,7 +314,7 @@ public class NotificationPreview extends BaseFragment {
                                 }
                             };
                         } else {
-                            new AlertDialogFailure(getActivity(), "Something went wrong", "OK", "Failed") {
+                            new AlertDialogFailure(getActivity(), "Something went wrong", "OK", "") {
                                 @Override
                                 public void onButtonClick() {
                                     NotificationHome searchresult = new NotificationHome();

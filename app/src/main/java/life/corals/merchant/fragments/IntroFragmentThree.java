@@ -139,7 +139,7 @@ public class IntroFragmentThree extends BaseFragment {
         agreeContinue.setClickable(false);
         intermediateAlertDialog = new IntermediateAlertDialog(getActivity());
         if (!trycount()) {
-            new AlertDialogFailure(getActivity(), "Reached your maximum limit please re-install your app and continue", "Ok", "Oops!") {
+            new AlertDialogFailure(getActivity(), "Reached your maximum limit please re-install your app and continue", "Ok", "") {
                 @Override
                 public void onButtonClick() {
                     IntroFragmentOne fragment1 = new IntroFragmentOne();
@@ -202,7 +202,7 @@ public class IntroFragmentThree extends BaseFragment {
                     editor.apply();
 
                     if (statusCode==404){
-                        new AlertDialogFailure(getActivity(), "Wrong activation code", "OK", "Failed") {
+                        new AlertDialogFailure(getActivity(), "Wrong activation code", "OK", "") {
                             @Override
                             public void onButtonClick() {
                                 IntroFragmentOne fragment1 = new IntroFragmentOne();
@@ -213,7 +213,7 @@ public class IntroFragmentThree extends BaseFragment {
                             }
                         };
                     }else if (statusCode==406){
-                        new AlertDialogFailure(getActivity(), "Your code already activated", "OK", "Failed") {
+                        new AlertDialogFailure(getActivity(), "Your code already activated", "OK", "") {
                             @Override
                             public void onButtonClick() {
                                 IntroFragmentOne fragment1 = new IntroFragmentOne();
@@ -224,7 +224,7 @@ public class IntroFragmentThree extends BaseFragment {
                             }
                         };
                     }else {
-                        new AlertDialogFailure(getActivity(), "Unable to register your device", "OK", "Failed") {
+                        new AlertDialogFailure(getActivity(), "Unable to register your device", "OK", "") {
                             @Override
                             public void onButtonClick() {
                                 IntroFragmentOne fragment1 = new IntroFragmentOne();
@@ -262,7 +262,7 @@ public class IntroFragmentThree extends BaseFragment {
 
                             successIntent();
                         } else {
-                            new AlertDialogFailure(getActivity(), "Unable to register your device", "OK", "Failed") {
+                            new AlertDialogFailure(getActivity(), "Unable to register your device", "OK", "") {
                                 @Override
                                 public void onButtonClick() {
                                     IntroFragmentOne fragment1 = new IntroFragmentOne();

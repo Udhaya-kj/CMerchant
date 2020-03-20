@@ -5,11 +5,14 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Point;
 import android.os.Handler;
 import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
@@ -175,7 +178,7 @@ public class Vouchers_RecyclerviewAdapter extends RecyclerView.Adapter<Vouchers_
                     in.putExtra("isActive", setUpRedemptionList.isIsActive());
                     in.putExtra("terms_conditions",setUpRedemptionList.getTermsConditions());
                     in.putExtra("ref_reward_points",setUpRedemptionList.getReferralRewardPoints());
-                    Log.d("Adapter---->", " Rectc : "+position + "," + setUpRedemptionList.getRedeemType() + "," + setUpRedemptionList.getRedeemTitle() + " " + setUpRedemptionList.getRedeemDescription() + " " + setUpRedemptionList.getVoucherBg() + " " + setUpRedemptionList.getLeadTitle() + " " + setUpRedemptionList.getLeadDescription() + " " + setUpRedemptionList.getAssignedVoucherCount()+","+setUpRedemptionList.getVoucherPurchaseAmount());
+                    Log.d("Adapter---->", " Rectc : "+ setUpRedemptionList.getVoucherBg()  + "," + setUpRedemptionList.getRedeemType() + "," + setUpRedemptionList.getRedeemTitle() + " , " + setUpRedemptionList.getRedeemDescription() + " ," + setUpRedemptionList.getVoucherBg() + " ," + setUpRedemptionList.getLeadTitle() + " ," + setUpRedemptionList.getLeadDescription() + " " + setUpRedemptionList.getAssignedVoucherCount()+","+setUpRedemptionList.getVoucherPurchaseAmount());
                     //e_date_list.get(position) + " " + e_time_list.get(position) + "," + act_dys_list.get(position) + "," + sharable_list.get(position)+","+sharable+","+voucher_bg_list.get(position));
                     context.startActivity(in);
                     ((Activity) context).finish();
@@ -303,16 +306,24 @@ public class Vouchers_RecyclerviewAdapter extends RecyclerView.Adapter<Vouchers_
                         public void run() {
                             LayoutInflater factory = LayoutInflater.from(context);
                             final View deleteDialogView = factory.inflate(R.layout.success_dialog, null);
-                            final AlertDialog deleteDialog = new AlertDialog.Builder(context).create();
+                            final AlertDialog activateDialog = new AlertDialog.Builder(context).create();
+                            activateDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
                             TextView textView_delete = (TextView) deleteDialogView.findViewById(R.id.text_dialog);
                             textView_delete.setText("Voucher activated successfully");
-                            deleteDialog.setView(deleteDialogView);
-                            deleteDialog.show();
+                            activateDialog.setView(deleteDialogView);
+                            activateDialog.show();
+                            WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+                            lp.copyFrom(Objects.requireNonNull(activateDialog.getWindow()).getAttributes());
+                            lp.width = getDisplayWidth(activateDialog);
+                            lp.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+                            lp.x = 0;
+                            lp.y = 0;
+                            activateDialog.getWindow().setAttributes(lp);
 
                             new Handler().postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
-                                    deleteDialog.dismiss();
+                                    activateDialog.dismiss();
                                     ((Activity)context).startActivity(new Intent(context,VoucherSetupHome.class));
                                     ((Activity)context).finish();
 
@@ -358,6 +369,19 @@ public class Vouchers_RecyclerviewAdapter extends RecyclerView.Adapter<Vouchers_
         dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         Date today = Calendar.getInstance().getTime();
         return dateFormat.format(today);
+    }
+    private int getDisplayWidth(AlertDialog alertDialog) {
+        int width = 600;
+        if (alertDialog.getWindow() != null) {
+            Display display = alertDialog.getWindow().getWindowManager().getDefaultDisplay();
+            Point size = new Point();
+            display.getSize(size);
+
+            if (size.x > 720) {
+                width = size.x - 200;
+            }
+        }
+        return width;
     }
 }
 

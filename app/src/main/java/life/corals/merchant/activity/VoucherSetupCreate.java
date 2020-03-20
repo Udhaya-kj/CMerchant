@@ -3183,7 +3183,7 @@ public class VoucherSetupCreate extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            AlertDialogFailure alertDialogFailure = new AlertDialogFailure(VoucherSetupCreate.this, "Requested Voucher type is Invalid", "OK", "FAILED") {
+                            AlertDialogFailure alertDialogFailure = new AlertDialogFailure(VoucherSetupCreate.this, "Requested Voucher type is Invalid", "OK", "") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(VoucherSetupCreate.this, VoucherSetupHome.class));

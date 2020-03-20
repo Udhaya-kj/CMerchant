@@ -21,6 +21,12 @@
         app:titleTextAppearance="@style/toolbarTitle"
         app:titleTextColor="@color/matt_black" />
 
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/swipeRefreshLayout"
+        >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -48,7 +54,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/voucher_title_margin"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginEnd="@dimen/voucher_title_margin"
                         app:cardCornerRadius="8dp"
                         app:cardElevation="5dp">
@@ -529,4 +535,5 @@
             </androidx.cardview.widget.CardView>
         </RelativeLayout>
     </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </LinearLayout>

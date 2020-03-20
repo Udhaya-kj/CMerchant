@@ -13,6 +13,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,6 +60,7 @@ public class VoucherSetupHome extends AppCompatActivity {
     private IntermediateAlertDialog intermediateAlertDialog;
     private AppTimeOutManagerUtil appTimeOutManagerUtil;
     private SharedPreferences preferences;
+    SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +90,7 @@ public class VoucherSetupHome extends AppCompatActivity {
         setUpRedemptionLists_Z = new ArrayList<>();
         setUpRedemptionLists_M = new ArrayList<>();
 
+        swipeRefreshLayout=findViewById(R.id.swipeRefreshLayout);
         tv_no_p = (TextView) findViewById(R.id.text_no_voucher_p);
         tv_no_b = (TextView) findViewById(R.id.text_no_voucher_b);
         tv_no_u = (TextView) findViewById(R.id.text_no_voucher_u);
@@ -205,6 +208,20 @@ public class VoucherSetupHome extends AppCompatActivity {
 
         callAPI();
 
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                redeemVouchers.clear();
+                setUpRedemptionLists_P.clear();
+                setUpRedemptionLists_B.clear();
+                setUpRedemptionLists_U.clear();
+                setUpRedemptionLists_Z.clear();
+                setUpRedemptionLists_M.clear();
+
+                callAPI();
+            }
+        });
+
     }
 
     public void callAPI() {
@@ -249,6 +266,9 @@ public class VoucherSetupHome extends AppCompatActivity {
 
     public void fetchVoucherList(FetchRedeemVoucherListRequestBody requestBody) throws ApiException {
         Log.d("Voucher---", "uploadVoucher: " + requestBody);
+        if(swipeRefreshLayout.isRefreshing()) {
+            swipeRefreshLayout.setRefreshing(false);
+        }
         OkHttpApiClient okHttpApiClient = new OkHttpApiClient(Objects.requireNonNull(VoucherSetupHome.this));
         MerchantApisApi webMerchantApisApi = new MerchantApisApi();
         webMerchantApisApi.setApiClient(okHttpApiClient.getApiClient());
@@ -257,6 +277,7 @@ public class VoucherSetupHome extends AppCompatActivity {
             @Override
             public void onFailure(ApiException e, int statusCode, Map<String, List<String>> responseHeaders) {
                 Log.d("VoucherList---", "onFailure: " + e.getMessage() + "," + statusCode);
+
                 if (intermediateAlertDialog != null) {
                     intermediateAlertDialog.dismissAlertDialog();
                 }
@@ -296,6 +317,7 @@ public class VoucherSetupHome extends AppCompatActivity {
 
             @Override
             public void onSuccess(RedeemVoucherListResponse result, int statusCode, Map<String, List<String>> responseHeaders) {
+
                 if (statusCode == 200) {
                     List<RedeemVoucher> redeemVouchers = result.getRedeemVouchers();
                     Log.d("redeemVouchers---", "onsuccess: " +redeemVouchers);
@@ -325,7 +347,7 @@ public class VoucherSetupHome extends AppCompatActivity {
                         String terms_conditions = redeemVouchers.get(t).getTermsAndConditions();
                         String ref_points = redeemVouchers.get(t).getReferralRewardPoints();
 
-                        Log.d("VoucherList---", "data--: " + pur_amount+","+title + "," + desc + "," + redeem_type + "," + lead_title + "," + lead_desc+","+points+","+ref_points);
+                        Log.d("VoucherList---", "data--: " +voucher_bg+","+ pur_amount+","+title + "," + desc + "," + redeem_type + "," + lead_title + "," + lead_desc+","+points+","+ref_points);
 
                         if (redeem_type.equals("P")) {
                             SetUpRedemptionList sp = new SetUpRedemptionList();
@@ -416,7 +438,6 @@ public class VoucherSetupHome extends AppCompatActivity {
                             sz.setTermsConditions(terms_conditions);
                             setUpRedemptionLists_Z.add(sz);
 
-
                         } else if (redeem_type.equals("M")) {
                             SetUpRedemptionList sm = new SetUpRedemptionList();
                             sm.setRedeemTitle(title);
@@ -443,15 +464,13 @@ public class VoucherSetupHome extends AppCompatActivity {
                             setUpRedemptionLists_M.add(sm);
                         }
                     }
-               /*     for(){
+               /*for(){
                         setUpRedemptionLists_M.get(0).getRedeemExpdt().
-                    }*/
+               }*/
                     Log.d("VoucherList---", "onSuccess: " + setUpRedemptionLists_P.size() + "," + setUpRedemptionLists_B.size() + "," + setUpRedemptionLists_U.size() + "," + setUpRedemptionLists_Z.size() + "," + setUpRedemptionLists_M.size());
-
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-
                             if (setUpRedemptionLists_P.size() != 0) {
                                 recyclerView_P.setVisibility(View.VISIBLE);
                                 cardView_p.setVisibility(View.GONE);
@@ -576,6 +595,10 @@ public class VoucherSetupHome extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         appTimeOutManagerUtil.onPauseApp();
+
+        if(swipeRefreshLayout.isRefreshing()) {
+            swipeRefreshLayout.setRefreshing(false);
+        }
     }
 
 }

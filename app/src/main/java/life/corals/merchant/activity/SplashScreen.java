@@ -483,7 +483,7 @@ public class SplashScreen extends AppCompatActivity {
 
                         });
                     } else {
-                        new AlertDialogFailure(SplashScreen.this, "Please try again later", "Retry", "Login failed") {
+                        new AlertDialogFailure(SplashScreen.this, "Please try again later!", "Retry", "Login failed") {
                             @Override
                             public void onButtonClick() {
                                 callApi();
@@ -492,7 +492,7 @@ public class SplashScreen extends AppCompatActivity {
                     }
 
                 } else {
-                    new AlertDialogFailure(SplashScreen.this, "Please try again later", "Retry", "Login failed") {
+                    new AlertDialogFailure(SplashScreen.this, "Please try again later!", "Retry", "Login failed") {
                         @Override
                         public void onButtonClick() {
                             callApi();

@@ -5,12 +5,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.Point;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -229,7 +234,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                 }
                 voucherReview(title, desc, s_date, e_date, st_time, e_time, sharable, getActDays, terms_conditions, "P", points, bg_color);
 
-                Log.d("Preview----", "type 1=p: " + title + "," + desc + "," + s_date + "," + e_date + "," + st_time + "," + e_time + "," + sharable + "," + getActDays + "," + mer_cb_redeem_id + "," + isActive + "," + terms_conditions);
+                Log.d("Preview----", "type 1=p: " + title + "," + desc + "," + s_date + "," + e_date + "," + st_time + "," + e_time + "," + sharable + "," + getActDays + "," + mer_cb_redeem_id + "," + isActive + "," + terms_conditions+ "," + bg_color);
             } else if (voucher_type.equals("B")) {
                 title = getIntent().getStringExtra("title");
                 desc = getIntent().getStringExtra("desc");
@@ -483,17 +488,25 @@ public class VoucherSetupPreview extends AppCompatActivity {
                 Log.d("Date--->", "" + e.getMessage());
             }
         }
-
+        Log.d("Aaaaa----", "voucherReview: "+title+","+desc+","+sharable+","+t_conditions+","+v_bg_color);
         if (StringUtils.isNotBlank(title) && StringUtils.isNotBlank(desc) && StringUtils.isNotBlank(t_conditions) && StringUtils.isNotBlank(v_bg_color)) {
+            Log.d("Aaaaa----", "voucherReview: "+title+","+desc+","+sharable+","+t_conditions);
             if (v_type.equals("M")) {
 
                 tv_title.setText("Refer and earn " + points + " points. Your friend Offer : " + "\""+title+"\"");
                 tv_desc.setText("Share this voucher and earn " + points + " points when your friend redeems. Your referral offer is : " + "\""+desc+"\"");
+
+               if(sharable.equals("1")){
+                   layout_share.setVisibility(View.VISIBLE);
+               }
+               else {
+                   layout_share.setVisibility(View.INVISIBLE);
+               }
                 tv_val.setText(t_conditions);
                 cardView.setCardBackgroundColor(Color.parseColor(v_bg_color));
 
             } else {
-
+                Log.d("Aaaaa----", "voucherReview: "+title+","+desc+","+sharable+","+t_conditions);
                 if (StringUtils.isNotBlank(points)) {
                     tv_title.setText(title + " for " + points + " points");
                 } else {
@@ -501,8 +514,30 @@ public class VoucherSetupPreview extends AppCompatActivity {
                 }
                 tv_desc.setText(desc);
                 tv_val.setText(t_conditions);
+                if(sharable.equals("1")){
+                    layout_share.setVisibility(View.VISIBLE);
+                }
+                else {
+                    layout_share.setVisibility(View.INVISIBLE);
+                }
                 cardView.setCardBackgroundColor(Color.parseColor(v_bg_color));
             }
+        }
+        else {
+            Log.d("Aaaaa----", "Empty data : "+title+","+desc+","+sharable+","+t_conditions);
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    new AlertDialogFailure(VoucherSetupPreview.this, " Please try again later!", "OK", "Something went wrong") {
+                        @Override
+                        public void onButtonClick() {
+                            startActivity(new Intent(VoucherSetupPreview.this, VoucherSetupHome.class));
+                            finish();
+                            overridePendingTransition(R.anim.swipe_in_left, R.anim.swipe_in_left);
+                        }
+                    };
+                }
+            });
         }
 
         if (!TextUtils.isEmpty(weekdays)) {
@@ -690,7 +725,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            new AlertDialogFailure(VoucherSetupPreview.this, "Merchant does not exist or Inactive", "OK", "Failed") {
+                            new AlertDialogFailure(VoucherSetupPreview.this, "Merchant does not exist or Inactive", "OK", "") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(VoucherSetupPreview.this, VoucherSetupHome.class));
@@ -733,7 +768,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            new AlertDialogFailure(VoucherSetupPreview.this, "Merchant does not exist or Inactive", "OK", "Failed") {
+                            new AlertDialogFailure(VoucherSetupPreview.this, "Merchant does not exist or Inactive", "OK", "") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(VoucherSetupPreview.this, VoucherSetupHome.class));
@@ -785,19 +820,27 @@ public class VoucherSetupPreview extends AppCompatActivity {
                             Log.d("getStatusMsg---", "run: " + result.getStatusMsg());
                             LayoutInflater factory = LayoutInflater.from(VoucherSetupPreview.this);
                             final View deleteDialogView = factory.inflate(R.layout.success_dialog, null);
-                            final AlertDialog deleteDialog = new AlertDialog.Builder(VoucherSetupPreview.this).create();
-                            deleteDialog.setView(deleteDialogView);
-                            deleteDialog.setCancelable(false);
+                            final AlertDialog uploadDialog = new AlertDialog.Builder(VoucherSetupPreview.this).create();
+                            uploadDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+                            uploadDialog.setView(deleteDialogView);
+                            uploadDialog.setCancelable(false);
                             TextView textView_title = (TextView) deleteDialogView.findViewById(R.id.tv_title);
                             textView_title.setText("Done!");
                             TextView textView = (TextView) deleteDialogView.findViewById(R.id.text_dialog);
                             textView.setText(result.getStatusMsg());
-                            deleteDialog.show();
+                            uploadDialog.show();
+                            WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+                            lp.copyFrom(Objects.requireNonNull(uploadDialog.getWindow()).getAttributes());
+                            lp.width = getDisplayWidth(uploadDialog);
+                            lp.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+                            lp.x = 0;
+                            lp.y = 0;
+                            uploadDialog.getWindow().setAttributes(lp);
 
                             new Handler().postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
-                                    deleteDialog.dismiss();
+                                    uploadDialog.dismiss();
                                     Intent in = new Intent(VoucherSetupPreview.this, VoucherSetupHome.class);
                                     startActivity(in);
                                     finish();
@@ -904,6 +947,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                                 LayoutInflater factory = LayoutInflater.from(VoucherSetupPreview.this);
                                 final View deleteDialogView = factory.inflate(R.layout.success_dialog, null);
                                 final AlertDialog deleteDialog = new AlertDialog.Builder(VoucherSetupPreview.this).create();
+                                deleteDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
                                 TextView textView_delete = (TextView) deleteDialogView.findViewById(R.id.text_dialog);
                                 textView_delete.setText(result.getStatusMsg());
                                 TextView textView_title = (TextView) deleteDialogView.findViewById(R.id.tv_title);
@@ -911,6 +955,13 @@ public class VoucherSetupPreview extends AppCompatActivity {
                                 deleteDialog.setView(deleteDialogView);
                                 deleteDialog.setCancelable(false);
                                 deleteDialog.show();
+                                WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+                                lp.copyFrom(Objects.requireNonNull(deleteDialog.getWindow()).getAttributes());
+                                lp.width = getDisplayWidth(deleteDialog);
+                                lp.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+                                lp.x = 0;
+                                lp.y = 0;
+                                deleteDialog.getWindow().setAttributes(lp);
 
                                 new Handler().postDelayed(new Runnable() {
                                     @Override
@@ -986,7 +1037,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            new AlertDialogFailure(VoucherSetupPreview.this, "Merchant does not exist or Inactive", "OK", "Failed") {
+                            new AlertDialogFailure(VoucherSetupPreview.this, "Merchant does not exist or Inactive", "OK", "") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(VoucherSetupPreview.this, VoucherSetupHome.class));
@@ -1031,7 +1082,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            new AlertDialogFailure(VoucherSetupPreview.this, "Merchant does not exist or Inactive", "OK", "Failed") {
+                            new AlertDialogFailure(VoucherSetupPreview.this, "Merchant does not exist or Inactive", "OK", "") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(VoucherSetupPreview.this, VoucherSetupHome.class));
@@ -1083,14 +1134,24 @@ public class VoucherSetupPreview extends AppCompatActivity {
 
                             }
 
+
+
                             LayoutInflater factory = LayoutInflater.from(VoucherSetupPreview.this);
                             final View deleteDialogView = factory.inflate(R.layout.success_dialog, null);
                             final AlertDialog deleteDialog = new AlertDialog.Builder(VoucherSetupPreview.this).create();
+                            deleteDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
                             TextView textView_delete = (TextView) deleteDialogView.findViewById(R.id.text_dialog);
                             textView_delete.setText("Voucher updated successfully");
                             deleteDialog.setView(deleteDialogView);
                             deleteDialog.setCancelable(false);
                             deleteDialog.show();
+                            WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+                            lp.copyFrom(Objects.requireNonNull(deleteDialog.getWindow()).getAttributes());
+                            lp.width = getDisplayWidth(deleteDialog);
+                            lp.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+                            lp.x = 0;
+                            lp.y = 0;
+                            deleteDialog.getWindow().setAttributes(lp);
 
                             new Handler().postDelayed(new Runnable() {
                                 @Override
@@ -1145,6 +1206,20 @@ public class VoucherSetupPreview extends AppCompatActivity {
         if (alertDialogYesNo != null) {
             alertDialogYesNo.onCancelButtonClick();
         }
+    }
+
+    private int getDisplayWidth(AlertDialog alertDialog) {
+        int width = 600;
+        if (alertDialog.getWindow() != null) {
+            Display display = alertDialog.getWindow().getWindowManager().getDefaultDisplay();
+            Point size = new Point();
+            display.getSize(size);
+
+            if (size.x > 720) {
+                width = size.x - 200;
+            }
+        }
+        return width;
     }
 
     private void callDeleteAPI() {

@@ -211,7 +211,7 @@ public class NotificationOnetoOnePreview extends BaseFragment {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         intermediateAlertDialog.dismissAlertDialog();
-                        new AlertDialogFailure(getActivity(), "Something went wrong", "OK", "Failed") {
+                        new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                             @Override
                             public void onButtonClick() {
                                 CustomerListOne fragment1 = new CustomerListOne();
@@ -267,7 +267,7 @@ public class NotificationOnetoOnePreview extends BaseFragment {
                 sendNotiofication(body);
             } catch (Exception e) {
                 intermediateAlertDialog.dismissAlertDialog();
-                new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Something went wrong") {
+                new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Something went wrong") {
                     @Override
                     public void onButtonClick() {
                         startActivity(new Intent(getActivity(), Homenew.class));
@@ -315,7 +315,7 @@ public class NotificationOnetoOnePreview extends BaseFragment {
                     Log.d("InlineResponse__Summary", "onFailure: " + e + "  " + statusCode);
                     intermediateAlertDialog.dismissAlertDialog();
 
-                        new AlertDialogFailure(getActivity(), "Please try again later", "OK", "Notification sending failed") {
+                        new AlertDialogFailure(getActivity(), "Please try again later!", "OK", "Notification sending failed") {
                             @Override
                             public void onButtonClick() {
                                 CustomerListOne fragment1 = new CustomerListOne();

@@ -175,7 +175,7 @@ public class HistoryPrevious extends BaseFragment implements SwipeRefreshLayout.
                         if (swipeRefreshLayout.isRefreshing()) {
                             swipeRefreshLayout.setRefreshing(false);
                         }
-                        new AlertDialogFailure(activity, "Please try again later", "OK", "Something went wrong") {
+                        new AlertDialogFailure(activity, "Please try again later!", "OK", "Something went wrong") {
                             @Override
                             public void onButtonClick() {
                                 startActivity(new Intent(activity, Homenew.class));
@@ -225,7 +225,7 @@ public class HistoryPrevious extends BaseFragment implements SwipeRefreshLayout.
                                 recyclerView.setVisibility(View.GONE);
                             }
                         } else {
-                            new AlertDialogFailure(activity, "Please try again later", "OK", "Something went wrong") {
+                            new AlertDialogFailure(activity, "Please try again later!", "OK", "Something went wrong") {
                                 @Override
                                 public void onButtonClick() {
                                     startActivity(new Intent(activity, Homenew.class));
@@ -275,7 +275,7 @@ public class HistoryPrevious extends BaseFragment implements SwipeRefreshLayout.
             transactionHistory(body);
         } catch (ApiException e) {
             e.printStackTrace();
-            new AlertDialogFailure(activity, "Please try again later", "OK", "Something went wrong") {
+            new AlertDialogFailure(activity, "Please try again later!", "OK", "Something went wrong") {
                 @Override
                 public void onButtonClick() {
                     startActivity(new Intent(activity, HistoryHomePage.class));

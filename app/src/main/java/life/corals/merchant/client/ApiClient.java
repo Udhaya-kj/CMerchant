@@ -76,27 +76,23 @@ public class ApiClient {
 
      //private String basePath = "https://139.59.74.230:8443";//prod
     //private String basePath ="http://192.168.225.70:8080";//local-jayanth
-      //private String basePath = "https://139.59.11.186:8443";//dev server
-      private String basePath = "http://192.168.0.104:8080";//local-kathir
+      private String basePath = "https://139.59.11.186:8443";//dev server
+      //private String basePath = "http://192.168.0.104:8080";//local-kathir
     //private String basePath = "http://192.168.0.103:8080";//local-udhay
 
     private boolean debugging = false;
     private Map<String, String> defaultHeaderMap = new HashMap<String, String>();
     private String tempFolderPath = null;
     private Map<String, Authentication> authentications;
-
     private DateFormat dateFormat;
     private DateFormat datetimeFormat;
     private boolean lenientDatetimeFormat;
     private int dateLength;
-
     private InputStream sslCaCert;
     private boolean verifyingSsl;
     private KeyManager[] keyManagers;
-
     private OkHttpClient httpClient;
     private JSON json;
-
     private HttpLoggingInterceptor loggingInterceptor;
 
     /*
@@ -104,12 +100,8 @@ public class ApiClient {
      */
     public ApiClient() {
         httpClient = new OkHttpClient();
-
-
         verifyingSsl = true;
-
         json = new JSON();
-
         // Set default User-Agent.
         setUserAgent("Swagger-Codegen/1.0.0/java");
 

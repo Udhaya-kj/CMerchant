@@ -55,7 +55,7 @@
 
 
             <LinearLayout
-                android:visibility="gone"
+                android:visibility="visible"
                 android:id="@+id/layout_voucher_preview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -93,7 +93,7 @@
                             android:layout_marginTop="@dimen/margin_5dp"
                             android:gravity="right|center"
                             android:orientation="horizontal"
-                            android:visibility="visible">
+                            android:visibility="invisible">
 
                             <TextView
                                 style="@style/subTitleTextAppearance"
