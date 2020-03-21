@@ -523,22 +523,7 @@ public class VoucherSetupPreview extends AppCompatActivity {
                 cardView.setCardBackgroundColor(Color.parseColor(v_bg_color));
             }
         }
-        else {
-            Log.d("Aaaaa----", "Empty data : "+title+","+desc+","+sharable+","+t_conditions);
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    new AlertDialogFailure(VoucherSetupPreview.this, " Please try again later!", "OK", "Something went wrong") {
-                        @Override
-                        public void onButtonClick() {
-                            startActivity(new Intent(VoucherSetupPreview.this, VoucherSetupHome.class));
-                            finish();
-                            overridePendingTransition(R.anim.swipe_in_left, R.anim.swipe_in_left);
-                        }
-                    };
-                }
-            });
-        }
+
 
         if (!TextUtils.isEmpty(weekdays)) {
             char get1 = weekdays.charAt(0);
